@@ -91,6 +91,20 @@
     const yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+    /* ---------- 6b. Yorum şeridi: kusursuz döngü için içeriği kopyala ---------- */
+    const reviewsTrack = document.getElementById("reviews-track");
+    if (reviewsTrack) {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduceMotion) {
+        const cards = Array.prototype.slice.call(reviewsTrack.children);
+        cards.forEach(function (card) {
+          const clone = card.cloneNode(true);
+          clone.setAttribute("aria-hidden", "true");
+          reviewsTrack.appendChild(clone);
+        });
+      }
+    }
+
     /* ---------- 6. Görsel yüklenemezse yer tutucuya düş ----------
        (Inline onerror handler'ları CSP uyumu için buraya taşındı) */
     document.querySelectorAll("img[data-fallback]").forEach(function (img) {

@@ -499,20 +499,53 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 
-/* ---------- Yorumlar ---------- */
-.reviews {
-  display: grid;
-  gap: 20px;
+/* ---------- Yorumlar (soldan sağa yavaşça kayan şerit) ---------- */
+.reviews-marquee {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
 }
+.reviews-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  padding: 6px 20px;
+  /* JS içeriği iki kez döşedikten sonra -50% → 0 kusursuz döngü verir */
+  animation: reviews-scroll 150s linear infinite;
+}
+.reviews-marquee:hover .reviews-track,
+.reviews-track:focus-within { animation-play-state: paused; }
+
+@keyframes reviews-scroll {
+  from { transform: translateX(-50%); } /* sağa doğru akış */
+  to   { transform: translateX(0); }
+}
+
 .review-card {
+  flex: 0 0 min(82vw, 340px);
+  width: min(82vw, 340px);
+  display: flex;
+  flex-direction: column;
   background: var(--gray-100);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 22px;
   box-shadow: var(--shadow-sm);
 }
-.review-stars { color: var(--limos-yellow); letter-spacing: 3px; margin-bottom: 12px; }
-.review-card p { font-size: 1rem; color: var(--ink); }
+.review-stars { color: var(--limos-yellow); letter-spacing: 3px; font-size: .9rem; margin-bottom: 10px; }
+.review-card p {
+  margin: 0;
+  font-size: .95rem;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .review-card cite {
   display: block;
   margin-top: 14px;
@@ -625,7 +658,6 @@ ul { list-style: none; }
 @media (min-width: 600px) {
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .pay-grid { grid-template-columns: 1fr 1fr; }
-  .reviews { grid-template-columns: 1fr 1fr; }
   .hero-facts { grid-template-columns: repeat(3, 1fr); }
   .gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -653,6 +685,11 @@ ul { list-style: none; }
   .pay-grid { grid-template-columns: repeat(3, 1fr); }
   .contact-grid { grid-template-columns: 1fr 1fr; align-items: stretch; }
   .footer-inner { grid-template-columns: 1.4fr 1fr 1.2fr; }
+}
+
+/* Mobil/tablet: hero görseli metnin üstünde dursun (tek sütun düzende) */
+@media (max-width: 899px) {
+  .hero-media { order: -1; }
 }
 
 /* =========================================================
@@ -724,6 +761,15 @@ ul { list-style: none; }
     animation-duration: .001ms !important;
     transition-duration: .001ms !important;
   }
+  /* Yorum şeridi otomatik kaymak yerine elle kaydırılır */
+  .reviews-track { transform: none !important; }
+  .reviews-marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+            mask-image: none;
+    scroll-snap-type: x proximity;
+  }
+  .review-card { scroll-snap-align: start; }
 }
 
 /* Yazdırma */
