@@ -41,19 +41,27 @@
     const filterButtons = document.querySelectorAll(".filter-btn");
     const categories = document.querySelectorAll(".menu-cat");
 
+    const applyFilter = function (filter) {
+      filterButtons.forEach(function (b) {
+        b.classList.toggle("is-active", b.getAttribute("data-filter") === filter);
+      });
+      categories.forEach(function (cat) {
+        const match = filter === "all" || cat.getAttribute("data-cat") === filter;
+        cat.classList.toggle("is-hidden", !match);
+      });
+    };
+
     filterButtons.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        const filter = btn.getAttribute("data-filter");
-
-        filterButtons.forEach(function (b) { b.classList.remove("is-active"); });
-        btn.classList.add("is-active");
-
-        categories.forEach(function (cat) {
-          const match = filter === "all" || cat.getAttribute("data-cat") === filter;
-          cat.classList.toggle("is-hidden", !match);
-        });
+        applyFilter(btn.getAttribute("data-filter"));
       });
     });
+
+    // İlk açılışta seçili butonun (Menemenler) filtresini uygula
+    if (filterButtons.length) {
+      const initial = document.querySelector(".filter-btn.is-active") || filterButtons[0];
+      applyFilter(initial.getAttribute("data-filter"));
+    }
 
     /* ---------- 3. Aktif menü linkini vurgula (scroll spy) ---------- */
     const sections = document.querySelectorAll("main section[id]");
