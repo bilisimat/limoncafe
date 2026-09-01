@@ -1,0 +1,29 @@
+# ---- Hassas dosyalar (ASLA depoya girmesin) ----
+şifre.txt
+sifre.txt
+*.env
+.env
+.env.*
+*secret*
+*password*
+credentials*
+*.pem
+*.key
+
+# ---- Kaynak/çalışma dosyaları (yayınlanan siteye dahil değil) ----
+işletme-bilgileri.md
+limos_kurumsal_kimlik.md
+node_modules/
+
+# ---- Kullanılmayan orijinal görseller (site webp sürümleri kullanıyor) ----
+logo,.jpg
+logo.jpg
+images/menemen.jpg
+images/*_n.jpg
+
+# ---- OS / editör ----
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

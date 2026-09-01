@@ -1,0 +1,47 @@
+# =========================================================
+#  Limos Kahvaltı — Apache güvenlik / sertleştirme yapılandırması
+# =========================================================
+
+# ---- 1. HTTP -> HTTPS zorunlu yönlendirme ----
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP:X-Forwarded-Proto} =http
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ---- 2. Güvenlik başlıkları ----
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always unset X-Powered-By
+  Header always unset Server
+</IfModule>
+
+# ---- 3. Hassas / kaynak dosyalara erişimi tamamen engelle ----
+<FilesMatch "(^\.|\.(md|txt|env|key|pem|log|bak|json)$|^şifre)">
+  Require all denied
+</FilesMatch>
+# İstisna: gerekiyorsa site kökündeki belirli dosyalara izin ver (örn. site.webmanifest)
+<Files "site.webmanifest">
+  Require all granted
+</Files>
+
+# ---- 4. Dizin listelemeyi kapat ----
+Options -Indexes -MultiViews
+
+# ---- 5. Statik varlık önbellekleme (performans) ----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp            "access plus 1 year"
+  ExpiresByType image/jpeg            "access plus 1 year"
+  ExpiresByType image/svg+xml         "access plus 1 year"
+  ExpiresByType text/css              "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html             "access plus 0 seconds"
+</IfModule>

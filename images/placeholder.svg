@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Limos Kahvaltı görsel yer tutucu">
+  <rect width="800" height="600" fill="#F8F9FA"/>
+  <rect x="1" y="1" width="798" height="598" fill="none" stroke="#EAEAEA" stroke-width="2"/>
+  <circle cx="400" cy="255" r="96" fill="#F6C314"/>
+  <circle cx="400" cy="255" r="96" fill="none" stroke="#1A1A1A" stroke-width="6"/>
+  <path d="M330 255c0-38 32-66 70-66s70 28 70 66" fill="none" stroke="#1A1A1A" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="365" cy="238" r="10" fill="#1A1A1A"/>
+  <circle cx="435" cy="238" r="10" fill="#1A1A1A"/>
+  <text x="400" y="410" text-anchor="middle" font-family="Poppins, Montserrat, sans-serif" font-size="44" font-weight="700" fill="#1A1A1A">Limos Kahvaltı</text>
+  <text x="400" y="452" text-anchor="middle" font-family="Inter, 'Open Sans', sans-serif" font-size="22" fill="#5b5b5b">Görsel yakında eklenecek</text>
+</svg>
