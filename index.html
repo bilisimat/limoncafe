@@ -3,154 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="theme-color" content="#F3EFE6" />
 
   <!-- Güvenlik: içerik güvenlik politikası (yalnızca sitenin gerçekten kullandığı kaynaklar) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <title>Limos Kahvaltı | Beşiktaş'ın Serpme Kahvaltı Durağı</title>
-  <meta name="description" content="Limos Kahvaltı Beşiktaş — bol çeşitli serpme kahvaltı, menemenler, pişiler, gözlemeler ve taze kahve. 4.6 puan, 2.418+ yorum. Sinanpaşa, Çelebi Oğlu Sk. No:11 Beşiktaş/İstanbul." />
+
+  <title>Limos Kahvaltı — Beşiktaş'ta Serpme Kahvaltı ve Taze Kahve</title>
+  <meta name="description" content="Sinanpaşa, Beşiktaş'ta serpme ve à la carte kahvaltı: menemenler, sıcak pişiler, gözlemeler, mıhlama ve taze kahve. Google'da 4,6 / 5 — 2.418+ değerlendirme. Çelebi Oğlu Sk. No:11, Beşiktaş / İstanbul." />
+  <link rel="canonical" href="https://limosbesiktas.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Limos Kahvaltı | Beşiktaş" />
-  <meta property="og:description" content="Bol çeşitli serpme kahvaltı, menemenler, pişiler ve taze kahve. Beşiktaş/İstanbul." />
+  <meta property="og:title" content="Limos Kahvaltı — Beşiktaş" />
+  <meta property="og:description" content="Serpme ve à la carte kahvaltı, sıcacık pişiler, menemenler ve taze kahve. Beşiktaş / İstanbul." />
   <meta property="og:type" content="restaurant" />
-  <meta property="og:image" content="logo.webp" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:image" content="images/hero.webp" />
 
-  <!-- Fonts: Poppins (başlıklar) + Inter (gövde) -->
+  <!-- Tipografi: Cormorant Garamond (editorial başlıklar) + Inter (gövde / arayüz) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="icon" type="image/webp" href="logo.webp" />
-  <link rel="stylesheet" href="css/styles.css?v=3" />
+  <link rel="preload" as="image" href="images/hero.webp" fetchpriority="high" />
+  <link rel="stylesheet" href="css/styles.css?v=4" />
 </head>
 <body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="Limos Kahvaltı ana sayfa">
-        <span class="brand-badge">
-          <img src="logo.webp" alt="Limos Kahvaltı logosu" width="120" height="120" />
-        </span>
-        <span class="brand-text">
-          <strong>Limos</strong>
-          <small>kahvaltı</small>
-        </span>
-      </a>
+  <a class="skip-link" href="#kahvalti">İçeriğe geç</a>
 
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="top" data-header>
+    <div class="container header-inner">
       <nav class="main-nav" id="main-nav" aria-label="Ana menü">
+        <a href="#kahvalti" class="nav-link">Kahvaltı</a>
         <a href="#menu" class="nav-link">Menü</a>
         <a href="#galeri" class="nav-link">Galeri</a>
-        <a href="#odeme" class="nav-link">Ödeme</a>
-        <a href="#yorumlar" class="nav-link">Yorumlar</a>
         <a href="#iletisim" class="nav-link">İletişim</a>
-        <a href="tel:+905494980021" class="btn btn-primary nav-cta">Bizi Arayın</a>
+        <a href="tel:+905494980021" class="nav-link nav-link--cta">Rezervasyon &amp; Bilgi</a>
       </nav>
 
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
+      <a href="#top" class="brand" aria-label="Limos Kahvaltı — ana sayfa">
+        <span class="brand-word">Limos</span>
+        <span class="brand-sub">kahvaltı — beşiktaş</span>
+      </a>
+
+      <div class="header-actions">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="header-phone">Yol Tarifi</a>
+        <a href="tel:+902122369236" class="btn btn-line header-cta">Bizi Arayın</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü aç / kapat" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span>
       </button>
     </div>
   </header>
 
-  <main>
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="hero-eyebrow">
-            <span class="stars" aria-hidden="true">★★★★★</span>
-            <span>4.6 / 5 &nbsp;•&nbsp; 2.418+ Google yorumu</span>
-          </p>
-          <h1 class="hero-title">Beşiktaş'ta güne <span class="hl">bereketli bir sofrayla</span> başlayın</h1>
-          <p class="hero-lead">
-            Ezine peyniri, manda kaymağı, Erzincan balı, sıcacık pişiler ve tavadan yeni inmiş
-            menemenler… Limos Kahvaltı'da her tabak taze, bol çeşitli ve gönlünce.
-          </p>
-          <div class="hero-actions">
-            <a href="#menu" class="btn btn-primary">Menüyü İncele</a>
-            <a href="tel:+902122369236" class="btn btn-ghost">0 (212) 236 92 36</a>
-          </div>
-        </div>
-
-        <figure class="hero-media">
-          <img
-            src="https://images.unsplash.com/photo-1647772809729-7afb10f80766?auto=format&fm=webp&fit=crop&w=1000&q=70"
-            alt="Çay eşliğinde serilmiş geleneksel serpme kahvaltı sofrası"
-            width="1000" height="1200" loading="eager"
-            data-fallback="images/placeholder.svg" />
-          <figcaption class="hero-badge">
-            <strong>Limos Serpme Kahvaltı</strong>
-            <span>Beşiktaş'ın favorisi</span>
-          </figcaption>
-        </figure>
+  <!-- ================= HERO ================= -->
+  <section class="hero" aria-label="Limos Kahvaltı">
+    <div class="hero-media" aria-hidden="true"></div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <p class="hero-eyebrow">Beşiktaş — Sinanpaşa · Est. Kahvaltı Sokağı</p>
+      <h1 class="hero-title">
+        Sabahın<br /><em>en güzel</em> hali.
+      </h1>
+      <p class="hero-lead">
+        Serpme ve à la carte kahvaltı, tavadan yeni inmiş menemenler, sıcacık pişiler
+        ve demi gelmiş çay. Limos'ta sofra acele etmeden kurulur.
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-solid">Menüyü Keşfet <span class="arw" aria-hidden="true">→</span></a>
+        <a href="#iletisim" class="btn btn-line btn-line--light">Bizi Ziyaret Et</a>
       </div>
+    </div>
+    <div class="hero-foot">
+      <div class="container hero-foot-inner">
+        <span>Serpme &amp; à la carte</span>
+        <span>Her gün · 18:00'e kadar</span>
+        <span>Google 4,6 / 5 — 2.418+ yorum</span>
+      </div>
+    </div>
+  </section>
 
-      <div class="container">
-        <ul class="hero-facts">
-          <li><strong>Serpme &amp; à la carte</strong><span>Tek kişilik tabaklar 350₺'den</span></li>
-          <li><strong>Her gün 18:00'e kadar</strong><span>İçeride servis</span></li>
-          <li><strong>Yemek kartları geçerli</strong><span>Pluxee, Multinet, Edenred…</span></li>
-        </ul>
+  <main>
+
+    <!-- ================= 01 — GİRİŞ / MARKA ================= -->
+    <section class="section intro" id="kahvalti">
+      <div class="container intro-grid">
+        <p class="sec-index" data-reveal>01 — Limos</p>
+        <div class="intro-body">
+          <h2 class="display" data-reveal>
+            İyi bir sabah, iyi bir <em>sofrayla</em> başlar.
+          </h2>
+          <p class="lede" data-reveal>
+            Limos Kahvaltı, Beşiktaş Sinanpaşa'nın kahvaltı sokağında; taze peynirler,
+            Erzincan balı, manda kaymağı, ev reçelleri ve gün boyu tazelenen çayın
+            etrafında kurulan bir sofra. Bereketli ama özenli; bol ama savruk değil.
+          </p>
+          <ul class="intro-facts" data-reveal>
+            <li><strong>4,6 / 5</strong><span>Google — 2.418+ değerlendirme</span></li>
+            <li><strong>Kişi başı ₺400–800</strong><span>Serpme &amp; à la carte</span></li>
+            <li><strong>İçeride servis</strong><span>Her gün, 18:00'de kapanır</span></li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- ================= MENÜ ================= -->
-    <section class="section" id="menu">
+    <!-- ================= 02 — KAHVALTI DENEYİMİ ================= -->
+    <section class="section breakfast section-paper-dark" id="kahvalti-deneyim">
       <div class="container">
-        <header class="section-head">
-          <p class="kicker">Menü</p>
-          <h2>Sofradaki her şey burada</h2>
-          <p class="section-sub">Fiyatlar Türk Lirası (₺) cinsindendir. İlk çay serpme tabaklarda ikramımızdır.</p>
-        </header>
-
-        <!-- Öne çıkan serpme tabaklar -->
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="feature-img">
-              <img
-                src="https://images.unsplash.com/photo-1633040243823-6bf8d4edb0ec?auto=format&fm=webp&fit=crop&w=800&q=70"
-                alt="Kahvaltı tabağı: peynir, zeytin, bal, kaymak ve taze ekmek"
-                width="800" height="520" loading="lazy"
-                data-fallback="images/placeholder.svg" />
-            </div>
-            <div class="feature-body">
-              <div class="feature-top">
-                <h3>Kahvaltı Tabağı</h3>
-                <span class="price-tag">450₺</span>
-              </div>
-              <p class="feature-meta">Tek kişilik</p>
-              <p>Ezine beyaz peynir, taze kaşar, domates, salatalık, Erzincan balı, manda kaymağı,
-                ev reçeli, siyah &amp; yeşil zeytin, omlet (1 yumurta), 1 adet sigara böreği.</p>
-              <p class="feature-note">İlk çay ikramımızdır.</p>
-            </div>
-          </article>
-          <article class="feature-card">
-            <div class="feature-img">
-              <img
-                src="images/pisi-tabagi.webp"
-                alt="Limos pişi tabağı: sıcak pişiler, domates, salatalık, peynir ve zeytin"
-                width="800" height="520" loading="lazy"
-                data-fallback="images/placeholder.svg" />
-            </div>
-            <div class="feature-body">
-              <div class="feature-top">
-                <h3>Pişi Tabağı</h3>
-                <span class="price-tag">350₺</span>
-              </div>
-              <p class="feature-meta">Tek kişilik</p>
-              <p>3 adet sade pişi, domates, salatalık, Ezine beyaz peynir, ev reçeli,
-                siyah &amp; yeşil zeytin.</p>
-              <p class="feature-note">İlk çay ikramımızdır.</p>
-            </div>
-          </article>
+        <div class="breakfast-head">
+          <p class="sec-index sec-index--light" data-reveal>02 — Kahvaltı</p>
+          <h2 class="display display--light" data-reveal>Güne Limos'ta başlayın.</h2>
         </div>
 
-        <!-- Kategori filtreleri -->
+        <div class="breakfast-grid">
+          <figure class="breakfast-figure breakfast-figure--main" data-reveal>
+            <img src="images/breakfast.webp" width="1280" height="1541" loading="lazy" decoding="async"
+                 alt="Meşe tahtası üzerinde sıcak sucuk tava; arkada sahanda sucuklu yumurta, pişi, domates ve zeytin"
+                 data-fallback="images/placeholder.svg" />
+          </figure>
+          <figure class="breakfast-figure breakfast-figure--inset" data-reveal>
+            <img src="images/sucuklu_yumurta.webp" width="1200" height="675" loading="lazy" decoding="async"
+                 alt="Bakır sahanda sucuklu yumurta"
+                 data-fallback="images/placeholder.svg" />
+          </figure>
+
+          <div class="breakfast-copy" data-reveal>
+            <p>
+              Kahvaltı burada tek bir tabak değil, bir masa. Serpme sofrayı paylaşın
+              ya da à la carte seçin; her iki türlü de peynirler taze, pişiler tavadan
+              yeni iniyor. İlk çay serpme tabaklarda ikramımızdır.
+            </p>
+
+            <ul class="plate-list">
+              <li>
+                <div class="plate-line">
+                  <h3>Kahvaltı Tabağı</h3>
+                  <span class="plate-price">450₺</span>
+                </div>
+                <p>Ezine beyaz peynir, taze kaşar, domates, salatalık, Erzincan balı,
+                   manda kaymağı, ev reçeli, siyah &amp; yeşil zeytin, omlet (1 yumurta),
+                   1 adet sigara böreği. <em>Tek kişilik — ilk çay ikramımızdır.</em></p>
+              </li>
+              <li>
+                <div class="plate-line">
+                  <h3>Pişi Tabağı</h3>
+                  <span class="plate-price">350₺</span>
+                </div>
+                <p>3 adet sade pişi, domates, salatalık, Ezine beyaz peynir, ev reçeli,
+                   siyah &amp; yeşil zeytin. <em>Tek kişilik — ilk çay ikramımızdır.</em></p>
+              </li>
+            </ul>
+
+            <a href="#menu" class="link-arrow">Menünün tamamını gör <span class="arw" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 03 — MASADAN SEÇTİKLERİMİZ ================= -->
+    <section class="section signature">
+      <div class="container">
+        <header class="sec-head">
+          <p class="sec-index" data-reveal>03 — Masadan Seçtiklerimiz</p>
+          <h2 class="display" data-reveal>Sofranın <em>öne çıkanları</em>.</h2>
+        </header>
+
+        <div class="sig-grid">
+          <article class="sig-item" data-reveal>
+            <figure class="sig-media"><img src="images/sucuk-tava.webp" width="1100" height="1100" loading="lazy" decoding="async" alt="Bakır tavada kızarmış dilim sucuk" data-fallback="images/placeholder.svg" /></figure>
+            <div class="sig-line"><h3>Sucuk Tava</h3><span>300₺</span></div>
+            <p>Kendi yağında, kenarları çıtır.</p>
+          </article>
+          <article class="sig-item" data-reveal>
+            <figure class="sig-media"><img src="images/menemen.webp" width="1400" height="1750" loading="lazy" decoding="async" alt="Sahanda menemen, taze sıkma portakal suyu ve çay eşliğinde" data-fallback="images/placeholder.svg" /></figure>
+            <div class="sig-line"><h3>Karışık Menemen</h3><span>350₺</span></div>
+            <p>Domates, biber, sucuk, kavurma ve kaşar.</p>
+          </article>
+          <article class="sig-item" data-reveal>
+            <figure class="sig-media"><img src="images/sucuklu_yumurta.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Bakır sahanda sucuklu yumurta" data-fallback="images/placeholder.svg" /></figure>
+            <div class="sig-line"><h3>Sucuklu Yumurta</h3><span>270₺</span></div>
+            <p>Sahanda, bol sucuklu.</p>
+          </article>
+          <article class="sig-item" data-reveal>
+            <figure class="sig-media"><img src="images/pisi-tabagi.webp" width="690" height="460" loading="lazy" decoding="async" alt="Sıcak pişi tabağı: domates, salatalık, peynir, zeytin ve acuka ile" data-fallback="images/placeholder.svg" /></figure>
+            <div class="sig-line"><h3>Pişi Tabağı</h3><span>350₺</span></div>
+            <p>3 adet sade pişi, taze mezelerle.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDITORIAL STATEMENT ================= -->
+    <section class="statement" aria-label="Limos anlayışı">
+      <div class="container">
+        <p class="statement-text" data-reveal>
+          Uzun kahvaltılar.<br />
+          <em>Demli çaylar.</em><br />
+          Acelesi olmayan sabahlar.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 04 — MENÜ ================= -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <header class="sec-head">
+          <p class="sec-index" data-reveal>04 — Menü</p>
+          <h2 class="display" data-reveal>Sofradaki her şey.</h2>
+          <p class="sec-sub" data-reveal>Fiyatlar Türk Lirası (₺) cinsindendir. Serpme tabaklarda ilk çay ikramımızdır.</p>
+        </header>
+
         <div class="menu-filters" id="menu-filters" role="tablist" aria-label="Menü kategorileri">
-          <button class="filter-btn is-active" data-filter="menemen">Menemenler</button>
+          <button class="filter-btn is-active" data-filter="all">Tümü</button>
+          <button class="filter-btn" data-filter="menemen">Menemenler</button>
           <button class="filter-btn" data-filter="yumurta">Yumurta &amp; Omlet</button>
           <button class="filter-btn" data-filter="tava">Tavalar</button>
           <button class="filter-btn" data-filter="pisi">Pişiler</button>
@@ -161,7 +230,6 @@
         </div>
 
         <div class="menu-grid" id="menu-grid">
-          <!-- Menemenler -->
           <div class="menu-cat" data-cat="menemen">
             <h3 class="menu-cat-title">Menemenler</h3>
             <ul class="menu-list">
@@ -174,7 +242,6 @@
             </ul>
           </div>
 
-          <!-- Sahanda Yumurta / Omlet -->
           <div class="menu-cat" data-cat="yumurta">
             <h3 class="menu-cat-title">Sahanda Yumurtalar / Omletler</h3>
             <ul class="menu-list">
@@ -189,7 +256,6 @@
             </ul>
           </div>
 
-          <!-- Tavalar -->
           <div class="menu-cat" data-cat="tava">
             <h3 class="menu-cat-title">Tavalar</h3>
             <ul class="menu-list">
@@ -205,7 +271,6 @@
             </ul>
           </div>
 
-          <!-- Pişiler -->
           <div class="menu-cat" data-cat="pisi">
             <h3 class="menu-cat-title">Pişiler <small>(4 Adet)</small></h3>
             <ul class="menu-list">
@@ -217,7 +282,6 @@
             </ul>
           </div>
 
-          <!-- Gözlemeler -->
           <div class="menu-cat" data-cat="gozleme">
             <h3 class="menu-cat-title">Gözlemeler</h3>
             <ul class="menu-list">
@@ -231,7 +295,6 @@
             </ul>
           </div>
 
-          <!-- Krep & Pankek -->
           <div class="menu-cat" data-cat="krep">
             <h3 class="menu-cat-title">Krep &amp; Pankek Çeşitleri</h3>
             <ul class="menu-list">
@@ -242,7 +305,6 @@
             <p class="menu-cat-note">Nutella ve meyve ile servis edilir.</p>
           </div>
 
-          <!-- Ekstralar -->
           <div class="menu-cat" data-cat="ekstra">
             <h3 class="menu-cat-title">Ekstralar</h3>
             <ul class="menu-list">
@@ -264,7 +326,6 @@
             </ul>
           </div>
 
-          <!-- İçecekler (solda soğuk, sağda sıcak) -->
           <div class="menu-cat menu-cat--wide" data-cat="icecek">
             <h3 class="menu-cat-title">İçecekler</h3>
             <div class="menu-subcols">
@@ -299,150 +360,115 @@
             </div>
           </div>
         </div>
+
+        <div class="menu-pay" id="odeme" data-reveal>
+          <p class="menu-pay-label">Ödeme</p>
+          <p class="menu-pay-list">
+            Nakit &amp; kredi kartı · Pluxee · Metropol Card · SETCARD · Multinet · Token Flex · Edenred (Ticket)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 05 — ATMOSFER ================= -->
+    <section class="section atmosphere">
+      <div class="container atmo-grid">
+        <div class="atmo-copy">
+          <p class="sec-index" data-reveal>05 — Atmosfer</p>
+          <h2 class="display" data-reveal>Güneşli bir masa, <em>tazelenen çay</em>.</h2>
+          <p class="lede" data-reveal>
+            Kahvaltı Sokağı'nın hareketi dışarıda; içeride tempo yavaş. Bahçede ya da
+            serin salonda oturun, sofrayı kurun, acele etmeyin. Yemek sonrası bir
+            fincan Türk kahvesi ikramımızdır.
+          </p>
+          <a href="#iletisim" class="link-arrow" data-reveal>Adres &amp; çalışma saatleri <span class="arw" aria-hidden="true">→</span></a>
+        </div>
+        <div class="atmo-media">
+          <figure class="atmo-figure atmo-figure--a" data-reveal>
+            <img src="images/atmosphere.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Güneş alan kahvaltı masasında menemen tavası ve taze sıkma portakal suları" data-fallback="images/placeholder.svg" />
+          </figure>
+          <figure class="atmo-figure atmo-figure--b" data-reveal>
+            <img src="images/meze.webp" width="1180" height="1420" loading="lazy" decoding="async" alt="Demli çay, taze sıkma portakal suyu ve meze tabakları: közlenmiş biber, patlıcan ezmesi, zeytin" data-fallback="images/placeholder.svg" />
+          </figure>
+        </div>
       </div>
     </section>
 
     <!-- ================= GALERİ ================= -->
-    <section class="section" id="galeri">
+    <section class="section gallery-sec" id="galeri">
       <div class="container">
-        <header class="section-head">
-          <p class="kicker">Galeri</p>
-          <h2>Sofradan kareler</h2>
-          <p class="section-sub">Serpme sofralar, menemen, sucuklu yumurta, taze peynirler ve daha fazlası.</p>
+        <header class="sec-head">
+          <p class="sec-index" data-reveal>06 — Galeri</p>
+          <h2 class="display" data-reveal>Sofradan kareler.</h2>
         </header>
 
-        <div class="gallery">
-          <figure class="gallery-item gallery-lg">
-            <img src="https://images.unsplash.com/photo-1647772809798-f34d785c981c?auto=format&fm=webp&fit=crop&w=1000&q=70"
-              alt="Bol çeşitli serpme kahvaltı sofrası" width="1000" height="1000" loading="lazy"
-              data-fallback="images/placeholder.svg" />
-            <figcaption>Serpme Kahvaltı</figcaption>
+        <div class="gallery" data-reveal>
+          <figure class="g-item g-tall">
+            <img src="images/breakfast.webp" width="1280" height="1541" loading="lazy" decoding="async" alt="Sıcak sucuk tava ve serpme kahvaltı masası" data-fallback="images/placeholder.svg" />
           </figure>
-          <figure class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fm=webp&fit=crop&w=700&q=70"
-              alt="Meyveli pankekler" width="700" height="700" loading="lazy"
-              data-fallback="images/placeholder.svg" />
-            <figcaption>Pankek &amp; Meyve</figcaption>
+          <figure class="g-item g-wide">
+            <img src="images/hero.webp" width="2400" height="1500" loading="lazy" decoding="async" alt="Güneşli kahvaltı masası: menemen ve sucuk tavaları, taze sıkma portakal suları" data-fallback="images/placeholder.svg" />
           </figure>
-          <figure class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1676272650338-faaea8e5e5fd?auto=format&fm=webp&fit=crop&w=700&q=80"
-              alt="Susamlı taze simit" width="700" height="700" loading="lazy"
-              data-fallback="images/placeholder.svg" />
-            <figcaption>Taze Simit</figcaption>
+          <figure class="g-item">
+            <img src="images/sucuk-tava.webp" width="1100" height="1100" loading="lazy" decoding="async" alt="Bakır tavada kızarmış sucuk dilimleri" data-fallback="images/placeholder.svg" />
           </figure>
-          <figure class="gallery-item gallery-tall">
-            <img src="images/menemen.webp"
-              alt="Limos menemeni: sahanda menemen, taze sıkma portakal suyu ve çay eşliğinde" width="700" height="1100" loading="lazy"
-              data-fallback="images/placeholder.svg" />
-            <figcaption>Menemen</figcaption>
+          <figure class="g-item">
+            <img src="images/sucuklu_yumurta.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Bakır sahanda sucuklu yumurta" data-fallback="images/placeholder.svg" />
           </figure>
-          <figure class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1627935722051-395636b0d8a5?auto=format&fm=webp&fit=crop&w=700&q=70"
-              alt="Tahta üzerinde dilimlenmiş peynir çeşitleri" width="700" height="700" loading="lazy"
-              data-fallback="images/placeholder.svg" />
-            <figcaption>Peynir Çeşitleri</figcaption>
+          <figure class="g-item g-tall2">
+            <img src="images/meze.webp" width="1180" height="1420" loading="lazy" decoding="async" alt="Demli çay, portakal suyu ve kahvaltı mezeleri" data-fallback="images/placeholder.svg" />
           </figure>
-          <figure class="gallery-item">
-            <img src="images/sucuklu_yumurta.webp"
-              alt="Bakır sahanda sucuklu yumurta" width="700" height="700" loading="lazy"
-              data-fallback="images/placeholder.svg" />
-            <figcaption>Sucuklu Yumurta</figcaption>
+          <figure class="g-item g-wide2">
+            <img src="images/menemen.webp" width="1400" height="1750" loading="lazy" decoding="async" alt="Sahanda menemen, çay ve portakal suyu" data-fallback="images/placeholder.svg" />
           </figure>
         </div>
-      </div>
-    </section>
-
-    <!-- ================= ÖDEME SEÇENEKLERİ ================= -->
-    <section class="section section-alt" id="odeme">
-      <div class="container">
-        <header class="section-head">
-          <p class="kicker">Ödeme</p>
-          <h2>Geçerli yemek kartları</h2>
-          <p class="section-sub">Nakit ve kredi kartına ek olarak aşağıdaki yemek kartlarını kabul ediyoruz.</p>
-        </header>
-
-        <ul class="pay-grid">
-          <li class="pay-card"><span class="pay-dot"></span>Pluxee</li>
-          <li class="pay-card"><span class="pay-dot"></span>Metropol Card</li>
-          <li class="pay-card"><span class="pay-dot"></span>SETCARD</li>
-          <li class="pay-card"><span class="pay-dot"></span>Multinet</li>
-          <li class="pay-card"><span class="pay-dot"></span>Token Flex</li>
-          <li class="pay-card"><span class="pay-dot"></span>Edenred (Ticket)</li>
-        </ul>
       </div>
     </section>
 
     <!-- ================= YORUMLAR ================= -->
-    <section class="section" id="yorumlar">
+    <section class="section reviews section-paper-dark" id="yorumlar">
       <div class="container">
-        <header class="section-head">
-          <p class="kicker">Misafirlerimiz</p>
-          <h2>Beşiktaş'ın sevdiği kahvaltı</h2>
-          <p class="section-sub">Google üzerinde <strong>4.6 / 5</strong> ortalama &nbsp;•&nbsp; 2.418+ değerlendirme</p>
+        <header class="sec-head">
+          <p class="sec-index sec-index--light" data-reveal>Misafirlerimiz</p>
+          <h2 class="display display--light" data-reveal>Beşiktaş'ın sevdiği kahvaltı.</h2>
+          <p class="sec-sub sec-sub--light" data-reveal>Google Haritalar'da <strong>4,6 / 5</strong> — 2.418+ değerlendirme</p>
         </header>
-
-        <div class="reviews-marquee" aria-label="Google Haritalar misafir yorumları">
-          <div class="reviews-track" id="reviews-track">
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“We really like this place. We come here every year when we live in Beşiktaş. The perfect cafe to have breakfast with friends, children and families. The service is amazing. The waiter named Sultan is very nice. The food is delicious. We wish all the best to this cafe.”</p><cite>— Елизавета Лобанова</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Kahvaltı çok iyi çeşitler bol ürünler kaliteli tek kötü yan ise patates kızartması çok kötüydü fiyat olarakta 2 kişi 1250 TL”</p><cite>— Şerafettin Aşkın</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Güzel bir kahvaltı deneyimi yaşadım. Çeşit yeterli, ürünlerin kalitesi başarılıydı. Fiyat/performans açısından da tavsiye edebilirim. Tuğçe ve Sultan hanımefendiler oldukça ilgili ve güler yüzlüydüler. Misafirlerle yakından ilgilenmeleri güzel bir izlenim bıraktı.”</p><cite>— Arden Karadayı</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Teşekkür ederiz. Yağmurlu bir cumartesi gününde hiçbir aksaklık olmadan kahvaltımızı miss gibi yaptık. Elinize emeğinize sağlık 💛”</p><cite>— Esin Köse</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Çok tatlı otantik bir yer, kahvaltısı lezzetli, servisi de süper. Her çalışanı güler yüzlü. Garson Efe bey sayesinde de kahvaltımız çok iyi geçti.”</p><cite>— Kaan Yıldırım</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Buradaki yemekleri çok beğendim, her şey gerçekten çok lezzetliydi. Mekânın atmosferi oldukça güzel ve samimi. Çalışan hanımefendilerin yanı sıra beyefendiler de son derece güler yüzlü ve ilgiliydi.”</p><cite>— Elif Şahin</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Bu güler yüzlü insanların elinden yenilir içilir, uğrayın bi kahvaltı yapın, rahatlıkla tavsiye ederim 🙏”</p><cite>— Sinan Bilgin</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Beşiktaş'ta 2-3 yerde kahvaltı yaptım ama gerçekten burası farklı; karşılama açısından da hizmet açısından da gayet güzel bir mekan. Kahvaltı yapmak istiyorsan burayı 1. sıraya yazmalısın 👊👊👊”</p><cite>— Selçuk Arpacı</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Her şey harikaydı, hele ekmeklerinin bir ayrıcalığı vardı. Gezdim ve burada kahvaltı yapmaya karar verdim. Güler yüzlü, kibar Sultan, teşekkürler.”</p><cite>— Seher Sevincer</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Efe bey'e ilgisi için teşekkür ederiz. İki kişilik kahvaltı söyledik, kişi başı 500-700₺ arası bir ücretti ve fiyata her şey dahildi.”</p><cite>— Eda Ar</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Yıllardır geldiğim kahvaltı mekanı, çok memnunum. Çalışanların ilgili ve sıcak yaklaşımları çok iyi. Samet bey'e ilgisinden dolayı ayrıca teşekkür ederim 🙏🏻”</p><cite>— Merve Emine Ertaş</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Beşiktaş'ta kahvaltı yapmak için çok güzel bir mekan. Bahçesinde, yol üstünde ya da klimalı salonlarında oturabilirsiniz. Yemekler güzeldi. Her şey bir yana, tüm çalışanların güler yüzlü olması çok daha güzeldi.”</p><cite>— Cem Mazlum</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Çok keyifli bir kahvaltıydı. Özellikle Ela hanım çok ilgilendi, çok teşekkür ediyorum ♥️☺️”</p><cite>— Sena Umul</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Gayet güzel ve doyurucuydu. Biz 3 kişi için iki kişilik full serpme kahvaltı söyledik ve bitiremedik bile. Tavsiye ederim.”</p><cite>— Sara Amini</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Ortam çok güzel, çalışanların hepsi çok güler yüzlüydü. Tatlı çalan müzik eşliğinde kahvaltımızı büyük bir keyifle yaptık, pişisi harikaydı 😍”</p><cite>— Serpil Arslan Yıldız</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Ailemle kahvaltı için geldik, her şey çok güzeldi. Yemekler lezzetli, servis müthişti. Sultan hanıma güler yüzü ve inceliği için ayrıca teşekkür ederim.”</p><cite>— Nermin Aliyeva</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Çok güzel, çeşit çeşit, bol bol doyasıya kahvaltı yaptık. Mekan temiz, geniş, rahat; çalışanlar ilgili. Özellikle Efe bey bizimle çok güzel ilgilendi, teşekkür ederiz her şey için.”</p><cite>— Gözde Serra Bayram</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Kızlarımla birlikte Limos'u tercih ettik, çok memnun kaldık. Kahvaltısı çeşitli, lezzetli ve gerçekten çok hızlıydı. Çalışanları çok güler yüzlü; bizimle Efe bey ilgilendi, kendisine teşekkür ediyorum.”</p><cite>— Büşra Budak</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Limos'ta kahvaltı deneyimimiz son derece keyifliydi. Mutfağın kalitesi ve lezzeti açıkça hissediliyor. Servis özenli ve düzenliydi, personel ise oldukça nazik ve güler yüzlüydü. Kesinlikle tekrar tercih edilecek bir adres.”</p><cite>— Berru Namlı</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Tüm personel aşırı güler yüzlüydü. Bir pazar sabahı tercih edilebilecek en güzel mekanlardan birisi. Servis hızı etkileyiciydi. Tüm ürünler taze ve lezzetliydi. Güler yüzleri için teşekkürler 🙏”</p><cite>— Selver Armutçu</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Kendi yaptıkları ekmek çok lezzetliydi. İki kişilik serpme kahvaltı için çok doyurucu ve yeterli miktardaydı, tüm çeşitler. Ellerine sağlık, kahve ikramı için teşekkürler.”</p><cite>— Ezginur Okumuş</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Her şey çok güzeldi, çok güzel ilgilenildi. Kahvaltı lezzetli ve doyurucuydu. Yemek sonrası kahve ikram edildi. Sultan hanım'a çok teşekkür ederiz ❤️”</p><cite>— Beyzanur Erdoğan</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Gerçekten harika bir deneyim! 👌 Yemekler lezzetli ve otantikti, ekmek ise olağanüstüydü. Ortam rahatlatıcıydı ve servis mükemmeldi.”</p><cite>— Anfal Almurshed</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Bu kahvaltıya 5 yıldız veriyorum. Kahvaltı güzeldi ve beklentilerimi kesinlikle karşıladı. Genel olarak yemek lezzetli ve taze hazırlanmıştı.”</p><cite>— Serkan Göçmen</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Lezzetli, doyurucu, keyifli ve rahat bir atmosfer. Her şey taze. Sınırsız çay ve yemeğin sonunda bir fincan Türk kahvesi. Personel yardımsever. Şiddetle tavsiye ederim!”</p><cite>— Dasha Kalinina</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Güler yüzlü ve kusursuz hizmet, her şey mükemmeldi, kahvaltı çok boldu, bayıldım!”</p><cite>— Dagoux Khadijahejjaj</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“İstanbul'da seyahat ederken kahvaltı sokaklarını öğrendik ve tesadüfen ilk kez Limos'a gittik. Çok memnun kaldık.”</p><cite>— Дарья Егорова</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Grup halinde kahvaltı için harika bir yer. Fiyat/performans oranı çok iyi. Çok verimli hizmet.”</p><cite>— Aylin Altun</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Kahvaltı Sokağı'ndaki müşteri kapma mücadelesini çok seviyorum. Bu sefer buraya gittik ve hayal kırıklığına uğramadık!”</p><cite>— Burak Demir</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Yemekler tek kelimeyle enfesti. Sultan bizim için çok uğraştı ve bize son derece nazik ve ilgili davrandı. Böylesine harika bir hizmet aldığınızda kendinizi muhteşem hissediyorsunuz. 5/5 ve 10/10.”</p><cite>— Zeynep Kaya</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Dürüst olmak gerekirse, bu şimdiye kadar yediğim en iyi kahvaltı restoranlarından biri. Temiz, şakşuka muhteşem, servis mükemmel ve mekan tertemiz.”</p><cite>— Ali Al Saad</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Kahvaltı için harika bir yer! Şiddetle tavsiye ederim ☺️”</p><cite>— Onur Çelik</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Mükemmel, yüksek kaliteli restoran, kesinlikle tavsiye ederim... kesinlikle birinci sınıf!”</p><cite>— Merve Aydın</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Restoran inanılmaz lezzetli, en iyi kahvaltı mekanlarından biri. Kahvaltı Sokağı'nda bulunuyor.”</p><cite>— Emre Koç</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Muhteşem bir atmosfere sahip harika bir restoran. Kahvaltı çok zengin ve kesinlikle tavsiye edilir. Servis gerçekten mükemmeldi. Çok teşekkürler, tekrar geleceğiz! 👌”</p><cite>— Deniz Yalçın</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Nefis bir Türk kahvaltısı için harika bir gastronomi keşfi. Personel çok cana yakın.”</p><cite>— Marie Travert</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Harika bir konumda lezzetli bir kahvaltı.”</p><cite>— Melina Baier</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Koreliler için mutlaka okunmalı!!! Hayatımda yediğim en iyi Türk usulü kahvaltıydı.”</p><cite>— Kil Chang Lee</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Restoran Beşiktaş'ta, Sinanpaşa'da, kahvaltı caddesinde yer alıyor. Deneyim çok güzeldi ve özellikle Sultan Hanım ile birlikte mekan çok rahatlatıcıydı. Fiyatlar çok uygun ve iki kişilik kahvaltı üç kişiye yetiyor.”</p><cite>— Fuad El-Şerif</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Mekanın atmosferi harika, yemekler lezzetli ve personelin hizmeti ve yaklaşımı çok kaliteli.”</p><cite>— Yasser Attiah</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Lezzetli kahvaltı, harika atmosfer ve güler yüzlü, hızlı servis. Sultan bize ve özel isteklerimize çok iyi baktı 😊”</p><cite>— Senem Born</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Mükemmel hizmet. Çay hemen tazelendi ve yemekler kesinlikle çok lezzetliydi!”</p><cite>— Finster Muehle</cite></blockquote>
-            <blockquote class="review-card"><div class="review-stars" aria-hidden="true">★★★★★</div><p>“Ortam çok güzeldi ve kahvaltı gerçekten lezzetliydi. Personel de çok güler yüzlüydü!”</p><cite>— Gamze Aksoy</cite></blockquote>
-          </div>
-        </div>
-        <p class="reviews-note">Yorumlar Google Haritalar üzerindeki misafir değerlendirmelerinden alınmıştır. Şerit üzerine gelince durur.</p>
       </div>
+
+      <div class="reviews-marquee" aria-label="Google Haritalar misafir yorumları">
+        <div class="reviews-track" id="reviews-track">
+          <blockquote class="review-card"><p>We really like this place. We come here every year when we live in Beşiktaş. The perfect cafe to have breakfast with friends, children and families. The service is amazing. The waiter named Sultan is very nice.</p><cite>Елизавета Лобанова</cite></blockquote>
+          <blockquote class="review-card"><p>Güzel bir kahvaltı deneyimi yaşadım. Çeşit yeterli, ürünlerin kalitesi başarılıydı. Tuğçe ve Sultan hanımefendiler oldukça ilgili ve güler yüzlüydüler.</p><cite>Arden Karadayı</cite></blockquote>
+          <blockquote class="review-card"><p>Yağmurlu bir cumartesi gününde hiçbir aksaklık olmadan kahvaltımızı miss gibi yaptık. Elinize emeğinize sağlık.</p><cite>Esin Köse</cite></blockquote>
+          <blockquote class="review-card"><p>Çok tatlı otantik bir yer, kahvaltısı lezzetli, servisi de süper. Her çalışanı güler yüzlü. Garson Efe bey sayesinde kahvaltımız çok iyi geçti.</p><cite>Kaan Yıldırım</cite></blockquote>
+          <blockquote class="review-card"><p>Buradaki yemekleri çok beğendim, her şey gerçekten çok lezzetliydi. Mekânın atmosferi oldukça güzel ve samimi.</p><cite>Elif Şahin</cite></blockquote>
+          <blockquote class="review-card"><p>Beşiktaş'ta 2-3 yerde kahvaltı yaptım ama gerçekten burası farklı; karşılama açısından da hizmet açısından da gayet güzel bir mekan.</p><cite>Selçuk Arpacı</cite></blockquote>
+          <blockquote class="review-card"><p>Her şey harikaydı, hele ekmeklerinin bir ayrıcalığı vardı. Güler yüzlü, kibar Sultan, teşekkürler.</p><cite>Seher Sevincer</cite></blockquote>
+          <blockquote class="review-card"><p>Yıllardır geldiğim kahvaltı mekanı, çok memnunum. Çalışanların ilgili ve sıcak yaklaşımları çok iyi.</p><cite>Merve Emine Ertaş</cite></blockquote>
+          <blockquote class="review-card"><p>Bahçesinde, yol üstünde ya da klimalı salonlarında oturabilirsiniz. Her şey bir yana, tüm çalışanların güler yüzlü olması çok daha güzeldi.</p><cite>Cem Mazlum</cite></blockquote>
+          <blockquote class="review-card"><p>Ortam çok güzel, çalışanların hepsi çok güler yüzlüydü. Tatlı çalan müzik eşliğinde kahvaltımızı büyük bir keyifle yaptık, pişisi harikaydı.</p><cite>Serpil Arslan Yıldız</cite></blockquote>
+          <blockquote class="review-card"><p>Limos'ta kahvaltı deneyimimiz son derece keyifliydi. Mutfağın kalitesi ve lezzeti açıkça hissediliyor. Kesinlikle tekrar tercih edilecek bir adres.</p><cite>Berru Namlı</cite></blockquote>
+          <blockquote class="review-card"><p>Kendi yaptıkları ekmek çok lezzetliydi. İki kişilik serpme kahvaltı için çok doyurucu ve yeterliydi. Kahve ikramı için teşekkürler.</p><cite>Ezginur Okumuş</cite></blockquote>
+          <blockquote class="review-card"><p>Lezzetli, doyurucu, keyifli ve rahat bir atmosfer. Her şey taze. Sınırsız çay ve yemeğin sonunda bir fincan Türk kahvesi. Şiddetle tavsiye ederim!</p><cite>Dasha Kalinina</cite></blockquote>
+          <blockquote class="review-card"><p>İstanbul'da seyahat ederken kahvaltı sokaklarını öğrendik ve tesadüfen ilk kez Limos'a gittik. Çok memnun kaldık.</p><cite>Дарья Егорова</cite></blockquote>
+          <blockquote class="review-card"><p>Nefis bir Türk kahvaltısı için harika bir gastronomi keşfi. Personel çok cana yakın.</p><cite>Marie Travert</cite></blockquote>
+          <blockquote class="review-card"><p>Honestly one of the best breakfast restaurants I've had. Clean, the şakşuka is amazing, the service is perfect.</p><cite>Ali Al Saad</cite></blockquote>
+        </div>
+      </div>
+      <p class="reviews-note">Yorumlar Google Haritalar üzerindeki misafir değerlendirmelerinden alınmıştır. Şerit üzerine gelince durur.</p>
     </section>
 
     <!-- ================= İLETİŞİM ================= -->
-    <section class="section section-alt" id="iletisim">
+    <section class="section visit" id="iletisim">
       <div class="container">
-        <header class="section-head">
-          <p class="kicker">İletişim</p>
-          <h2>Bize ulaşın</h2>
-          <p class="section-sub">Sinanpaşa, Çelebi Oğlu Sk. No:11, 34353 Beşiktaş/İstanbul</p>
+        <header class="sec-head">
+          <p class="sec-index" data-reveal>07 — Ziyaret</p>
+          <h2 class="display" data-reveal>Limos'ta buluşalım.</h2>
+          <p class="sec-sub" data-reveal>Sinanpaşa, Çelebi Oğlu Sk. No:11, 34353 Beşiktaş / İstanbul</p>
         </header>
 
-        <div class="contact-grid">
-          <div class="contact-info">
+        <div class="visit-grid">
+          <div class="visit-info" data-reveal>
             <ul class="info-list">
               <li>
                 <span class="info-label">Adres</span>
@@ -450,34 +476,31 @@
               </li>
               <li>
                 <span class="info-label">Telefon</span>
-                <span>
-                  <a href="tel:+902122369236">0 (212) 236 92 36</a><br />
-                  <a href="tel:+905494980021">0549 498 00 21</a>
-                </span>
+                <span><a href="tel:+902122369236">0 (212) 236 92 36</a><br /><a href="tel:+905494980021">0549 498 00 21</a></span>
               </li>
               <li>
                 <span class="info-label">Çalışma Saatleri</span>
-                <span>Her gün servis &nbsp;•&nbsp; <strong>18:00'de kapanır</strong></span>
+                <span>Her gün servis · <strong>18:00'de kapanır</strong></span>
               </li>
               <li>
                 <span class="info-label">Hizmet</span>
-                <span>İçeride servis var &nbsp;•&nbsp; Adrese servis yok</span>
+                <span>İçeride servis var · Adrese servis yok</span>
               </li>
               <li>
                 <span class="info-label">Instagram</span>
                 <span><a href="https://instagram.com/limosbesiktas" target="_blank" rel="noopener noreferrer">@limosbesiktas</a></span>
               </li>
             </ul>
-            <div class="contact-actions">
-              <a href="tel:+905494980021" class="btn btn-primary">Bizi Arayın</a>
-              <a href="https://www.google.com/maps/search/?api=1&query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Yol Tarifi Al</a>
+            <div class="visit-actions">
+              <a href="tel:+905494980021" class="btn btn-solid">Bizi Arayın <span class="arw" aria-hidden="true">→</span></a>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="btn btn-line">Yol Tarifi Al</a>
             </div>
           </div>
 
-          <div class="contact-map">
+          <div class="visit-map" data-reveal>
             <iframe
-              title="Limos Kahvaltı konumu - Google Haritalar"
-              src="https://www.google.com/maps?q=Limos%20Kahvalt%C4%B1%20%C3%87elebi%20O%C4%9Flu%20Sk.%20No%3A11%20Be%C5%9Fikta%C5%9F%20%C4%B0stanbul&output=embed"
+              title="Limos Kahvaltı konumu — Google Haritalar"
+              src="https://www.google.com/maps?q=Limos%20Kahvalt%C4%B1%20%C3%87elebi%20O%C4%9Flu%20Sk.%20No%3A11%20Be%C5%9Fikta%C5%9F%20%C4%B0stanbul&amp;output=embed"
               loading="lazy"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen></iframe>
@@ -489,58 +512,61 @@
 
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="brand-badge">
-          <img src="logo.webp" alt="Limos Kahvaltı logosu" width="120" height="120" />
-        </span>
-        <p>Beşiktaş'ta bereketli sofraların adresi. Taze, bol çeşitli ve gönlünce kahvaltı.</p>
+    <div class="container">
+      <p class="footer-cta" data-reveal>Masada görüşürüz.</p>
+
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-word">Limos</span>
+          <p>Beşiktaş Sinanpaşa'da, kahvaltı sokağında. Serpme ve à la carte kahvaltı, taze pişiler ve demli çay.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="Alt menü">
+          <h4>Keşfet</h4>
+          <a href="#kahvalti">Kahvaltı</a>
+          <a href="#menu">Menü</a>
+          <a href="#galeri">Galeri</a>
+          <a href="#yorumlar">Yorumlar</a>
+          <a href="#iletisim">İletişim</a>
+        </nav>
+
+        <div class="footer-col">
+          <h4>İletişim</h4>
+          <p>Sinanpaşa, Çelebi Oğlu Sk. No:11<br />34353 Beşiktaş / İstanbul</p>
+          <p><a href="tel:+902122369236">0 (212) 236 92 36</a></p>
+          <p><a href="tel:+905494980021">0549 498 00 21</a></p>
+          <p><a href="https://instagram.com/limosbesiktas" target="_blank" rel="noopener noreferrer">Instagram — @limosbesiktas</a></p>
+          <p>Her gün · 18:00'de kapanır</p>
+        </div>
       </div>
 
-      <nav class="footer-col" aria-label="Alt menü">
-        <h4>Keşfet</h4>
-        <a href="#menu">Menü</a>
-        <a href="#galeri">Galeri</a>
-        <a href="#odeme">Ödeme Seçenekleri</a>
-        <a href="#yorumlar">Yorumlar</a>
-        <a href="#iletisim">İletişim</a>
-      </nav>
-
-      <div class="footer-col">
-        <h4>İletişim</h4>
-        <p>Sinanpaşa, Çelebi Oğlu Sk. No:11<br />34353 Beşiktaş / İstanbul</p>
-        <p><a href="tel:+902122369236">0 (212) 236 92 36</a></p>
-        <p><a href="tel:+905494980021">0549 498 00 21</a></p>
-        <p><a href="https://instagram.com/limosbesiktas" target="_blank" rel="noopener noreferrer">Instagram: @limosbesiktas</a></p>
-        <p>Her gün 18:00'de kapanır</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
+      <div class="footer-bottom">
         <p>&copy; <span id="year"></span> Limos Kahvaltı. Tüm hakları saklıdır.</p>
-        <p><a href="https://www.google.com/maps/search/?api=1&query=Limos+Kahvalt%C4%B1+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer">Google Haritalar'da aç</a></p>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer">Google Haritalar'da aç</a></p>
       </div>
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" id="back-to-top" aria-label="Yukarı çık">↑</a>
+  <a href="#top" class="back-to-top" id="back-to-top" aria-label="Yukarı çık">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
 
   <!-- Mobil sabit alt bar -->
   <nav class="mobile-bar" aria-label="Hızlı erişim">
     <a href="tel:+905494980021" class="mobile-bar-btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       <span>Ara</span>
     </a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       <span>Konum</span>
     </a>
     <a href="https://instagram.com/limosbesiktas" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       <span>Instagram</span>
     </a>
   </nav>
 
-  <script src="js/script.js?v=3" defer></script>
+  <script src="js/script.js?v=4" defer></script>
 </body>
 </html>
