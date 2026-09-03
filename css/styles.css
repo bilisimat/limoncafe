@@ -409,6 +409,7 @@ ul { list-style: none; }
 /* ---------- 01 Intro ---------- */
 .intro {
   --gingham: clamp(20px, 3.4vw, 30px);
+  padding-block: clamp(32px, 4.5vw, 64px);
   background-color: var(--paper);
   background-image:
     repeating-linear-gradient(90deg, rgba(246, 192, 20, .17) 0 var(--gingham), transparent var(--gingham) calc(var(--gingham) * 2)),
@@ -752,21 +753,6 @@ ul { list-style: none; }
   .menu-cat--drinks { grid-column: span 2; }
 }
 
-/* ---------- 05 Atmosphere ---------- */
-.atmo-grid { display: grid; gap: 44px; }
-.atmo-copy .lede { margin-top: 28px; }
-.atmo-copy .link-arrow { margin-top: 32px; }
-.atmo-media { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
-.atmo-figure { overflow: hidden; background: var(--paper-2); }
-.atmo-figure img { width: 100%; height: 100%; object-fit: cover; }
-.atmo-figure--a img { aspect-ratio: 3/4; }
-.atmo-figure--b { margin-top: 44px; }
-.atmo-figure--b img { aspect-ratio: 3/4; }
-
-@media (min-width: 940px) {
-  .atmo-grid { grid-template-columns: 0.9fr 1.1fr; gap: 72px; align-items: center; }
-}
-
 /* ---------- Gallery ---------- */
 .gallery {
   display: grid;
@@ -911,13 +897,12 @@ ul { list-style: none; }
   gap: 44px;
   padding-top: clamp(48px, 7vw, 80px);
 }
-.footer-word {
-  font-family: var(--serif);
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--paper);
+.footer-logo {
+  width: clamp(112px, 16vw, 168px);
+  height: auto;
   display: block;
-  margin-bottom: 16px;
+  border-radius: 10px;
+  margin-bottom: 22px;
 }
 .footer-brand p { font-size: .9rem; max-width: 34ch; line-height: 1.75; }
 .footer-col h4 {
