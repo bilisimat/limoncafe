@@ -1,13 +1,27 @@
 {
+  "serpme": {
+    "Limos Serpme Kahvaltı": {
+      "t": "images/menu/serpme/limos-serpme-kahvalti-t.webp",
+      "b": "images/menu/serpme/limos-serpme-kahvalti-b.webp"
+    },
+    "Full Serpme Kahvaltı": {
+      "t": "images/menu/serpme/full-serpme-kahvalti-t.webp",
+      "b": "images/menu/serpme/full-serpme-kahvalti-b.webp"
+    },
+    "Special Serpme Kahvaltı": {
+      "t": "images/menu/serpme/special-serpme-kahvalti-t.webp",
+      "b": "images/menu/serpme/special-serpme-kahvalti-b.webp"
+    },
+    "Kahvaltı Tabağı": {
+      "t": "images/menu/serpme/kahvalti-tabagi-t.webp",
+      "b": "images/menu/serpme/kahvalti-tabagi-b.webp"
+    },
+    "Pişi Tabağı": {
+      "t": "images/menu/serpme/pisi-tabagi-t.webp",
+      "b": "images/menu/serpme/pisi-tabagi-b.webp"
+    }
+  },
   "menemenler": {
-    "Klasik Menemen": {
-      "t": "images/menu/menemenler/klasik-menemen-t.webp",
-      "b": "images/menu/menemenler/klasik-menemen-b.webp"
-    },
-    "Kaşarlı Menemen": {
-      "t": "images/menu/menemenler/kasarli-menemen-t.webp",
-      "b": "images/menu/menemenler/kasarli-menemen-b.webp"
-    },
     "Beyaz Peynirli Menemen": {
       "t": "images/menu/menemenler/beyaz-peynirli-menemen-t.webp",
       "b": "images/menu/menemenler/beyaz-peynirli-menemen-b.webp"
@@ -16,9 +30,17 @@
       "t": "images/menu/menemenler/karisik-menemen-t.webp",
       "b": "images/menu/menemenler/karisik-menemen-b.webp"
     },
+    "Kaşarlı Menemen": {
+      "t": "images/menu/menemenler/kasarli-menemen-t.webp",
+      "b": "images/menu/menemenler/kasarli-menemen-b.webp"
+    },
     "Kavurmalı Menemen": {
       "t": "images/menu/menemenler/kavurmali-menemen-t.webp",
       "b": "images/menu/menemenler/kavurmali-menemen-b.webp"
+    },
+    "Klasik Menemen": {
+      "t": "images/menu/menemenler/klasik-menemen-t.webp",
+      "b": "images/menu/menemenler/klasik-menemen-b.webp"
     },
     "Sucuklu Menemen": {
       "t": "images/menu/menemenler/sucuklu-menemen-t.webp",
@@ -26,47 +48,77 @@
     }
   },
   "yumurta": {
-    "Sade Yumurta": {
-      "t": "images/menu/yumurta/sade-yumurta-t.webp",
-      "b": "images/menu/yumurta/sade-yumurta-b.webp"
+    "Beyaz Peynirli Yumurta": {
+      "t": "images/menu/yumurta/beyaz-peynirli-yumurta-t.webp",
+      "b": "images/menu/yumurta/beyaz-peynirli-yumurta-b.webp"
     },
     "Kaşarlı Yumurta": {
       "t": "images/menu/yumurta/kasarli-yumurta-t.webp",
       "b": "images/menu/yumurta/kasarli-yumurta-b.webp"
     },
-    "Beyaz Peynirli Yumurta": {
-      "t": "images/menu/yumurta/beyaz-peynirli-yumurta-t.webp",
-      "b": "images/menu/yumurta/beyaz-peynirli-yumurta-b.webp"
-    },
-    "Karışık Yumurta": {
-      "t": "images/menu/yumurta/karisik-yumurta-t.webp",
-      "b": "images/menu/yumurta/karisik-yumurta-b.webp"
-    },
     "Kavurmalı Yumurta": {
       "t": "images/menu/yumurta/kavurmali-yumurta-t.webp",
       "b": "images/menu/yumurta/kavurmali-yumurta-b.webp"
-    },
-    "Sucuklu Yumurta": {
-      "t": "images/menu/yumurta/sucuklu-yumurta-t.webp",
-      "b": "images/menu/yumurta/sucuklu-yumurta-b.webp"
     },
     "Patatesli Yumurta": {
       "t": "images/menu/yumurta/patatesli-yumurta-t.webp",
       "b": "images/menu/yumurta/patatesli-yumurta-b.webp"
     },
-    "Mantar Kaşar Yumurta": {
-      "t": "images/menu/yumurta/mantar-kasar-yumurta-t.webp",
-      "b": "images/menu/yumurta/mantar-kasar-yumurta-b.webp"
+    "Sade Yumurta": {
+      "t": "images/menu/yumurta/sade-yumurta-t.webp",
+      "b": "images/menu/yumurta/sade-yumurta-b.webp"
+    },
+    "Sosisli Yumurta": {
+      "t": "images/menu/yumurta/sosisli-yumurta-t.webp",
+      "b": "images/menu/yumurta/sosisli-yumurta-b.webp"
+    },
+    "Sucuklu Yumurta": {
+      "t": "images/menu/yumurta/sucuklu-yumurta-t.webp",
+      "b": "images/menu/yumurta/sucuklu-yumurta-b.webp"
+    }
+  },
+  "omletler": {
+    "Beyaz Peynirli Omlet": {
+      "t": "images/menu/omletler/beyaz-peynirli-omlet-t.webp",
+      "b": "images/menu/omletler/beyaz-peynirli-omlet-b.webp"
+    },
+    "Karışık Omlet": {
+      "t": "images/menu/omletler/karisik-omlet-t.webp",
+      "b": "images/menu/omletler/karisik-omlet-b.webp"
+    },
+    "Kaşarlı Omlet": {
+      "t": "images/menu/omletler/kasarli-omlet-t.webp",
+      "b": "images/menu/omletler/kasarli-omlet-b.webp"
+    },
+    "Kavurmalı Omlet": {
+      "t": "images/menu/omletler/kavurmali-omlet-t.webp",
+      "b": "images/menu/omletler/kavurmali-omlet-b.webp"
+    },
+    "Kıymalı Omlet": {
+      "t": "images/menu/omletler/kiymali-omlet-t.webp",
+      "b": "images/menu/omletler/kiymali-omlet-b.webp"
+    },
+    "Patatesli Omlet": {
+      "t": "images/menu/omletler/patatesli-omlet-t.webp",
+      "b": "images/menu/omletler/patatesli-omlet-b.webp"
+    },
+    "Sade Omlet": {
+      "t": "images/menu/omletler/sade-omlet-t.webp",
+      "b": "images/menu/omletler/sade-omlet-b.webp"
+    },
+    "Sosisli Omlet": {
+      "t": "images/menu/omletler/sosisli-omlet-t.webp",
+      "b": "images/menu/omletler/sosisli-omlet-b.webp"
+    },
+    "Sucuklu Omlet": {
+      "t": "images/menu/omletler/sucuklu-omlet-t.webp",
+      "b": "images/menu/omletler/sucuklu-omlet-b.webp"
     }
   },
   "tavalar": {
-    "Mıhlama": {
-      "t": "images/menu/tavalar/mihlama-t.webp",
-      "b": "images/menu/tavalar/mihlama-b.webp"
-    },
-    "Sucuk Tava": {
-      "t": "images/menu/tavalar/sucuk-tava-t.webp",
-      "b": "images/menu/tavalar/sucuk-tava-b.webp"
+    "Anne Dilim Patates Tava": {
+      "t": "images/menu/tavalar/anne-dilim-patates-tava-t.webp",
+      "b": "images/menu/tavalar/anne-dilim-patates-tava-b.webp"
     },
     "Hellim Tava": {
       "t": "images/menu/tavalar/hellim-tava-t.webp",
@@ -76,69 +128,89 @@
       "t": "images/menu/tavalar/kavurma-tava-t.webp",
       "b": "images/menu/tavalar/kavurma-tava-b.webp"
     },
-    "Yumurtalı Ekmek (6)": {
-      "t": "images/menu/tavalar/yumurtali-ekmek-6-t.webp",
-      "b": "images/menu/tavalar/yumurtali-ekmek-6-b.webp"
-    },
-    "Sosis Tava": {
-      "t": "images/menu/tavalar/sosis-tava-t.webp",
-      "b": "images/menu/tavalar/sosis-tava-b.webp"
+    "Mıhlama (Kuymak)": {
+      "t": "images/menu/tavalar/mihlama-kuymak-t.webp",
+      "b": "images/menu/tavalar/mihlama-kuymak-b.webp"
     },
     "Salçalı Sosis": {
       "t": "images/menu/tavalar/salcali-sosis-t.webp",
       "b": "images/menu/tavalar/salcali-sosis-b.webp"
     },
-    "Patates Tava": {
-      "t": "images/menu/tavalar/patates-tava-t.webp",
-      "b": "images/menu/tavalar/patates-tava-b.webp"
+    "Sıcak Tabağı": {
+      "t": "images/menu/tavalar/sicak-tabagi-t.webp",
+      "b": "images/menu/tavalar/sicak-tabagi-b.webp"
     },
-    "Sigara Böreği (6)": {
-      "t": "images/menu/tavalar/sigara-boregi-6-t.webp",
-      "b": "images/menu/tavalar/sigara-boregi-6-b.webp"
+    "Sigara Böreği": {
+      "t": "images/menu/tavalar/sigara-boregi-t.webp",
+      "b": "images/menu/tavalar/sigara-boregi-b.webp"
+    },
+    "Sosis Tava": {
+      "t": "images/menu/tavalar/sosis-tava-t.webp",
+      "b": "images/menu/tavalar/sosis-tava-b.webp"
+    },
+    "Sucuk Tava": {
+      "t": "images/menu/tavalar/sucuk-tava-t.webp",
+      "b": "images/menu/tavalar/sucuk-tava-b.webp"
+    },
+    "Yumurtalı Ekmek": {
+      "t": "images/menu/tavalar/yumurtali-ekmek-t.webp",
+      "b": "images/menu/tavalar/yumurtali-ekmek-b.webp"
     }
   },
   "pisiler": {
-    "Sade Pişi": {
-      "t": "images/menu/pisiler/sade-pisi-t.webp",
-      "b": "images/menu/pisiler/sade-pisi-b.webp"
+    "Beyaz Peynirli Pişi": {
+      "t": "images/menu/pisiler/beyaz-peynirli-pisi-t.webp",
+      "b": "images/menu/pisiler/beyaz-peynirli-pisi-b.webp"
     },
     "Kaşarlı Pişi": {
       "t": "images/menu/pisiler/kasarli-pisi-t.webp",
       "b": "images/menu/pisiler/kasarli-pisi-b.webp"
     },
-    "Beyaz Peynirli Pişi": {
-      "t": "images/menu/pisiler/beyaz-peynirli-pisi-t.webp",
-      "b": "images/menu/pisiler/beyaz-peynirli-pisi-b.webp"
+    "Kavurma Kaşarlı Pişi": {
+      "t": "images/menu/pisiler/kavurma-kasarli-pisi-t.webp",
+      "b": "images/menu/pisiler/kavurma-kasarli-pisi-b.webp"
     },
-    "Nutellalı Pişi": {
-      "t": "images/menu/pisiler/nutellali-pisi-t.webp",
-      "b": "images/menu/pisiler/nutellali-pisi-b.webp"
+    "Nutella'lı Pişi": {
+      "t": "images/menu/pisiler/nutella-li-pisi-t.webp",
+      "b": "images/menu/pisiler/nutella-li-pisi-b.webp"
     },
-    "Kavurma Kaşar Pişi": {
-      "t": "images/menu/pisiler/kavurma-kasar-pisi-t.webp",
-      "b": "images/menu/pisiler/kavurma-kasar-pisi-b.webp"
+    "Sade Pişi": {
+      "t": "images/menu/pisiler/sade-pisi-t.webp",
+      "b": "images/menu/pisiler/sade-pisi-b.webp"
+    },
+    "Sucuklu Pişi": {
+      "t": "images/menu/pisiler/sucuklu-pisi-t.webp",
+      "b": "images/menu/pisiler/sucuklu-pisi-b.webp"
     }
   },
   "gozlemeler": {
+    "Beyaz Peynirli Gözleme": {
+      "t": "images/menu/gozlemeler/beyaz-peynirli-gozleme-t.webp",
+      "b": "images/menu/gozlemeler/beyaz-peynirli-gozleme-b.webp"
+    },
+    "Ispanaklı Gözleme": {
+      "t": "images/menu/gozlemeler/ispanakli-gozleme-t.webp",
+      "b": "images/menu/gozlemeler/ispanakli-gozleme-b.webp"
+    },
     "Kaşarlı Gözleme": {
       "t": "images/menu/gozlemeler/kasarli-gozleme-t.webp",
       "b": "images/menu/gozlemeler/kasarli-gozleme-b.webp"
     },
-    "Beyaz Peynirli Gözleme": {
-      "t": "images/menu/gozlemeler/beyaz-peynirli-gozleme-t.webp",
-      "b": "images/menu/gozlemeler/beyaz-peynirli-gozleme-b.webp"
+    "Kavurmalı Kaşarlı Gözleme": {
+      "t": "images/menu/gozlemeler/kavurmali-kasarli-gozleme-t.webp",
+      "b": "images/menu/gozlemeler/kavurmali-kasarli-gozleme-b.webp"
+    },
+    "Kıymalı Gözleme": {
+      "t": "images/menu/gozlemeler/kiymali-gozleme-t.webp",
+      "b": "images/menu/gozlemeler/kiymali-gozleme-b.webp"
     },
     "Patatesli Gözleme": {
       "t": "images/menu/gozlemeler/patatesli-gozleme-t.webp",
       "b": "images/menu/gozlemeler/patatesli-gozleme-b.webp"
     },
-    "Patates Kaşarlı Gözleme": {
-      "t": "images/menu/gozlemeler/patates-kasarli-gozleme-t.webp",
-      "b": "images/menu/gozlemeler/patates-kasarli-gozleme-b.webp"
-    },
-    "Kavurma Kaşarlı Gözleme": {
-      "t": "images/menu/gozlemeler/kavurma-kasarli-gozleme-t.webp",
-      "b": "images/menu/gozlemeler/kavurma-kasarli-gozleme-b.webp"
+    "Patatesli Kaşarlı Gözleme": {
+      "t": "images/menu/gozlemeler/patatesli-kasarli-gozleme-t.webp",
+      "b": "images/menu/gozlemeler/patatesli-kasarli-gozleme-b.webp"
     },
     "Sucuklu Gözleme": {
       "t": "images/menu/gozlemeler/sucuklu-gozleme-t.webp",
@@ -150,63 +222,51 @@
     }
   },
   "krep": {
+    "Nutella'lı Krep": {
+      "t": "images/menu/krep/nutella-li-krep-t.webp",
+      "b": "images/menu/krep/nutella-li-krep-b.webp"
+    },
+    "Pankek": {
+      "t": "images/menu/krep/pankek-t.webp",
+      "b": "images/menu/krep/pankek-b.webp"
+    },
     "Sade Krep": {
       "t": "images/menu/krep/sade-krep-t.webp",
       "b": "images/menu/krep/sade-krep-b.webp"
-    },
-    "Nutellalı Krep": {
-      "t": "images/menu/krep/nutellali-krep-t.webp",
-      "b": "images/menu/krep/nutellali-krep-b.webp"
-    },
-    "Pankek (4 Adet)": {
-      "t": "images/menu/krep/pankek-4-adet-t.webp",
-      "b": "images/menu/krep/pankek-4-adet-b.webp"
     }
   },
   "ekstralar": {
-    "Beyaz Peynir (1 Dilim)": {
-      "t": "images/menu/ekstralar/beyaz-peynir-1-dilim-t.webp",
-      "b": "images/menu/ekstralar/beyaz-peynir-1-dilim-b.webp"
-    },
-    "Kaşar Peyniri (1 Dilim)": {
-      "t": "images/menu/ekstralar/kasar-peyniri-1-dilim-t.webp",
-      "b": "images/menu/ekstralar/kasar-peyniri-1-dilim-b.webp"
-    },
-    "Çeçil Peyniri": {
-      "t": "images/menu/ekstralar/cecil-peyniri-t.webp",
-      "b": "images/menu/ekstralar/cecil-peyniri-b.webp"
-    },
-    "Karışık Peynir Tabağı": {
-      "t": "images/menu/ekstralar/karisik-peynir-tabagi-t.webp",
-      "b": "images/menu/ekstralar/karisik-peynir-tabagi-b.webp"
-    },
-    "Tereyağı": {
-      "t": "images/menu/ekstralar/tereyagi-t.webp",
-      "b": "images/menu/ekstralar/tereyagi-b.webp"
-    },
-    "Zeytin Tabağı": {
-      "t": "images/menu/ekstralar/zeytin-tabagi-t.webp",
-      "b": "images/menu/ekstralar/zeytin-tabagi-b.webp"
-    },
-    "Tahin Pekmez": {
-      "t": "images/menu/ekstralar/tahin-pekmez-t.webp",
-      "b": "images/menu/ekstralar/tahin-pekmez-b.webp"
-    },
-    "Söğüş": {
-      "t": "images/menu/ekstralar/sogus-t.webp",
-      "b": "images/menu/ekstralar/sogus-b.webp"
-    },
     "Acuka": {
       "t": "images/menu/ekstralar/acuka-t.webp",
       "b": "images/menu/ekstralar/acuka-b.webp"
+    },
+    "Bal & Kaymak": {
+      "t": "images/menu/ekstralar/bal-ve-kaymak-t.webp",
+      "b": "images/menu/ekstralar/bal-ve-kaymak-b.webp"
+    },
+    "Beyaz Peynir": {
+      "t": "images/menu/ekstralar/beyaz-peynir-t.webp",
+      "b": "images/menu/ekstralar/beyaz-peynir-b.webp"
+    },
+    "Biber Kızartması": {
+      "t": "images/menu/ekstralar/biber-kizartmasi-t.webp",
+      "b": "images/menu/ekstralar/biber-kizartmasi-b.webp"
+    },
+    "Çeçil Peynir": {
+      "t": "images/menu/ekstralar/cecil-peynir-t.webp",
+      "b": "images/menu/ekstralar/cecil-peynir-b.webp"
     },
     "Haşlanmış Yumurta": {
       "t": "images/menu/ekstralar/haslanmis-yumurta-t.webp",
       "b": "images/menu/ekstralar/haslanmis-yumurta-b.webp"
     },
-    "Bal Kaymak": {
-      "t": "images/menu/ekstralar/bal-kaymak-t.webp",
-      "b": "images/menu/ekstralar/bal-kaymak-b.webp"
+    "Karışık Peynir Tabağı": {
+      "t": "images/menu/ekstralar/karisik-peynir-tabagi-t.webp",
+      "b": "images/menu/ekstralar/karisik-peynir-tabagi-b.webp"
+    },
+    "Kaşar Peyniri": {
+      "t": "images/menu/ekstralar/kasar-peyniri-t.webp",
+      "b": "images/menu/ekstralar/kasar-peyniri-b.webp"
     },
     "Nutella": {
       "t": "images/menu/ekstralar/nutella-t.webp",
@@ -220,83 +280,119 @@
       "t": "images/menu/ekstralar/simit-t.webp",
       "b": "images/menu/ekstralar/simit-b.webp"
     },
+    "Söğüş": {
+      "t": "images/menu/ekstralar/sogus-t.webp",
+      "b": "images/menu/ekstralar/sogus-b.webp"
+    },
+    "Tahin Pekmez": {
+      "t": "images/menu/ekstralar/tahin-pekmez-t.webp",
+      "b": "images/menu/ekstralar/tahin-pekmez-b.webp"
+    },
+    "Tereyağı": {
+      "t": "images/menu/ekstralar/tereyagi-t.webp",
+      "b": "images/menu/ekstralar/tereyagi-b.webp"
+    },
     "Yeşillik": {
       "t": "images/menu/ekstralar/yesillik-t.webp",
       "b": "images/menu/ekstralar/yesillik-b.webp"
+    },
+    "Yoğurt": {
+      "t": "images/menu/ekstralar/yogurt-t.webp",
+      "b": "images/menu/ekstralar/yogurt-b.webp"
+    },
+    "Zeytin Tabağı": {
+      "t": "images/menu/ekstralar/zeytin-tabagi-t.webp",
+      "b": "images/menu/ekstralar/zeytin-tabagi-b.webp"
     }
   },
   "icecekler": {
-    "Su": {
-      "t": "images/menu/icecekler/su-t.webp",
-      "b": "images/menu/icecekler/su-b.webp"
-    },
-    "Sade Soda": {
-      "t": "images/menu/icecekler/sade-soda-t.webp",
-      "b": "images/menu/icecekler/sade-soda-b.webp"
-    },
-    "Meyveli Soda": {
-      "t": "images/menu/icecekler/meyveli-soda-t.webp",
-      "b": "images/menu/icecekler/meyveli-soda-b.webp"
-    },
-    "Kola": {
-      "t": "images/menu/icecekler/kola-t.webp",
-      "b": "images/menu/icecekler/kola-b.webp"
-    },
-    "Meyve Suyu": {
-      "t": "images/menu/icecekler/meyve-suyu-t.webp",
-      "b": "images/menu/icecekler/meyve-suyu-b.webp"
-    },
-    "Ice Tea": {
-      "t": "images/menu/icecekler/ice-tea-t.webp",
-      "b": "images/menu/icecekler/ice-tea-b.webp"
-    },
-    "Taze Sıkma Portakal Suyu": {
-      "t": "images/menu/icecekler/taze-sikma-portakal-suyu-t.webp",
-      "b": "images/menu/icecekler/taze-sikma-portakal-suyu-b.webp"
+    "Americano": {
+      "t": "images/menu/icecekler/americano-t.webp",
+      "b": "images/menu/icecekler/americano-b.webp"
     },
     "Ayran": {
       "t": "images/menu/icecekler/ayran-t.webp",
       "b": "images/menu/icecekler/ayran-b.webp"
     },
-    "Naneli Limonata": {
-      "t": "images/menu/icecekler/naneli-limonata-t.webp",
-      "b": "images/menu/icecekler/naneli-limonata-b.webp"
+    "Cappuccino": {
+      "t": "images/menu/icecekler/cappuccino-t.webp",
+      "b": "images/menu/icecekler/cappuccino-b.webp"
+    },
+    "Coca-Cola": {
+      "t": "images/menu/icecekler/coca-cola-t.webp",
+      "b": "images/menu/icecekler/coca-cola-b.webp"
+    },
+    "Coca-Cola Zero": {
+      "t": "images/menu/icecekler/coca-cola-zero-t.webp",
+      "b": "images/menu/icecekler/coca-cola-zero-b.webp"
     },
     "Çay": {
       "t": "images/menu/icecekler/cay-t.webp",
       "b": "images/menu/icecekler/cay-b.webp"
     },
-    "Türk Kahvesi": {
-      "t": "images/menu/icecekler/turk-kahvesi-t.webp",
-      "b": "images/menu/icecekler/turk-kahvesi-b.webp"
-    },
-    "Demleme Bitki Çayı": {
-      "t": "images/menu/icecekler/demleme-bitki-cayi-t.webp",
-      "b": "images/menu/icecekler/demleme-bitki-cayi-b.webp"
-    },
     "Espresso": {
       "t": "images/menu/icecekler/espresso-t.webp",
       "b": "images/menu/icecekler/espresso-b.webp"
     },
-    "Americano": {
-      "t": "images/menu/icecekler/americano-t.webp",
-      "b": "images/menu/icecekler/americano-b.webp"
+    "Filtre Kahve": {
+      "t": "images/menu/icecekler/filtre-kahve-t.webp",
+      "b": "images/menu/icecekler/filtre-kahve-b.webp"
+    },
+    "Ice Tea Limon": {
+      "t": "images/menu/icecekler/ice-tea-limon-t.webp",
+      "b": "images/menu/icecekler/ice-tea-limon-b.webp"
+    },
+    "Ice Tea Şeftali": {
+      "t": "images/menu/icecekler/ice-tea-seftali-t.webp",
+      "b": "images/menu/icecekler/ice-tea-seftali-b.webp"
+    },
+    "Karışık Meyve Suyu": {
+      "t": "images/menu/icecekler/karisik-meyve-suyu-t.webp",
+      "b": "images/menu/icecekler/karisik-meyve-suyu-b.webp"
     },
     "Latte": {
       "t": "images/menu/icecekler/latte-t.webp",
       "b": "images/menu/icecekler/latte-b.webp"
     },
-    "Cappuccino": {
-      "t": "images/menu/icecekler/cappuccino-t.webp",
-      "b": "images/menu/icecekler/cappuccino-b.webp"
+    "Meyveli Soda": {
+      "t": "images/menu/icecekler/meyveli-soda-t.webp",
+      "b": "images/menu/icecekler/meyveli-soda-b.webp"
     },
     "Mocha": {
       "t": "images/menu/icecekler/mocha-t.webp",
       "b": "images/menu/icecekler/mocha-b.webp"
     },
-    "Filtre Kahve": {
-      "t": "images/menu/icecekler/filtre-kahve-t.webp",
-      "b": "images/menu/icecekler/filtre-kahve-b.webp"
+    "Naneli Limonata": {
+      "t": "images/menu/icecekler/naneli-limonata-t.webp",
+      "b": "images/menu/icecekler/naneli-limonata-b.webp"
+    },
+    "Sade Soda": {
+      "t": "images/menu/icecekler/sade-soda-t.webp",
+      "b": "images/menu/icecekler/sade-soda-b.webp"
+    },
+    "Su": {
+      "t": "images/menu/icecekler/su-t.webp",
+      "b": "images/menu/icecekler/su-b.webp"
+    },
+    "Süt": {
+      "t": "images/menu/icecekler/sut-t.webp",
+      "b": "images/menu/icecekler/sut-b.webp"
+    },
+    "Şeftali Suyu": {
+      "t": "images/menu/icecekler/seftali-suyu-t.webp",
+      "b": "images/menu/icecekler/seftali-suyu-b.webp"
+    },
+    "Taze Sıkma Portakal Suyu": {
+      "t": "images/menu/icecekler/taze-sikma-portakal-suyu-t.webp",
+      "b": "images/menu/icecekler/taze-sikma-portakal-suyu-b.webp"
+    },
+    "Türk Kahvesi": {
+      "t": "images/menu/icecekler/turk-kahvesi-t.webp",
+      "b": "images/menu/icecekler/turk-kahvesi-b.webp"
+    },
+    "Vişne Suyu": {
+      "t": "images/menu/icecekler/visne-suyu-t.webp",
+      "b": "images/menu/icecekler/visne-suyu-b.webp"
     }
   }
 }

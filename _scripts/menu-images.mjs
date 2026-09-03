@@ -1,6 +1,10 @@
 /* "menü görselleri/" içindeki ham fotoğrafları web'e uygun webp'lere indirger.
-   Çıktı: images/menu/<catSlug>/<itemSlug>-t.webp (thumb) + -b.webp (pop-up).
-   Ayrıca _scripts/menu-images.json (ürün adı -> yol) yazar; gen-menu-pages.mjs bunu okur.
+   Kategori ve ürün listesi KLASÖRE göredir (klasör = doğruluk kaynağı).
+   Çıktı:
+     images/menu/<catSlug>/<itemSlug>-t.webp  (thumb 220px)
+     images/menu/<catSlug>/<itemSlug>-b.webp  (pop-up 1100px)
+     _scripts/menu-images.json  -> { catSlug: { "Ürün Adı": { t, b } } }
+     _scripts/menu-items.json   -> { catSlug: ["Ürün Adı", ...] }  (klasör sırası)
    Çalıştır:  node _scripts/menu-images.mjs   (sharp gerekli: npm i --no-save sharp) */
 import sharp from "sharp";
 import fs from "fs";
@@ -13,116 +17,78 @@ const trMap = { "ç": "c", "Ç": "c", "ğ": "g", "Ğ": "g", "ı": "i", "İ": "i"
 const slug = (s) => s.replace(/[çÇğĞıİöÖşŞüÜ]/g, (m) => trMap[m])
   .toLowerCase().replace(/&/g, " ve ").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-/* catSlug -> { "Menü ürün adı (gen-menu-pages ile birebir)": "AltKlasör/Dosya.jpg" } */
-const MAP = {
-  menemenler: {
-    "Klasik Menemen": "Menemenler/Klasik Menemen.jpg",
-    "Kaşarlı Menemen": "Menemenler/Kaşşarlı Menemen.jpg",
-    "Beyaz Peynirli Menemen": "Menemenler/Beyaz Peynirli Menemen.jpg",
-    "Karışık Menemen": "Menemenler/Karışık Menemen.jpg",
-    "Kavurmalı Menemen": "Menemenler/Kavurmalı Menemen.jpg",
-    "Sucuklu Menemen": "Menemenler/Sucuklu Menemen.jpg",
-  },
-  yumurta: {
-    "Sade Yumurta": "Sahanda Yumurtalar/Sade Yumurta.jpg",
-    "Kaşarlı Yumurta": "Sahanda Yumurtalar/Kaşarlı Yumurta.jpg",
-    "Beyaz Peynirli Yumurta": "Sahanda Yumurtalar/Beyaz Peynirli Yumurta.jpg",
-    "Karışık Yumurta": "Omletler/Karışık Omlet.jpg",
-    "Kavurmalı Yumurta": "Sahanda Yumurtalar/Kavurmalı Yumurta.jpg",
-    "Sucuklu Yumurta": "Sahanda Yumurtalar/Sucuklu Yumurta.jpg",
-    "Patatesli Yumurta": "Sahanda Yumurtalar/Patatesli Yumurta.jpg",
-    "Mantar Kaşar Yumurta": "Omletler/Kaşarlı Omlet.jpg",
-  },
-  tavalar: {
-    "Mıhlama": "Tavalar/Mıhlama (Kuymak).jpg",
-    "Sucuk Tava": "Tavalar/Sucuk Tava.jpg",
-    "Hellim Tava": "Tavalar/Hellim Tava.jpg",
-    "Kavurma Tava": "Tavalar/Kavurma Tava.jpg",
-    "Yumurtalı Ekmek (6)": "Tavalar/Yumurtalı Ekmek.jpg",
-    "Sosis Tava": "Tavalar/Sosis Tava.jpg",
-    "Salçalı Sosis": "Tavalar/Salçalı Sosis.jpg",
-    "Patates Tava": "Tavalar/Anne Dilim Patates Tava.jpg",
-    "Sigara Böreği (6)": "Tavalar/Sigara Böreği.jpg",
-  },
-  pisiler: {
-    "Sade Pişi": "Pişiler/Sade Pişi.jpg",
-    "Kaşarlı Pişi": "Pişiler/Kaşarlı Pişi.jpg",
-    "Beyaz Peynirli Pişi": "Pişiler/Beyaz Peynirli Pişi.jpg",
-    "Nutellalı Pişi": "Pişiler/Nutella'lı Pişi.jpg",
-    "Kavurma Kaşar Pişi": "Pişiler/Kavurma Kaşarlı Pişi.jpg",
-  },
-  gozlemeler: {
-    "Kaşarlı Gözleme": "Gözlemezler/Kaşarlı Gözleme.jpg",
-    "Beyaz Peynirli Gözleme": "Gözlemezler/Beyaz Peynirli Gözleme.jpg",
-    "Patatesli Gözleme": "Gözlemezler/Patatesli Gözleme.jpg",
-    "Patates Kaşarlı Gözleme": "Gözlemezler/Patatesli Kaşarlı Gözleme.jpg",
-    "Kavurma Kaşarlı Gözleme": "Gözlemezler/Kavurmalı Kaşarlı Gözleme.jpg",
-    "Sucuklu Gözleme": "Gözlemezler/Sucuklu Gözleme.jpg",
-    "Sucuklu Kaşarlı Gözleme": "Gözlemezler/Sucuklu Kaşarlı Gözleme.jpg",
-  },
-  krep: {
-    "Sade Krep": "Krep & Pankek Çeşitleri/Sade Krep.jpg",
-    "Nutellalı Krep": "Krep & Pankek Çeşitleri/Nutella'lı Krep.jpg",
-    "Pankek (4 Adet)": "Krep & Pankek Çeşitleri/Pankek.jpg",
-  },
-  ekstralar: {
-    "Beyaz Peynir (1 Dilim)": "Ekstralar/Beyaz Peynir.jpg",
-    "Kaşar Peyniri (1 Dilim)": "Ekstralar/Kaşar Peyniri.jpg",
-    "Çeçil Peyniri": "Ekstralar/Çeçil Peynir.jpg",
-    "Karışık Peynir Tabağı": "Ekstralar/Karışık Peynir Tabağı.jpg",
-    "Tereyağı": "Ekstralar/Tereyağı.jpg",
-    "Zeytin Tabağı": "Ekstralar/Zeytin Tabağı.jpg",
-    "Tahin Pekmez": "Ekstralar/Tahin Pekmez.jpg",
-    "Söğüş": "Ekstralar/Söğüş.jpg",
-    "Acuka": "Ekstralar/Acuka.jpg",
-    "Haşlanmış Yumurta": "Ekstralar/Haşlanmış Yumurta.jpg",
-    "Bal Kaymak": "Ekstralar/Bal & Kaymak.jpg",
-    "Nutella": "Ekstralar/Nutella.jpg",
-    "Reçel": "Ekstralar/Reçel.jpg",
-    "Simit": "Ekstralar/Simit.jpg",
-    "Yeşillik": "Ekstralar/Yeşillik.jpg",
-  },
-  icecekler: {
-    "Su": "İçecekler/Su.jpg",
-    "Sade Soda": "İçecekler/Sade Soda.jpg",
-    "Meyveli Soda": "İçecekler/Meyveli Soda.jpg",
-    "Kola": "İçecekler/Coca'cola .jpg",
-    "Meyve Suyu": "İçecekler/Karışık Meyve Suyu.jpg",
-    "Ice Tea": "İçecekler/Ice Tea Şeftali.jpg",
-    "Taze Sıkma Portakal Suyu": "İçecekler/Taze Sıkma Portakal Suyu.jpg",
-    "Ayran": "İçecekler/Ayran.jpg",
-    "Naneli Limonata": "İçecekler/Naneli Limonata.jpg",
-    "Çay": "İçecekler/Çay.jpg",
-    "Türk Kahvesi": "İçecekler/Türk Kahvesi.jpg",
-    "Demleme Bitki Çayı": "İçecekler/Çay.jpg",
-    "Espresso": "İçecekler/Espresso.jpg",
-    "Americano": "İçecekler/Americano.jpg",
-    "Latte": "İçecekler/Latte.jpg",
-    "Cappuccino": "İçecekler/Cappuccino.jpg",
-    "Mocha": "İçecekler/Mocha,.jpg",
-    "Filtre Kahve": "İçecekler/Filtre Kahve.jpg",
-  },
-};
+/* dosya adını (uzantısız) ekranda görünecek temiz ada çevir */
+function cleanName(base) {
+  let n = base.trim();
+  n = n.replace(/\s*\(\d+\)$/, "");            // "Reçel (2)" -> "Reçel"
+  n = n.replace(/,+$/, "");                     // "Mocha," -> "Mocha"
+  n = n.replace(/Kaşşarlı/g, "Kaşarlı");        // kaynak yazım hatası
+  n = n.replace(/Coca'cola/gi, "Coca-Cola");    // "Coca'cola" -> "Coca-Cola"
+  return n.trim();
+}
 
-const manifest = {};
+/* klasör -> { slug, name }  (kategori sırası buradaki sıradır) */
+const FOLDERS = [
+  { dir: "__serpme__", slug: "serpme", name: "Serpme & Tabaklar" },
+  { dir: "Menemenler", slug: "menemenler", name: "Menemenler" },
+  { dir: "Sahanda Yumurtalar", slug: "yumurta", name: "Sahanda Yumurtalar" },
+  { dir: "Omletler", slug: "omletler", name: "Omletler" },
+  { dir: "Tavalar", slug: "tavalar", name: "Tavalar" },
+  { dir: "Pişiler", slug: "pisiler", name: "Pişiler" },
+  { dir: "Gözlemezler", slug: "gozlemeler", name: "Gözlemeler" },
+  { dir: "Krep & Pankek Çeşitleri", slug: "krep", name: "Krep & Pankek Çeşitleri" },
+  { dir: "Ekstralar", slug: "ekstralar", name: "Ekstralar" },
+  { dir: "İçecekler", slug: "icecekler", name: "İçecekler" },
+];
+
+/* "Serpme & Tabaklar": kökteki serpme görselleri + "Kahvaltı Tabakları/" klasörü */
+const SERPME = [
+  { name: "Limos Serpme Kahvaltı", file: "Limos Serpme Kahvaltı.jpg" },
+  { name: "Full Serpme Kahvaltı", file: "Full Serpme Kahvaltı.jpg" },
+  { name: "Special Serpme Kahvaltı", file: "Special Serpme Kahvaltı.jpg" },
+  { name: "Kahvaltı Tabağı", file: "Kahvaltı Tabakları/Kahvaltı Tabağı.jpg" },
+  { name: "Pişi Tabağı", file: "Kahvaltı Tabakları/Pişi Tabağı.jpg" },
+];
+
+const images = {};
+const items = {};
 let ok = 0, miss = 0;
 
-for (const [cat, items] of Object.entries(MAP)) {
-  const dir = path.join(OUT, cat);
+async function emit(catSlug, name, srcPath) {
+  if (!fs.existsSync(srcPath)) { console.log("EKSİK:", srcPath.replace(SRC + path.sep, "")); miss++; return; }
+  const dir = path.join(OUT, catSlug);
   fs.mkdirSync(dir, { recursive: true });
-  manifest[cat] = {};
-  for (const [name, rel] of Object.entries(items)) {
-    const src = path.join(SRC, rel);
-    if (!fs.existsSync(src)) { console.log("EKSİK:", rel); miss++; continue; }
-    const base = slug(name);
-    const tOut = path.join(dir, base + "-t.webp");
-    const bOut = path.join(dir, base + "-b.webp");
-    await sharp(src).rotate().resize({ width: 220, height: 220, fit: "cover" }).webp({ quality: 68 }).toFile(tOut);
-    await sharp(src).rotate().resize({ width: 1100, height: 1100, fit: "inside", withoutEnlargement: true }).webp({ quality: 80 }).toFile(bOut);
-    manifest[cat][name] = { t: `images/menu/${cat}/${base}-t.webp`, b: `images/menu/${cat}/${base}-b.webp` };
-    ok++;
+  const base = slug(name);
+  const tOut = path.join(dir, base + "-t.webp");
+  const bOut = path.join(dir, base + "-b.webp");
+  await sharp(srcPath).rotate().resize({ width: 220, height: 220, fit: "cover" }).webp({ quality: 68 }).toFile(tOut);
+  await sharp(srcPath).rotate().resize({ width: 1100, height: 1100, fit: "inside", withoutEnlargement: true }).webp({ quality: 80 }).toFile(bOut);
+  (images[catSlug] ||= {})[name] = { t: `images/menu/${catSlug}/${base}-t.webp`, b: `images/menu/${catSlug}/${base}-b.webp` };
+  (items[catSlug] ||= []).push(name);
+  ok++;
+}
+
+for (const f of FOLDERS) {
+  images[f.slug] = {};
+  items[f.slug] = [];
+
+  if (f.dir === "__serpme__") {
+    for (const s of SERPME) await emit(f.slug, s.name, path.join(SRC, s.file));
+    continue;
+  }
+
+  const abs = path.join(SRC, f.dir);
+  const files = fs.readdirSync(abs).filter((x) => /\.jpe?g$/i.test(x)).sort((a, b) => a.localeCompare(b, "tr"));
+  const seen = new Set();
+  for (const file of files) {
+    const name = cleanName(file.replace(/\.jpe?g$/i, ""));
+    if (seen.has(name)) continue;             // "Reçel (2)" tekrarını at
+    seen.add(name);
+    await emit(f.slug, name, path.join(abs, file));
   }
 }
 
-fs.writeFileSync(path.resolve("_scripts/menu-images.json"), JSON.stringify(manifest, null, 2), "utf8");
-console.log(`\nbitti: ${ok} ürün görseli, ${miss} eksik. manifest -> _scripts/menu-images.json`);
+fs.writeFileSync(path.resolve("_scripts/menu-images.json"), JSON.stringify(images, null, 2), "utf8");
+fs.writeFileSync(path.resolve("_scripts/menu-items.json"), JSON.stringify(items, null, 2), "utf8");
+console.log(`\nbitti: ${ok} ürün görseli, ${miss} eksik.`);
+for (const f of FOLDERS) console.log(`  ${f.slug.padEnd(12)} ${items[f.slug].length} ürün`);

@@ -1,0 +1,116 @@
+{
+  "serpme": [
+    "Limos Serpme Kahvaltı",
+    "Full Serpme Kahvaltı",
+    "Special Serpme Kahvaltı",
+    "Kahvaltı Tabağı",
+    "Pişi Tabağı"
+  ],
+  "menemenler": [
+    "Beyaz Peynirli Menemen",
+    "Karışık Menemen",
+    "Kaşarlı Menemen",
+    "Kavurmalı Menemen",
+    "Klasik Menemen",
+    "Sucuklu Menemen"
+  ],
+  "yumurta": [
+    "Beyaz Peynirli Yumurta",
+    "Kaşarlı Yumurta",
+    "Kavurmalı Yumurta",
+    "Patatesli Yumurta",
+    "Sade Yumurta",
+    "Sosisli Yumurta",
+    "Sucuklu Yumurta"
+  ],
+  "omletler": [
+    "Beyaz Peynirli Omlet",
+    "Karışık Omlet",
+    "Kaşarlı Omlet",
+    "Kavurmalı Omlet",
+    "Kıymalı Omlet",
+    "Patatesli Omlet",
+    "Sade Omlet",
+    "Sosisli Omlet",
+    "Sucuklu Omlet"
+  ],
+  "tavalar": [
+    "Anne Dilim Patates Tava",
+    "Hellim Tava",
+    "Kavurma Tava",
+    "Mıhlama (Kuymak)",
+    "Salçalı Sosis",
+    "Sıcak Tabağı",
+    "Sigara Böreği",
+    "Sosis Tava",
+    "Sucuk Tava",
+    "Yumurtalı Ekmek"
+  ],
+  "pisiler": [
+    "Beyaz Peynirli Pişi",
+    "Kaşarlı Pişi",
+    "Kavurma Kaşarlı Pişi",
+    "Nutella'lı Pişi",
+    "Sade Pişi",
+    "Sucuklu Pişi"
+  ],
+  "gozlemeler": [
+    "Beyaz Peynirli Gözleme",
+    "Ispanaklı Gözleme",
+    "Kaşarlı Gözleme",
+    "Kavurmalı Kaşarlı Gözleme",
+    "Kıymalı Gözleme",
+    "Patatesli Gözleme",
+    "Patatesli Kaşarlı Gözleme",
+    "Sucuklu Gözleme",
+    "Sucuklu Kaşarlı Gözleme"
+  ],
+  "krep": [
+    "Nutella'lı Krep",
+    "Pankek",
+    "Sade Krep"
+  ],
+  "ekstralar": [
+    "Acuka",
+    "Bal & Kaymak",
+    "Beyaz Peynir",
+    "Biber Kızartması",
+    "Çeçil Peynir",
+    "Haşlanmış Yumurta",
+    "Karışık Peynir Tabağı",
+    "Kaşar Peyniri",
+    "Nutella",
+    "Reçel",
+    "Simit",
+    "Söğüş",
+    "Tahin Pekmez",
+    "Tereyağı",
+    "Yeşillik",
+    "Yoğurt",
+    "Zeytin Tabağı"
+  ],
+  "icecekler": [
+    "Americano",
+    "Ayran",
+    "Cappuccino",
+    "Coca-Cola",
+    "Coca-Cola Zero",
+    "Çay",
+    "Espresso",
+    "Filtre Kahve",
+    "Ice Tea Limon",
+    "Ice Tea Şeftali",
+    "Karışık Meyve Suyu",
+    "Latte",
+    "Meyveli Soda",
+    "Mocha",
+    "Naneli Limonata",
+    "Sade Soda",
+    "Su",
+    "Süt",
+    "Şeftali Suyu",
+    "Taze Sıkma Portakal Suyu",
+    "Türk Kahvesi",
+    "Vişne Suyu"
+  ]
+}

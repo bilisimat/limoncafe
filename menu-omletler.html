@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#211C18" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <title>Sahanda Yumurtalar — Limos Kahvaltı Menüsü</title>
-  <meta name="description" content="Limos Kahvaltı Sahanda Yumurtalar kategorisi, fiyatları ve içerikleri." />
+  <title>Omletler — Limos Kahvaltı Menüsü</title>
+  <meta name="description" content="Limos Kahvaltı Omletler kategorisi, fiyatları ve içerikleri." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -48,9 +48,9 @@
     <section class="menu-hero cat-hero">
       <div class="container">
         <a class="cat-back" href="menu.html">← Tüm menü</a>
-        <p class="sec-index sec-index--light">Menü · 03 / 10</p>
-        <h1 class="display display--light" id="cat-baslik">Sahanda Yumurtalar</h1>
-        <p class="sec-sub sec-sub--light cat-blurb">Bakır sahanda pişen yumurta; sadeden sucuklu, sosisli, kavurmalıya.</p>
+        <p class="sec-index sec-index--light">Menü · 04 / 10</p>
+        <h1 class="display display--light" id="cat-baslik">Omletler</h1>
+        <p class="sec-sub sec-sub--light cat-blurb">Bakır tavada kabaran omlet; kaşarlı, sucuklu, kıymalı, karışık.</p>
       </div>
     </section>
 
@@ -61,8 +61,8 @@
             <p class="cat-side-label">Kategoriler</p>
             <a href="menu-serpme.html">Serpme &amp; Tabaklar</a>
             <a href="menu-menemenler.html">Menemenler</a>
-            <a href="menu-yumurta.html" aria-current="page" class="is-current">Sahanda Yumurtalar</a>
-            <a href="menu-omletler.html">Omletler</a>
+            <a href="menu-yumurta.html">Sahanda Yumurtalar</a>
+            <a href="menu-omletler.html" aria-current="page" class="is-current">Omletler</a>
             <a href="menu-tavalar.html">Tavalar</a>
             <a href="menu-pisiler.html">Pişiler</a>
             <a href="menu-gozlemeler.html">Gözlemeler</a>
@@ -73,39 +73,47 @@
 
           <div class="cat-main">
               <ul class="menu-list mi-list">
-                <li><button class="mi" type="button" data-name="Sade Yumurta" data-price="150₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/sade-yumurta-b.webp" data-desc="İki yumurta bakır sahanda, tereyağında pişirilir. Sarısı akışkan ister misiniz, söyleyin.">
-                  <img class="mi-thumb" src="images/menu/yumurta/sade-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Sade Yumurta</span><span class="dots"></span><span class="p">150₺</span>
+                <li><button class="mi" type="button" data-name="Sade Omlet" data-price="" data-cat="Omletler" data-img="images/menu/omletler/sade-omlet-b.webp" data-desc="Çırpılmış yumurta bakır tavada kabartılır; hafif ve yumuşak.">
+                  <img class="mi-thumb" src="images/menu/omletler/sade-omlet-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Sade Omlet</span><span class="dots"></span>
                 </button></li>
-                <li><button class="mi" type="button" data-name="Kaşarlı Yumurta" data-price="200₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/kasarli-yumurta-b.webp" data-desc="Sahanda yumurtanın üzerine eriyen taze kaşar. Basit ama tam kıvamında.">
-                  <img class="mi-thumb" src="images/menu/yumurta/kasarli-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Kaşarlı Yumurta</span><span class="dots"></span><span class="p">200₺</span>
+                <li><button class="mi" type="button" data-name="Kaşarlı Omlet" data-price="" data-cat="Omletler" data-img="images/menu/omletler/kasarli-omlet-b.webp" data-desc="İçi eriyen taze kaşarla dolu omlet. Mekânın en çok tercih edileni.">
+                  <img class="mi-thumb" src="images/menu/omletler/kasarli-omlet-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Kaşarlı Omlet</span><span class="dots"></span>
                 </button></li>
-                <li><button class="mi" type="button" data-name="Beyaz Peynirli Yumurta" data-price="200₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/beyaz-peynirli-yumurta-b.webp" data-desc="Ezine beyaz peynir parçalarıyla; tuzlu-ferah bir kahvaltı klasiği.">
-                  <img class="mi-thumb" src="images/menu/yumurta/beyaz-peynirli-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Beyaz Peynirli Yumurta</span><span class="dots"></span><span class="p">200₺</span>
+                <li><button class="mi" type="button" data-name="Beyaz Peynirli Omlet" data-price="" data-cat="Omletler" data-img="images/menu/omletler/beyaz-peynirli-omlet-b.webp" data-desc="Ezine beyaz peynir ve maydanozla; ferah bir omlet.">
+                  <img class="mi-thumb" src="images/menu/omletler/beyaz-peynirli-omlet-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Beyaz Peynirli Omlet</span><span class="dots"></span>
                 </button></li>
-                <li><button class="mi" type="button" data-name="Sucuklu Yumurta" data-price="270₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/sucuklu-yumurta-b.webp" data-desc="Bakır sahanda kızaran sucuk dilimleri, üzerine yumurta. Yağı ekmekle silinir.">
-                  <img class="mi-thumb" src="images/menu/yumurta/sucuklu-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Sucuklu Yumurta</span><span class="dots"></span><span class="p">270₺</span>
+                <li><button class="mi" type="button" data-name="Karışık Omlet" data-price="" data-cat="Omletler" data-img="images/menu/omletler/karisik-omlet-b.webp" data-desc="Sucuk, kaşar ve biberle zenginleştirilmiş omlet.">
+                  <img class="mi-thumb" src="images/menu/omletler/karisik-omlet-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Karışık Omlet</span><span class="dots"></span>
                 </button></li>
-                <li><button class="mi" type="button" data-name="Sosisli Yumurta" data-price="" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/sosisli-yumurta-b.webp" data-desc="Dana sosis dilimleri sahanda kızarır, üzerine yumurta kırılır.">
-                  <img class="mi-thumb" src="images/menu/yumurta/sosisli-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Sosisli Yumurta</span><span class="dots"></span>
+                <li><button class="mi" type="button" data-name="Sucuklu Omlet" data-price="" data-cat="Omletler" data-img="images/menu/omletler/sucuklu-omlet-b.webp" data-desc="Kızarmış sucuk dilimleriyle katlanan omlet.">
+                  <img class="mi-thumb" src="images/menu/omletler/sucuklu-omlet-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Sucuklu Omlet</span><span class="dots"></span>
                 </button></li>
-                <li><button class="mi" type="button" data-name="Patatesli Yumurta" data-price="200₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/patatesli-yumurta-b.webp" data-desc="Küp doğranmış patates altın rengi kızartılır, yumurtayla bağlanır.">
-                  <img class="mi-thumb" src="images/menu/yumurta/patatesli-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Patatesli Yumurta</span><span class="dots"></span><span class="p">200₺</span>
+                <li><button class="mi" type="button" data-name="Sosisli Omlet" data-price="" data-cat="Omletler" data-img="images/menu/omletler/sosisli-omlet-b.webp" data-desc="Dana sosis parçalarıyla hazırlanan omlet.">
+                  <img class="mi-thumb" src="images/menu/omletler/sosisli-omlet-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Sosisli Omlet</span><span class="dots"></span>
                 </button></li>
-                <li><button class="mi" type="button" data-name="Kavurmalı Yumurta" data-price="350₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/kavurmali-yumurta-b.webp" data-desc="Kendi yağında çevrilmiş kavurma etinin üzerine kırılan yumurtalar. Doyurucu.">
-                  <img class="mi-thumb" src="images/menu/yumurta/kavurmali-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Kavurmalı Yumurta</span><span class="dots"></span><span class="p">350₺</span>
+                <li><button class="mi" type="button" data-name="Patatesli Omlet" data-price="" data-cat="Omletler" data-img="images/menu/omletler/patatesli-omlet-b.webp" data-desc="Kızarmış patatesle doldurulan doyurucu omlet.">
+                  <img class="mi-thumb" src="images/menu/omletler/patatesli-omlet-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Patatesli Omlet</span><span class="dots"></span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Kıymalı Omlet" data-price="" data-cat="Omletler" data-img="images/menu/omletler/kiymali-omlet-b.webp" data-desc="Baharatlı kıyma sotesiyle katlanan omlet.">
+                  <img class="mi-thumb" src="images/menu/omletler/kiymali-omlet-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Kıymalı Omlet</span><span class="dots"></span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Kavurmalı Omlet" data-price="" data-cat="Omletler" data-img="images/menu/omletler/kavurmali-omlet-b.webp" data-desc="Kendi yağında çevrilmiş kavurmayla; etli ve yoğun.">
+                  <img class="mi-thumb" src="images/menu/omletler/kavurmali-omlet-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Kavurmalı Omlet</span><span class="dots"></span>
                 </button></li>
               </ul>
 
             <nav class="cat-prevnext" aria-label="Kategoriler arası gezinme">
-              <a href="menu-menemenler.html"><span>← Önceki</span><b>Menemenler</b></a>
-              <a href="menu-omletler.html" class="cat-next"><span>Sonraki →</span><b>Omletler</b></a>
+              <a href="menu-yumurta.html"><span>← Önceki</span><b>Sahanda Yumurtalar</b></a>
+              <a href="menu-tavalar.html" class="cat-next"><span>Sonraki →</span><b>Tavalar</b></a>
             </nav>
           </div>
         </div>
