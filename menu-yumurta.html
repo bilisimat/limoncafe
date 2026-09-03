@@ -4,32 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#211C18" />
-
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-  <title>Menü — Limos Kahvaltı, Beşiktaş</title>
-  <meta name="description" content="Limos Kahvaltı menüsü: menemenler, sahanda yumurtalar, tavalar, pişiler, gözlemeler, krep & pankek, ekstralar ve içecekler." />
-  <link rel="canonical" href="https://limosbesiktas.com/menu" />
-
-  <meta property="og:title" content="Menü — Limos Kahvaltı" />
-  <meta property="og:description" content="Serpme ve à la carte kahvaltı menüsü. Beşiktaş / İstanbul." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="tr_TR" />
-  <meta property="og:image" content="images/hero.webp" />
-
+  <title>Sahanda Yumurtalar ve Omletler — Limos Kahvaltı Menüsü</title>
+  <meta name="description" content="Limos Kahvaltı Sahanda Yumurtalar / Omletler kategorisi ve fiyatları." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-
   <link rel="icon" type="image/webp" href="logo.webp" />
   <link rel="stylesheet" href="css/styles.css?v=32" />
 </head>
-<body class="menu-page">
+<body class="menu-page cat-page">
 
-  <a class="skip-link" href="#menu-baslik">İçeriğe geç</a>
+  <a class="skip-link" href="#cat-baslik">İçeriğe geç</a>
 
-  <!-- ================= HEADER ================= -->
   <header class="site-header" id="top" data-header>
     <div class="container header-inner">
       <a href="index.html" class="header-logo" aria-label="Limos Kahvaltı — ana sayfa">
@@ -42,17 +30,14 @@
         <a href="index.html#iletisim" class="nav-link">İletişim</a>
         <a href="tel:+905494980021" class="nav-link nav-link--cta">Rezervasyon &amp; Bilgi</a>
       </nav>
-
       <a href="index.html" class="brand" aria-label="Limos Kahvaltı — ana sayfa">
         <span class="brand-word">Limos</span>
         <span class="brand-sub">kahvaltı — beşiktaş</span>
       </a>
-
       <div class="header-actions">
         <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="header-phone">Yol Tarifi</a>
         <a href="tel:+902122369236" class="btn btn-line header-cta">Bizi Arayın</a>
       </div>
-
       <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü aç / kapat" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span>
       </button>
@@ -60,76 +45,59 @@
   </header>
 
   <main>
-    <!-- ================= MENÜ BAŞLIK ================= -->
-    <section class="menu-hero">
+    <section class="menu-hero cat-hero">
       <div class="container">
-        <p class="sec-index sec-index--light">Menü</p>
-        <h1 class="display display--light" id="menu-baslik">Sofradaki her şey.</h1>
-        <p class="sec-sub sec-sub--light">Serpme tabaklarda ilk çay ikramımızdır. Bir kategori seçin.</p>
+        <a class="cat-back" href="menu.html">← Tüm menü</a>
+        <p class="sec-index sec-index--light">Menü · 02 / 08</p>
+        <h1 class="display display--light" id="cat-baslik">Sahanda Yumurtalar / Omletler</h1>
       </div>
     </section>
 
-    <!-- ================= KATEGORİLER ================= -->
-    <section class="section menu-acc-sec">
+    <section class="section cat-sec">
       <div class="container">
-        <div class="cat-list">
-          <a class="cat-card" href="menu-menemenler.html">
-            <span class="cat-thumb" aria-hidden="true"></span>
-            <span class="cat-name">Menemenler</span>
-            <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="cat-card" href="menu-yumurta.html">
-            <span class="cat-thumb" aria-hidden="true"></span>
-            <span class="cat-name">Sahanda Yumurtalar / Omletler</span>
-            <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="cat-card" href="menu-tavalar.html">
-            <span class="cat-thumb" aria-hidden="true"></span>
-            <span class="cat-name">Tavalar</span>
-            <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="cat-card" href="menu-pisiler.html">
-            <span class="cat-thumb" aria-hidden="true"></span>
-            <span class="cat-name">Pişiler <small>(4 Adet)</small></span>
-            <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="cat-card" href="menu-gozlemeler.html">
-            <span class="cat-thumb" aria-hidden="true"></span>
-            <span class="cat-name">Gözlemeler</span>
-            <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="cat-card" href="menu-krep.html">
-            <span class="cat-thumb" aria-hidden="true"></span>
-            <span class="cat-name">Krep &amp; Pankek Çeşitleri</span>
-            <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="cat-card" href="menu-ekstralar.html">
-            <span class="cat-thumb" aria-hidden="true"></span>
-            <span class="cat-name">Ekstralar</span>
-            <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a class="cat-card" href="menu-icecekler.html">
-            <span class="cat-thumb" aria-hidden="true"></span>
-            <span class="cat-name">İçecekler</span>
-            <svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
+        <div class="cat-layout">
+          <aside class="cat-side" aria-label="Kategoriler">
+            <p class="cat-side-label">Kategoriler</p>
+          <a href="menu-menemenler.html">Menemenler</a>
+          <a href="menu-yumurta.html" aria-current="page" class="is-current">Sahanda Yumurtalar / Omletler</a>
+          <a href="menu-tavalar.html">Tavalar</a>
+          <a href="menu-pisiler.html">Pişiler</a>
+          <a href="menu-gozlemeler.html">Gözlemeler</a>
+          <a href="menu-krep.html">Krep &amp; Pankek Çeşitleri</a>
+          <a href="menu-ekstralar.html">Ekstralar</a>
+          <a href="menu-icecekler.html">İçecekler</a>
+          </aside>
 
+          <div class="cat-main">
+            <ul class="menu-list">
+              <li><span>Sade Yumurta</span><span class="dots"></span><span class="p">150₺</span></li>
+              <li><span>Kaşarlı Yumurta</span><span class="dots"></span><span class="p">200₺</span></li>
+              <li><span>Beyaz Peynirli Yumurta</span><span class="dots"></span><span class="p">200₺</span></li>
+              <li><span>Karışık Yumurta</span><span class="dots"></span><span class="p">250₺</span></li>
+              <li><span>Kavurmalı Yumurta</span><span class="dots"></span><span class="p">350₺</span></li>
+              <li><span>Sucuklu Yumurta</span><span class="dots"></span><span class="p">270₺</span></li>
+              <li><span>Patatesli Yumurta</span><span class="dots"></span><span class="p">200₺</span></li>
+              <li><span>Mantar Kaşar Yumurta</span><span class="dots"></span><span class="p">250₺</span></li>
+            </ul>
+
+            <nav class="cat-prevnext" aria-label="Kategoriler arası gezinme">
+              <a href="menu-menemenler.html"><span>← Önceki</span><b>Menemenler</b></a>
+              <a href="menu-tavalar.html" class="cat-next"><span>Sonraki →</span><b>Tavalar</b></a>
+            </nav>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="container">
       <p class="footer-cta">Masada görüşürüz.</p>
-
       <div class="footer-inner">
         <div class="footer-brand">
           <img class="footer-logo" src="images/logo-mark.jpg" width="150" height="150" alt="Limos Kahvaltı" />
           <p>Beşiktaş Sinanpaşa'da, kahvaltı sokağında. Serpme ve à la carte kahvaltı, taze pişiler ve demli çay.</p>
         </div>
-
         <nav class="footer-col" aria-label="Alt menü">
           <h4>Keşfet</h4>
           <a href="index.html#kahvalti">Kahvaltı</a>
@@ -138,7 +106,6 @@
           <a href="index.html#yorumlar">Yorumlar</a>
           <a href="index.html#iletisim">İletişim</a>
         </nav>
-
         <div class="footer-col">
           <h4>İletişim</h4>
           <p>Sinanpaşa, Çelebi Oğlu Sk. No:11<br />34353 Beşiktaş / İstanbul</p>
@@ -148,7 +115,6 @@
           <p>Her gün · 18:00'de kapanır</p>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p>&copy; <span id="year"></span> Limos Kahvaltı. Tüm hakları saklıdır.</p>
         <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer">Google Haritalar'da aç</a></p>
@@ -160,7 +126,6 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </a>
 
-  <!-- Mobil sabit alt bar -->
   <nav class="mobile-bar" aria-label="Hızlı erişim">
     <a href="tel:+905494980021" class="mobile-bar-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>

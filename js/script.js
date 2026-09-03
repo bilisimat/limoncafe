@@ -90,29 +90,6 @@
       applyFilter(initial.getAttribute("data-filter"));
     }
 
-    /* ---------- 3b. Menü sayfası: kategori akordeonu ---------- */
-    var catHeads = document.querySelectorAll(".cat-head");
-    if (catHeads.length) {
-      catHeads.forEach(function (head) {
-        head.addEventListener("click", function () {
-          var acc = head.closest(".cat-acc");
-          if (!acc) return;
-          var willOpen = !acc.classList.contains("is-open");
-
-          document.querySelectorAll(".cat-acc.is-open").forEach(function (other) {
-            if (other !== acc) {
-              other.classList.remove("is-open");
-              var b = other.querySelector(".cat-head");
-              if (b) b.setAttribute("aria-expanded", "false");
-            }
-          });
-
-          acc.classList.toggle("is-open", willOpen);
-          head.setAttribute("aria-expanded", willOpen ? "true" : "false");
-        });
-      });
-    }
-
     /* ---------- 4. Aktif menü linkini vurgula (scroll spy) ---------- */
     var sections = document.querySelectorAll("main section[id]");
     var navLinks = document.querySelectorAll(".main-nav .nav-link");
