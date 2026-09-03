@@ -8,6 +8,14 @@ const ROOT = path.resolve(".");
 const CSS_V = "v=33";
 const JS_V = "v=11";
 
+/* ürün fotoğrafı manifesti (node _scripts/menu-images.mjs ile üretilir) */
+let IMG = {};
+try { IMG = JSON.parse(fs.readFileSync(path.resolve("_scripts/menu-images.json"), "utf8")); } catch (e) {}
+function pics(cat, name) {
+  var m = (IMG[cat.slug] || {})[name];
+  return { t: (m && m.t) || cat.img, b: (m && m.b) || cat.img };
+}
+
 const CATS = [
   {
     slug: "menemenler", name: "Menemenler", img: "images/menemen.webp",
@@ -138,8 +146,9 @@ const CATS = [
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
 
 function itemLi(cat, [n, p, d], i) {
-  return `                <li><button class="mi" type="button" data-name="${esc(n)}" data-price="${p}" data-cat="${esc(cat.name)}" data-img="${cat.img}" data-desc="${esc(d)}">
-                  <img class="mi-thumb" src="${cat.img}" width="80" height="80" loading="lazy" decoding="async" alt="" />
+  const im = pics(cat, n);
+  return `                <li><button class="mi" type="button" data-name="${esc(n)}" data-price="${p}" data-cat="${esc(cat.name)}" data-img="${im.b}" data-desc="${esc(d)}">
+                  <img class="mi-thumb" src="${im.t}" width="80" height="80" loading="lazy" decoding="async" alt="" />
                   <span class="mi-name">${esc(n)}</span><span class="dots"></span><span class="p">${p}</span>
                 </button></li>`;
 }
