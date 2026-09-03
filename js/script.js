@@ -187,7 +187,7 @@
           "ratingValue": "4.6",
           "reviewCount": "2418"
         },
-        "sameAs": ["https://instagram.com/limosbesiktas"]
+        "sameAs": ["https://instagram.com/limoskahvalti"]
       };
       var s = document.createElement("script");
       s.type = "application/ld+json";
@@ -229,5 +229,47 @@
         if (!document.hidden && v.__inView) kick();
       });
     });
+
+    /* ---------- 12. Menü: ürün pop-up ---------- */
+    var miDlg = document.getElementById("mi-dlg");
+    if (miDlg) {
+      var miImg = document.getElementById("mi-dlg-img");
+      var miCat = document.getElementById("mi-dlg-cat");
+      var miTitle = document.getElementById("mi-dlg-title");
+      var miPrice = document.getElementById("mi-dlg-price");
+      var miDesc = document.getElementById("mi-dlg-desc");
+      var miLast = null;
+
+      var miClose = function () {
+        miDlg.hidden = true;
+        document.documentElement.classList.remove("mi-dlg-open");
+        if (miLast && miLast.focus) miLast.focus();
+      };
+      var miOpen = function (btn) {
+        miLast = btn;
+        var img = btn.getAttribute("data-img") || "";
+        var name = btn.getAttribute("data-name") || "";
+        miImg.src = img;
+        miImg.alt = name;
+        miCat.textContent = btn.getAttribute("data-cat") || "";
+        miTitle.textContent = name;
+        miPrice.textContent = btn.getAttribute("data-price") || "";
+        miDesc.textContent = btn.getAttribute("data-desc") || "";
+        miDlg.hidden = false;
+        document.documentElement.classList.add("mi-dlg-open");
+        var x = miDlg.querySelector(".mi-dlg-x");
+        if (x && x.focus) x.focus();
+      };
+
+      document.querySelectorAll(".mi").forEach(function (btn) {
+        btn.addEventListener("click", function () { miOpen(btn); });
+      });
+      Array.prototype.forEach.call(miDlg.querySelectorAll("[data-close]"), function (el) {
+        el.addEventListener("click", miClose);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !miDlg.hidden) miClose();
+      });
+    }
   });
 })();

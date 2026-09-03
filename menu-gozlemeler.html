@@ -7,12 +7,12 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Gözlemeler — Limos Kahvaltı Menüsü</title>
-  <meta name="description" content="Limos Kahvaltı Gözlemeler kategorisi ve fiyatları." />
+  <meta name="description" content="Limos Kahvaltı Gözlemeler kategorisi, fiyatları ve içerikleri." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/webp" href="logo.webp" />
-  <link rel="stylesheet" href="css/styles.css?v=32" />
+  <link rel="stylesheet" href="css/styles.css?v=33" />
 </head>
 <body class="menu-page cat-page">
 
@@ -50,6 +50,7 @@
         <a class="cat-back" href="menu.html">← Tüm menü</a>
         <p class="sec-index sec-index--light">Menü · 05 / 08</p>
         <h1 class="display display--light" id="cat-baslik">Gözlemeler</h1>
+        <p class="sec-sub sec-sub--light cat-blurb">İnce açılmış hamur, sacda; peynirli, patatesli, kavurmalı.</p>
       </div>
     </section>
 
@@ -58,26 +59,47 @@
         <div class="cat-layout">
           <aside class="cat-side" aria-label="Kategoriler">
             <p class="cat-side-label">Kategoriler</p>
-          <a href="menu-menemenler.html">Menemenler</a>
-          <a href="menu-yumurta.html">Sahanda Yumurtalar / Omletler</a>
-          <a href="menu-tavalar.html">Tavalar</a>
-          <a href="menu-pisiler.html">Pişiler</a>
-          <a href="menu-gozlemeler.html" aria-current="page" class="is-current">Gözlemeler</a>
-          <a href="menu-krep.html">Krep &amp; Pankek Çeşitleri</a>
-          <a href="menu-ekstralar.html">Ekstralar</a>
-          <a href="menu-icecekler.html">İçecekler</a>
+            <a href="menu-menemenler.html">Menemenler</a>
+            <a href="menu-yumurta.html">Sahanda Yumurtalar / Omletler</a>
+            <a href="menu-tavalar.html">Tavalar</a>
+            <a href="menu-pisiler.html">Pişiler</a>
+            <a href="menu-gozlemeler.html" aria-current="page" class="is-current">Gözlemeler</a>
+            <a href="menu-krep.html">Krep &amp; Pankek Çeşitleri</a>
+            <a href="menu-ekstralar.html">Ekstralar</a>
+            <a href="menu-icecekler.html">İçecekler</a>
           </aside>
 
           <div class="cat-main">
-            <ul class="menu-list">
-              <li><span>Kaşarlı Gözleme</span><span class="dots"></span><span class="p">275₺</span></li>
-              <li><span>Beyaz Peynirli Gözleme</span><span class="dots"></span><span class="p">275₺</span></li>
-              <li><span>Patatesli Gözleme</span><span class="dots"></span><span class="p">275₺</span></li>
-              <li><span>Patates Kaşarlı Gözleme</span><span class="dots"></span><span class="p">300₺</span></li>
-              <li><span>Kavurma Kaşarlı Gözleme</span><span class="dots"></span><span class="p">400₺</span></li>
-              <li><span>Sucuklu Gözleme</span><span class="dots"></span><span class="p">350₺</span></li>
-              <li><span>Sucuklu Kaşarlı Gözleme</span><span class="dots"></span><span class="p">375₺</span></li>
-            </ul>
+              <ul class="menu-list mi-list">
+                <li><button class="mi" type="button" data-name="Kaşarlı Gözleme" data-price="275₺" data-cat="Gözlemeler" data-img="images/breakfast.webp" data-desc="İnce açılan hamura bol kaşar; sacda çıtır çıtır pişirilir.">
+                  <img class="mi-thumb" src="images/breakfast.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Kaşarlı Gözleme</span><span class="dots"></span><span class="p">275₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Beyaz Peynirli Gözleme" data-price="275₺" data-cat="Gözlemeler" data-img="images/breakfast.webp" data-desc="Ezine beyaz peynir ve maydanozla; klasik köy gözlemesi.">
+                  <img class="mi-thumb" src="images/breakfast.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Beyaz Peynirli Gözleme</span><span class="dots"></span><span class="p">275₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Patatesli Gözleme" data-price="275₺" data-cat="Gözlemeler" data-img="images/breakfast.webp" data-desc="Baharatlı patates püresiyle; hafif ve doyurucu.">
+                  <img class="mi-thumb" src="images/breakfast.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Patatesli Gözleme</span><span class="dots"></span><span class="p">275₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Patates Kaşarlı Gözleme" data-price="300₺" data-cat="Gözlemeler" data-img="images/breakfast.webp" data-desc="Patates ve kaşar bir arada; en çok tercih edilen ikili.">
+                  <img class="mi-thumb" src="images/breakfast.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Patates Kaşarlı Gözleme</span><span class="dots"></span><span class="p">300₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Kavurma Kaşarlı Gözleme" data-price="400₺" data-cat="Gözlemeler" data-img="images/breakfast.webp" data-desc="Kavurma ve kaşar dolgulu, etli gözleme.">
+                  <img class="mi-thumb" src="images/breakfast.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Kavurma Kaşarlı Gözleme</span><span class="dots"></span><span class="p">400₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Sucuklu Gözleme" data-price="350₺" data-cat="Gözlemeler" data-img="images/breakfast.webp" data-desc="Dilim sucuk ve baharatla; sacda pişer.">
+                  <img class="mi-thumb" src="images/breakfast.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Sucuklu Gözleme</span><span class="dots"></span><span class="p">350₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Sucuklu Kaşarlı Gözleme" data-price="375₺" data-cat="Gözlemeler" data-img="images/breakfast.webp" data-desc="Sucuk ve kaşarın bir arada olduğu doyurucu gözleme.">
+                  <img class="mi-thumb" src="images/breakfast.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Sucuklu Kaşarlı Gözleme</span><span class="dots"></span><span class="p">375₺</span>
+                </button></li>
+              </ul>
 
             <nav class="cat-prevnext" aria-label="Kategoriler arası gezinme">
               <a href="menu-pisiler.html"><span>← Önceki</span><b>Pişiler</b></a>
@@ -110,7 +132,7 @@
           <p>Sinanpaşa, Çelebi Oğlu Sk. No:11<br />34353 Beşiktaş / İstanbul</p>
           <p><a href="tel:+902122369236">0 (212) 236 92 36</a></p>
           <p><a href="tel:+905494980021">0549 498 00 21</a></p>
-          <p><a href="https://instagram.com/limosbesiktas" target="_blank" rel="noopener noreferrer">Instagram — @limosbesiktas</a></p>
+          <p><a href="https://instagram.com/limoskahvalti" target="_blank" rel="noopener noreferrer">Instagram — @limoskahvalti</a></p>
           <p>Her gün · 18:00'de kapanır</p>
         </div>
       </div>
@@ -134,12 +156,28 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       <span>Konum</span>
     </a>
-    <a href="https://instagram.com/limosbesiktas" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
+    <a href="https://instagram.com/limoskahvalti" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       <span>Instagram</span>
     </a>
   </nav>
 
-  <script src="js/script.js?v=10" defer></script>
+  <div class="mi-dlg" id="mi-dlg" hidden>
+    <div class="mi-dlg-backdrop" data-close></div>
+    <div class="mi-dlg-box" role="dialog" aria-modal="true" aria-labelledby="mi-dlg-title">
+      <button class="mi-dlg-x" type="button" data-close aria-label="Kapat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="mi-dlg-media"><img id="mi-dlg-img" src="" alt="" /></div>
+      <div class="mi-dlg-body">
+        <p class="mi-dlg-cat" id="mi-dlg-cat"></p>
+        <h3 class="mi-dlg-title" id="mi-dlg-title"></h3>
+        <p class="mi-dlg-price" id="mi-dlg-price"></p>
+        <p class="mi-dlg-desc" id="mi-dlg-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js?v=11" defer></script>
 </body>
 </html>

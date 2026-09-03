@@ -7,12 +7,12 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Ekstralar — Limos Kahvaltı Menüsü</title>
-  <meta name="description" content="Limos Kahvaltı Ekstralar kategorisi ve fiyatları." />
+  <meta name="description" content="Limos Kahvaltı Ekstralar kategorisi, fiyatları ve içerikleri." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/webp" href="logo.webp" />
-  <link rel="stylesheet" href="css/styles.css?v=32" />
+  <link rel="stylesheet" href="css/styles.css?v=33" />
 </head>
 <body class="menu-page cat-page">
 
@@ -50,6 +50,7 @@
         <a class="cat-back" href="menu.html">← Tüm menü</a>
         <p class="sec-index sec-index--light">Menü · 07 / 08</p>
         <h1 class="display display--light" id="cat-baslik">Ekstralar</h1>
+        <p class="sec-sub sec-sub--light cat-blurb">Sofraya eklemelik: peynirler, bal-kaymak, zeytin, söğüş.</p>
       </div>
     </section>
 
@@ -58,34 +59,79 @@
         <div class="cat-layout">
           <aside class="cat-side" aria-label="Kategoriler">
             <p class="cat-side-label">Kategoriler</p>
-          <a href="menu-menemenler.html">Menemenler</a>
-          <a href="menu-yumurta.html">Sahanda Yumurtalar / Omletler</a>
-          <a href="menu-tavalar.html">Tavalar</a>
-          <a href="menu-pisiler.html">Pişiler</a>
-          <a href="menu-gozlemeler.html">Gözlemeler</a>
-          <a href="menu-krep.html">Krep &amp; Pankek Çeşitleri</a>
-          <a href="menu-ekstralar.html" aria-current="page" class="is-current">Ekstralar</a>
-          <a href="menu-icecekler.html">İçecekler</a>
+            <a href="menu-menemenler.html">Menemenler</a>
+            <a href="menu-yumurta.html">Sahanda Yumurtalar / Omletler</a>
+            <a href="menu-tavalar.html">Tavalar</a>
+            <a href="menu-pisiler.html">Pişiler</a>
+            <a href="menu-gozlemeler.html">Gözlemeler</a>
+            <a href="menu-krep.html">Krep &amp; Pankek Çeşitleri</a>
+            <a href="menu-ekstralar.html" aria-current="page" class="is-current">Ekstralar</a>
+            <a href="menu-icecekler.html">İçecekler</a>
           </aside>
 
           <div class="cat-main">
-            <ul class="menu-list">
-              <li><span>Beyaz Peynir (1 Dilim)</span><span class="dots"></span><span class="p">75₺</span></li>
-              <li><span>Kaşar Peyniri (1 Dilim)</span><span class="dots"></span><span class="p">75₺</span></li>
-              <li><span>Çeçil Peyniri</span><span class="dots"></span><span class="p">95₺</span></li>
-              <li><span>Karışık Peynir Tabağı</span><span class="dots"></span><span class="p">220₺</span></li>
-              <li><span>Tereyağı</span><span class="dots"></span><span class="p">120₺</span></li>
-              <li><span>Zeytin Tabağı</span><span class="dots"></span><span class="p">120₺</span></li>
-              <li><span>Tahin Pekmez</span><span class="dots"></span><span class="p">200₺</span></li>
-              <li><span>Söğüş</span><span class="dots"></span><span class="p">150₺</span></li>
-              <li><span>Acuka</span><span class="dots"></span><span class="p">120₺</span></li>
-              <li><span>Haşlanmış Yumurta</span><span class="dots"></span><span class="p">40₺</span></li>
-              <li><span>Bal Kaymak</span><span class="dots"></span><span class="p">220₺</span></li>
-              <li><span>Nutella</span><span class="dots"></span><span class="p">150₺</span></li>
-              <li><span>Reçel</span><span class="dots"></span><span class="p">100₺</span></li>
-              <li><span>Simit</span><span class="dots"></span><span class="p">45₺</span></li>
-              <li><span>Yeşillik</span><span class="dots"></span><span class="p">120₺</span></li>
-            </ul>
+              <ul class="menu-list mi-list">
+                <li><button class="mi" type="button" data-name="Beyaz Peynir (1 Dilim)" data-price="75₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Ezine tam yağlı beyaz peynir, tek dilim.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Beyaz Peynir (1 Dilim)</span><span class="dots"></span><span class="p">75₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Kaşar Peyniri (1 Dilim)" data-price="75₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Taze kaşar, tek dilim.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Kaşar Peyniri (1 Dilim)</span><span class="dots"></span><span class="p">75₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Çeçil Peyniri" data-price="95₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="İnce tel çeçil (örgü) peyniri.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Çeçil Peyniri</span><span class="dots"></span><span class="p">95₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Karışık Peynir Tabağı" data-price="220₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Beyaz peynir, kaşar ve çeçilden oluşan üçlü tabak.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Karışık Peynir Tabağı</span><span class="dots"></span><span class="p">220₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Tereyağı" data-price="120₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Köy tereyağı; bal ve ekmekle.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Tereyağı</span><span class="dots"></span><span class="p">120₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Zeytin Tabağı" data-price="120₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Yağlı siyah ve kırma yeşil zeytin, baharatlı.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Zeytin Tabağı</span><span class="dots"></span><span class="p">120₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Tahin Pekmez" data-price="200₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Karışımı sofrada yapılan tahin-pekmez.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Tahin Pekmez</span><span class="dots"></span><span class="p">200₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Söğüş" data-price="150₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Mevsiminde domates, salatalık, biber ve maydanoz.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Söğüş</span><span class="dots"></span><span class="p">150₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Acuka" data-price="120₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Ceviz, biber salçası ve baharatla yoğrulan Antakya mezesi.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Acuka</span><span class="dots"></span><span class="p">120₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Haşlanmış Yumurta" data-price="40₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Tam haşlanmış tek yumurta.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Haşlanmış Yumurta</span><span class="dots"></span><span class="p">40₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Bal Kaymak" data-price="220₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Süzme çiçek balı ve manda kaymağı; pişiyle en iyisi.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Bal Kaymak</span><span class="dots"></span><span class="p">220₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Nutella" data-price="150₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Porsiyon Nutella.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Nutella</span><span class="dots"></span><span class="p">150₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Reçel" data-price="100₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Ev yapımı mevsim reçeli.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Reçel</span><span class="dots"></span><span class="p">100₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Simit" data-price="45₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Günlük, susamlı taze simit.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Simit</span><span class="dots"></span><span class="p">45₺</span>
+                </button></li>
+                <li><button class="mi" type="button" data-name="Yeşillik" data-price="120₺" data-cat="Ekstralar" data-img="images/meze.webp" data-desc="Marul, roka, maydanoz, taze soğandan tabak.">
+                  <img class="mi-thumb" src="images/meze.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
+                  <span class="mi-name">Yeşillik</span><span class="dots"></span><span class="p">120₺</span>
+                </button></li>
+              </ul>
 
             <nav class="cat-prevnext" aria-label="Kategoriler arası gezinme">
               <a href="menu-krep.html"><span>← Önceki</span><b>Krep &amp; Pankek Çeşitleri</b></a>
@@ -118,7 +164,7 @@
           <p>Sinanpaşa, Çelebi Oğlu Sk. No:11<br />34353 Beşiktaş / İstanbul</p>
           <p><a href="tel:+902122369236">0 (212) 236 92 36</a></p>
           <p><a href="tel:+905494980021">0549 498 00 21</a></p>
-          <p><a href="https://instagram.com/limosbesiktas" target="_blank" rel="noopener noreferrer">Instagram — @limosbesiktas</a></p>
+          <p><a href="https://instagram.com/limoskahvalti" target="_blank" rel="noopener noreferrer">Instagram — @limoskahvalti</a></p>
           <p>Her gün · 18:00'de kapanır</p>
         </div>
       </div>
@@ -142,12 +188,28 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       <span>Konum</span>
     </a>
-    <a href="https://instagram.com/limosbesiktas" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
+    <a href="https://instagram.com/limoskahvalti" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       <span>Instagram</span>
     </a>
   </nav>
 
-  <script src="js/script.js?v=10" defer></script>
+  <div class="mi-dlg" id="mi-dlg" hidden>
+    <div class="mi-dlg-backdrop" data-close></div>
+    <div class="mi-dlg-box" role="dialog" aria-modal="true" aria-labelledby="mi-dlg-title">
+      <button class="mi-dlg-x" type="button" data-close aria-label="Kapat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="mi-dlg-media"><img id="mi-dlg-img" src="" alt="" /></div>
+      <div class="mi-dlg-body">
+        <p class="mi-dlg-cat" id="mi-dlg-cat"></p>
+        <h3 class="mi-dlg-title" id="mi-dlg-title"></h3>
+        <p class="mi-dlg-price" id="mi-dlg-price"></p>
+        <p class="mi-dlg-desc" id="mi-dlg-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js?v=11" defer></script>
 </body>
 </html>

@@ -23,9 +23,11 @@
   var MAX_SPIN = reduce ? 0 : 520;   // derece / sn
   var FADE_FROM = 0.62;         // bu ilerlemeden sonra pişmiş görsele geçiş başlar
 
+  var REWIND_MS = 1800;              // "yeniden pişir" geri sarması (+ dik oturma < 2 sn)
   var held = false, done = false;
   var p = 0, angle = 0, spinVel = 0;
   var landing = false, landTarget = 0;
+  var rewinding = false, rewindStart = 0;
   var timer = null, lastT = 0;
 
   function nowMs() { return (window.performance && performance.now) ? performance.now() : Date.now(); }
@@ -40,6 +42,34 @@
   }
 
   function step(dt) {
+    if (rewinding) {
+      var el = nowMs() - rewindStart;
+      var t = Math.min(1, el / REWIND_MS);
+      var ease = Math.pow(Math.min(1, t / 0.72), 1.4);        // yavaşça artan hızlanma
+      var taper = t > 0.72 ? Math.max(0, 1 - (t - 0.72) / 0.28) : 1;
+      spinVel = -3 * MAX_SPIN * ease * taper;                 // negatif = saat yönünün tersi, tepe ≈ 3×
+      angle += spinVel * dt;
+      var back = 1 - Math.pow(t, 1.3);                        // pişmiş → ham geçişi
+      var bl = Math.min(6, (Math.abs(spinVel) / (MAX_SPIN || 1)) * 4);
+      spin.style.transform = "rotate(" + angle.toFixed(1) + "deg)";
+      spin.style.filter = bl > 0.06 ? "blur(" + bl.toFixed(2) + "px)" : "";
+      imgDone.style.opacity = Math.max(0, back).toFixed(3);
+      fig.style.setProperty("--p", Math.max(0, back).toFixed(3));
+      if (t >= 1) {
+        rewinding = false;
+        done = false; p = 0; angle = 0; spinVel = 0; landing = false;
+        fig.classList.remove("is-done");
+        if (label) label.textContent = "Menemeni Hazırla";
+        if (hint) hint.textContent = "basılı tut";
+        spin.style.transform = "rotate(0deg)";
+        spin.style.filter = "";
+        imgDone.style.opacity = "0";
+        fig.style.setProperty("--p", "0");
+        stopEngine();
+      }
+      return;
+    }
+
     if (held && !done) {
       // serbest dönüş
       spinVel += (MAX_SPIN - spinVel) * Math.min(1, dt * 3.5);
@@ -101,9 +131,20 @@
     render();
   }
 
+  function startRewind() {
+    if (rewinding) return;
+    rewinding = true;
+    rewindStart = nowMs();
+    fig.classList.remove("is-cooking");
+    fig.classList.add("is-done");
+    if (label) label.textContent = "Geri sarılıyor…";
+    kick();
+  }
+
   function press(e) {
     if (e && e.cancelable) e.preventDefault();
-    if (done) { reset(); return; }          // pişmişken dokunuş → baştan
+    if (rewinding) return;
+    if (done) { startRewind(); return; }    // pişmişken dokunuş → saat tersi geri sar
     held = true;
     fig.classList.add("is-cooking");
     if (label) label.textContent = "Pişiyor…";

@@ -288,6 +288,12 @@ ul { list-style: none; }
 .site-header.is-scrolled .header-phone:hover { color: var(--accent); }
 .site-header.is-scrolled .header-cta { color: var(--espresso); border-color: var(--stone-line-dk); }
 .site-header.is-scrolled .header-cta:hover { background: var(--accent); color: var(--espresso); border-color: var(--accent); }
+
+/* Ana sayfa: "Yol Tarifi" simsiyah (menü sayfalarında sarı kalır) */
+body:not(.menu-page) .header-phone,
+body:not(.menu-page) .header-phone:hover,
+body:not(.menu-page) .site-header.is-scrolled .header-phone,
+body:not(.menu-page) .site-header.is-scrolled .header-phone:hover { color: #000; }
 .site-header.is-scrolled .nav-toggle span { background: var(--espresso); }
 
 /* Hamburger */
@@ -1206,8 +1212,111 @@ ul { list-style: none; }
   .cat-main { max-width: none; }
 }
 
+.cat-blurb { color: #A79C88; margin-top: 14px; }
+
+/* --- menu.html kart açıklaması --- */
+.cat-name { flex-direction: column; align-items: flex-start; justify-content: center; gap: 6px; }
+.cat-desc {
+  font-family: var(--sans);
+  font-size: .8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--stone);
+  max-width: 30ch;
+}
+
+/* --- alt sayfa: fotoğraflı, tıklanır ürün satırı --- */
+.mi-list li { padding: 0; }
+.mi {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 12px 4px 12px 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.mi-thumb {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: var(--paper-2);
+}
+.mi-name { flex: 0 0 auto; font-size: 1.02rem; }
+.mi .dots { flex: 1; }
+.mi .p { flex: 0 0 auto; }
+.mi:hover .mi-name { color: var(--accent-ink); }
+.mi:hover .mi-thumb { outline: 2px solid var(--accent); outline-offset: 2px; }
+.mi:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* --- ürün pop-up --- */
+.mi-dlg {
+  position: fixed; inset: 0; z-index: 200;
+  display: grid; place-items: center;
+  padding: clamp(16px, 4vw, 40px);
+}
+.mi-dlg[hidden] { display: none; }
+.mi-dlg-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(20, 14, 10, .62);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  animation: mi-fade .2s var(--ease);
+}
+.mi-dlg-box {
+  position: relative; z-index: 1;
+  width: min(560px, 100%);
+  max-height: min(88vh, 760px);
+  overflow: auto;
+  background: var(--paper);
+  border-radius: 6px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .4);
+  animation: mi-rise .28s var(--ease);
+}
+.mi-dlg-x {
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  border: 0; border-radius: 50%;
+  background: rgba(20, 14, 10, .5);
+  color: #fff; cursor: pointer;
+}
+.mi-dlg-x svg { width: 18px; height: 18px; }
+.mi-dlg-media { aspect-ratio: 16 / 11; background: var(--paper-2); }
+.mi-dlg-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mi-dlg-body { padding: clamp(22px, 4vw, 34px); }
+.mi-dlg-cat {
+  font-family: var(--sans); font-size: .68rem; font-weight: 500;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--stone);
+  margin-bottom: 10px;
+}
+.mi-dlg-title {
+  font-family: var(--serif); font-size: clamp(1.7rem, 5vw, 2.4rem);
+  font-weight: 500; line-height: 1.08; color: var(--espresso);
+}
+.mi-dlg-price {
+  font-family: var(--sans); font-size: 1rem; font-weight: 500;
+  letter-spacing: .03em; color: var(--olive-deep); margin-top: 8px;
+}
+.mi-dlg-desc {
+  margin-top: 16px; font-size: .98rem; line-height: 1.75; color: var(--ink);
+  max-width: 46ch;
+}
+@keyframes mi-fade { from { opacity: 0; } }
+@keyframes mi-rise { from { opacity: 0; transform: translateY(16px); } }
+
+.mi-dlg-open { overflow: hidden; }
+
 @media (prefers-reduced-motion: reduce) {
   .cat-card, .cat-arrow { transition: none; }
+  .mi-dlg-backdrop, .mi-dlg-box { animation: none; }
 }
 
 /* =========================================================
