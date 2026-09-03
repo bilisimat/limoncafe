@@ -27,18 +27,26 @@
 
   <link rel="icon" type="image/webp" href="logo.webp" />
   <link rel="preload" as="image" href="images/hero.webp" fetchpriority="high" />
-  <link rel="stylesheet" href="css/styles.css?v=6" />
+  <link rel="stylesheet" href="css/styles.css?v=29" />
 </head>
 <body>
+
+  <div class="intro-splash" id="intro-splash" aria-hidden="true">
+    <div class="intro-splash__lemon"><img src="images/intro-lemon.gif" alt="" width="512" height="512" /></div>
+    <p class="intro-splash__word">Limos</p>
+  </div>
 
   <a class="skip-link" href="#kahvalti">İçeriğe geç</a>
 
   <!-- ================= HEADER ================= -->
   <header class="site-header" id="top" data-header>
     <div class="container header-inner">
+      <a href="#top" class="header-logo" aria-label="Limos Kahvaltı — ana sayfa">
+        <img src="images/logo-mark.jpg" width="150" height="150" alt="Limos Kahvaltı" />
+      </a>
       <nav class="main-nav" id="main-nav" aria-label="Ana menü">
         <a href="#kahvalti" class="nav-link">Kahvaltı</a>
-        <a href="#menu" class="nav-link">Menü</a>
+        <a href="menu.html" class="nav-link">Menü</a>
         <a href="#galeri" class="nav-link">Galeri</a>
         <a href="#iletisim" class="nav-link">İletişim</a>
         <a href="tel:+905494980021" class="nav-link nav-link--cta">Rezervasyon &amp; Bilgi</a>
@@ -74,7 +82,7 @@
         ve demi gelmiş çay. Limos'ta sofra acele etmeden kurulur.
       </p>
       <div class="hero-actions">
-        <a href="#menu" class="btn btn-solid">Menüyü Keşfet <span class="arw" aria-hidden="true">→</span></a>
+        <a href="menu.html" class="btn btn-solid">Menüyü Keşfet <span class="arw" aria-hidden="true">→</span></a>
         <a href="#iletisim" class="btn btn-line btn-line--light">Bizi Ziyaret Et</a>
       </div>
     </div>
@@ -82,7 +90,7 @@
       <div class="container hero-foot-inner">
         <span>Serpme &amp; à la carte</span>
         <span>Her gün · 18:00'e kadar</span>
-        <span>Google 4,6 / 5 — 2.418+ yorum</span>
+        <span>Tüm yemek kartları geçerli</span>
       </div>
     </div>
   </section>
@@ -102,12 +110,23 @@
             Erzincan balı, manda kaymağı, ev reçelleri ve gün boyu tazelenen çayın
             etrafında kurulan bir sofra. Bereketli ama özenli; bol ama savruk değil.
           </p>
-          <ul class="intro-facts" data-reveal>
-            <li><strong>4,6 / 5</strong><span>Google — 2.418+ değerlendirme</span></li>
-            <li><strong>Kişi başı ₺400–800</strong><span>Serpme &amp; à la carte</span></li>
-            <li><strong>İçeride servis</strong><span>Her gün, 18:00'de kapanır</span></li>
-          </ul>
         </div>
+
+        <figure class="intro-cook" id="menemen-fig">
+          <div class="cook-pan">
+            <div class="cook-spin" id="menemen-spin">
+              <img class="cook-img cook-img--raw" src="images/menemen-raw.png" width="715" height="534"
+                   decoding="async" alt="Menemen malzemeleri: doğranmış domates, biber, soğan ve yumurta bakır sahanda" />
+              <img class="cook-img cook-img--done" src="images/menemen-cooked.png" width="713" height="535"
+                   decoding="async" alt="Pişmiş menemen" />
+            </div>
+          </div>
+          <button class="cook-btn" id="menemen-btn" type="button" aria-label="Menemeni hazırla — basılı tut">
+            <span class="cook-btn-fill" aria-hidden="true"></span>
+            <span class="cook-btn-label">Menemeni Hazırla</span>
+          </button>
+          <p class="cook-hint">basılı tut</p>
+        </figure>
       </div>
     </section>
 
@@ -121,14 +140,9 @@
 
         <div class="breakfast-grid">
           <figure class="breakfast-figure breakfast-figure--main" data-reveal>
-            <img src="images/breakfast.webp" width="1280" height="1541" loading="lazy" decoding="async"
-                 alt="Meşe tahtası üzerinde sıcak sucuk tava; arkada sahanda sucuklu yumurta, pişi, domates ve zeytin"
-                 data-fallback="images/placeholder.svg" />
-          </figure>
-          <figure class="breakfast-figure breakfast-figure--inset" data-reveal>
-            <img src="images/sucuklu_yumurta.webp" width="1200" height="675" loading="lazy" decoding="async"
-                 alt="Bakır sahanda sucuklu yumurta"
-                 data-fallback="images/placeholder.svg" />
+            <video src="video/sucuk-sizzle.mp4" poster="images/sucuk-sizzle-poster.jpg"
+                   autoplay muted loop playsinline preload="metadata"
+                   aria-label="Bakır tavada cızırdayan sucuk dilimleri"></video>
           </figure>
 
           <div class="breakfast-copy" data-reveal>
@@ -142,7 +156,6 @@
               <li>
                 <div class="plate-line">
                   <h3>Kahvaltı Tabağı</h3>
-                  <span class="plate-price">450₺</span>
                 </div>
                 <p>Ezine beyaz peynir, taze kaşar, domates, salatalık, Erzincan balı,
                    manda kaymağı, ev reçeli, siyah &amp; yeşil zeytin, omlet (1 yumurta),
@@ -151,14 +164,13 @@
               <li>
                 <div class="plate-line">
                   <h3>Pişi Tabağı</h3>
-                  <span class="plate-price">350₺</span>
                 </div>
                 <p>3 adet sade pişi, domates, salatalık, Ezine beyaz peynir, ev reçeli,
                    siyah &amp; yeşil zeytin. <em>Tek kişilik — ilk çay ikramımızdır.</em></p>
               </li>
             </ul>
 
-            <a href="#menu" class="link-arrow">Menünün tamamını gör <span class="arw" aria-hidden="true">→</span></a>
+            <a href="menu.html" class="link-arrow">Menünün tamamını gör <span class="arw" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -175,22 +187,22 @@
         <div class="sig-grid">
           <article class="sig-item" data-reveal>
             <figure class="sig-media"><img src="images/sucuk-tava.webp" width="1100" height="1100" loading="lazy" decoding="async" alt="Bakır tavada kızarmış dilim sucuk" data-fallback="images/placeholder.svg" /></figure>
-            <div class="sig-line"><h3>Sucuk Tava</h3><span>300₺</span></div>
+            <div class="sig-line"><h3>Sucuk Tava</h3></div>
             <p>Kendi yağında, kenarları çıtır.</p>
           </article>
           <article class="sig-item" data-reveal>
             <figure class="sig-media"><img src="images/menemen.webp" width="1400" height="1750" loading="lazy" decoding="async" alt="Sahanda menemen, taze sıkma portakal suyu ve çay eşliğinde" data-fallback="images/placeholder.svg" /></figure>
-            <div class="sig-line"><h3>Karışık Menemen</h3><span>350₺</span></div>
+            <div class="sig-line"><h3>Karışık Menemen</h3></div>
             <p>Domates, biber, sucuk, kavurma ve kaşar.</p>
           </article>
           <article class="sig-item" data-reveal>
             <figure class="sig-media"><img src="images/sucuklu_yumurta.webp" width="1200" height="675" loading="lazy" decoding="async" alt="Bakır sahanda sucuklu yumurta" data-fallback="images/placeholder.svg" /></figure>
-            <div class="sig-line"><h3>Sucuklu Yumurta</h3><span>270₺</span></div>
+            <div class="sig-line"><h3>Sucuklu Yumurta</h3></div>
             <p>Sahanda, bol sucuklu.</p>
           </article>
           <article class="sig-item" data-reveal>
             <figure class="sig-media"><img src="images/pisi-tabagi.webp" width="690" height="460" loading="lazy" decoding="async" alt="Sıcak pişi tabağı: domates, salatalık, peynir, zeytin ve acuka ile" data-fallback="images/placeholder.svg" /></figure>
-            <div class="sig-line"><h3>Pişi Tabağı</h3><span>350₺</span></div>
+            <div class="sig-line"><h3>Pişi Tabağı</h3></div>
             <p>3 adet sade pişi, taze mezelerle.</p>
           </article>
         </div>
@@ -199,173 +211,16 @@
 
     <!-- ================= EDITORIAL STATEMENT ================= -->
     <section class="statement" aria-label="Limos anlayışı">
+      <video class="statement-bg" src="video/0902.mp4" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
       <div class="container">
-        <p class="statement-text" data-reveal>
-          Uzun kahvaltılar.<br />
-          <em>Demli çaylar.</em><br />
-          Acelesi olmayan sabahlar.
-        </p>
-      </div>
-    </section>
-
-    <!-- ================= 04 — MENÜ ================= -->
-    <section class="section menu" id="menu">
-      <div class="container">
-        <header class="sec-head">
-          <p class="sec-index" data-reveal>04 — Menü</p>
-          <h2 class="display" data-reveal>Sofradaki her şey.</h2>
-          <p class="sec-sub" data-reveal>Fiyatlar Türk Lirası (₺) cinsindendir. Serpme tabaklarda ilk çay ikramımızdır.</p>
-        </header>
-
-        <div class="menu-filters" id="menu-filters" role="tablist" aria-label="Menü kategorileri">
-          <button class="filter-btn is-active" data-filter="all">Tümü</button>
-          <button class="filter-btn" data-filter="menemen">Menemenler</button>
-          <button class="filter-btn" data-filter="yumurta">Yumurta &amp; Omlet</button>
-          <button class="filter-btn" data-filter="tava">Tavalar</button>
-          <button class="filter-btn" data-filter="pisi">Pişiler</button>
-          <button class="filter-btn" data-filter="gozleme">Gözlemeler</button>
-          <button class="filter-btn" data-filter="krep">Krep &amp; Pankek</button>
-          <button class="filter-btn" data-filter="ekstra">Ekstralar</button>
-          <button class="filter-btn" data-filter="icecek">İçecekler</button>
-        </div>
-
-        <div class="menu-grid" id="menu-grid">
-          <div class="menu-cat" data-cat="menemen">
-            <h3 class="menu-cat-title">Menemenler</h3>
-            <ul class="menu-list">
-              <li><span>Klasik Menemen</span><span class="dots"></span><span class="p">220₺</span></li>
-              <li><span>Kaşarlı Menemen</span><span class="dots"></span><span class="p">250₺</span></li>
-              <li><span>Beyaz Peynirli Menemen</span><span class="dots"></span><span class="p">250₺</span></li>
-              <li><span>Karışık Menemen</span><span class="dots"></span><span class="p">350₺</span></li>
-              <li><span>Kavurmalı Menemen</span><span class="dots"></span><span class="p">370₺</span></li>
-              <li><span>Sucuklu Menemen</span><span class="dots"></span><span class="p">330₺</span></li>
-            </ul>
-          </div>
-
-          <div class="menu-cat" data-cat="yumurta">
-            <h3 class="menu-cat-title">Sahanda Yumurtalar / Omletler</h3>
-            <ul class="menu-list">
-              <li><span>Sade Yumurta</span><span class="dots"></span><span class="p">150₺</span></li>
-              <li><span>Kaşarlı Yumurta</span><span class="dots"></span><span class="p">200₺</span></li>
-              <li><span>Beyaz Peynirli Yumurta</span><span class="dots"></span><span class="p">200₺</span></li>
-              <li><span>Karışık Yumurta</span><span class="dots"></span><span class="p">250₺</span></li>
-              <li><span>Kavurmalı Yumurta</span><span class="dots"></span><span class="p">350₺</span></li>
-              <li><span>Sucuklu Yumurta</span><span class="dots"></span><span class="p">270₺</span></li>
-              <li><span>Patatesli Yumurta</span><span class="dots"></span><span class="p">200₺</span></li>
-              <li><span>Mantar Kaşar Yumurta</span><span class="dots"></span><span class="p">250₺</span></li>
-            </ul>
-          </div>
-
-          <div class="menu-cat" data-cat="tava">
-            <h3 class="menu-cat-title">Tavalar</h3>
-            <ul class="menu-list">
-              <li><span>Mıhlama</span><span class="dots"></span><span class="p">300₺</span></li>
-              <li><span>Sucuk Tava</span><span class="dots"></span><span class="p">300₺</span></li>
-              <li><span>Hellim Tava</span><span class="dots"></span><span class="p">200₺</span></li>
-              <li><span>Kavurma Tava</span><span class="dots"></span><span class="p">350₺</span></li>
-              <li><span>Yumurtalı Ekmek (6)</span><span class="dots"></span><span class="p">150₺</span></li>
-              <li><span>Sosis Tava</span><span class="dots"></span><span class="p">250₺</span></li>
-              <li><span>Salçalı Sosis</span><span class="dots"></span><span class="p">300₺</span></li>
-              <li><span>Patates Tava</span><span class="dots"></span><span class="p">180₺</span></li>
-              <li><span>Sigara Böreği (6)</span><span class="dots"></span><span class="p">120₺</span></li>
-            </ul>
-          </div>
-
-          <div class="menu-cat" data-cat="pisi">
-            <h3 class="menu-cat-title">Pişiler <small>(4 Adet)</small></h3>
-            <ul class="menu-list">
-              <li><span>Sade Pişi</span><span class="dots"></span><span class="p">200₺</span></li>
-              <li><span>Kaşarlı Pişi</span><span class="dots"></span><span class="p">250₺</span></li>
-              <li><span>Beyaz Peynirli Pişi</span><span class="dots"></span><span class="p">250₺</span></li>
-              <li><span>Nutellalı Pişi</span><span class="dots"></span><span class="p">250₺</span></li>
-              <li><span>Kavurma Kaşar Pişi</span><span class="dots"></span><span class="p">350₺</span></li>
-            </ul>
-          </div>
-
-          <div class="menu-cat" data-cat="gozleme">
-            <h3 class="menu-cat-title">Gözlemeler</h3>
-            <ul class="menu-list">
-              <li><span>Kaşarlı Gözleme</span><span class="dots"></span><span class="p">275₺</span></li>
-              <li><span>Beyaz Peynirli Gözleme</span><span class="dots"></span><span class="p">275₺</span></li>
-              <li><span>Patatesli Gözleme</span><span class="dots"></span><span class="p">275₺</span></li>
-              <li><span>Patates Kaşarlı Gözleme</span><span class="dots"></span><span class="p">300₺</span></li>
-              <li><span>Kavurma Kaşarlı Gözleme</span><span class="dots"></span><span class="p">400₺</span></li>
-              <li><span>Sucuklu Gözleme</span><span class="dots"></span><span class="p">350₺</span></li>
-              <li><span>Sucuklu Kaşarlı Gözleme</span><span class="dots"></span><span class="p">375₺</span></li>
-            </ul>
-          </div>
-
-          <div class="menu-cat" data-cat="krep">
-            <h3 class="menu-cat-title">Krep &amp; Pankek Çeşitleri</h3>
-            <ul class="menu-list">
-              <li><span>Sade Krep</span><span class="dots"></span><span class="p">150₺</span></li>
-              <li><span>Nutellalı Krep</span><span class="dots"></span><span class="p">275₺</span></li>
-              <li><span>Pankek (4 Adet)</span><span class="dots"></span><span class="p">400₺</span></li>
-            </ul>
-            <p class="menu-cat-note">Nutella ve meyve ile servis edilir.</p>
-          </div>
-
-          <div class="menu-cat" data-cat="ekstra">
-            <h3 class="menu-cat-title">Ekstralar</h3>
-            <ul class="menu-list">
-              <li><span>Beyaz Peynir (1 Dilim)</span><span class="dots"></span><span class="p">75₺</span></li>
-              <li><span>Kaşar Peyniri (1 Dilim)</span><span class="dots"></span><span class="p">75₺</span></li>
-              <li><span>Çeçil Peyniri</span><span class="dots"></span><span class="p">95₺</span></li>
-              <li><span>Karışık Peynir Tabağı</span><span class="dots"></span><span class="p">220₺</span></li>
-              <li><span>Tereyağı</span><span class="dots"></span><span class="p">120₺</span></li>
-              <li><span>Zeytin Tabağı</span><span class="dots"></span><span class="p">120₺</span></li>
-              <li><span>Tahin Pekmez</span><span class="dots"></span><span class="p">200₺</span></li>
-              <li><span>Söğüş</span><span class="dots"></span><span class="p">150₺</span></li>
-              <li><span>Acuka</span><span class="dots"></span><span class="p">120₺</span></li>
-              <li><span>Haşlanmış Yumurta</span><span class="dots"></span><span class="p">40₺</span></li>
-              <li><span>Bal Kaymak</span><span class="dots"></span><span class="p">220₺</span></li>
-              <li><span>Nutella</span><span class="dots"></span><span class="p">150₺</span></li>
-              <li><span>Reçel</span><span class="dots"></span><span class="p">100₺</span></li>
-              <li><span>Simit</span><span class="dots"></span><span class="p">45₺</span></li>
-              <li><span>Yeşillik</span><span class="dots"></span><span class="p">120₺</span></li>
-            </ul>
-          </div>
-
-          <div class="menu-cat menu-cat--drinks" data-cat="icecek">
-            <h3 class="menu-cat-title">İçecekler</h3>
-            <div class="menu-subcols">
-              <div class="menu-subcol">
-                <h4 class="menu-subtitle">Soğuk İçecekler</h4>
-                <ul class="menu-list">
-                  <li><span>Su</span><span class="dots"></span><span class="p">25₺</span></li>
-                  <li><span>Sade Soda</span><span class="dots"></span><span class="p">50₺</span></li>
-                  <li><span>Meyveli Soda</span><span class="dots"></span><span class="p">60₺</span></li>
-                  <li><span>Kola</span><span class="dots"></span><span class="p">90₺</span></li>
-                  <li><span>Meyve Suyu</span><span class="dots"></span><span class="p">75₺</span></li>
-                  <li><span>Ice Tea</span><span class="dots"></span><span class="p">75₺</span></li>
-                  <li><span>Taze Sıkma Portakal Suyu</span><span class="dots"></span><span class="p">175₺</span></li>
-                  <li><span>Ayran</span><span class="dots"></span><span class="p">50₺</span></li>
-                  <li><span>Naneli Limonata</span><span class="dots"></span><span class="p">150₺</span></li>
-                </ul>
-              </div>
-              <div class="menu-subcol">
-                <h4 class="menu-subtitle">Sıcak İçecekler</h4>
-                <ul class="menu-list">
-                  <li><span>Çay</span><span class="dots"></span><span class="p">40₺</span></li>
-                  <li><span>Türk Kahvesi</span><span class="dots"></span><span class="p">100₺</span></li>
-                  <li><span>Demleme Bitki Çayı</span><span class="dots"></span><span class="p">100₺</span></li>
-                  <li><span>Espresso</span><span class="dots"></span><span class="p">85₺</span></li>
-                  <li><span>Americano</span><span class="dots"></span><span class="p">100₺</span></li>
-                  <li><span>Latte</span><span class="dots"></span><span class="p">120₺</span></li>
-                  <li><span>Cappuccino</span><span class="dots"></span><span class="p">120₺</span></li>
-                  <li><span>Mocha</span><span class="dots"></span><span class="p">120₺</span></li>
-                  <li><span>Filtre Kahve</span><span class="dots"></span><span class="p">100₺</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="menu-pay" id="odeme" data-reveal>
-          <p class="menu-pay-label">Ödeme</p>
-          <p class="menu-pay-list">
-            Nakit &amp; kredi kartı · Pluxee · Metropol Card · SETCARD · Multinet · Token Flex · Edenred (Ticket)
+        <div class="statement-body" data-reveal>
+          <p class="sec-index sec-index--light">Limos anlayışı</p>
+          <p class="statement-text">
+            Uzun kahvaltılar.<br />
+            <em>Demli çaylar.</em><br />
+            Acelesi olmayan sabahlar.
           </p>
+          <p class="statement-note">Sofra kurulur, çay tazelenir; gerisi zamana kalır.</p>
         </div>
       </div>
     </section>
@@ -374,7 +229,7 @@
     <section class="section atmosphere">
       <div class="container atmo-grid">
         <div class="atmo-copy">
-          <p class="sec-index" data-reveal>05 — Atmosfer</p>
+          <p class="sec-index" data-reveal>04 — Atmosfer</p>
           <h2 class="display" data-reveal>Güneşli bir masa, <em>tazelenen çay</em>.</h2>
           <p class="lede" data-reveal>
             Kahvaltı Sokağı'nın hareketi dışarıda; içeride tempo yavaş. Bahçede ya da
@@ -398,7 +253,7 @@
     <section class="section gallery-sec" id="galeri">
       <div class="container">
         <header class="sec-head">
-          <p class="sec-index" data-reveal>06 — Galeri</p>
+          <p class="sec-index" data-reveal>05 — Galeri</p>
           <h2 class="display" data-reveal>Sofradan kareler.</h2>
         </header>
 
@@ -455,14 +310,13 @@
           <blockquote class="review-card"><p>Honestly one of the best breakfast restaurants I've had. Clean, the şakşuka is amazing, the service is perfect.</p><cite>Ali Al Saad</cite></blockquote>
         </div>
       </div>
-      <p class="reviews-note">Yorumlar Google Haritalar üzerindeki misafir değerlendirmelerinden alınmıştır. Şerit üzerine gelince durur.</p>
     </section>
 
     <!-- ================= İLETİŞİM ================= -->
     <section class="section visit" id="iletisim">
       <div class="container">
         <header class="sec-head">
-          <p class="sec-index" data-reveal>07 — Ziyaret</p>
+          <p class="sec-index" data-reveal>06 — Ziyaret</p>
           <h2 class="display" data-reveal>Limos'ta buluşalım.</h2>
           <p class="sec-sub" data-reveal>Sinanpaşa, Çelebi Oğlu Sk. No:11, 34353 Beşiktaş / İstanbul</p>
         </header>
@@ -524,7 +378,7 @@
         <nav class="footer-col" aria-label="Alt menü">
           <h4>Keşfet</h4>
           <a href="#kahvalti">Kahvaltı</a>
-          <a href="#menu">Menü</a>
+          <a href="menu.html">Menü</a>
           <a href="#galeri">Galeri</a>
           <a href="#yorumlar">Yorumlar</a>
           <a href="#iletisim">İletişim</a>
@@ -567,6 +421,7 @@
     </a>
   </nav>
 
-  <script src="js/script.js?v=6" defer></script>
+  <script src="js/script.js?v=9" defer></script>
+  <script src="js/menemen.js?v=5" defer></script>
 </body>
 </html>

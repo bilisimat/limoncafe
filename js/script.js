@@ -6,6 +6,25 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ---------- 0. Giriş animasyonu (dönen limon, ~4 sn) ---------- */
+  (function introSplash() {
+    var s = document.getElementById("intro-splash");
+    if (!s) return;
+    var seen;
+    try { seen = sessionStorage.getItem("limosIntro"); } catch (e) {}
+    if (reduceMotion || seen) {
+      if (s.parentNode) s.parentNode.removeChild(s);
+      return;
+    }
+    document.documentElement.classList.add("intro-lock");
+    window.setTimeout(function () {
+      s.classList.add("is-hiding");
+      document.documentElement.classList.remove("intro-lock");
+      try { sessionStorage.setItem("limosIntro", "1"); } catch (e) {}
+      window.setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 850);
+    }, 4000);
+  })();
+
   document.addEventListener("DOMContentLoaded", function () {
 
     /* ---------- 1. Mobil navigasyon ---------- */
@@ -69,6 +88,29 @@
     if (filterButtons.length) {
       var initial = document.querySelector(".filter-btn.is-active") || filterButtons[0];
       applyFilter(initial.getAttribute("data-filter"));
+    }
+
+    /* ---------- 3b. Menü sayfası: kategori akordeonu ---------- */
+    var catHeads = document.querySelectorAll(".cat-head");
+    if (catHeads.length) {
+      catHeads.forEach(function (head) {
+        head.addEventListener("click", function () {
+          var acc = head.closest(".cat-acc");
+          if (!acc) return;
+          var willOpen = !acc.classList.contains("is-open");
+
+          document.querySelectorAll(".cat-acc.is-open").forEach(function (other) {
+            if (other !== acc) {
+              other.classList.remove("is-open");
+              var b = other.querySelector(".cat-head");
+              if (b) b.setAttribute("aria-expanded", "false");
+            }
+          });
+
+          acc.classList.toggle("is-open", willOpen);
+          head.setAttribute("aria-expanded", willOpen ? "true" : "false");
+        });
+      });
     }
 
     /* ---------- 4. Aktif menü linkini vurgula (scroll spy) ---------- */
@@ -175,5 +217,40 @@
       s.textContent = JSON.stringify(schema);
       document.head.appendChild(s);
     } catch (e) { /* yok say */ }
+
+    /* ---------- 11. Loop video: bazı tarayıcılar loop/autoplay'i takmıyor ---------- */
+    document.querySelectorAll("video[loop], video[autoplay]").forEach(function (v) {
+      v.muted = true;               // autoplay politikası için şart
+      v.setAttribute("muted", "");
+      v.playsInline = true;
+      v.loop = true;
+
+      var kick = function () {
+        var p = v.play();
+        if (p && typeof p.catch === "function") p.catch(function () {});
+      };
+      // döngü kopması / erken durma durumunda başa sar
+      v.addEventListener("ended", function () { v.currentTime = 0; kick(); });
+      v.addEventListener("pause", function () {
+        if (!v.ended && !document.hidden && v.__inView) kick();
+      });
+
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            v.__inView = e.isIntersecting;
+            if (e.isIntersecting) kick();
+            else v.pause();
+          });
+        }, { threshold: 0.1 });
+        io.observe(v);
+      } else {
+        v.__inView = true;
+        kick();
+      }
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden && v.__inView) kick();
+      });
+    });
   });
 })();

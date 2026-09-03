@@ -14,6 +14,12 @@ credentials*
 işletme-bilgileri.md
 limos_kurumsal_kimlik.md
 node_modules/
+limos/
+yeni_görüntü/
+Menemen animasyonu/
+cinematic/
+cinematic_tmp/
+index-cinematic.html
 
 # ---- Kullanılmayan orijinal görseller (site webp sürümleri kullanıyor) ----
 logo,.jpg

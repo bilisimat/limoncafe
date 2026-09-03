@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#211C18" />
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <title>Menü — Limos Kahvaltı, Beşiktaş</title>
+  <meta name="description" content="Limos Kahvaltı menüsü: menemenler, sahanda yumurtalar, tavalar, pişiler, gözlemeler, krep & pankek, ekstralar ve içecekler. Fiyatlar Türk Lirası (₺) cinsindendir." />
+  <link rel="canonical" href="https://limosbesiktas.com/menu" />
+
+  <meta property="og:title" content="Menü — Limos Kahvaltı" />
+  <meta property="og:description" content="Serpme ve à la carte kahvaltı menüsü. Beşiktaş / İstanbul." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:image" content="images/hero.webp" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/webp" href="logo.webp" />
+  <link rel="stylesheet" href="css/styles.css?v=29" />
+</head>
+<body class="menu-page">
+
+  <a class="skip-link" href="#menu-baslik">İçeriğe geç</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="top" data-header>
+    <div class="container header-inner">
+      <a href="index.html" class="header-logo" aria-label="Limos Kahvaltı — ana sayfa">
+        <img src="images/logo-mark.jpg" width="150" height="150" alt="Limos Kahvaltı" />
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Ana menü">
+        <a href="index.html#kahvalti" class="nav-link">Kahvaltı</a>
+        <a href="menu.html" class="nav-link is-current">Menü</a>
+        <a href="index.html#galeri" class="nav-link">Galeri</a>
+        <a href="index.html#iletisim" class="nav-link">İletişim</a>
+        <a href="tel:+905494980021" class="nav-link nav-link--cta">Rezervasyon &amp; Bilgi</a>
+      </nav>
+
+      <a href="index.html" class="brand" aria-label="Limos Kahvaltı — ana sayfa">
+        <span class="brand-word">Limos</span>
+        <span class="brand-sub">kahvaltı — beşiktaş</span>
+      </a>
+
+      <div class="header-actions">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="header-phone">Yol Tarifi</a>
+        <a href="tel:+902122369236" class="btn btn-line header-cta">Bizi Arayın</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü aç / kapat" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= MENÜ BAŞLIK ================= -->
+    <section class="menu-hero">
+      <div class="container">
+        <p class="sec-index sec-index--light">Menü</p>
+        <h1 class="display display--light" id="menu-baslik">Sofradaki her şey.</h1>
+        <p class="sec-sub sec-sub--light">Fiyatlar Türk Lirası (₺) cinsindendir. Serpme tabaklarda ilk çay ikramımızdır. Bir kategoriye dokunun, içindekiler açılsın.</p>
+      </div>
+    </section>
+
+    <!-- ================= KATEGORİLER (accordion) ================= -->
+    <section class="section menu-acc-sec">
+      <div class="container">
+        <div class="cat-list">
+
+          <div class="cat-acc" data-cat="menemen">
+            <button class="cat-head" type="button" aria-expanded="false" aria-controls="panel-menemen">
+              <span class="cat-thumb" aria-hidden="true"></span>
+              <span class="cat-name">Menemenler</span>
+              <svg class="cat-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="cat-panel" id="panel-menemen">
+              <div class="cat-panel-inner">
+                <ul class="menu-list">
+                  <li><span>Klasik Menemen</span><span class="dots"></span><span class="p">220₺</span></li>
+                  <li><span>Kaşarlı Menemen</span><span class="dots"></span><span class="p">250₺</span></li>
+                  <li><span>Beyaz Peynirli Menemen</span><span class="dots"></span><span class="p">250₺</span></li>
+                  <li><span>Karışık Menemen</span><span class="dots"></span><span class="p">350₺</span></li>
+                  <li><span>Kavurmalı Menemen</span><span class="dots"></span><span class="p">370₺</span></li>
+                  <li><span>Sucuklu Menemen</span><span class="dots"></span><span class="p">330₺</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cat-acc" data-cat="yumurta">
+            <button class="cat-head" type="button" aria-expanded="false" aria-controls="panel-yumurta">
+              <span class="cat-thumb" aria-hidden="true"></span>
+              <span class="cat-name">Sahanda Yumurtalar / Omletler</span>
+              <svg class="cat-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="cat-panel" id="panel-yumurta">
+              <div class="cat-panel-inner">
+                <ul class="menu-list">
+                  <li><span>Sade Yumurta</span><span class="dots"></span><span class="p">150₺</span></li>
+                  <li><span>Kaşarlı Yumurta</span><span class="dots"></span><span class="p">200₺</span></li>
+                  <li><span>Beyaz Peynirli Yumurta</span><span class="dots"></span><span class="p">200₺</span></li>
+                  <li><span>Karışık Yumurta</span><span class="dots"></span><span class="p">250₺</span></li>
+                  <li><span>Kavurmalı Yumurta</span><span class="dots"></span><span class="p">350₺</span></li>
+                  <li><span>Sucuklu Yumurta</span><span class="dots"></span><span class="p">270₺</span></li>
+                  <li><span>Patatesli Yumurta</span><span class="dots"></span><span class="p">200₺</span></li>
+                  <li><span>Mantar Kaşar Yumurta</span><span class="dots"></span><span class="p">250₺</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cat-acc" data-cat="tava">
+            <button class="cat-head" type="button" aria-expanded="false" aria-controls="panel-tava">
+              <span class="cat-thumb" aria-hidden="true"></span>
+              <span class="cat-name">Tavalar</span>
+              <svg class="cat-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="cat-panel" id="panel-tava">
+              <div class="cat-panel-inner">
+                <ul class="menu-list">
+                  <li><span>Mıhlama</span><span class="dots"></span><span class="p">300₺</span></li>
+                  <li><span>Sucuk Tava</span><span class="dots"></span><span class="p">300₺</span></li>
+                  <li><span>Hellim Tava</span><span class="dots"></span><span class="p">200₺</span></li>
+                  <li><span>Kavurma Tava</span><span class="dots"></span><span class="p">350₺</span></li>
+                  <li><span>Yumurtalı Ekmek (6)</span><span class="dots"></span><span class="p">150₺</span></li>
+                  <li><span>Sosis Tava</span><span class="dots"></span><span class="p">250₺</span></li>
+                  <li><span>Salçalı Sosis</span><span class="dots"></span><span class="p">300₺</span></li>
+                  <li><span>Patates Tava</span><span class="dots"></span><span class="p">180₺</span></li>
+                  <li><span>Sigara Böreği (6)</span><span class="dots"></span><span class="p">120₺</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cat-acc" data-cat="pisi">
+            <button class="cat-head" type="button" aria-expanded="false" aria-controls="panel-pisi">
+              <span class="cat-thumb" aria-hidden="true"></span>
+              <span class="cat-name">Pişiler <small>(4 Adet)</small></span>
+              <svg class="cat-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="cat-panel" id="panel-pisi">
+              <div class="cat-panel-inner">
+                <ul class="menu-list">
+                  <li><span>Sade Pişi</span><span class="dots"></span><span class="p">200₺</span></li>
+                  <li><span>Kaşarlı Pişi</span><span class="dots"></span><span class="p">250₺</span></li>
+                  <li><span>Beyaz Peynirli Pişi</span><span class="dots"></span><span class="p">250₺</span></li>
+                  <li><span>Nutellalı Pişi</span><span class="dots"></span><span class="p">250₺</span></li>
+                  <li><span>Kavurma Kaşar Pişi</span><span class="dots"></span><span class="p">350₺</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cat-acc" data-cat="gozleme">
+            <button class="cat-head" type="button" aria-expanded="false" aria-controls="panel-gozleme">
+              <span class="cat-thumb" aria-hidden="true"></span>
+              <span class="cat-name">Gözlemeler</span>
+              <svg class="cat-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="cat-panel" id="panel-gozleme">
+              <div class="cat-panel-inner">
+                <ul class="menu-list">
+                  <li><span>Kaşarlı Gözleme</span><span class="dots"></span><span class="p">275₺</span></li>
+                  <li><span>Beyaz Peynirli Gözleme</span><span class="dots"></span><span class="p">275₺</span></li>
+                  <li><span>Patatesli Gözleme</span><span class="dots"></span><span class="p">275₺</span></li>
+                  <li><span>Patates Kaşarlı Gözleme</span><span class="dots"></span><span class="p">300₺</span></li>
+                  <li><span>Kavurma Kaşarlı Gözleme</span><span class="dots"></span><span class="p">400₺</span></li>
+                  <li><span>Sucuklu Gözleme</span><span class="dots"></span><span class="p">350₺</span></li>
+                  <li><span>Sucuklu Kaşarlı Gözleme</span><span class="dots"></span><span class="p">375₺</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cat-acc" data-cat="krep">
+            <button class="cat-head" type="button" aria-expanded="false" aria-controls="panel-krep">
+              <span class="cat-thumb" aria-hidden="true"></span>
+              <span class="cat-name">Krep &amp; Pankek Çeşitleri</span>
+              <svg class="cat-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="cat-panel" id="panel-krep">
+              <div class="cat-panel-inner">
+                <ul class="menu-list">
+                  <li><span>Sade Krep</span><span class="dots"></span><span class="p">150₺</span></li>
+                  <li><span>Nutellalı Krep</span><span class="dots"></span><span class="p">275₺</span></li>
+                  <li><span>Pankek (4 Adet)</span><span class="dots"></span><span class="p">400₺</span></li>
+                </ul>
+                <p class="menu-cat-note">Nutella ve meyve ile servis edilir.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cat-acc" data-cat="ekstra">
+            <button class="cat-head" type="button" aria-expanded="false" aria-controls="panel-ekstra">
+              <span class="cat-thumb" aria-hidden="true"></span>
+              <span class="cat-name">Ekstralar</span>
+              <svg class="cat-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="cat-panel" id="panel-ekstra">
+              <div class="cat-panel-inner">
+                <ul class="menu-list">
+                  <li><span>Beyaz Peynir (1 Dilim)</span><span class="dots"></span><span class="p">75₺</span></li>
+                  <li><span>Kaşar Peyniri (1 Dilim)</span><span class="dots"></span><span class="p">75₺</span></li>
+                  <li><span>Çeçil Peyniri</span><span class="dots"></span><span class="p">95₺</span></li>
+                  <li><span>Karışık Peynir Tabağı</span><span class="dots"></span><span class="p">220₺</span></li>
+                  <li><span>Tereyağı</span><span class="dots"></span><span class="p">120₺</span></li>
+                  <li><span>Zeytin Tabağı</span><span class="dots"></span><span class="p">120₺</span></li>
+                  <li><span>Tahin Pekmez</span><span class="dots"></span><span class="p">200₺</span></li>
+                  <li><span>Söğüş</span><span class="dots"></span><span class="p">150₺</span></li>
+                  <li><span>Acuka</span><span class="dots"></span><span class="p">120₺</span></li>
+                  <li><span>Haşlanmış Yumurta</span><span class="dots"></span><span class="p">40₺</span></li>
+                  <li><span>Bal Kaymak</span><span class="dots"></span><span class="p">220₺</span></li>
+                  <li><span>Nutella</span><span class="dots"></span><span class="p">150₺</span></li>
+                  <li><span>Reçel</span><span class="dots"></span><span class="p">100₺</span></li>
+                  <li><span>Simit</span><span class="dots"></span><span class="p">45₺</span></li>
+                  <li><span>Yeşillik</span><span class="dots"></span><span class="p">120₺</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cat-acc" data-cat="icecek">
+            <button class="cat-head" type="button" aria-expanded="false" aria-controls="panel-icecek">
+              <span class="cat-thumb" aria-hidden="true"></span>
+              <span class="cat-name">İçecekler</span>
+              <svg class="cat-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="cat-panel" id="panel-icecek">
+              <div class="cat-panel-inner">
+                <div class="menu-subcols">
+                  <div class="menu-subcol">
+                    <h4 class="menu-subtitle">Soğuk İçecekler</h4>
+                    <ul class="menu-list">
+                      <li><span>Su</span><span class="dots"></span><span class="p">25₺</span></li>
+                      <li><span>Sade Soda</span><span class="dots"></span><span class="p">50₺</span></li>
+                      <li><span>Meyveli Soda</span><span class="dots"></span><span class="p">60₺</span></li>
+                      <li><span>Kola</span><span class="dots"></span><span class="p">90₺</span></li>
+                      <li><span>Meyve Suyu</span><span class="dots"></span><span class="p">75₺</span></li>
+                      <li><span>Ice Tea</span><span class="dots"></span><span class="p">75₺</span></li>
+                      <li><span>Taze Sıkma Portakal Suyu</span><span class="dots"></span><span class="p">175₺</span></li>
+                      <li><span>Ayran</span><span class="dots"></span><span class="p">50₺</span></li>
+                      <li><span>Naneli Limonata</span><span class="dots"></span><span class="p">150₺</span></li>
+                    </ul>
+                  </div>
+                  <div class="menu-subcol">
+                    <h4 class="menu-subtitle">Sıcak İçecekler</h4>
+                    <ul class="menu-list">
+                      <li><span>Çay</span><span class="dots"></span><span class="p">40₺</span></li>
+                      <li><span>Türk Kahvesi</span><span class="dots"></span><span class="p">100₺</span></li>
+                      <li><span>Demleme Bitki Çayı</span><span class="dots"></span><span class="p">100₺</span></li>
+                      <li><span>Espresso</span><span class="dots"></span><span class="p">85₺</span></li>
+                      <li><span>Americano</span><span class="dots"></span><span class="p">100₺</span></li>
+                      <li><span>Latte</span><span class="dots"></span><span class="p">120₺</span></li>
+                      <li><span>Cappuccino</span><span class="dots"></span><span class="p">120₺</span></li>
+                      <li><span>Mocha</span><span class="dots"></span><span class="p">120₺</span></li>
+                      <li><span>Filtre Kahve</span><span class="dots"></span><span class="p">100₺</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-cta">Masada görüşürüz.</p>
+
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-word">Limos</span>
+          <p>Beşiktaş Sinanpaşa'da, kahvaltı sokağında. Serpme ve à la carte kahvaltı, taze pişiler ve demli çay.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="Alt menü">
+          <h4>Keşfet</h4>
+          <a href="index.html#kahvalti">Kahvaltı</a>
+          <a href="menu.html">Menü</a>
+          <a href="index.html#galeri">Galeri</a>
+          <a href="index.html#yorumlar">Yorumlar</a>
+          <a href="index.html#iletisim">İletişim</a>
+        </nav>
+
+        <div class="footer-col">
+          <h4>İletişim</h4>
+          <p>Sinanpaşa, Çelebi Oğlu Sk. No:11<br />34353 Beşiktaş / İstanbul</p>
+          <p><a href="tel:+902122369236">0 (212) 236 92 36</a></p>
+          <p><a href="tel:+905494980021">0549 498 00 21</a></p>
+          <p><a href="https://instagram.com/limosbesiktas" target="_blank" rel="noopener noreferrer">Instagram — @limosbesiktas</a></p>
+          <p>Her gün · 18:00'de kapanır</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Limos Kahvaltı. Tüm hakları saklıdır.</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer">Google Haritalar'da aç</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" id="back-to-top" aria-label="Yukarı çık">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
+
+  <!-- Mobil sabit alt bar -->
+  <nav class="mobile-bar" aria-label="Hızlı erişim">
+    <a href="tel:+905494980021" class="mobile-bar-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Ara</span>
+    </a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>Konum</span>
+    </a>
+    <a href="https://instagram.com/limosbesiktas" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      <span>Instagram</span>
+    </a>
+  </nav>
+
+  <script src="js/script.js?v=9" defer></script>
+</body>
+</html>
