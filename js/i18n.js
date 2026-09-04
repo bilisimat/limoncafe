@@ -291,7 +291,7 @@
     "Su": { en: { n: "Water", d: "0.5 litre spring water." }, de: { n: "Wasser", d: "0,5 Liter Quellwasser." }, ar: { n: "ماء", d: "٠٫٥ لتر مياه ينابيع." } },
     "Sade Soda": { en: { n: "Soda Water", d: "Bottled mineral water." }, de: { n: "Soda", d: "Mineralwasser in der Flasche." }, ar: { n: "صودا سادة", d: "مياه معدنية بالزجاجة." } },
     "Meyveli Soda": { en: { n: "Fruit Soda", d: "Fruit-flavoured mineral water." }, de: { n: "Frucht-Soda", d: "Mineralwasser mit Fruchtgeschmack." }, ar: { n: "صودا بالفواكه", d: "مياه معدنية بنكهة الفواكه." } },
-    "Ayran": { en: { n: "Ayran", d: "Homemade yoghurt drink." }, de: { n: "Ayran", d: "Hausgemachtes Joghurtgetränk." }, ar: { n: "أيران", d: "مشروب اللبن المنزلي." } },
+    "Ayran": { en: { n: "Ayran", d: "Bottled yoghurt drink." }, de: { n: "Ayran", d: "Joghurtgetränk aus der Flasche." }, ar: { n: "أيران", d: "مشروب اللبن المعبأ بزجاجة." } },
     "Coca-Cola": { en: { n: "Coca-Cola", d: "Can, 330 ml." }, de: { n: "Coca-Cola", d: "Dose, 330 ml." }, ar: { n: "كوكا كولا", d: "علبة، ٣٣٠ مل." } },
     "Coca-Cola Zero": { en: { n: "Coca-Cola Zero", d: "Sugar-free can, 330 ml." }, de: { n: "Coca-Cola Zero", d: "Zuckerfreie Dose, 330 ml." }, ar: { n: "كوكا كولا زيرو", d: "علبة خالية من السكر، ٣٣٠ مل." } },
     "Naneli Limonata": { en: { n: "Mint Lemonade", d: "Homemade lemonade with fresh lemon and mint." }, de: { n: "Minz-Limonade", d: "Hausgemachte Limonade mit frischer Zitrone und Minze." }, ar: { n: "ليموناضة بالنعناع", d: "ليموناضة منزلية بالليمون الطازج والنعناع." } },
