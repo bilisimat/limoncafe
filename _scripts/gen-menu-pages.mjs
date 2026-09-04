@@ -7,7 +7,7 @@ import fs from "fs";
 import path from "path";
 
 const ROOT = path.resolve(".");
-const CSS_V = "v=33";
+const CSS_V = "v=40";
 const JS_V = "v=11";
 
 const IMG = JSON.parse(fs.readFileSync(path.resolve("_scripts/menu-images.json"), "utf8"));
@@ -25,7 +25,7 @@ const META = {
     name: "Menemenler",
     blurb: "Tereyağında domates-biber, üstüne yumurta; klasikten kavurmalıya.",
     card: "Tereyağında domates-biber, üstüne yumurta; klasikten kavurmalıya.",
-    order: ["Klasik Menemen", "Kaşarlı Menemen", "Beyaz Peynirli Menemen", "Karışık Menemen", "Kavurmalı Menemen", "Sucuklu Menemen"],
+    order: ["Klasik Menemen", "Kaşarlı Menemen", "Beyaz Peynirli Menemen", "Karışık Menemen", "Kavurmalı Menemen", "Sucuklu Menemen", "Sosisli Menemen"],
   },
   yumurta: {
     name: "Sahanda Yumurtalar",
@@ -59,8 +59,8 @@ const META = {
   },
   krep: {
     name: "Krep & Pankek Çeşitleri",
-    blurb: "Tatlı taraf: Nutellalı krep ve tereyağlı pankek.",
-    card: "Tatlı taraf: Nutellalı krep ve tereyağlı pankek.",
+    blurb: "Nutellalı krep ve tereyağlı pankek çeşitleri.",
+    card: "Nutellalı krep ve tereyağlı pankek çeşitleri.",
     note: "Nutella ve meyve ile servis edilir.",
     order: ["Sade Krep", "Nutella'lı Krep", "Pankek"],
   },
@@ -81,123 +81,125 @@ const META = {
   },
 };
 
-/* ---- fiyatlar (işletme-bilgileri.md). Listede olmayan ürün fiyatsız. ---- */
+/* ---- fiyatlar ---- */
 const PRICE = {
+  "Limos Serpme Kahvaltı": "1150₺", "Special Serpme Kahvaltı": "1390₺", "Full Serpme Kahvaltı": "1590₺",
   "Kahvaltı Tabağı": "450₺", "Pişi Tabağı": "350₺",
-  "Klasik Menemen": "220₺", "Kaşarlı Menemen": "250₺", "Beyaz Peynirli Menemen": "250₺", "Karışık Menemen": "350₺", "Kavurmalı Menemen": "370₺", "Sucuklu Menemen": "330₺",
-  "Sade Yumurta": "150₺", "Kaşarlı Yumurta": "200₺", "Beyaz Peynirli Yumurta": "200₺", "Sucuklu Yumurta": "270₺", "Patatesli Yumurta": "200₺", "Kavurmalı Yumurta": "350₺",
-  "Mıhlama (Kuymak)": "300₺", "Sucuk Tava": "300₺", "Kavurma Tava": "350₺", "Hellim Tava": "200₺", "Sosis Tava": "250₺", "Salçalı Sosis": "300₺", "Anne Dilim Patates Tava": "180₺", "Sigara Böreği": "120₺", "Yumurtalı Ekmek": "150₺",
+  "Klasik Menemen": "220₺", "Kaşarlı Menemen": "250₺", "Beyaz Peynirli Menemen": "250₺", "Karışık Menemen": "350₺", "Kavurmalı Menemen": "370₺", "Sucuklu Menemen": "330₺", "Sosisli Menemen": "330₺",
+  "Sade Yumurta": "150₺", "Kaşarlı Yumurta": "200₺", "Beyaz Peynirli Yumurta": "200₺", "Sucuklu Yumurta": "270₺", "Sosisli Yumurta": "250₺", "Patatesli Yumurta": "200₺", "Kavurmalı Yumurta": "350₺",
+  "Mıhlama (Kuymak)": "300₺", "Sucuk Tava": "300₺", "Sıcak Tabağı": "250₺", "Kavurma Tava": "350₺", "Hellim Tava": "200₺", "Sosis Tava": "250₺", "Salçalı Sosis": "300₺", "Anne Dilim Patates Tava": "180₺", "Sigara Böreği": "120₺", "Yumurtalı Ekmek": "150₺",
   "Sade Pişi": "200₺", "Kaşarlı Pişi": "250₺", "Beyaz Peynirli Pişi": "250₺", "Nutella'lı Pişi": "250₺", "Kavurma Kaşarlı Pişi": "350₺",
-  "Kaşarlı Gözleme": "275₺", "Beyaz Peynirli Gözleme": "275₺", "Patatesli Gözleme": "275₺", "Patatesli Kaşarlı Gözleme": "300₺", "Kavurmalı Kaşarlı Gözleme": "400₺", "Sucuklu Gözleme": "350₺", "Sucuklu Kaşarlı Gözleme": "375₺",
+  "Kaşarlı Gözleme": "275₺", "Beyaz Peynirli Gözleme": "275₺", "Patatesli Gözleme": "275₺", "Patatesli Kaşarlı Gözleme": "300₺", "Ispanaklı Gözleme": "300₺", "Kıymalı Gözleme": "400₺", "Kavurmalı Kaşarlı Gözleme": "400₺", "Sucuklu Gözleme": "350₺", "Sucuklu Kaşarlı Gözleme": "375₺",
   "Sade Krep": "150₺", "Nutella'lı Krep": "275₺", "Pankek": "400₺",
-  "Beyaz Peynir": "75₺", "Kaşar Peyniri": "75₺", "Çeçil Peynir": "95₺", "Karışık Peynir Tabağı": "220₺", "Tereyağı": "120₺", "Bal & Kaymak": "220₺", "Tahin Pekmez": "200₺", "Reçel": "100₺", "Nutella": "150₺", "Zeytin Tabağı": "120₺", "Söğüş": "150₺", "Yeşillik": "120₺", "Acuka": "120₺", "Haşlanmış Yumurta": "40₺", "Simit": "45₺",
-  "Su": "25₺", "Sade Soda": "50₺", "Meyveli Soda": "60₺", "Ayran": "50₺", "Coca-Cola": "90₺", "Naneli Limonata": "150₺", "Taze Sıkma Portakal Suyu": "175₺", "Karışık Meyve Suyu": "75₺", "Ice Tea Şeftali": "75₺",
+  "Beyaz Peynir": "75₺", "Kaşar Peyniri": "75₺", "Çeçil Peynir": "95₺", "Karışık Peynir Tabağı": "220₺", "Tereyağı": "120₺", "Bal & Kaymak": "220₺", "Tahin Pekmez": "200₺", "Reçel": "100₺", "Nutella": "150₺", "Zeytin Tabağı": "120₺", "Söğüş": "150₺", "Yeşillik": "120₺", "Acuka": "120₺", "Biber Kızartması": "200₺", "Yoğurt": "120₺", "Haşlanmış Yumurta": "40₺", "Simit": "45₺",
+  "Su": "25₺", "Sade Soda": "50₺", "Meyveli Soda": "60₺", "Ayran": "50₺", "Coca-Cola": "90₺", "Coca-Cola Zero": "120₺", "Naneli Limonata": "150₺", "Taze Sıkma Portakal Suyu": "175₺", "Karışık Meyve Suyu": "75₺", "Vişne Suyu": "120₺", "Şeftali Suyu": "120₺", "Ice Tea Şeftali": "75₺", "Ice Tea Limon": "120₺", "Süt": "120₺",
   "Çay": "40₺", "Türk Kahvesi": "100₺", "Espresso": "85₺", "Americano": "100₺", "Latte": "120₺", "Cappuccino": "120₺", "Mocha": "120₺", "Filtre Kahve": "100₺",
 };
 
-/* ---- kısa açıklamalar (pop-up) ---- */
+/* ---- kısa açıklamalar (pop-up) — sade, net, içerik odaklı ---- */
 const DESC = {
-  "Limos Serpme Kahvaltı": "Sofrayı dolduran serpme kahvaltı: peynirler, kahvaltılıklar, sıcaklar ve sınırsız çay bir arada.",
-  "Full Serpme Kahvaltı": "Limos serpmenin daha geniş hâli; menemen, mıhlama, sucuk ve pişilerle donatılmış tam sofra.",
-  "Special Serpme Kahvaltı": "En kapsamlı serpme; mevsim ürünleri ve sıcak tabaklarıyla kalabalık sofralar için.",
-  "Kahvaltı Tabağı": "Tek kişilik: Ezine beyaz peynir, taze kaşar, domates, salatalık, bal, kaymak, ev reçeli, zeytin, omlet ve 1 sigara böreği. İlk çay ikram.",
-  "Pişi Tabağı": "Tek kişilik: 3 adet sade pişi, domates, salatalık, Ezine beyaz peynir, ev reçeli ve zeytin. İlk çay ikram.",
+  "Limos Serpme Kahvaltı": "Peynir çeşitleri, bal, kaymak, ev reçelleri, zeytin ve kahvaltılık meze seçkisi; yanında sıcak tabak. Sınırsız çay ikram edilir.",
+  "Full Serpme Kahvaltı": "Limos Serpme içeriğine ek olarak tereyağlı köy menemen, mıhlama, sucuk tava ve pişi. Sınırsız çay ikram edilir.",
+  "Special Serpme Kahvaltı": "Geniş peynir ve meze seçkisi, mevsim ürünleri ve zenginleştirilmiş sıcak tabak. Sınırsız çay ikram edilir.",
+  "Kahvaltı Tabağı": "Tek kişilik. Ezine beyaz peynir, taze kaşar, domates, salatalık, Erzincan balı, manda kaymağı, ev reçeli, siyah ve yeşil zeytin, omlet ve bir adet sigara böreği. İlk çay ikramımızdır.",
+  "Pişi Tabağı": "Tek kişilik. Üç adet sade pişi, domates, salatalık, Ezine beyaz peynir, ev reçeli, siyah ve yeşil zeytin. İlk çay ikramımızdır.",
 
-  "Klasik Menemen": "Domates ve yeşil biberin tereyağında yumuşayıp yumurtayla buluştuğu sade menemen. Sahanda, sıcak servis edilir.",
-  "Kaşarlı Menemen": "Klasik menemenin üzerine bol taze kaşar; tavada eriyerek ipek gibi bir kıvam bırakır.",
-  "Beyaz Peynirli Menemen": "Ezine beyaz peynirle hazırlanır; hafif tuzlu, ferah bir tat. Yanında ekmekle güzel gider.",
-  "Karışık Menemen": "Domates, biber, sucuk, kavurma ve kaşar bir arada. Sofranın en doyurucu menemeni.",
-  "Kavurmalı Menemen": "El kavurması eti kendi yağında çevrilip menemene katılır. Yoğun, etli bir lezzet.",
-  "Sucuklu Menemen": "Dilimlenmiş sucuk tavada yağını bırakana kadar kızarır, menemenle harmanlanır.",
+  "Klasik Menemen": "Domates ve yeşil biber tereyağında pişirilir, yumurtayla bağlanır. Bakır sahanda, sıcak servis edilir.",
+  "Kaşarlı Menemen": "Klasik menemenin üzerine bol taze kaşar eklenir, tavada eritilir.",
+  "Beyaz Peynirli Menemen": "Ezine beyaz peynirle hazırlanan menemen. Yanında taze ekmekle servis edilir.",
+  "Karışık Menemen": "Domates, biber, sucuk, kavurma ve kaşar birlikte pişirilir.",
+  "Kavurmalı Menemen": "El kavurması kendi yağında çevrilerek menemene eklenir.",
+  "Sucuklu Menemen": "Dilim sucuk tavada kızartılır, menemenle birlikte pişirilir.",
+  "Sosisli Menemen": "Dilim dana sosis tavada kızartılır, menemenle birlikte pişirilir.",
 
-  "Sade Yumurta": "İki yumurta bakır sahanda, tereyağında pişirilir. Sarısı akışkan ister misiniz, söyleyin.",
-  "Kaşarlı Yumurta": "Sahanda yumurtanın üzerine eriyen taze kaşar. Basit ama tam kıvamında.",
-  "Beyaz Peynirli Yumurta": "Ezine beyaz peynir parçalarıyla; tuzlu-ferah bir kahvaltı klasiği.",
-  "Sucuklu Yumurta": "Bakır sahanda kızaran sucuk dilimleri, üzerine yumurta. Yağı ekmekle silinir.",
-  "Sosisli Yumurta": "Dana sosis dilimleri sahanda kızarır, üzerine yumurta kırılır.",
-  "Patatesli Yumurta": "Küp doğranmış patates altın rengi kızartılır, yumurtayla bağlanır.",
-  "Kavurmalı Yumurta": "Kendi yağında çevrilmiş kavurma etinin üzerine kırılan yumurtalar. Doyurucu.",
+  "Sade Yumurta": "İki yumurta, bakır sahanda tereyağında pişirilir.",
+  "Kaşarlı Yumurta": "Sahanda yumurtanın üzerine taze kaşar eklenir.",
+  "Beyaz Peynirli Yumurta": "Sahanda yumurta, Ezine beyaz peynir parçalarıyla hazırlanır.",
+  "Sucuklu Yumurta": "Bakır sahanda kızartılan sucuk dilimlerinin üzerine yumurta kırılır.",
+  "Sosisli Yumurta": "Dana sosis dilimleri sahanda kızartılır, üzerine yumurta kırılır.",
+  "Patatesli Yumurta": "Küp patates kızartılır, yumurtayla birlikte pişirilir.",
+  "Kavurmalı Yumurta": "Kendi yağında çevrilen kavurmanın üzerine yumurta kırılır.",
 
-  "Sade Omlet": "Çırpılmış yumurta bakır tavada kabartılır; hafif ve yumuşak.",
-  "Kaşarlı Omlet": "İçi eriyen taze kaşarla dolu omlet. Mekânın en çok tercih edileni.",
-  "Beyaz Peynirli Omlet": "Ezine beyaz peynir ve maydanozla; ferah bir omlet.",
-  "Karışık Omlet": "Sucuk, kaşar ve biberle zenginleştirilmiş omlet.",
-  "Sucuklu Omlet": "Kızarmış sucuk dilimleriyle katlanan omlet.",
+  "Sade Omlet": "Çırpılmış yumurta, bakır tavada tereyağında pişirilir.",
+  "Kaşarlı Omlet": "İçi taze kaşarla doldurulan omlet.",
+  "Beyaz Peynirli Omlet": "Ezine beyaz peynir ve maydanozla hazırlanan omlet.",
+  "Karışık Omlet": "Sucuk, kaşar ve biberle hazırlanan omlet.",
+  "Sucuklu Omlet": "Kızartılmış sucuk dilimleriyle katlanan omlet.",
   "Sosisli Omlet": "Dana sosis parçalarıyla hazırlanan omlet.",
-  "Patatesli Omlet": "Kızarmış patatesle doldurulan doyurucu omlet.",
-  "Kıymalı Omlet": "Baharatlı kıyma sotesiyle katlanan omlet.",
-  "Kavurmalı Omlet": "Kendi yağında çevrilmiş kavurmayla; etli ve yoğun.",
+  "Patatesli Omlet": "Kızartılmış patatesle hazırlanan omlet.",
+  "Kıymalı Omlet": "Baharatlı kıyma sotesiyle hazırlanan omlet.",
+  "Kavurmalı Omlet": "Kendi yağında çevrilen kavurmayla hazırlanan omlet.",
 
-  "Mıhlama (Kuymak)": "Karadeniz usulü; tereyağı, mısır unu ve taze peynirle çekilen, telli akan kuymak.",
-  "Sucuk Tava": "Dilim sucuk kendi yağında, kenarları çıtır olacak şekilde kızartılır.",
-  "Sıcak Tabağı": "Günün sıcakları bir tabakta: mıhlama, sucuk, patates ve sigara böreğinden seçki.",
-  "Kavurma Tava": "El kavurması kendi yağında çevrilir; yanında ekmekle.",
-  "Hellim Tava": "Izgara-tava hellim; dışı kızarmış, içi yumuşak. Limon sıkarak servis edilir.",
-  "Sosis Tava": "Dana sosis dilimlenip tavada kızartılır.",
-  "Salçalı Sosis": "Sosisler domates-biber salçasıyla tavada buluşur; hafif baharatlı.",
-  "Anne Dilim Patates Tava": "Elde iri dilimlenen patates, bol yağda çıtır çıtır kızartılır.",
-  "Sigara Böreği": "Beyaz peynir ve maydanozla sarılıp kızartılmış 6 adet ince börek.",
-  "Yumurtalı Ekmek": "Yumurtaya batırılıp tereyağında kızartılmış 6 dilim ekmek. Çocukların favorisi.",
+  "Mıhlama (Kuymak)": "Tereyağı, mısır unu ve taze peynirle Karadeniz usulü pişirilir. Bakır tavada, sıcak servis edilir.",
+  "Sucuk Tava": "Dilim sucuk kendi yağında, kenarları kızarana kadar tavada pişirilir.",
+  "Sıcak Tabağı": "Mıhlama, sucuk, anne dilim patates ve sigara böreğinden oluşan sıcak seçki.",
+  "Kavurma Tava": "El kavurması kendi yağında çevrilir. Yanında taze ekmekle servis edilir.",
+  "Hellim Tava": "Hellim peyniri tavada kızartılır, limonla servis edilir.",
+  "Sosis Tava": "Dana sosis dilimlenerek tavada kızartılır.",
+  "Salçalı Sosis": "Sosis, domates ve biber salçasıyla tavada pişirilir.",
+  "Anne Dilim Patates Tava": "Elde iri dilimlenen patates, bol yağda kızartılır.",
+  "Sigara Böreği": "Beyaz peynir ve maydanozla sarılıp kızartılan altı adet ince börek.",
+  "Yumurtalı Ekmek": "Yumurtaya batırılıp tereyağında kızartılan altı dilim ekmek.",
 
-  "Sade Pişi": "Mayalı hamurdan, siparişle kızartılan 4 adet sıcak pişi. Bal-kaymakla enfes.",
-  "Kaşarlı Pişi": "İçine kaşar konularak kızartılır; kesince peynir uzar.",
-  "Beyaz Peynirli Pişi": "Ezine beyaz peynir dolgulu, tuzlu pişi.",
-  "Sucuklu Pişi": "İçi kızarmış sucukla doldurulan sıcak pişi.",
-  "Nutella'lı Pişi": "İçi Nutella dolu, sıcak servis edilen tatlı pişi.",
-  "Kavurma Kaşarlı Pişi": "Kavurma ve kaşar dolgulu, doyurucu pişi.",
+  "Sade Pişi": "Mayalı hamurdan, sipariş üzerine kızartılan dört adet sıcak pişi.",
+  "Kaşarlı Pişi": "İçine kaşar konularak kızartılan pişi.",
+  "Beyaz Peynirli Pişi": "Ezine beyaz peynir dolgulu pişi.",
+  "Sucuklu Pişi": "İçi kızartılmış sucukla doldurulan pişi.",
+  "Nutella'lı Pişi": "İçi Nutella dolgulu, sıcak servis edilen pişi.",
+  "Kavurma Kaşarlı Pişi": "Kavurma ve kaşar dolgulu pişi.",
 
-  "Kaşarlı Gözleme": "İnce açılan hamura bol kaşar; sacda çıtır çıtır pişirilir.",
-  "Beyaz Peynirli Gözleme": "Ezine beyaz peynir ve maydanozla; klasik köy gözlemesi.",
-  "Patatesli Gözleme": "Baharatlı patates püresiyle; hafif ve doyurucu.",
-  "Patatesli Kaşarlı Gözleme": "Patates ve kaşar bir arada; en çok tercih edilen ikili.",
-  "Ispanaklı Gözleme": "Sotelenmiş ıspanak ve lor/peynirle hazırlanan gözleme.",
-  "Kıymalı Gözleme": "Baharatlı kıyma harcıyla; sacda pişer.",
-  "Sucuklu Gözleme": "Dilim sucuk ve baharatla; sacda pişer.",
-  "Sucuklu Kaşarlı Gözleme": "Sucuk ve kaşarın bir arada olduğu doyurucu gözleme.",
-  "Kavurmalı Kaşarlı Gözleme": "Kavurma ve kaşar dolgulu, etli gözleme.",
+  "Kaşarlı Gözleme": "İnce açılan hamura bol kaşar konularak sacda pişirilir.",
+  "Beyaz Peynirli Gözleme": "Ezine beyaz peynir ve maydanozla hazırlanan gözleme.",
+  "Patatesli Gözleme": "Baharatlı patates harcıyla hazırlanan gözleme.",
+  "Patatesli Kaşarlı Gözleme": "Patates ve kaşar dolgusuyla hazırlanan gözleme.",
+  "Ispanaklı Gözleme": "Sotelenmiş ıspanak ve peynirle hazırlanan gözleme.",
+  "Kıymalı Gözleme": "Baharatlı kıyma harcıyla sacda pişirilen gözleme.",
+  "Sucuklu Gözleme": "Dilim sucuk ve baharatla hazırlanan gözleme.",
+  "Sucuklu Kaşarlı Gözleme": "Sucuk ve kaşar dolgusuyla hazırlanan gözleme.",
+  "Kavurmalı Kaşarlı Gözleme": "Kavurma ve kaşar dolgusuyla hazırlanan gözleme.",
 
-  "Sade Krep": "İnce Fransız usulü krep; pudra şekeriyle.",
-  "Nutella'lı Krep": "Bol Nutella ve mevsim meyveleriyle katlanır.",
-  "Pankek": "Kabarık 4 adet pankek; tereyağı, Nutella ve meyveyle sunulur.",
+  "Sade Krep": "İnce krep, pudra şekeriyle servis edilir.",
+  "Nutella'lı Krep": "Nutella ve mevsim meyveleriyle servis edilen krep.",
+  "Pankek": "Dört adet pankek; tereyağı, Nutella ve mevsim meyveleriyle servis edilir.",
 
-  "Beyaz Peynir": "Ezine tam yağlı beyaz peynir, tek dilim.",
-  "Kaşar Peyniri": "Taze kaşar, tek dilim.",
-  "Çeçil Peynir": "İnce tel çeçil (örgü) peyniri.",
-  "Karışık Peynir Tabağı": "Beyaz peynir, kaşar ve çeçilden oluşan üçlü tabak.",
-  "Tereyağı": "Köy tereyağı; bal ve ekmekle.",
-  "Bal & Kaymak": "Süzme çiçek balı ve manda kaymağı; pişiyle en iyisi.",
-  "Tahin Pekmez": "Karışımı sofrada yapılan tahin-pekmez.",
+  "Beyaz Peynir": "Ezine tam yağlı beyaz peynir, bir dilim.",
+  "Kaşar Peyniri": "Taze kaşar, bir dilim.",
+  "Çeçil Peynir": "Tel çeçil (örgü) peyniri.",
+  "Karışık Peynir Tabağı": "Beyaz peynir, kaşar ve çeçilden oluşan peynir tabağı.",
+  "Tereyağı": "Köy tereyağı; bal ve ekmekle servis edilir.",
+  "Bal & Kaymak": "Süzme çiçek balı ve manda kaymağı.",
+  "Tahin Pekmez": "Tahin ve üzüm pekmezi.",
   "Reçel": "Ev yapımı mevsim reçeli.",
   "Nutella": "Porsiyon Nutella.",
-  "Zeytin Tabağı": "Yağlı siyah ve kırma yeşil zeytin, baharatlı.",
-  "Söğüş": "Mevsiminde domates, salatalık, biber ve maydanoz.",
-  "Yeşillik": "Marul, roka, maydanoz, taze soğandan tabak.",
-  "Acuka": "Ceviz, biber salçası ve baharatla yoğrulan Antakya mezesi.",
-  "Biber Kızartması": "Sivri biberler kızartılıp sarımsaklı yoğurtla servis edilir.",
+  "Zeytin Tabağı": "Baharatlı siyah ve kırma yeşil zeytin.",
+  "Söğüş": "Domates, salatalık, biber ve maydanoz.",
+  "Yeşillik": "Marul, roka, maydanoz ve taze soğan.",
+  "Acuka": "Ceviz, biber salçası ve baharatla hazırlanan Antakya mezesi.",
+  "Biber Kızartması": "Sivri biber kızartılır, sarımsaklı yoğurtla servis edilir.",
   "Yoğurt": "Porsiyon süzme yoğurt.",
-  "Haşlanmış Yumurta": "Tam haşlanmış tek yumurta.",
-  "Simit": "Günlük, susamlı taze simit.",
+  "Haşlanmış Yumurta": "Bir adet haşlanmış yumurta.",
+  "Simit": "Günlük, susamlı simit.",
 
-  "Su": "0,5 lt kaynak suyu.",
+  "Su": "0,5 litre kaynak suyu.",
   "Sade Soda": "Şişe maden suyu.",
-  "Meyveli Soda": "Çeşitli meyve aromalı maden suyu.",
-  "Ayran": "Çırpma ev ayranı, köpüklü.",
-  "Coca-Cola": "Kutu kola (soğuk).",
-  "Coca-Cola Zero": "Şekersiz kutu kola (soğuk).",
+  "Meyveli Soda": "Meyve aromalı maden suyu.",
+  "Ayran": "Ev yapımı ayran.",
+  "Coca-Cola": "Kutu, 330 ml.",
+  "Coca-Cola Zero": "Şekersiz kutu, 330 ml.",
   "Naneli Limonata": "Taze limon ve naneyle hazırlanan ev limonatası.",
-  "Taze Sıkma Portakal Suyu": "Sipariş üzerine, o an sıkılan portakal suyu.",
-  "Karışık Meyve Suyu": "Kutu meyve suyu; çeşit için sorun.",
+  "Taze Sıkma Portakal Suyu": "Sipariş üzerine sıkılan portakal suyu.",
+  "Karışık Meyve Suyu": "Kutu meyve suyu.",
   "Vişne Suyu": "Kutu vişne suyu.",
   "Şeftali Suyu": "Kutu şeftali suyu.",
   "Ice Tea Şeftali": "Şeftali aromalı soğuk çay.",
   "Ice Tea Limon": "Limon aromalı soğuk çay.",
-  "Süt": "Bardak sıcak veya soğuk süt.",
-  "Çay": "Demli tavşan kanı çay. Serpme sofralarda ilki ikramımız, devamı sınırsız.",
-  "Türk Kahvesi": "Közde/ocakta pişen Türk kahvesi; yanında lokum.",
+  "Süt": "Bir bardak süt, sıcak veya soğuk.",
+  "Çay": "Demli çay. Serpme sofralarda ilki ikramımızdır, devamı sınırsızdır.",
+  "Türk Kahvesi": "Ocakta pişirilen Türk kahvesi, yanında lokumla.",
   "Espresso": "Tek shot espresso.",
-  "Americano": "Espresso üzerine sıcak su.",
-  "Latte": "Espresso ve bol buharlı süt.",
-  "Cappuccino": "Espresso, süt ve yoğun süt köpüğü.",
+  "Americano": "Espresso ve sıcak su.",
+  "Latte": "Espresso ve buharlı süt.",
+  "Cappuccino": "Espresso, süt ve süt köpüğü.",
   "Mocha": "Espresso, çikolata ve süt.",
   "Filtre Kahve": "Günün filtre kahvesi.",
 };
@@ -228,7 +230,7 @@ function itemLi(slug, catName, name) {
   const priceSpan = p ? `<span class="p">${p}</span>` : "";
   return `                <li><button class="mi" type="button" data-name="${esc(name)}" data-price="${esc(p)}" data-cat="${esc(catName)}" data-img="${im.b}" data-desc="${esc(d)}">
                   <img class="mi-thumb" src="${im.t}" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">${esc(name)}</span><span class="dots"></span>${priceSpan}
+                  <span class="mi-name">${esc(name)}</span>${priceSpan}
                 </button></li>`;
 }
 const itemList = (slug, catName, names) =>
@@ -425,7 +427,7 @@ const ARROW = `<svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="cu
 const cards = CATS.map((c) => {
   const small = c.nameSmall ? ` <small>${c.nameSmall}</small>` : "";
   return `          <a class="cat-card" href="menu-${c.slug}.html">
-            <span class="cat-thumb" aria-hidden="true"></span>
+            <span class="cat-thumb"><img src="images/cat/${c.slug}.webp" width="800" height="800" loading="lazy" decoding="async" alt="" /></span>
             <span class="cat-name">${esc(c.name)}${small}<span class="cat-desc">${esc(c.card || c.blurb)}</span></span>
             ${ARROW}
           </a>`;

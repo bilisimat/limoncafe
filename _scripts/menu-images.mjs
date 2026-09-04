@@ -88,6 +88,19 @@ for (const f of FOLDERS) {
   }
 }
 
+/* klasörde ayrı fotoğrafı olmayıp başka bir ürünün görselini kullanan kalemler:
+   [kategori, yeni ürün, görseli kopyalanacak ürün] */
+const ALIAS = [
+  ["menemenler", "Sosisli Menemen", "Sucuklu Menemen"],
+];
+for (const [cat, name, from] of ALIAS) {
+  if (images[cat] && images[cat][from]) {
+    images[cat][name] = images[cat][from];
+    if (!items[cat].includes(name)) items[cat].push(name);
+    console.log(`alias: ${cat}/${name} -> ${from} görseli`);
+  }
+}
+
 fs.writeFileSync(path.resolve("_scripts/menu-images.json"), JSON.stringify(images, null, 2), "utf8");
 fs.writeFileSync(path.resolve("_scripts/menu-items.json"), JSON.stringify(items, null, 2), "utf8");
 console.log(`\nbitti: ${ok} ürün görseli, ${miss} eksik.`);

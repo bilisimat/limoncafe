@@ -45,6 +45,10 @@
     "Sucuklu Menemen": {
       "t": "images/menu/menemenler/sucuklu-menemen-t.webp",
       "b": "images/menu/menemenler/sucuklu-menemen-b.webp"
+    },
+    "Sosisli Menemen": {
+      "t": "images/menu/menemenler/sucuklu-menemen-t.webp",
+      "b": "images/menu/menemenler/sucuklu-menemen-b.webp"
     }
   },
   "yumurta": {

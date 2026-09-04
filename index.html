@@ -27,7 +27,7 @@
 
   <link rel="icon" type="image/webp" href="logo.webp" />
   <link rel="preload" as="image" href="images/hero.webp" fetchpriority="high" />
-  <link rel="stylesheet" href="css/styles.css?v=33" />
+  <link rel="stylesheet" href="css/styles.css?v=40" />
 </head>
 <body>
 
@@ -139,18 +139,22 @@
         </div>
 
         <div class="breakfast-grid">
-          <figure class="breakfast-figure breakfast-figure--main" data-reveal>
-            <video src="video/sucuk-sizzle.mp4" poster="images/sucuk-sizzle-poster.jpg"
-                   autoplay muted loop playsinline preload="metadata"
-                   aria-label="Bakır tavada cızırdayan sucuk dilimleri"></video>
+          <figure class="breakfast-feature" data-reveal>
+            <img src="images/kahvalti-sofra.webp" width="2000" height="1500" loading="lazy" decoding="async"
+                 alt="Limos'ta sokak masasında serpme kahvaltı: menemen tavası, sıcak pişi, taze peynirler, sigara böreği ve tavşankanı çaylar"
+                 data-fallback="images/placeholder.svg" />
+            <figcaption>Sinanpaşa'da bir sabah sofrası — serpme kahvaltı.</figcaption>
           </figure>
 
-          <div class="breakfast-copy" data-reveal>
-            <p>
-              Kahvaltı burada tek bir tabak değil, bir masa. Serpme sofrayı paylaşın
-              ya da à la carte seçin; her iki türlü de peynirler taze, pişiler tavadan
-              yeni iniyor. İlk çay serpme tabaklarda ikramımızdır.
-            </p>
+          <div class="breakfast-body" data-reveal>
+            <div class="breakfast-intro">
+              <p>
+                Kahvaltı burada tek bir tabak değil, bir masa. Serpme sofrayı paylaşın
+                ya da à la carte seçin; her iki türlü de peynirler taze, pişiler tavadan
+                yeni iniyor. İlk çay serpme tabaklarda ikramımızdır.
+              </p>
+              <a href="menu.html" class="link-arrow">Menünün tamamını gör <span class="arw" aria-hidden="true">→</span></a>
+            </div>
 
             <ul class="plate-list">
               <li>
@@ -170,8 +174,6 @@
                    Anne Dilim Patates, Sigara Böreği, Sade Pişi, Biber Kızartması.</p>
               </li>
             </ul>
-
-            <a href="menu.html" class="link-arrow">Menünün tamamını gör <span class="arw" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
