@@ -272,6 +272,22 @@ ul { list-style: none; }
 }
 .header-cta:hover { background: var(--accent); color: var(--espresso); border-color: var(--accent); }
 
+/* Dil değiştirici */
+.lang-switch { display: flex; align-items: center; gap: 2px; border: 1px solid rgba(243, 239, 230, .35); border-radius: 999px; padding: 3px; }
+.lang-btn {
+  appearance: none; border: 0; background: transparent; cursor: pointer;
+  font-family: inherit; font-size: .68rem; font-weight: 600; letter-spacing: .06em;
+  padding: 5px 9px; border-radius: 999px; color: rgba(243, 239, 230, .75);
+  transition: background .25s var(--ease), color .25s var(--ease);
+}
+.lang-btn:hover { color: var(--paper); }
+.lang-btn.is-active { background: var(--accent); color: var(--espresso); }
+.site-header.is-scrolled .lang-switch { border-color: var(--stone-line-dk); }
+.site-header.is-scrolled .lang-btn { color: var(--stone); }
+.site-header.is-scrolled .lang-btn:hover { color: var(--ink); }
+.site-header.is-scrolled .lang-btn.is-active { background: var(--accent); color: var(--espresso); }
+.lang-switch--mobile { display: none; margin: 18px 0 0; align-self: center; }
+
 /* Scrolled state → ivory */
 .site-header.is-scrolled {
   background: rgba(243, 239, 230, .92);
@@ -1003,6 +1019,10 @@ body:not(.menu-page) .site-header.is-scrolled .header-phone:hover { color: #000;
     transition: clip-path .4s var(--ease), visibility .4s var(--ease);
   }
   .main-nav.is-open { clip-path: inset(0 0 0 0); visibility: visible; }
+  .lang-switch--mobile { display: flex; justify-content: center; border-color: var(--stone-line-dk); }
+  .lang-switch--mobile .lang-btn { color: var(--stone); }
+  .lang-switch--mobile .lang-btn:hover { color: var(--ink); }
+  .lang-switch--mobile .lang-btn.is-active { background: var(--accent); color: var(--espresso); }
   .nav-link {
     color: var(--ink);
     padding: 18px 0;
@@ -1384,3 +1404,16 @@ body:not(.menu-page) .site-header.is-scrolled .header-phone:hover { color: #000;
   .section { padding-block: 20px; }
   .hero { min-height: auto; color: #000; }
 }
+
+/* =========================================================
+   RTL (Arapça)
+   ========================================================= */
+[dir="rtl"] { text-align: right; }
+[dir="rtl"] .cat-side { border-color: var(--stone-line); }
+[dir="rtl"] .cat-arrow { transform: scaleX(-1); }
+[dir="rtl"] .cat-back { direction: ltr; unicode-bidi: isolate; }
+[dir="rtl"] .cat-prevnext a > span { direction: ltr; unicode-bidi: isolate; }
+[dir="rtl"] .arw { display: inline-block; transform: scaleX(-1); }
+[dir="rtl"] .mi-name, [dir="rtl"] .p { direction: rtl; }
+[dir="rtl"] .skip-link { left: auto; right: -9999px; }
+[dir="rtl"] .skip-link:focus { right: 12px; }
