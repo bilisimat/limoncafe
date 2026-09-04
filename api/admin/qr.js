@@ -1,7 +1,7 @@
 const QRCode = require("qrcode");
 const { requireAuth } = require("../../lib/auth");
 
-const MENU_URL = "https://limosbesiktas.com/menu";
+const MENU_URL = "https://limoskahvalti.com/menu";
 
 module.exports = async (req, res) => {
   const session = requireAuth(req, res);
