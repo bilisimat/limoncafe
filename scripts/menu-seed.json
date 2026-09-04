@@ -1,0 +1,2051 @@
+{
+  "categories": [
+    {
+      "slug": "serpme",
+      "order": 0,
+      "href": "menu-serpme.html",
+      "image": "images/cat/serpme.webp",
+      "name": {
+        "tr": "Serpme & Tabaklar",
+        "en": "Sharing & Plates",
+        "de": "Serpme & Teller",
+        "ar": "سربمة وأطباق"
+      },
+      "listDesc": {
+        "tr": "Serpme kahvaltılar ve tek kişilik tabaklar. İlk çay ikramımızdır.",
+        "en": "Sharing breakfasts and single-person plates. First tea is on us.",
+        "de": "Serpme-Frühstück zum Teilen und Teller für eine Person. Der erste Tee geht auf uns.",
+        "ar": "فطور سربمة للمشاركة وأطباق فردية. الشاي الأول ضيافة منّا."
+      },
+      "blurb": {
+        "tr": "Sofranın tamamı: serpme kahvaltılar ve tek kişilik tabaklar. İlk çay ikramımızdır.",
+        "en": "The whole table: sharing breakfasts and single-person plates. First tea is on us.",
+        "de": "Der ganze Tisch: Serpme-Frühstück zum Teilen und Teller für eine Person. Der erste Tee geht auf uns.",
+        "ar": "المائدة كاملة: فطور سربمة للمشاركة وأطباق فردية. الشاي الأول ضيافة منّا."
+      }
+    },
+    {
+      "slug": "menemenler",
+      "order": 1,
+      "href": "menu-menemenler.html",
+      "image": "images/cat/menemenler.webp",
+      "name": {
+        "tr": "Menemenler",
+        "en": "Menemen",
+        "de": "Menemen",
+        "ar": "منمن"
+      },
+      "listDesc": {
+        "tr": "Tereyağında domates-biber, üstüne yumurta; klasikten kavurmalıya.",
+        "en": "Tomato-pepper sautéed in butter, topped with egg; from classic to seasoned.",
+        "de": "Tomate-Paprika in Butter geschmort, mit Ei; vom Klassiker bis würzig.",
+        "ar": "طماطم وفلفل يُطهيان بالزبدة، مع البيض؛ من الكلاسيكي إلى المتبل."
+      },
+      "blurb": {
+        "tr": "Tereyağında domates-biber, üstüne yumurta; klasikten kavurmalıya.",
+        "en": "Tomato-pepper sautéed in butter, topped with egg; from classic to seasoned.",
+        "de": "Tomate-Paprika in Butter geschmort, mit Ei; vom Klassiker bis würzig.",
+        "ar": "طماطم وفلفل يُطهيان بالزبدة، مع البيض؛ من الكلاسيكي إلى المتبل."
+      }
+    },
+    {
+      "slug": "yumurta",
+      "order": 2,
+      "href": "menu-yumurta.html",
+      "image": "images/cat/yumurta.webp",
+      "name": {
+        "tr": "Sahanda Yumurtalar",
+        "en": "Pan-Fried Eggs",
+        "de": "Pfannenspiegeleier",
+        "ar": "بيض بالمقلاة"
+      },
+      "listDesc": {
+        "tr": "Bakır sahanda; sadeden sucuklu, sosisli, kavurmalıya.",
+        "en": "In a copper pan; from plain to sujuk, sausage, or seasoned mince.",
+        "de": "In der Kupferpfanne; pur bis mit Sucuk, Würstchen oder Kavurma.",
+        "ar": "في مقلاة نحاسية؛ من السادة إلى السجق والنقانق والقاورما."
+      },
+      "blurb": {
+        "tr": "Bakır sahanda pişen yumurta; sadeden sucuklu, sosisli, kavurmalıya.",
+        "en": "Eggs cooked in a copper pan; from plain to sujuk, sausage, or seasoned mince.",
+        "de": "In der Kupferpfanne gebratene Eier; pur bis mit Sucuk, Würstchen oder Kavurma.",
+        "ar": "بيض يُطهى في مقلاة نحاسية؛ من السادة إلى السجق والنقانق والقاورما."
+      }
+    },
+    {
+      "slug": "omletler",
+      "order": 3,
+      "href": "menu-omletler.html",
+      "image": "images/cat/omletler.webp",
+      "name": {
+        "tr": "Omletler",
+        "en": "Omelettes",
+        "de": "Omeletts",
+        "ar": "أومليت"
+      },
+      "listDesc": {
+        "tr": "Kabaran omlet; kaşarlı, sucuklu, kıymalı, karışık.",
+        "en": "Fluffy omelette; with cheese, sujuk, minced meat, or mixed.",
+        "de": "Fluffiges Omelett; mit Käse, Sucuk, Hackfleisch oder gemischt.",
+        "ar": "أومليت هش؛ بالجبن أو السجق أو اللحم المفروم أو مشكّل."
+      },
+      "blurb": {
+        "tr": "Bakır tavada kabaran omlet; kaşarlı, sucuklu, kıymalı, karışık.",
+        "en": "Fluffy omelette from the copper pan; with cheese, sujuk, minced meat, or mixed.",
+        "de": "Fluffiges Omelett aus der Kupferpfanne; mit Käse, Sucuk, Hackfleisch oder gemischt.",
+        "ar": "أومليت هش من المقلاة النحاسية؛ بالجبن أو السجق أو اللحم المفروم أو مشكّل."
+      }
+    },
+    {
+      "slug": "tavalar",
+      "order": 4,
+      "href": "menu-tavalar.html",
+      "image": "images/cat/tavalar.webp",
+      "name": {
+        "tr": "Tavalar",
+        "en": "Skillets",
+        "de": "Pfannengerichte",
+        "ar": "مقالي"
+      },
+      "listDesc": {
+        "tr": "Bakır tavada sıcacık: mıhlama, sucuk, kavurma, sigara böreği.",
+        "en": "Warm from the copper pan: mıhlama, sujuk, kavurma, cigar börek.",
+        "de": "Warm aus der Kupferpfanne: Mıhlama, Sucuk, Kavurma, Cigarettenbörek.",
+        "ar": "دافئة من المقلاة النحاسية: مِهلاما، سجق، قاورما، بوريك السيجار."
+      },
+      "blurb": {
+        "tr": "Bakır tavada sıcacık: mıhlama, sucuk, kavurma, sigara böreği.",
+        "en": "Warm from the copper pan: mıhlama, sujuk, kavurma, cigar börek.",
+        "de": "Warm aus der Kupferpfanne: Mıhlama, Sucuk, Kavurma, Cigarettenbörek.",
+        "ar": "دافئة من المقلاة النحاسية: مِهلاما، سجق، قاورما، بوريك السيجار."
+      }
+    },
+    {
+      "slug": "pisiler",
+      "order": 5,
+      "href": "menu-pisiler.html",
+      "image": "images/cat/pisiler.webp",
+      "name": {
+        "tr": "Pişiler",
+        "en": "Pişi",
+        "de": "Pişi",
+        "ar": "بيشي"
+      },
+      "listDesc": {
+        "tr": "Tavadan yeni çıkmış, içi hava gibi çıtır pişiler.",
+        "en": "Fresh from the pan, light and crispy inside.",
+        "de": "Frisch aus der Pfanne, innen luftig-knusprig.",
+        "ar": "مقلية طازجة، هشة من الداخل."
+      },
+      "blurb": {
+        "tr": "Tavadan yeni çıkmış, içi hava gibi 4 adet çıtır pişi.",
+        "en": "Fresh from the pan, 4 pieces of light, crispy pişi.",
+        "de": "Frisch aus der Pfanne, 4 Stück luftig-knuspriges Pişi.",
+        "ar": "٤ قطع بيشي طازجة من المقلاة، هشة من الداخل."
+      }
+    },
+    {
+      "slug": "gozlemeler",
+      "order": 6,
+      "href": "menu-gozlemeler.html",
+      "image": "images/cat/gozlemeler.webp",
+      "name": {
+        "tr": "Gözlemeler",
+        "en": "Gözleme",
+        "de": "Gözleme",
+        "ar": "غوزلمة"
+      },
+      "listDesc": {
+        "tr": "İnce açılmış hamur, sacda; peynirli, patatesli, kavurmalı.",
+        "en": "Thin dough on a griddle; with cheese, potato, or kavurma.",
+        "de": "Dünn ausgerollter Teig vom Blech; mit Käse, Kartoffel oder Kavurma.",
+        "ar": "عجين رقيق على الصاج؛ بالجبن أو البطاطس أو القاورما."
+      },
+      "blurb": {
+        "tr": "İnce açılmış hamur, sacda; peynirli, patatesli, kavurmalı.",
+        "en": "Thin dough on a griddle; with cheese, potato, or kavurma.",
+        "de": "Dünn ausgerollter Teig vom Blech; mit Käse, Kartoffel oder Kavurma.",
+        "ar": "عجين رقيق على الصاج؛ بالجبن أو البطاطس أو القاورما."
+      }
+    },
+    {
+      "slug": "krep",
+      "order": 7,
+      "href": "menu-krep.html",
+      "image": "images/cat/krep.webp",
+      "name": {
+        "tr": "Krep & Pankek Çeşitleri",
+        "en": "Crêpes & Pancakes",
+        "de": "Crêpes & Pancakes",
+        "ar": "كريب وبان كيك"
+      },
+      "listDesc": {
+        "tr": "Nutellalı krep ve tereyağlı pankek çeşitleri.",
+        "en": "Nutella crêpes and buttery pancake varieties.",
+        "de": "Nutella-Crêpes und buttrige Pancake-Variationen.",
+        "ar": "كريب بالنوتيلا وأنواع بان كيك بالزبدة."
+      },
+      "blurb": {
+        "tr": "Nutellalı krep ve tereyağlı pankek çeşitleri.",
+        "en": "Nutella crêpes and buttery pancake varieties.",
+        "de": "Nutella-Crêpes und buttrige Pancake-Variationen.",
+        "ar": "كريب بالنوتيلا وأنواع بان كيك بالزبدة."
+      }
+    },
+    {
+      "slug": "ekstralar",
+      "order": 8,
+      "href": "menu-ekstralar.html",
+      "image": "images/cat/ekstralar.webp",
+      "name": {
+        "tr": "Ekstralar",
+        "en": "Extras",
+        "de": "Extras",
+        "ar": "إضافات"
+      },
+      "listDesc": {
+        "tr": "Sofraya eklemelik: peynirler, bal-kaymak, zeytin, söğüş.",
+        "en": "To add to the table: cheeses, honey & clotted cream, olives, sliced vegetables.",
+        "de": "Zum Ergänzen: Käsesorten, Honig-Kaymak, Oliven, Rohkost.",
+        "ar": "لإثراء المائدة: أجبان، عسل وقشطة، زيتون، خضار طازجة."
+      },
+      "blurb": {
+        "tr": "Sofraya eklemelik: peynirler, bal-kaymak, zeytin, söğüş.",
+        "en": "To add to the table: cheeses, honey & clotted cream, olives, sliced vegetables.",
+        "de": "Zum Ergänzen: Käsesorten, Honig-Kaymak, Oliven, Rohkost.",
+        "ar": "لإثراء المائدة: أجبان، عسل وقشطة، زيتون، خضار طازجة."
+      }
+    },
+    {
+      "slug": "icecekler",
+      "order": 9,
+      "href": "menu-icecekler.html",
+      "image": "images/cat/icecekler.webp",
+      "name": {
+        "tr": "İçecekler",
+        "en": "Drinks",
+        "de": "Getränke",
+        "ar": "مشروبات"
+      },
+      "listDesc": {
+        "tr": "Sınırsız demli çay, taze sıkma portakal ve tüm kahveler.",
+        "en": "Unlimited brewed tea, fresh orange juice and all coffees.",
+        "de": "Unbegrenzt Tee, frisch gepresster Orangensaft und alle Kaffeesorten.",
+        "ar": "شاي مغلي غير محدود، عصير برتقال طازج وجميع أنواع القهوة."
+      },
+      "blurb": {
+        "tr": "Sınırsız demli çay, taze sıkma portakal ve tüm kahveler.",
+        "en": "Unlimited brewed tea, fresh orange juice and all coffees.",
+        "de": "Unbegrenzt Tee, frisch gepresster Orangensaft und alle Kaffeesorten.",
+        "ar": "شاي مغلي غير محدود، عصير برتقال طازج وجميع أنواع القهوة."
+      }
+    }
+  ],
+  "items": [
+    {
+      "categorySlug": "serpme",
+      "order": 0,
+      "price": "1150₺",
+      "img": "images/menu/serpme/limos-serpme-kahvalti-b.webp",
+      "imgThumb": "images/menu/serpme/limos-serpme-kahvalti-t.webp",
+      "name": {
+        "tr": "Limos Serpme Kahvaltı",
+        "en": "Limos Sharing Breakfast",
+        "de": "Limos Serpme-Frühstück",
+        "ar": "فطور ليموس سربمة"
+      },
+      "desc": {
+        "tr": "Peynir çeşitleri, bal, kaymak, ev reçelleri, zeytin ve kahvaltılık meze seçkisi; yanında sıcak tabak. Sınırsız çay ikram edilir.",
+        "en": "A selection of cheeses, honey, clotted cream, homemade jams, olives and breakfast mezze, with a hot plate on the side. Unlimited tea included.",
+        "de": "Käseauswahl, Honig, Kaymak, hausgemachte Marmeladen, Oliven und Frühstücksmezze; dazu ein warmer Teller. Unbegrenzt Tee inklusive.",
+        "ar": "تشكيلة أجبان، عسل، قشطة، مربيات منزلية، زيتون ومقبلات فطور؛ مع طبق ساخن جانبي. شاي غير محدود ضمن الطلب."
+      }
+    },
+    {
+      "categorySlug": "serpme",
+      "order": 1,
+      "price": "1590₺",
+      "img": "images/menu/serpme/full-serpme-kahvalti-b.webp",
+      "imgThumb": "images/menu/serpme/full-serpme-kahvalti-t.webp",
+      "name": {
+        "tr": "Full Serpme Kahvaltı",
+        "en": "Full Sharing Breakfast",
+        "de": "Full Serpme-Frühstück",
+        "ar": "فطور فُل سربمة"
+      },
+      "desc": {
+        "tr": "Limos Serpme içeriğine ek olarak tereyağlı köy menemen, mıhlama, sucuk tava ve pişi. Sınırsız çay ikram edilir.",
+        "en": "Everything in the Limos Sharing plus buttery village-style menemen, mıhlama, sujuk skillet and pişi. Unlimited tea included.",
+        "de": "Alles vom Limos Serpme plus buttriges Dorf-Menemen, Mıhlama, Sucuk-Pfanne und Pişi. Unbegrenzt Tee inklusive.",
+        "ar": "كل ما في فطور ليموس سربمة، إضافة إلى منمن قروي بالزبدة، مِهلاما، سجق بالمقلاة وبيشي. شاي غير محدود ضمن الطلب."
+      }
+    },
+    {
+      "categorySlug": "serpme",
+      "order": 2,
+      "price": "1390₺",
+      "img": "images/menu/serpme/special-serpme-kahvalti-b.webp",
+      "imgThumb": "images/menu/serpme/special-serpme-kahvalti-t.webp",
+      "name": {
+        "tr": "Special Serpme Kahvaltı",
+        "en": "Special Sharing Breakfast",
+        "de": "Special Serpme-Frühstück",
+        "ar": "فطور سبيشل سربمة"
+      },
+      "desc": {
+        "tr": "Geniş peynir ve meze seçkisi, mevsim ürünleri ve zenginleştirilmiş sıcak tabak. Sınırsız çay ikram edilir.",
+        "en": "A wide cheese and mezze selection, seasonal produce and an enriched hot plate. Unlimited tea included.",
+        "de": "Große Käse- und Mezzeauswahl, saisonale Produkte und ein reichhaltiger warmer Teller. Unbegrenzt Tee inklusive.",
+        "ar": "تشكيلة واسعة من الأجبان والمقبلات، منتجات موسمية وطبق ساخن غني. شاي غير محدود ضمن الطلب."
+      }
+    },
+    {
+      "categorySlug": "serpme",
+      "order": 3,
+      "price": "450₺",
+      "img": "images/menu/serpme/kahvalti-tabagi-b.webp",
+      "imgThumb": "images/menu/serpme/kahvalti-tabagi-t.webp",
+      "name": {
+        "tr": "Kahvaltı Tabağı",
+        "en": "Breakfast Plate",
+        "de": "Frühstücksteller",
+        "ar": "طبق الفطور"
+      },
+      "desc": {
+        "tr": "Tek kişilik. Ezine beyaz peynir, taze kaşar, domates, salatalık, Erzincan balı, manda kaymağı, ev reçeli, siyah ve yeşil zeytin, omlet ve bir adet sigara böreği. İlk çay ikramımızdır.",
+        "en": "For one. Ezine white cheese, fresh kaşar, tomato, cucumber, Erzincan honey, buffalo clotted cream, homemade jam, black and green olives, omelette and one cigar börek. First tea is on us.",
+        "de": "Für eine Person. Ezine-Weißkäse, frischer Kaşar, Tomate, Gurke, Erzincan-Honig, Büffel-Kaymak, hausgemachte Marmelade, schwarze und grüne Oliven, Omelett und ein Cigarettenbörek. Der erste Tee geht auf uns.",
+        "ar": "لشخص واحد. جبنة إزينة البيضاء، كاشار طازج، طماطم، خيار، عسل أرزنجان، قشطة الجاموس، مربى منزلي، زيتون أسود وأخضر، أومليت وقطعة بوريك سيجار واحدة. الشاي الأول ضيافة منّا."
+      }
+    },
+    {
+      "categorySlug": "serpme",
+      "order": 4,
+      "price": "350₺",
+      "img": "images/menu/serpme/pisi-tabagi-b.webp",
+      "imgThumb": "images/menu/serpme/pisi-tabagi-t.webp",
+      "name": {
+        "tr": "Pişi Tabağı",
+        "en": "Pişi Plate",
+        "de": "Pişi-Teller",
+        "ar": "طبق البيشي"
+      },
+      "desc": {
+        "tr": "Tek kişilik. Üç adet sade pişi, domates, salatalık, Ezine beyaz peynir, ev reçeli, siyah ve yeşil zeytin. İlk çay ikramımızdır.",
+        "en": "For one. Three plain pişi, tomato, cucumber, Ezine white cheese, homemade jam, black and green olives. First tea is on us.",
+        "de": "Für eine Person. Drei Pişi, Tomate, Gurke, Ezine-Weißkäse, hausgemachte Marmelade, schwarze und grüne Oliven. Der erste Tee geht auf uns.",
+        "ar": "لشخص واحد. ثلاث قطع بيشي سادة، طماطم، خيار، جبنة إزينة البيضاء، مربى منزلي، زيتون أسود وأخضر. الشاي الأول ضيافة منّا."
+      }
+    },
+    {
+      "categorySlug": "menemenler",
+      "order": 0,
+      "price": "220₺",
+      "img": "images/menu/menemenler/klasik-menemen-b.webp",
+      "imgThumb": "images/menu/menemenler/klasik-menemen-t.webp",
+      "name": {
+        "tr": "Klasik Menemen",
+        "en": "Classic Menemen",
+        "de": "Klassisches Menemen",
+        "ar": "منمن كلاسيكي"
+      },
+      "desc": {
+        "tr": "Domates ve yeşil biber tereyağında pişirilir, yumurtayla bağlanır. Bakır sahanda, sıcak servis edilir.",
+        "en": "Tomato and green pepper cooked in butter, bound with egg. Served hot in a copper pan.",
+        "de": "Tomate und grüne Paprika in Butter geschmort, mit Ei gebunden. Heiß serviert in der Kupferpfanne.",
+        "ar": "طماطم وفلفل أخضر يُطهيان بالزبدة، ويُضاف البيض. يُقدَّم ساخناً في مقلاة نحاسية."
+      }
+    },
+    {
+      "categorySlug": "menemenler",
+      "order": 1,
+      "price": "250₺",
+      "img": "images/menu/menemenler/kasarli-menemen-b.webp",
+      "imgThumb": "images/menu/menemenler/kasarli-menemen-t.webp",
+      "name": {
+        "tr": "Kaşarlı Menemen",
+        "en": "Menemen with Kaşar",
+        "de": "Menemen mit Kaşar",
+        "ar": "منمن بالكاشار"
+      },
+      "desc": {
+        "tr": "Klasik menemenin üzerine bol taze kaşar eklenir, tavada eritilir.",
+        "en": "Plenty of fresh kaşar cheese melted over the classic menemen.",
+        "de": "Reichlich frischer Kaşar-Käse, in der Pfanne über dem klassischen Menemen geschmolzen.",
+        "ar": "جبنة كاشار طازجة وفيرة تُذاب فوق المنمن الكلاسيكي."
+      }
+    },
+    {
+      "categorySlug": "menemenler",
+      "order": 2,
+      "price": "250₺",
+      "img": "images/menu/menemenler/beyaz-peynirli-menemen-b.webp",
+      "imgThumb": "images/menu/menemenler/beyaz-peynirli-menemen-t.webp",
+      "name": {
+        "tr": "Beyaz Peynirli Menemen",
+        "en": "White Cheese Menemen",
+        "de": "Menemen mit Weißkäse",
+        "ar": "منمن بالجبنة البيضاء"
+      },
+      "desc": {
+        "tr": "Ezine beyaz peynirle hazırlanan menemen. Yanında taze ekmekle servis edilir.",
+        "en": "Menemen made with Ezine white cheese. Served with fresh bread.",
+        "de": "Menemen mit Ezine-Weißkäse. Serviert mit frischem Brot.",
+        "ar": "منمن مُحضَّر بجبنة إزينة البيضاء. يُقدَّم مع خبز طازج."
+      }
+    },
+    {
+      "categorySlug": "menemenler",
+      "order": 3,
+      "price": "350₺",
+      "img": "images/menu/menemenler/karisik-menemen-b.webp",
+      "imgThumb": "images/menu/menemenler/karisik-menemen-t.webp",
+      "name": {
+        "tr": "Karışık Menemen",
+        "en": "Mixed Menemen",
+        "de": "Gemischtes Menemen",
+        "ar": "منمن مشكّل"
+      },
+      "desc": {
+        "tr": "Domates, biber, sucuk, kavurma ve kaşar birlikte pişirilir.",
+        "en": "Tomato, pepper, sujuk, kavurma and kaşar cooked together.",
+        "de": "Tomate, Paprika, Sucuk, Kavurma und Kaşar gemeinsam geschmort.",
+        "ar": "طماطم، فلفل، سجق، قاورما وكاشار تُطهى معاً."
+      }
+    },
+    {
+      "categorySlug": "menemenler",
+      "order": 4,
+      "price": "370₺",
+      "img": "images/menu/menemenler/kavurmali-menemen-b.webp",
+      "imgThumb": "images/menu/menemenler/kavurmali-menemen-t.webp",
+      "name": {
+        "tr": "Kavurmalı Menemen",
+        "en": "Menemen with Kavurma",
+        "de": "Menemen mit Kavurma",
+        "ar": "منمن بالقاورما"
+      },
+      "desc": {
+        "tr": "El kavurması kendi yağında çevrilerek menemene eklenir.",
+        "en": "Hand-cured kavurma, sautéed in its own fat, added to the menemen.",
+        "de": "Handgemachte Kavurma, im eigenen Fett angebraten und zum Menemen gegeben.",
+        "ar": "قاورما يدوية الصنع تُشوى بدهنها وتُضاف إلى المنمن."
+      }
+    },
+    {
+      "categorySlug": "menemenler",
+      "order": 5,
+      "price": "330₺",
+      "img": "images/menu/menemenler/sucuklu-menemen-b.webp",
+      "imgThumb": "images/menu/menemenler/sucuklu-menemen-t.webp",
+      "name": {
+        "tr": "Sucuklu Menemen",
+        "en": "Menemen with Sujuk",
+        "de": "Menemen mit Sucuk",
+        "ar": "منمن بالسجق"
+      },
+      "desc": {
+        "tr": "Dilim sucuk tavada kızartılır, menemenle birlikte pişirilir.",
+        "en": "Sliced sujuk fried in the pan and cooked together with the menemen.",
+        "de": "In Scheiben geschnittene Sucuk wird angebraten und mit dem Menemen zusammen gegart.",
+        "ar": "شرائح سجق تُقلى في المقلاة وتُطهى مع المنمن."
+      }
+    },
+    {
+      "categorySlug": "menemenler",
+      "order": 6,
+      "price": "330₺",
+      "img": "images/menu/menemenler/sucuklu-menemen-b.webp",
+      "imgThumb": "images/menu/menemenler/sucuklu-menemen-t.webp",
+      "name": {
+        "tr": "Sosisli Menemen",
+        "en": "Menemen with Sausage",
+        "de": "Menemen mit Würstchen",
+        "ar": "منمن بالنقانق"
+      },
+      "desc": {
+        "tr": "Dilim dana sosis tavada kızartılır, menemenle birlikte pişirilir.",
+        "en": "Sliced beef sausage fried in the pan and cooked together with the menemen.",
+        "de": "In Scheiben geschnittene Rinderwürstchen werden angebraten und mit dem Menemen zusammen gegart.",
+        "ar": "شرائح نقانق بقري تُقلى في المقلاة وتُطهى مع المنمن."
+      }
+    },
+    {
+      "categorySlug": "yumurta",
+      "order": 0,
+      "price": "150₺",
+      "img": "images/menu/yumurta/sade-yumurta-b.webp",
+      "imgThumb": "images/menu/yumurta/sade-yumurta-t.webp",
+      "name": {
+        "tr": "Sade Yumurta",
+        "en": "Plain Fried Eggs",
+        "de": "Pfannenspiegeleier pur",
+        "ar": "بيض سادة بالمقلاة"
+      },
+      "desc": {
+        "tr": "İki yumurta, bakır sahanda tereyağında pişirilir.",
+        "en": "Two eggs, cooked in butter in a copper pan.",
+        "de": "Zwei Eier, in Butter in der Kupferpfanne gebraten.",
+        "ar": "بيضتان تُطهيان بالزبدة في مقلاة نحاسية."
+      }
+    },
+    {
+      "categorySlug": "yumurta",
+      "order": 1,
+      "price": "200₺",
+      "img": "images/menu/yumurta/kasarli-yumurta-b.webp",
+      "imgThumb": "images/menu/yumurta/kasarli-yumurta-t.webp",
+      "name": {
+        "tr": "Kaşarlı Yumurta",
+        "en": "Fried Eggs with Kaşar",
+        "de": "Spiegeleier mit Kaşar",
+        "ar": "بيض بالمقلاة والكاشار"
+      },
+      "desc": {
+        "tr": "Sahanda yumurtanın üzerine taze kaşar eklenir.",
+        "en": "Fresh kaşar cheese added over the pan-fried eggs.",
+        "de": "Frischer Kaşar-Käse über den Spiegeleiern.",
+        "ar": "جبنة كاشار طازجة تُضاف فوق البيض المقلي."
+      }
+    },
+    {
+      "categorySlug": "yumurta",
+      "order": 2,
+      "price": "200₺",
+      "img": "images/menu/yumurta/beyaz-peynirli-yumurta-b.webp",
+      "imgThumb": "images/menu/yumurta/beyaz-peynirli-yumurta-t.webp",
+      "name": {
+        "tr": "Beyaz Peynirli Yumurta",
+        "en": "Fried Eggs with White Cheese",
+        "de": "Spiegeleier mit Weißkäse",
+        "ar": "بيض بالمقلاة والجبنة البيضاء"
+      },
+      "desc": {
+        "tr": "Sahanda yumurta, Ezine beyaz peynir parçalarıyla hazırlanır.",
+        "en": "Pan-fried eggs prepared with pieces of Ezine white cheese.",
+        "de": "Spiegeleier mit Stücken von Ezine-Weißkäse.",
+        "ar": "بيض بالمقلاة مع قطع من جبنة إزينة البيضاء."
+      }
+    },
+    {
+      "categorySlug": "yumurta",
+      "order": 3,
+      "price": "270₺",
+      "img": "images/menu/yumurta/sucuklu-yumurta-b.webp",
+      "imgThumb": "images/menu/yumurta/sucuklu-yumurta-t.webp",
+      "name": {
+        "tr": "Sucuklu Yumurta",
+        "en": "Fried Eggs with Sujuk",
+        "de": "Spiegeleier mit Sucuk",
+        "ar": "بيض بالمقلاة والسجق"
+      },
+      "desc": {
+        "tr": "Bakır sahanda kızartılan sucuk dilimlerinin üzerine yumurta kırılır.",
+        "en": "Eggs cracked over sujuk slices fried in the copper pan.",
+        "de": "Eier über in der Kupferpfanne gebratenen Sucuk-Scheiben.",
+        "ar": "يُكسر البيض فوق شرائح السجق المقلية في المقلاة النحاسية."
+      }
+    },
+    {
+      "categorySlug": "yumurta",
+      "order": 4,
+      "price": "250₺",
+      "img": "images/menu/yumurta/sosisli-yumurta-b.webp",
+      "imgThumb": "images/menu/yumurta/sosisli-yumurta-t.webp",
+      "name": {
+        "tr": "Sosisli Yumurta",
+        "en": "Fried Eggs with Sausage",
+        "de": "Spiegeleier mit Würstchen",
+        "ar": "بيض بالمقلاة والنقانق"
+      },
+      "desc": {
+        "tr": "Dana sosis dilimleri sahanda kızartılır, üzerine yumurta kırılır.",
+        "en": "Beef sausage slices fried in the pan, eggs cracked on top.",
+        "de": "Rinderwürstchen-Scheiben in der Pfanne gebraten, Eier darüber.",
+        "ar": "شرائح نقانق بقري تُقلى في المقلاة ويُكسر البيض فوقها."
+      }
+    },
+    {
+      "categorySlug": "yumurta",
+      "order": 5,
+      "price": "200₺",
+      "img": "images/menu/yumurta/patatesli-yumurta-b.webp",
+      "imgThumb": "images/menu/yumurta/patatesli-yumurta-t.webp",
+      "name": {
+        "tr": "Patatesli Yumurta",
+        "en": "Fried Eggs with Potato",
+        "de": "Spiegeleier mit Kartoffel",
+        "ar": "بيض بالمقلاة والبطاطس"
+      },
+      "desc": {
+        "tr": "Küp patates kızartılır, yumurtayla birlikte pişirilir.",
+        "en": "Diced potato fried and cooked together with egg.",
+        "de": "Kartoffelwürfel gebraten und zusammen mit Ei gegart.",
+        "ar": "مكعبات بطاطس مقلية تُطهى مع البيض."
+      }
+    },
+    {
+      "categorySlug": "yumurta",
+      "order": 6,
+      "price": "350₺",
+      "img": "images/menu/yumurta/kavurmali-yumurta-b.webp",
+      "imgThumb": "images/menu/yumurta/kavurmali-yumurta-t.webp",
+      "name": {
+        "tr": "Kavurmalı Yumurta",
+        "en": "Fried Eggs with Kavurma",
+        "de": "Spiegeleier mit Kavurma",
+        "ar": "بيض بالمقلاة والقاورما"
+      },
+      "desc": {
+        "tr": "Kendi yağında çevrilen kavurmanın üzerine yumurta kırılır.",
+        "en": "Egg cracked over kavurma sautéed in its own fat.",
+        "de": "Ei über im eigenen Fett angebratener Kavurma.",
+        "ar": "يُكسر البيض فوق القاورما المشوية بدهنها."
+      }
+    },
+    {
+      "categorySlug": "omletler",
+      "order": 0,
+      "price": "",
+      "img": "images/menu/omletler/sade-omlet-b.webp",
+      "imgThumb": "images/menu/omletler/sade-omlet-t.webp",
+      "name": {
+        "tr": "Sade Omlet",
+        "en": "Plain Omelette",
+        "de": "Omelett pur",
+        "ar": "أومليت سادة"
+      },
+      "desc": {
+        "tr": "Çırpılmış yumurta, bakır tavada tereyağında pişirilir.",
+        "en": "Beaten eggs cooked in butter in a copper pan.",
+        "de": "Verquirlte Eier, in Butter in der Kupferpfanne gebraten.",
+        "ar": "بيض مخفوق يُطهى بالزبدة في مقلاة نحاسية."
+      }
+    },
+    {
+      "categorySlug": "omletler",
+      "order": 1,
+      "price": "",
+      "img": "images/menu/omletler/kasarli-omlet-b.webp",
+      "imgThumb": "images/menu/omletler/kasarli-omlet-t.webp",
+      "name": {
+        "tr": "Kaşarlı Omlet",
+        "en": "Kaşar Omelette",
+        "de": "Omelett mit Kaşar",
+        "ar": "أومليت بالكاشار"
+      },
+      "desc": {
+        "tr": "İçi taze kaşarla doldurulan omlet.",
+        "en": "Omelette filled with fresh kaşar cheese.",
+        "de": "Omelett gefüllt mit frischem Kaşar-Käse.",
+        "ar": "أومليت محشو بجبنة كاشار طازجة."
+      }
+    },
+    {
+      "categorySlug": "omletler",
+      "order": 2,
+      "price": "",
+      "img": "images/menu/omletler/beyaz-peynirli-omlet-b.webp",
+      "imgThumb": "images/menu/omletler/beyaz-peynirli-omlet-t.webp",
+      "name": {
+        "tr": "Beyaz Peynirli Omlet",
+        "en": "White Cheese Omelette",
+        "de": "Omelett mit Weißkäse",
+        "ar": "أومليت بالجبنة البيضاء"
+      },
+      "desc": {
+        "tr": "Ezine beyaz peynir ve maydanozla hazırlanan omlet.",
+        "en": "Omelette prepared with Ezine white cheese and parsley.",
+        "de": "Omelett mit Ezine-Weißkäse und Petersilie.",
+        "ar": "أومليت مُحضَّر بجبنة إزينة البيضاء والبقدونس."
+      }
+    },
+    {
+      "categorySlug": "omletler",
+      "order": 3,
+      "price": "",
+      "img": "images/menu/omletler/karisik-omlet-b.webp",
+      "imgThumb": "images/menu/omletler/karisik-omlet-t.webp",
+      "name": {
+        "tr": "Karışık Omlet",
+        "en": "Mixed Omelette",
+        "de": "Gemischtes Omelett",
+        "ar": "أومليت مشكّل"
+      },
+      "desc": {
+        "tr": "Sucuk, kaşar ve biberle hazırlanan omlet.",
+        "en": "Omelette prepared with sujuk, kaşar and pepper.",
+        "de": "Omelett mit Sucuk, Kaşar und Paprika.",
+        "ar": "أومليت مُحضَّر بالسجق والكاشار والفلفل."
+      }
+    },
+    {
+      "categorySlug": "omletler",
+      "order": 4,
+      "price": "",
+      "img": "images/menu/omletler/sucuklu-omlet-b.webp",
+      "imgThumb": "images/menu/omletler/sucuklu-omlet-t.webp",
+      "name": {
+        "tr": "Sucuklu Omlet",
+        "en": "Sujuk Omelette",
+        "de": "Omelett mit Sucuk",
+        "ar": "أومليت بالسجق"
+      },
+      "desc": {
+        "tr": "Kızartılmış sucuk dilimleriyle katlanan omlet.",
+        "en": "Omelette folded with fried sujuk slices.",
+        "de": "Omelett gefaltet mit gebratenen Sucuk-Scheiben.",
+        "ar": "أومليت مطوي بشرائح السجق المقلية."
+      }
+    },
+    {
+      "categorySlug": "omletler",
+      "order": 5,
+      "price": "",
+      "img": "images/menu/omletler/sosisli-omlet-b.webp",
+      "imgThumb": "images/menu/omletler/sosisli-omlet-t.webp",
+      "name": {
+        "tr": "Sosisli Omlet",
+        "en": "Sausage Omelette",
+        "de": "Omelett mit Würstchen",
+        "ar": "أومليت بالنقانق"
+      },
+      "desc": {
+        "tr": "Dana sosis parçalarıyla hazırlanan omlet.",
+        "en": "Omelette prepared with pieces of beef sausage.",
+        "de": "Omelett mit Stücken von Rinderwürstchen.",
+        "ar": "أومليت مُحضَّر بقطع النقانق البقري."
+      }
+    },
+    {
+      "categorySlug": "omletler",
+      "order": 6,
+      "price": "",
+      "img": "images/menu/omletler/patatesli-omlet-b.webp",
+      "imgThumb": "images/menu/omletler/patatesli-omlet-t.webp",
+      "name": {
+        "tr": "Patatesli Omlet",
+        "en": "Potato Omelette",
+        "de": "Omelett mit Kartoffel",
+        "ar": "أومليت بالبطاطس"
+      },
+      "desc": {
+        "tr": "Kızartılmış patatesle hazırlanan omlet.",
+        "en": "Omelette prepared with fried potato.",
+        "de": "Omelett mit gebratener Kartoffel.",
+        "ar": "أومليت مُحضَّر بالبطاطس المقلية."
+      }
+    },
+    {
+      "categorySlug": "omletler",
+      "order": 7,
+      "price": "",
+      "img": "images/menu/omletler/kiymali-omlet-b.webp",
+      "imgThumb": "images/menu/omletler/kiymali-omlet-t.webp",
+      "name": {
+        "tr": "Kıymalı Omlet",
+        "en": "Minced Meat Omelette",
+        "de": "Omelett mit Hackfleisch",
+        "ar": "أومليت باللحم المفروم"
+      },
+      "desc": {
+        "tr": "Baharatlı kıyma sotesiyle hazırlanan omlet.",
+        "en": "Omelette prepared with spiced sautéed minced meat.",
+        "de": "Omelett mit gewürztem, angebratenem Hackfleisch.",
+        "ar": "أومليت مُحضَّر باللحم المفروم المتبل والمشوّح."
+      }
+    },
+    {
+      "categorySlug": "omletler",
+      "order": 8,
+      "price": "",
+      "img": "images/menu/omletler/kavurmali-omlet-b.webp",
+      "imgThumb": "images/menu/omletler/kavurmali-omlet-t.webp",
+      "name": {
+        "tr": "Kavurmalı Omlet",
+        "en": "Kavurma Omelette",
+        "de": "Omelett mit Kavurma",
+        "ar": "أومليت بالقاورما"
+      },
+      "desc": {
+        "tr": "Kendi yağında çevrilen kavurmayla hazırlanan omlet.",
+        "en": "Omelette prepared with kavurma sautéed in its own fat.",
+        "de": "Omelett mit im eigenen Fett angebratener Kavurma.",
+        "ar": "أومليت مُحضَّر بالقاورما المشوية بدهنها."
+      }
+    },
+    {
+      "categorySlug": "tavalar",
+      "order": 0,
+      "price": "300₺",
+      "img": "images/menu/tavalar/mihlama-kuymak-b.webp",
+      "imgThumb": "images/menu/tavalar/mihlama-kuymak-t.webp",
+      "name": {
+        "tr": "Mıhlama (Kuymak)",
+        "en": "Mıhlama (Kuymak)",
+        "de": "Mıhlama (Kuymak)",
+        "ar": "مِهلاما (كويماك)"
+      },
+      "desc": {
+        "tr": "Tereyağı, mısır unu ve taze peynirle Karadeniz usulü pişirilir. Bakır tavada, sıcak servis edilir.",
+        "en": "Made Black Sea-style with butter, corn flour and fresh cheese. Served hot in a copper pan.",
+        "de": "Nach Schwarzmeer-Art mit Butter, Maismehl und frischem Käse. Heiß in der Kupferpfanne serviert.",
+        "ar": "تُحضَّر على طريقة البحر الأسود بالزبدة ودقيق الذرة والجبنة الطازجة. تُقدَّم ساخنة في مقلاة نحاسية."
+      }
+    },
+    {
+      "categorySlug": "tavalar",
+      "order": 1,
+      "price": "300₺",
+      "img": "images/menu/tavalar/sucuk-tava-b.webp",
+      "imgThumb": "images/menu/tavalar/sucuk-tava-t.webp",
+      "name": {
+        "tr": "Sucuk Tava",
+        "en": "Sujuk Skillet",
+        "de": "Sucuk-Pfanne",
+        "ar": "سجق بالمقلاة"
+      },
+      "desc": {
+        "tr": "Dilim sucuk kendi yağında, kenarları kızarana kadar tavada pişirilir.",
+        "en": "Sliced sujuk pan-fried in its own fat until the edges crisp up.",
+        "de": "In Scheiben geschnittene Sucuk im eigenen Fett gebraten, bis die Ränder knusprig sind.",
+        "ar": "شرائح سجق تُقلى بدهنها حتى تحمّر الأطراف."
+      }
+    },
+    {
+      "categorySlug": "tavalar",
+      "order": 2,
+      "price": "250₺",
+      "img": "images/menu/tavalar/sicak-tabagi-b.webp",
+      "imgThumb": "images/menu/tavalar/sicak-tabagi-t.webp",
+      "name": {
+        "tr": "Sıcak Tabağı",
+        "en": "Hot Plate",
+        "de": "Warmer Teller",
+        "ar": "طبق ساخن"
+      },
+      "desc": {
+        "tr": "Mıhlama, sucuk, anne dilim patates ve sigara böreğinden oluşan sıcak seçki.",
+        "en": "A hot selection of mıhlama, sujuk, hand-cut potato and cigar börek.",
+        "de": "Warme Auswahl aus Mıhlama, Sucuk, handgeschnittener Kartoffel und Cigarettenbörek.",
+        "ar": "تشكيلة ساخنة من المِهلاما، السجق، البطاطس المقطعة يدوياً وبوريك السيجار."
+      }
+    },
+    {
+      "categorySlug": "tavalar",
+      "order": 3,
+      "price": "350₺",
+      "img": "images/menu/tavalar/kavurma-tava-b.webp",
+      "imgThumb": "images/menu/tavalar/kavurma-tava-t.webp",
+      "name": {
+        "tr": "Kavurma Tava",
+        "en": "Kavurma Skillet",
+        "de": "Kavurma-Pfanne",
+        "ar": "قاورما بالمقلاة"
+      },
+      "desc": {
+        "tr": "El kavurması kendi yağında çevrilir. Yanında taze ekmekle servis edilir.",
+        "en": "Hand-cured kavurma sautéed in its own fat. Served with fresh bread.",
+        "de": "Handgemachte Kavurma im eigenen Fett angebraten. Serviert mit frischem Brot.",
+        "ar": "قاورما يدوية تُشوى بدهنها. تُقدَّم مع خبز طازج."
+      }
+    },
+    {
+      "categorySlug": "tavalar",
+      "order": 4,
+      "price": "200₺",
+      "img": "images/menu/tavalar/hellim-tava-b.webp",
+      "imgThumb": "images/menu/tavalar/hellim-tava-t.webp",
+      "name": {
+        "tr": "Hellim Tava",
+        "en": "Halloumi Skillet",
+        "de": "Halloumi-Pfanne",
+        "ar": "حلوم بالمقلاة"
+      },
+      "desc": {
+        "tr": "Hellim peyniri tavada kızartılır, limonla servis edilir.",
+        "en": "Halloumi cheese pan-fried, served with lemon.",
+        "de": "Halloumi-Käse in der Pfanne gebraten, serviert mit Zitrone.",
+        "ar": "جبنة الحلوم تُقلى في المقلاة وتُقدَّم مع الليمون."
+      }
+    },
+    {
+      "categorySlug": "tavalar",
+      "order": 5,
+      "price": "250₺",
+      "img": "images/menu/tavalar/sosis-tava-b.webp",
+      "imgThumb": "images/menu/tavalar/sosis-tava-t.webp",
+      "name": {
+        "tr": "Sosis Tava",
+        "en": "Sausage Skillet",
+        "de": "Würstchen-Pfanne",
+        "ar": "نقانق بالمقلاة"
+      },
+      "desc": {
+        "tr": "Dana sosis dilimlenerek tavada kızartılır.",
+        "en": "Beef sausage sliced and pan-fried.",
+        "de": "Rinderwürstchen in Scheiben, in der Pfanne gebraten.",
+        "ar": "نقانق بقري مقطّعة تُقلى في المقلاة."
+      }
+    },
+    {
+      "categorySlug": "tavalar",
+      "order": 6,
+      "price": "300₺",
+      "img": "images/menu/tavalar/salcali-sosis-b.webp",
+      "imgThumb": "images/menu/tavalar/salcali-sosis-t.webp",
+      "name": {
+        "tr": "Salçalı Sosis",
+        "en": "Sausage in Tomato Sauce",
+        "de": "Würstchen in Tomatensoße",
+        "ar": "نقانق بالصلصة"
+      },
+      "desc": {
+        "tr": "Sosis, domates ve biber salçasıyla tavada pişirilir.",
+        "en": "Sausage cooked in the pan with tomato and pepper paste.",
+        "de": "Würstchen in der Pfanne mit Tomaten- und Paprikamark gegart.",
+        "ar": "نقانق تُطهى في المقلاة مع معجون الطماطم والفلفل."
+      }
+    },
+    {
+      "categorySlug": "tavalar",
+      "order": 7,
+      "price": "180₺",
+      "img": "images/menu/tavalar/anne-dilim-patates-tava-b.webp",
+      "imgThumb": "images/menu/tavalar/anne-dilim-patates-tava-t.webp",
+      "name": {
+        "tr": "Anne Dilim Patates Tava",
+        "en": "Hand-Cut Potato Skillet",
+        "de": "Handgeschnittene Kartoffel-Pfanne",
+        "ar": "بطاطس مقطّعة يدوياً"
+      },
+      "desc": {
+        "tr": "Elde iri dilimlenen patates, bol yağda kızartılır.",
+        "en": "Thick, hand-cut potato slices deep-fried.",
+        "de": "Dick von Hand geschnittene Kartoffelscheiben, frittiert.",
+        "ar": "شرائح بطاطس سميكة مقطّعة يدوياً وتُقلى في زيت وفير."
+      }
+    },
+    {
+      "categorySlug": "tavalar",
+      "order": 8,
+      "price": "120₺",
+      "img": "images/menu/tavalar/sigara-boregi-b.webp",
+      "imgThumb": "images/menu/tavalar/sigara-boregi-t.webp",
+      "name": {
+        "tr": "Sigara Böreği",
+        "en": "Cigar Börek",
+        "de": "Cigarettenbörek",
+        "ar": "بوريك السيجار"
+      },
+      "desc": {
+        "tr": "Beyaz peynir ve maydanozla sarılıp kızartılan altı adet ince börek.",
+        "en": "Six thin pastries rolled with white cheese and parsley, then fried.",
+        "de": "Sechs dünne, mit Weißkäse und Petersilie gefüllte und frittierte Teigröllchen.",
+        "ar": "ست قطع بوريك رفيعة محشوة بالجبنة البيضاء والبقدونس ومقلية."
+      }
+    },
+    {
+      "categorySlug": "tavalar",
+      "order": 9,
+      "price": "150₺",
+      "img": "images/menu/tavalar/yumurtali-ekmek-b.webp",
+      "imgThumb": "images/menu/tavalar/yumurtali-ekmek-t.webp",
+      "name": {
+        "tr": "Yumurtalı Ekmek",
+        "en": "Egg Bread",
+        "de": "Eierbrot",
+        "ar": "خبز بالبيض"
+      },
+      "desc": {
+        "tr": "Yumurtaya batırılıp tereyağında kızartılan altı dilim ekmek.",
+        "en": "Six slices of bread dipped in egg and fried in butter.",
+        "de": "Sechs Brotscheiben, in Ei getaucht und in Butter gebraten.",
+        "ar": "ست شرائح خبز تُغمس بالبيض وتُقلى بالزبدة."
+      }
+    },
+    {
+      "categorySlug": "pisiler",
+      "order": 0,
+      "price": "200₺",
+      "img": "images/menu/pisiler/sade-pisi-b.webp",
+      "imgThumb": "images/menu/pisiler/sade-pisi-t.webp",
+      "name": {
+        "tr": "Sade Pişi",
+        "en": "Plain Pişi",
+        "de": "Pişi pur",
+        "ar": "بيشي سادة"
+      },
+      "desc": {
+        "tr": "Mayalı hamurdan, sipariş üzerine kızartılan dört adet sıcak pişi.",
+        "en": "Four hot pişi, made from yeast dough and fried to order.",
+        "de": "Vier heiße Pişi aus Hefeteig, frisch auf Bestellung frittiert.",
+        "ar": "أربع قطع بيشي ساخنة من عجين مخمّر، تُقلى عند الطلب."
+      }
+    },
+    {
+      "categorySlug": "pisiler",
+      "order": 1,
+      "price": "250₺",
+      "img": "images/menu/pisiler/kasarli-pisi-b.webp",
+      "imgThumb": "images/menu/pisiler/kasarli-pisi-t.webp",
+      "name": {
+        "tr": "Kaşarlı Pişi",
+        "en": "Pişi with Kaşar",
+        "de": "Pişi mit Kaşar",
+        "ar": "بيشي بالكاشار"
+      },
+      "desc": {
+        "tr": "İçine kaşar konularak kızartılan pişi.",
+        "en": "Pişi fried with kaşar cheese inside.",
+        "de": "Pişi mit Kaşar-Käse gefüllt und frittiert.",
+        "ar": "بيشي محشو بجبنة الكاشار ومقلي."
+      }
+    },
+    {
+      "categorySlug": "pisiler",
+      "order": 2,
+      "price": "250₺",
+      "img": "images/menu/pisiler/beyaz-peynirli-pisi-b.webp",
+      "imgThumb": "images/menu/pisiler/beyaz-peynirli-pisi-t.webp",
+      "name": {
+        "tr": "Beyaz Peynirli Pişi",
+        "en": "Pişi with White Cheese",
+        "de": "Pişi mit Weißkäse",
+        "ar": "بيشي بالجبنة البيضاء"
+      },
+      "desc": {
+        "tr": "Ezine beyaz peynir dolgulu pişi.",
+        "en": "Pişi filled with Ezine white cheese.",
+        "de": "Pişi gefüllt mit Ezine-Weißkäse.",
+        "ar": "بيشي محشو بجبنة إزينة البيضاء."
+      }
+    },
+    {
+      "categorySlug": "pisiler",
+      "order": 3,
+      "price": "",
+      "img": "images/menu/pisiler/sucuklu-pisi-b.webp",
+      "imgThumb": "images/menu/pisiler/sucuklu-pisi-t.webp",
+      "name": {
+        "tr": "Sucuklu Pişi",
+        "en": "Pişi with Sujuk",
+        "de": "Pişi mit Sucuk",
+        "ar": "بيشي بالسجق"
+      },
+      "desc": {
+        "tr": "İçi kızartılmış sucukla doldurulan pişi.",
+        "en": "Pişi filled with fried sujuk.",
+        "de": "Pişi gefüllt mit gebratener Sucuk.",
+        "ar": "بيشي محشو بالسجق المقلي."
+      }
+    },
+    {
+      "categorySlug": "pisiler",
+      "order": 4,
+      "price": "250₺",
+      "img": "images/menu/pisiler/nutella-li-pisi-b.webp",
+      "imgThumb": "images/menu/pisiler/nutella-li-pisi-t.webp",
+      "name": {
+        "tr": "Nutella'lı Pişi",
+        "en": "Pişi with Nutella",
+        "de": "Pişi mit Nutella",
+        "ar": "بيشي بالنوتيلا"
+      },
+      "desc": {
+        "tr": "İçi Nutella dolgulu, sıcak servis edilen pişi.",
+        "en": "Pişi filled with Nutella, served hot.",
+        "de": "Pişi gefüllt mit Nutella, heiß serviert.",
+        "ar": "بيشي محشو بالنوتيلا، يُقدَّم ساخناً."
+      }
+    },
+    {
+      "categorySlug": "pisiler",
+      "order": 5,
+      "price": "350₺",
+      "img": "images/menu/pisiler/kavurma-kasarli-pisi-b.webp",
+      "imgThumb": "images/menu/pisiler/kavurma-kasarli-pisi-t.webp",
+      "name": {
+        "tr": "Kavurma Kaşarlı Pişi",
+        "en": "Pişi with Kavurma and Kaşar",
+        "de": "Pişi mit Kavurma und Kaşar",
+        "ar": "بيشي بالقاورما والكاشار"
+      },
+      "desc": {
+        "tr": "Kavurma ve kaşar dolgulu pişi.",
+        "en": "Pişi filled with kavurma and kaşar cheese.",
+        "de": "Pişi gefüllt mit Kavurma und Kaşar-Käse.",
+        "ar": "بيشي محشو بالقاورما وجبنة الكاشار."
+      }
+    },
+    {
+      "categorySlug": "gozlemeler",
+      "order": 0,
+      "price": "275₺",
+      "img": "images/menu/gozlemeler/kasarli-gozleme-b.webp",
+      "imgThumb": "images/menu/gozlemeler/kasarli-gozleme-t.webp",
+      "name": {
+        "tr": "Kaşarlı Gözleme",
+        "en": "Gözleme with Kaşar",
+        "de": "Gözleme mit Kaşar",
+        "ar": "غوزلمة بالكاشار"
+      },
+      "desc": {
+        "tr": "İnce açılan hamura bol kaşar konularak sacda pişirilir.",
+        "en": "Thin dough filled with plenty of kaşar, cooked on a griddle.",
+        "de": "Dünn ausgerollter Teig mit reichlich Kaşar, auf dem Blech gebacken.",
+        "ar": "عجين رقيق محشو بكمية وفيرة من الكاشار، يُطهى على الصاج."
+      }
+    },
+    {
+      "categorySlug": "gozlemeler",
+      "order": 1,
+      "price": "275₺",
+      "img": "images/menu/gozlemeler/beyaz-peynirli-gozleme-b.webp",
+      "imgThumb": "images/menu/gozlemeler/beyaz-peynirli-gozleme-t.webp",
+      "name": {
+        "tr": "Beyaz Peynirli Gözleme",
+        "en": "Gözleme with White Cheese",
+        "de": "Gözleme mit Weißkäse",
+        "ar": "غوزلمة بالجبنة البيضاء"
+      },
+      "desc": {
+        "tr": "Ezine beyaz peynir ve maydanozla hazırlanan gözleme.",
+        "en": "Gözleme prepared with Ezine white cheese and parsley.",
+        "de": "Gözleme mit Ezine-Weißkäse und Petersilie.",
+        "ar": "غوزلمة مُحضَّرة بجبنة إزينة البيضاء والبقدونس."
+      }
+    },
+    {
+      "categorySlug": "gozlemeler",
+      "order": 2,
+      "price": "275₺",
+      "img": "images/menu/gozlemeler/patatesli-gozleme-b.webp",
+      "imgThumb": "images/menu/gozlemeler/patatesli-gozleme-t.webp",
+      "name": {
+        "tr": "Patatesli Gözleme",
+        "en": "Gözleme with Potato",
+        "de": "Gözleme mit Kartoffel",
+        "ar": "غوزلمة بالبطاطس"
+      },
+      "desc": {
+        "tr": "Baharatlı patates harcıyla hazırlanan gözleme.",
+        "en": "Gözleme filled with spiced potato mash.",
+        "de": "Gözleme gefüllt mit gewürztem Kartoffelpüree.",
+        "ar": "غوزلمة محشوة بخليط البطاطس المتبل."
+      }
+    },
+    {
+      "categorySlug": "gozlemeler",
+      "order": 3,
+      "price": "300₺",
+      "img": "images/menu/gozlemeler/patatesli-kasarli-gozleme-b.webp",
+      "imgThumb": "images/menu/gozlemeler/patatesli-kasarli-gozleme-t.webp",
+      "name": {
+        "tr": "Patatesli Kaşarlı Gözleme",
+        "en": "Gözleme with Potato and Kaşar",
+        "de": "Gözleme mit Kartoffel und Kaşar",
+        "ar": "غوزلمة بالبطاطس والكاشار"
+      },
+      "desc": {
+        "tr": "Patates ve kaşar dolgusuyla hazırlanan gözleme.",
+        "en": "Gözleme filled with potato and kaşar cheese.",
+        "de": "Gözleme gefüllt mit Kartoffel und Kaşar-Käse.",
+        "ar": "غوزلمة محشوة بالبطاطس وجبنة الكاشار."
+      }
+    },
+    {
+      "categorySlug": "gozlemeler",
+      "order": 4,
+      "price": "300₺",
+      "img": "images/menu/gozlemeler/ispanakli-gozleme-b.webp",
+      "imgThumb": "images/menu/gozlemeler/ispanakli-gozleme-t.webp",
+      "name": {
+        "tr": "Ispanaklı Gözleme",
+        "en": "Gözleme with Spinach",
+        "de": "Gözleme mit Spinat",
+        "ar": "غوزلمة بالسبانخ"
+      },
+      "desc": {
+        "tr": "Sotelenmiş ıspanak ve peynirle hazırlanan gözleme.",
+        "en": "Gözleme prepared with sautéed spinach and cheese.",
+        "de": "Gözleme mit gedünstetem Spinat und Käse.",
+        "ar": "غوزلمة مُحضَّرة بالسبانخ المشوّح والجبنة."
+      }
+    },
+    {
+      "categorySlug": "gozlemeler",
+      "order": 5,
+      "price": "400₺",
+      "img": "images/menu/gozlemeler/kiymali-gozleme-b.webp",
+      "imgThumb": "images/menu/gozlemeler/kiymali-gozleme-t.webp",
+      "name": {
+        "tr": "Kıymalı Gözleme",
+        "en": "Gözleme with Minced Meat",
+        "de": "Gözleme mit Hackfleisch",
+        "ar": "غوزلمة باللحم المفروم"
+      },
+      "desc": {
+        "tr": "Baharatlı kıyma harcıyla sacda pişirilen gözleme.",
+        "en": "Gözleme with spiced minced meat filling, cooked on a griddle.",
+        "de": "Gözleme mit gewürzter Hackfleischfüllung, auf dem Blech gebacken.",
+        "ar": "غوزلمة بحشوة اللحم المفروم المتبل، تُطهى على الصاج."
+      }
+    },
+    {
+      "categorySlug": "gozlemeler",
+      "order": 6,
+      "price": "350₺",
+      "img": "images/menu/gozlemeler/sucuklu-gozleme-b.webp",
+      "imgThumb": "images/menu/gozlemeler/sucuklu-gozleme-t.webp",
+      "name": {
+        "tr": "Sucuklu Gözleme",
+        "en": "Gözleme with Sujuk",
+        "de": "Gözleme mit Sucuk",
+        "ar": "غوزلمة بالسجق"
+      },
+      "desc": {
+        "tr": "Dilim sucuk ve baharatla hazırlanan gözleme.",
+        "en": "Gözleme prepared with sliced sujuk and spices.",
+        "de": "Gözleme mit Sucuk-Scheiben und Gewürzen.",
+        "ar": "غوزلمة مُحضَّرة بشرائح السجق والتوابل."
+      }
+    },
+    {
+      "categorySlug": "gozlemeler",
+      "order": 7,
+      "price": "375₺",
+      "img": "images/menu/gozlemeler/sucuklu-kasarli-gozleme-b.webp",
+      "imgThumb": "images/menu/gozlemeler/sucuklu-kasarli-gozleme-t.webp",
+      "name": {
+        "tr": "Sucuklu Kaşarlı Gözleme",
+        "en": "Gözleme with Sujuk and Kaşar",
+        "de": "Gözleme mit Sucuk und Kaşar",
+        "ar": "غوزلمة بالسجق والكاشار"
+      },
+      "desc": {
+        "tr": "Sucuk ve kaşar dolgusuyla hazırlanan gözleme.",
+        "en": "Gözleme filled with sujuk and kaşar cheese.",
+        "de": "Gözleme gefüllt mit Sucuk und Kaşar-Käse.",
+        "ar": "غوزلمة محشوة بالسجق وجبنة الكاشار."
+      }
+    },
+    {
+      "categorySlug": "gozlemeler",
+      "order": 8,
+      "price": "400₺",
+      "img": "images/menu/gozlemeler/kavurmali-kasarli-gozleme-b.webp",
+      "imgThumb": "images/menu/gozlemeler/kavurmali-kasarli-gozleme-t.webp",
+      "name": {
+        "tr": "Kavurmalı Kaşarlı Gözleme",
+        "en": "Gözleme with Kavurma and Kaşar",
+        "de": "Gözleme mit Kavurma und Kaşar",
+        "ar": "غوزلمة بالقاورما والكاشار"
+      },
+      "desc": {
+        "tr": "Kavurma ve kaşar dolgusuyla hazırlanan gözleme.",
+        "en": "Gözleme filled with kavurma and kaşar cheese.",
+        "de": "Gözleme gefüllt mit Kavurma und Kaşar-Käse.",
+        "ar": "غوزلمة محشوة بالقاورما وجبنة الكاشار."
+      }
+    },
+    {
+      "categorySlug": "krep",
+      "order": 0,
+      "price": "150₺",
+      "img": "images/menu/krep/sade-krep-b.webp",
+      "imgThumb": "images/menu/krep/sade-krep-t.webp",
+      "name": {
+        "tr": "Sade Krep",
+        "en": "Plain Crêpe",
+        "de": "Crêpe pur",
+        "ar": "كريب سادة"
+      },
+      "desc": {
+        "tr": "İnce krep, pudra şekeriyle servis edilir.",
+        "en": "Thin crêpe, served with powdered sugar.",
+        "de": "Dünner Crêpe, serviert mit Puderzucker.",
+        "ar": "كريب رقيق يُقدَّم مع سكر بودرة."
+      }
+    },
+    {
+      "categorySlug": "krep",
+      "order": 1,
+      "price": "275₺",
+      "img": "images/menu/krep/nutella-li-krep-b.webp",
+      "imgThumb": "images/menu/krep/nutella-li-krep-t.webp",
+      "name": {
+        "tr": "Nutella'lı Krep",
+        "en": "Nutella Crêpe",
+        "de": "Nutella-Crêpe",
+        "ar": "كريب بالنوتيلا"
+      },
+      "desc": {
+        "tr": "Nutella ve mevsim meyveleriyle servis edilen krep.",
+        "en": "Crêpe served with Nutella and seasonal fruit.",
+        "de": "Crêpe serviert mit Nutella und saisonalem Obst.",
+        "ar": "كريب يُقدَّم مع النوتيلا والفواكه الموسمية."
+      }
+    },
+    {
+      "categorySlug": "krep",
+      "order": 2,
+      "price": "400₺",
+      "img": "images/menu/krep/pankek-b.webp",
+      "imgThumb": "images/menu/krep/pankek-t.webp",
+      "name": {
+        "tr": "Pankek",
+        "en": "Pancakes",
+        "de": "Pancakes",
+        "ar": "بان كيك"
+      },
+      "desc": {
+        "tr": "Dört adet pankek; tereyağı, Nutella ve mevsim meyveleriyle servis edilir.",
+        "en": "Four pancakes, served with butter, Nutella and seasonal fruit.",
+        "de": "Vier Pancakes, serviert mit Butter, Nutella und saisonalem Obst.",
+        "ar": "أربع قطع بان كيك تُقدَّم مع الزبدة والنوتيلا والفواكه الموسمية."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 0,
+      "price": "75₺",
+      "img": "images/menu/ekstralar/beyaz-peynir-b.webp",
+      "imgThumb": "images/menu/ekstralar/beyaz-peynir-t.webp",
+      "name": {
+        "tr": "Beyaz Peynir",
+        "en": "White Cheese",
+        "de": "Weißkäse",
+        "ar": "جبنة بيضاء"
+      },
+      "desc": {
+        "tr": "Ezine tam yağlı beyaz peynir, bir dilim.",
+        "en": "Full-fat Ezine white cheese, one slice.",
+        "de": "Vollfetter Ezine-Weißkäse, eine Scheibe.",
+        "ar": "جبنة إزينة البيضاء كاملة الدسم، شريحة واحدة."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 1,
+      "price": "75₺",
+      "img": "images/menu/ekstralar/kasar-peyniri-b.webp",
+      "imgThumb": "images/menu/ekstralar/kasar-peyniri-t.webp",
+      "name": {
+        "tr": "Kaşar Peyniri",
+        "en": "Kaşar Cheese",
+        "de": "Kaşar-Käse",
+        "ar": "جبنة كاشار"
+      },
+      "desc": {
+        "tr": "Taze kaşar, bir dilim.",
+        "en": "Fresh kaşar, one slice.",
+        "de": "Frischer Kaşar, eine Scheibe.",
+        "ar": "كاشار طازج، شريحة واحدة."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 2,
+      "price": "95₺",
+      "img": "images/menu/ekstralar/cecil-peynir-b.webp",
+      "imgThumb": "images/menu/ekstralar/cecil-peynir-t.webp",
+      "name": {
+        "tr": "Çeçil Peynir",
+        "en": "Çeçil Cheese",
+        "de": "Çeçil-Käse",
+        "ar": "جبنة تشتشيل"
+      },
+      "desc": {
+        "tr": "Tel çeçil (örgü) peyniri.",
+        "en": "String (braided) çeçil cheese.",
+        "de": "Gezupfter (geflochtener) Çeçil-Käse.",
+        "ar": "جبنة تشتشيل المضفّرة (خيوط)."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 3,
+      "price": "220₺",
+      "img": "images/menu/ekstralar/karisik-peynir-tabagi-b.webp",
+      "imgThumb": "images/menu/ekstralar/karisik-peynir-tabagi-t.webp",
+      "name": {
+        "tr": "Karışık Peynir Tabağı",
+        "en": "Mixed Cheese Plate",
+        "de": "Gemischter Käseteller",
+        "ar": "طبق جبن مشكّل"
+      },
+      "desc": {
+        "tr": "Beyaz peynir, kaşar ve çeçilden oluşan peynir tabağı.",
+        "en": "A cheese plate of white cheese, kaşar and çeçil.",
+        "de": "Käseteller aus Weißkäse, Kaşar und Çeçil.",
+        "ar": "طبق جبن يضم الجبنة البيضاء والكاشار والتشتشيل."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 4,
+      "price": "120₺",
+      "img": "images/menu/ekstralar/tereyagi-b.webp",
+      "imgThumb": "images/menu/ekstralar/tereyagi-t.webp",
+      "name": {
+        "tr": "Tereyağı",
+        "en": "Butter",
+        "de": "Butter",
+        "ar": "زبدة"
+      },
+      "desc": {
+        "tr": "Köy tereyağı; bal ve ekmekle servis edilir.",
+        "en": "Village butter, served with honey and bread.",
+        "de": "Landbutter, serviert mit Honig und Brot.",
+        "ar": "زبدة قروية، تُقدَّم مع العسل والخبز."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 5,
+      "price": "220₺",
+      "img": "images/menu/ekstralar/bal-ve-kaymak-b.webp",
+      "imgThumb": "images/menu/ekstralar/bal-ve-kaymak-t.webp",
+      "name": {
+        "tr": "Bal & Kaymak",
+        "en": "Honey & Clotted Cream",
+        "de": "Honig & Kaymak",
+        "ar": "عسل وقشطة"
+      },
+      "desc": {
+        "tr": "Süzme çiçek balı ve manda kaymağı.",
+        "en": "Strained flower honey and buffalo clotted cream.",
+        "de": "Sortenreiner Blütenhonig und Büffel-Kaymak.",
+        "ar": "عسل زهور مصفّى وقشطة الجاموس."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 6,
+      "price": "200₺",
+      "img": "images/menu/ekstralar/tahin-pekmez-b.webp",
+      "imgThumb": "images/menu/ekstralar/tahin-pekmez-t.webp",
+      "name": {
+        "tr": "Tahin Pekmez",
+        "en": "Tahini & Grape Molasses",
+        "de": "Tahin-Pekmez",
+        "ar": "طحينة ودبس"
+      },
+      "desc": {
+        "tr": "Tahin ve üzüm pekmezi.",
+        "en": "Tahini and grape molasses (pekmez).",
+        "de": "Sesampaste (Tahin) und Traubensirup (Pekmez).",
+        "ar": "طحينة ودبس العنب."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 7,
+      "price": "100₺",
+      "img": "images/menu/ekstralar/recel-b.webp",
+      "imgThumb": "images/menu/ekstralar/recel-t.webp",
+      "name": {
+        "tr": "Reçel",
+        "en": "Jam",
+        "de": "Marmelade",
+        "ar": "مربى"
+      },
+      "desc": {
+        "tr": "Ev yapımı mevsim reçeli.",
+        "en": "Homemade seasonal jam.",
+        "de": "Hausgemachte saisonale Marmelade.",
+        "ar": "مربى منزلي موسمي."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 8,
+      "price": "150₺",
+      "img": "images/menu/ekstralar/nutella-b.webp",
+      "imgThumb": "images/menu/ekstralar/nutella-t.webp",
+      "name": {
+        "tr": "Nutella",
+        "en": "Nutella",
+        "de": "Nutella",
+        "ar": "نوتيلا"
+      },
+      "desc": {
+        "tr": "Porsiyon Nutella.",
+        "en": "A portion of Nutella.",
+        "de": "Eine Portion Nutella.",
+        "ar": "حصة من النوتيلا."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 9,
+      "price": "120₺",
+      "img": "images/menu/ekstralar/zeytin-tabagi-b.webp",
+      "imgThumb": "images/menu/ekstralar/zeytin-tabagi-t.webp",
+      "name": {
+        "tr": "Zeytin Tabağı",
+        "en": "Olive Plate",
+        "de": "Oliventeller",
+        "ar": "طبق زيتون"
+      },
+      "desc": {
+        "tr": "Baharatlı siyah ve kırma yeşil zeytin.",
+        "en": "Spiced black olives and cracked green olives.",
+        "de": "Gewürzte schwarze Oliven und angeschlagene grüne Oliven.",
+        "ar": "زيتون أسود متبل وزيتون أخضر مكسور."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 10,
+      "price": "150₺",
+      "img": "images/menu/ekstralar/sogus-b.webp",
+      "imgThumb": "images/menu/ekstralar/sogus-t.webp",
+      "name": {
+        "tr": "Söğüş",
+        "en": "Sliced Vegetables",
+        "de": "Rohkost",
+        "ar": "خضار طازجة"
+      },
+      "desc": {
+        "tr": "Domates, salatalık, biber ve maydanoz.",
+        "en": "Tomato, cucumber, pepper and parsley.",
+        "de": "Tomate, Gurke, Paprika und Petersilie.",
+        "ar": "طماطم، خيار، فلفل وبقدونس."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 11,
+      "price": "120₺",
+      "img": "images/menu/ekstralar/yesillik-b.webp",
+      "imgThumb": "images/menu/ekstralar/yesillik-t.webp",
+      "name": {
+        "tr": "Yeşillik",
+        "en": "Greens",
+        "de": "Grünzeug",
+        "ar": "خضرة"
+      },
+      "desc": {
+        "tr": "Marul, roka, maydanoz ve taze soğan.",
+        "en": "Lettuce, arugula, parsley and fresh onion.",
+        "de": "Salat, Rucola, Petersilie und frische Zwiebel.",
+        "ar": "خس، جرجير، بقدونس وبصل طازج."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 12,
+      "price": "120₺",
+      "img": "images/menu/ekstralar/acuka-b.webp",
+      "imgThumb": "images/menu/ekstralar/acuka-t.webp",
+      "name": {
+        "tr": "Acuka",
+        "en": "Acuka",
+        "de": "Acuka",
+        "ar": "عجوقة"
+      },
+      "desc": {
+        "tr": "Ceviz, biber salçası ve baharatla hazırlanan Antakya mezesi.",
+        "en": "An Antakya-style mezze made with walnuts, pepper paste and spices.",
+        "de": "Antakya-Mezze aus Walnüssen, Paprikamark und Gewürzen.",
+        "ar": "مقبّلات أنطاكية من الجوز ومعجون الفلفل والتوابل."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 13,
+      "price": "200₺",
+      "img": "images/menu/ekstralar/biber-kizartmasi-b.webp",
+      "imgThumb": "images/menu/ekstralar/biber-kizartmasi-t.webp",
+      "name": {
+        "tr": "Biber Kızartması",
+        "en": "Fried Peppers",
+        "de": "Gebratene Paprika",
+        "ar": "فلفل مقلي"
+      },
+      "desc": {
+        "tr": "Sivri biber kızartılır, sarımsaklı yoğurtla servis edilir.",
+        "en": "Fried green peppers, served with garlic yoghurt.",
+        "de": "Gebratene spitze Paprika, serviert mit Knoblauchjoghurt.",
+        "ar": "فلفل حار مقلي، يُقدَّم مع اللبن بالثوم."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 14,
+      "price": "120₺",
+      "img": "images/menu/ekstralar/yogurt-b.webp",
+      "imgThumb": "images/menu/ekstralar/yogurt-t.webp",
+      "name": {
+        "tr": "Yoğurt",
+        "en": "Yoghurt",
+        "de": "Joghurt",
+        "ar": "لبن"
+      },
+      "desc": {
+        "tr": "Porsiyon süzme yoğurt.",
+        "en": "A portion of strained yoghurt.",
+        "de": "Eine Portion griechischer Joghurt.",
+        "ar": "حصة من اللبن المصفّى."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 15,
+      "price": "40₺",
+      "img": "images/menu/ekstralar/haslanmis-yumurta-b.webp",
+      "imgThumb": "images/menu/ekstralar/haslanmis-yumurta-t.webp",
+      "name": {
+        "tr": "Haşlanmış Yumurta",
+        "en": "Boiled Egg",
+        "de": "Gekochtes Ei",
+        "ar": "بيضة مسلوقة"
+      },
+      "desc": {
+        "tr": "Bir adet haşlanmış yumurta.",
+        "en": "One boiled egg.",
+        "de": "Ein gekochtes Ei.",
+        "ar": "بيضة مسلوقة واحدة."
+      }
+    },
+    {
+      "categorySlug": "ekstralar",
+      "order": 16,
+      "price": "45₺",
+      "img": "images/menu/ekstralar/simit-b.webp",
+      "imgThumb": "images/menu/ekstralar/simit-t.webp",
+      "name": {
+        "tr": "Simit",
+        "en": "Simit",
+        "de": "Simit",
+        "ar": "سيميت"
+      },
+      "desc": {
+        "tr": "Günlük, susamlı simit.",
+        "en": "Daily-baked sesame simit.",
+        "de": "Frisches Sesam-Simit vom Tag.",
+        "ar": "سيميت طازج بالسمسم يُخبز يومياً."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 0,
+      "price": "25₺",
+      "img": "images/menu/icecekler/su-b.webp",
+      "imgThumb": "images/menu/icecekler/su-t.webp",
+      "name": {
+        "tr": "Su",
+        "en": "Water",
+        "de": "Wasser",
+        "ar": "ماء"
+      },
+      "desc": {
+        "tr": "0,5 litre kaynak suyu.",
+        "en": "0.5 litre spring water.",
+        "de": "0,5 Liter Quellwasser.",
+        "ar": "٠٫٥ لتر مياه ينابيع."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 1,
+      "price": "50₺",
+      "img": "images/menu/icecekler/sade-soda-b.webp",
+      "imgThumb": "images/menu/icecekler/sade-soda-t.webp",
+      "name": {
+        "tr": "Sade Soda",
+        "en": "Soda Water",
+        "de": "Soda",
+        "ar": "صودا سادة"
+      },
+      "desc": {
+        "tr": "Şişe maden suyu.",
+        "en": "Bottled mineral water.",
+        "de": "Mineralwasser in der Flasche.",
+        "ar": "مياه معدنية بالزجاجة."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 2,
+      "price": "60₺",
+      "img": "images/menu/icecekler/meyveli-soda-b.webp",
+      "imgThumb": "images/menu/icecekler/meyveli-soda-t.webp",
+      "name": {
+        "tr": "Meyveli Soda",
+        "en": "Fruit Soda",
+        "de": "Frucht-Soda",
+        "ar": "صودا بالفواكه"
+      },
+      "desc": {
+        "tr": "Meyve aromalı maden suyu.",
+        "en": "Fruit-flavoured mineral water.",
+        "de": "Mineralwasser mit Fruchtgeschmack.",
+        "ar": "مياه معدنية بنكهة الفواكه."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 3,
+      "price": "50₺",
+      "img": "images/menu/icecekler/ayran-b.webp",
+      "imgThumb": "images/menu/icecekler/ayran-t.webp",
+      "name": {
+        "tr": "Ayran",
+        "en": "Ayran",
+        "de": "Ayran",
+        "ar": "أيران"
+      },
+      "desc": {
+        "tr": "Şişe ayran.",
+        "en": "Bottled yoghurt drink.",
+        "de": "Joghurtgetränk aus der Flasche.",
+        "ar": "مشروب اللبن المعبأ بزجاجة."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 4,
+      "price": "90₺",
+      "img": "images/menu/icecekler/coca-cola-b.webp",
+      "imgThumb": "images/menu/icecekler/coca-cola-t.webp",
+      "name": {
+        "tr": "Coca-Cola",
+        "en": "Coca-Cola",
+        "de": "Coca-Cola",
+        "ar": "كوكا كولا"
+      },
+      "desc": {
+        "tr": "Kutu, 330 ml.",
+        "en": "Can, 330 ml.",
+        "de": "Dose, 330 ml.",
+        "ar": "علبة، ٣٣٠ مل."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 5,
+      "price": "120₺",
+      "img": "images/menu/icecekler/coca-cola-zero-b.webp",
+      "imgThumb": "images/menu/icecekler/coca-cola-zero-t.webp",
+      "name": {
+        "tr": "Coca-Cola Zero",
+        "en": "Coca-Cola Zero",
+        "de": "Coca-Cola Zero",
+        "ar": "كوكا كولا زيرو"
+      },
+      "desc": {
+        "tr": "Şekersiz kutu, 330 ml.",
+        "en": "Sugar-free can, 330 ml.",
+        "de": "Zuckerfreie Dose, 330 ml.",
+        "ar": "علبة خالية من السكر، ٣٣٠ مل."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 6,
+      "price": "150₺",
+      "img": "images/menu/icecekler/naneli-limonata-b.webp",
+      "imgThumb": "images/menu/icecekler/naneli-limonata-t.webp",
+      "name": {
+        "tr": "Naneli Limonata",
+        "en": "Mint Lemonade",
+        "de": "Minz-Limonade",
+        "ar": "ليموناضة بالنعناع"
+      },
+      "desc": {
+        "tr": "Taze limon ve naneyle hazırlanan ev limonatası.",
+        "en": "Homemade lemonade with fresh lemon and mint.",
+        "de": "Hausgemachte Limonade mit frischer Zitrone und Minze.",
+        "ar": "ليموناضة منزلية بالليمون الطازج والنعناع."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 7,
+      "price": "175₺",
+      "img": "images/menu/icecekler/taze-sikma-portakal-suyu-b.webp",
+      "imgThumb": "images/menu/icecekler/taze-sikma-portakal-suyu-t.webp",
+      "name": {
+        "tr": "Taze Sıkma Portakal Suyu",
+        "en": "Fresh Orange Juice",
+        "de": "Frisch gepresster Orangensaft",
+        "ar": "عصير برتقال طازج"
+      },
+      "desc": {
+        "tr": "Sipariş üzerine sıkılan portakal suyu.",
+        "en": "Orange juice squeezed to order.",
+        "de": "Auf Bestellung frisch gepresster Orangensaft.",
+        "ar": "عصير برتقال يُعصر عند الطلب."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 8,
+      "price": "75₺",
+      "img": "images/menu/icecekler/karisik-meyve-suyu-b.webp",
+      "imgThumb": "images/menu/icecekler/karisik-meyve-suyu-t.webp",
+      "name": {
+        "tr": "Karışık Meyve Suyu",
+        "en": "Mixed Fruit Juice",
+        "de": "Multivitaminsaft",
+        "ar": "عصير فواكه مشكّل"
+      },
+      "desc": {
+        "tr": "Kutu meyve suyu.",
+        "en": "Boxed fruit juice.",
+        "de": "Fruchtsaft im Tetrapack.",
+        "ar": "عصير فواكه معلّب."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 9,
+      "price": "120₺",
+      "img": "images/menu/icecekler/visne-suyu-b.webp",
+      "imgThumb": "images/menu/icecekler/visne-suyu-t.webp",
+      "name": {
+        "tr": "Vişne Suyu",
+        "en": "Sour Cherry Juice",
+        "de": "Sauerkirschsaft",
+        "ar": "عصير كرز حامض"
+      },
+      "desc": {
+        "tr": "Kutu vişne suyu.",
+        "en": "Boxed sour cherry juice.",
+        "de": "Sauerkirschsaft im Tetrapack.",
+        "ar": "عصير كرز حامض معلّب."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 10,
+      "price": "120₺",
+      "img": "images/menu/icecekler/seftali-suyu-b.webp",
+      "imgThumb": "images/menu/icecekler/seftali-suyu-t.webp",
+      "name": {
+        "tr": "Şeftali Suyu",
+        "en": "Peach Juice",
+        "de": "Pfirsichsaft",
+        "ar": "عصير خوخ"
+      },
+      "desc": {
+        "tr": "Kutu şeftali suyu.",
+        "en": "Boxed peach juice.",
+        "de": "Pfirsichsaft im Tetrapack.",
+        "ar": "عصير خوخ معلّب."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 11,
+      "price": "75₺",
+      "img": "images/menu/icecekler/ice-tea-seftali-b.webp",
+      "imgThumb": "images/menu/icecekler/ice-tea-seftali-t.webp",
+      "name": {
+        "tr": "Ice Tea Şeftali",
+        "en": "Peach Ice Tea",
+        "de": "Ice Tea Pfirsich",
+        "ar": "شاي مثلج بالخوخ"
+      },
+      "desc": {
+        "tr": "Şeftali aromalı soğuk çay.",
+        "en": "Peach-flavoured iced tea.",
+        "de": "Eistee mit Pfirsichgeschmack.",
+        "ar": "شاي بارد بنكهة الخوخ."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 12,
+      "price": "120₺",
+      "img": "images/menu/icecekler/ice-tea-limon-b.webp",
+      "imgThumb": "images/menu/icecekler/ice-tea-limon-t.webp",
+      "name": {
+        "tr": "Ice Tea Limon",
+        "en": "Lemon Ice Tea",
+        "de": "Ice Tea Zitrone",
+        "ar": "شاي مثلج بالليمون"
+      },
+      "desc": {
+        "tr": "Limon aromalı soğuk çay.",
+        "en": "Lemon-flavoured iced tea.",
+        "de": "Eistee mit Zitronengeschmack.",
+        "ar": "شاي بارد بنكهة الليمون."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 13,
+      "price": "120₺",
+      "img": "images/menu/icecekler/sut-b.webp",
+      "imgThumb": "images/menu/icecekler/sut-t.webp",
+      "name": {
+        "tr": "Süt",
+        "en": "Milk",
+        "de": "Milch",
+        "ar": "حليب"
+      },
+      "desc": {
+        "tr": "Bir bardak süt, sıcak veya soğuk.",
+        "en": "A glass of milk, hot or cold.",
+        "de": "Ein Glas Milch, warm oder kalt.",
+        "ar": "كوب حليب، ساخن أو بارد."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 14,
+      "price": "40₺",
+      "img": "images/menu/icecekler/cay-b.webp",
+      "imgThumb": "images/menu/icecekler/cay-t.webp",
+      "name": {
+        "tr": "Çay",
+        "en": "Tea",
+        "de": "Tee",
+        "ar": "شاي"
+      },
+      "desc": {
+        "tr": "Taze demlenmiş türk çayı.",
+        "en": "Freshly brewed Turkish tea.",
+        "de": "Frisch aufgebrühter türkischer Tee.",
+        "ar": "شاي تركي مغلي طازج."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 15,
+      "price": "100₺",
+      "img": "images/menu/icecekler/turk-kahvesi-b.webp",
+      "imgThumb": "images/menu/icecekler/turk-kahvesi-t.webp",
+      "name": {
+        "tr": "Türk Kahvesi",
+        "en": "Turkish Coffee",
+        "de": "Türkischer Kaffee",
+        "ar": "قهوة تركية"
+      },
+      "desc": {
+        "tr": "Ocakta pişirilen Türk kahvesi, yanında lokumla.",
+        "en": "Stove-brewed Turkish coffee, served with Turkish delight.",
+        "de": "Auf dem Herd gekochter türkischer Kaffee, mit Lokum serviert.",
+        "ar": "قهوة تركية تُحضَّر على الموقد، تُقدَّم مع الحلقوم."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 16,
+      "price": "85₺",
+      "img": "images/menu/icecekler/espresso-b.webp",
+      "imgThumb": "images/menu/icecekler/espresso-t.webp",
+      "name": {
+        "tr": "Espresso",
+        "en": "Espresso",
+        "de": "Espresso",
+        "ar": "إسبريسو"
+      },
+      "desc": {
+        "tr": "Tek shot espresso.",
+        "en": "Single shot espresso.",
+        "de": "Espresso, einfacher Shot.",
+        "ar": "إسبريسو شوت واحد."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 17,
+      "price": "100₺",
+      "img": "images/menu/icecekler/americano-b.webp",
+      "imgThumb": "images/menu/icecekler/americano-t.webp",
+      "name": {
+        "tr": "Americano",
+        "en": "Americano",
+        "de": "Americano",
+        "ar": "أمريكانو"
+      },
+      "desc": {
+        "tr": "Espresso ve sıcak su.",
+        "en": "Espresso and hot water.",
+        "de": "Espresso und heißes Wasser.",
+        "ar": "إسبريسو وماء ساخن."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 18,
+      "price": "120₺",
+      "img": "images/menu/icecekler/latte-b.webp",
+      "imgThumb": "images/menu/icecekler/latte-t.webp",
+      "name": {
+        "tr": "Latte",
+        "en": "Latte",
+        "de": "Latte",
+        "ar": "لاتيه"
+      },
+      "desc": {
+        "tr": "Espresso ve buharlı süt.",
+        "en": "Espresso and steamed milk.",
+        "de": "Espresso und aufgeschäumte Milch.",
+        "ar": "إسبريسو وحليب مبخّر."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 19,
+      "price": "120₺",
+      "img": "images/menu/icecekler/cappuccino-b.webp",
+      "imgThumb": "images/menu/icecekler/cappuccino-t.webp",
+      "name": {
+        "tr": "Cappuccino",
+        "en": "Cappuccino",
+        "de": "Cappuccino",
+        "ar": "كابتشينو"
+      },
+      "desc": {
+        "tr": "Espresso, süt ve süt köpüğü.",
+        "en": "Espresso, milk and milk foam.",
+        "de": "Espresso, Milch und Milchschaum.",
+        "ar": "إسبريسو وحليب ورغوة حليب."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 20,
+      "price": "120₺",
+      "img": "images/menu/icecekler/mocha-b.webp",
+      "imgThumb": "images/menu/icecekler/mocha-t.webp",
+      "name": {
+        "tr": "Mocha",
+        "en": "Mocha",
+        "de": "Mocha",
+        "ar": "موكا"
+      },
+      "desc": {
+        "tr": "Espresso, çikolata ve süt.",
+        "en": "Espresso, chocolate and milk.",
+        "de": "Espresso, Schokolade und Milch.",
+        "ar": "إسبريسو وشوكولاتة وحليب."
+      }
+    },
+    {
+      "categorySlug": "icecekler",
+      "order": 21,
+      "price": "100₺",
+      "img": "images/menu/icecekler/filtre-kahve-b.webp",
+      "imgThumb": "images/menu/icecekler/filtre-kahve-t.webp",
+      "name": {
+        "tr": "Filtre Kahve",
+        "en": "Filter Coffee",
+        "de": "Filterkaffee",
+        "ar": "قهوة فلتر"
+      },
+      "desc": {
+        "tr": "Günün filtre kahvesi.",
+        "en": "Filter coffee of the day.",
+        "de": "Filterkaffee des Tages.",
+        "ar": "قهوة فلتر اليوم."
+      }
+    }
+  ]
+}
