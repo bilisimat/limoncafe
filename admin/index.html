@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests" />
+  <title>Yönetim Paneli — Limos Kahvaltı</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/webp" href="../logo.webp" />
+  <link rel="stylesheet" href="../css/admin.css?v=1" />
+</head>
+<body>
+
+  <!-- ================= GİRİŞ EKRANI ================= -->
+  <section class="login-screen" id="login-screen">
+    <form class="login-box" id="login-form" autocomplete="off">
+      <p class="login-brand">Limos <span>Yönetim Paneli</span></p>
+      <label class="field">
+        <span>Kullanıcı adı</span>
+        <input type="text" name="username" id="login-username" autocomplete="username" required />
+      </label>
+      <label class="field">
+        <span>Şifre</span>
+        <input type="password" name="password" id="login-password" autocomplete="current-password" required />
+      </label>
+      <p class="login-error" id="login-error" hidden></p>
+      <button type="submit" class="btn-primary" id="login-submit">Giriş Yap</button>
+    </form>
+  </section>
+
+  <!-- ================= PANEL ================= -->
+  <div class="panel" id="panel" hidden>
+    <aside class="panel-side">
+      <p class="panel-brand">Limos <span>Panel</span></p>
+      <nav class="panel-nav">
+        <button type="button" class="panel-nav-btn is-active" data-section="qr">QR Kod</button>
+        <button type="button" class="panel-nav-btn" data-section="menu">Menü</button>
+        <button type="button" class="panel-nav-btn" data-section="users">Kullanıcılar</button>
+      </nav>
+      <div class="panel-side-foot">
+        <p class="panel-user" id="panel-username"></p>
+        <button type="button" class="btn-line" id="logout-btn">Çıkış Yap</button>
+      </div>
+    </aside>
+
+    <main class="panel-main">
+
+      <!-- ---------- QR ---------- -->
+      <section class="panel-section is-active" id="section-qr">
+        <h1>QR Kod</h1>
+        <p class="panel-sub">Masalarda kullanılacak menü QR kodu.</p>
+        <div class="qr-card">
+          <img src="/api/admin/qr" alt="Menü QR kodu" id="qr-img" width="320" height="320" />
+          <p class="qr-caption">Acil durum QR'ı</p>
+          <a class="btn-line" id="qr-download" download="limos-menu-qr.png">İndir</a>
+        </div>
+      </section>
+
+      <!-- ---------- MENÜ ---------- -->
+      <section class="panel-section" id="section-menu">
+        <h1>Menü</h1>
+        <p class="panel-sub">Yakında burada kategori ve ürünleri ekleyip düzenleyebileceksin.</p>
+      </section>
+
+      <!-- ---------- KULLANICILAR ---------- -->
+      <section class="panel-section" id="section-users">
+        <h1>Kullanıcılar</h1>
+        <p class="panel-sub">Panele giriş yapabilecek adminleri yönet.</p>
+
+        <table class="users-table" id="users-table">
+          <thead>
+            <tr><th>Kullanıcı adı</th><th>Oluşturulma</th><th></th></tr>
+          </thead>
+          <tbody id="users-tbody"></tbody>
+        </table>
+
+        <form class="add-user-form" id="add-user-form">
+          <h3>Yeni admin ekle</h3>
+          <label class="field">
+            <span>Kullanıcı adı</span>
+            <input type="text" id="new-username" required />
+          </label>
+          <label class="field">
+            <span>Şifre (en az 8 karakter)</span>
+            <input type="password" id="new-password" minlength="8" required />
+          </label>
+          <p class="form-error" id="add-user-error" hidden></p>
+          <button type="submit" class="btn-primary">Ekle</button>
+        </form>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ---------- Şifre değiştir dialog ---------- -->
+  <div class="modal" id="pw-modal" hidden>
+    <div class="modal-backdrop" data-modal-close></div>
+    <form class="modal-box" id="pw-form">
+      <h3>Şifreyi değiştir</h3>
+      <p class="modal-user" id="pw-modal-username"></p>
+      <label class="field">
+        <span>Yeni şifre (en az 8 karakter)</span>
+        <input type="password" id="pw-new" minlength="8" required />
+      </label>
+      <p class="form-error" id="pw-error" hidden></p>
+      <div class="modal-actions">
+        <button type="button" class="btn-line" data-modal-close>Vazgeç</button>
+        <button type="submit" class="btn-primary">Kaydet</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="../js/admin.js?v=1" defer></script>
+</body>
+</html>
