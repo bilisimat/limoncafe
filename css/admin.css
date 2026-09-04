@@ -60,6 +60,7 @@ body {
   min-height: 100vh; display: grid; place-items: center; padding: 20px;
   background: radial-gradient(circle at 50% 0%, #2c241d 0%, var(--espresso) 60%);
 }
+.login-screen[hidden], .panel[hidden] { display: none; }
 .login-box {
   width: min(360px, 100%); background: var(--paper); border-radius: 10px;
   padding: clamp(28px, 5vw, 38px); box-shadow: 0 30px 80px rgba(0,0,0,.4);
