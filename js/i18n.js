@@ -302,7 +302,7 @@
     "Ice Tea Şeftali": { en: { n: "Peach Ice Tea", d: "Peach-flavoured iced tea." }, de: { n: "Ice Tea Pfirsich", d: "Eistee mit Pfirsichgeschmack." }, ar: { n: "شاي مثلج بالخوخ", d: "شاي بارد بنكهة الخوخ." } },
     "Ice Tea Limon": { en: { n: "Lemon Ice Tea", d: "Lemon-flavoured iced tea." }, de: { n: "Ice Tea Zitrone", d: "Eistee mit Zitronengeschmack." }, ar: { n: "شاي مثلج بالليمون", d: "شاي بارد بنكهة الليمون." } },
     "Süt": { en: { n: "Milk", d: "A glass of milk, hot or cold." }, de: { n: "Milch", d: "Ein Glas Milch, warm oder kalt." }, ar: { n: "حليب", d: "كوب حليب، ساخن أو بارد." } },
-    "Çay": { en: { n: "Tea", d: "Brewed black tea. First one is on us with sharing breakfasts, unlimited after." }, de: { n: "Tee", d: "Aufgebrühter Tee. Bei Serpme-Frühstücken geht der erste auf uns, danach unbegrenzt." }, ar: { n: "شاي", d: "شاي مغلي. الأول ضيافة منّا في أطباق سربمة، والباقي غير محدود." } },
+    "Çay": { en: { n: "Tea", d: "Freshly brewed Turkish tea." }, de: { n: "Tee", d: "Frisch aufgebrühter türkischer Tee." }, ar: { n: "شاي", d: "شاي تركي مغلي طازج." } },
     "Türk Kahvesi": { en: { n: "Turkish Coffee", d: "Stove-brewed Turkish coffee, served with Turkish delight." }, de: { n: "Türkischer Kaffee", d: "Auf dem Herd gekochter türkischer Kaffee, mit Lokum serviert." }, ar: { n: "قهوة تركية", d: "قهوة تركية تُحضَّر على الموقد، تُقدَّم مع الحلقوم." } },
     "Espresso": { en: { n: "Espresso", d: "Single shot espresso." }, de: { n: "Espresso", d: "Espresso, einfacher Shot." }, ar: { n: "إسبريسو", d: "إسبريسو شوت واحد." } },
     "Americano": { en: { n: "Americano", d: "Espresso and hot water." }, de: { n: "Americano", d: "Espresso und heißes Wasser." }, ar: { n: "أمريكانو", d: "إسبريسو وماء ساخن." } },
