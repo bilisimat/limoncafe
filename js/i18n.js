@@ -551,9 +551,11 @@
     if (actions && !actions.querySelector(".lang-switch")) {
       actions.insertBefore(buildSwitcher(), actions.firstChild);
     }
-    var nav = document.getElementById("main-nav");
-    if (nav && !nav.querySelector(".lang-switch")) {
-      nav.appendChild(buildSwitcher("lang-switch--mobile"));
+    // Mobilde: dil seçici hamburger menüsünün içinde değil, üst bar'da (nav-toggle'ın yanında)
+    var headerInner = document.querySelector(".header-inner");
+    var toggle = document.getElementById("nav-toggle");
+    if (headerInner && toggle && !headerInner.querySelector(".lang-switch--topbar")) {
+      headerInner.insertBefore(buildSwitcher("lang-switch--topbar"), toggle);
     }
   }
 

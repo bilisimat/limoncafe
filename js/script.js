@@ -35,11 +35,13 @@
       var closeNav = function () {
         nav.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
+        document.documentElement.classList.remove("nav-open");
       };
 
       toggle.addEventListener("click", function () {
         var open = nav.classList.toggle("is-open");
         toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        document.documentElement.classList.toggle("nav-open", open);
       });
 
       nav.querySelectorAll("a").forEach(function (link) {
