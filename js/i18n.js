@@ -557,8 +557,82 @@
     }
   }
 
+  /* ---------- İlk ziyaret: dil seçim ekranı ---------- */
+  function hasSavedLang() {
+    try { return !!localStorage.getItem(STORAGE_KEY); } catch (e) { return true; }
+  }
+
+  function closeLangGate() {
+    var g = document.getElementById("lang-gate");
+    if (g && g.parentNode) g.parentNode.removeChild(g);
+    document.documentElement.classList.remove("lang-gate-open");
+    document.removeEventListener("keydown", onLangGateKeydown);
+  }
+  function onLangGateKeydown(e) {
+    if (e.key === "Escape") { setLang("tr"); closeLangGate(); }
+  }
+
+  function showLangGate() {
+    var overlay = document.createElement("div");
+    overlay.className = "lang-gate";
+    overlay.id = "lang-gate";
+
+    var backdrop = document.createElement("div");
+    backdrop.className = "lang-gate-backdrop";
+    overlay.appendChild(backdrop);
+
+    var box = document.createElement("div");
+    box.className = "lang-gate-box";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-labelledby", "lang-gate-title");
+
+    var title = document.createElement("p");
+    title.className = "lang-gate-title";
+    title.id = "lang-gate-title";
+    title.innerHTML = "Dilinizi seçin<br>Choose your language<br>اختر لغتك<br>Sprache wählen";
+    box.appendChild(title);
+
+    var grid = document.createElement("div");
+    grid.className = "lang-gate-grid";
+    LANGS.forEach(function (code) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "lang-gate-btn";
+      b.setAttribute("data-lang", code);
+      b.textContent = LANG_NAME[code];
+      b.addEventListener("click", function () {
+        setLang(code);
+        applyLang(code);
+        closeLangGate();
+      });
+      grid.appendChild(b);
+    });
+    box.appendChild(grid);
+
+    var skip = document.createElement("button");
+    skip.type = "button";
+    skip.className = "lang-gate-skip";
+    skip.textContent = "Türkçe ile devam et";
+    skip.addEventListener("click", function () { setLang("tr"); closeLangGate(); });
+    box.appendChild(skip);
+
+    overlay.appendChild(box);
+    document.body.appendChild(overlay);
+    document.documentElement.classList.add("lang-gate-open");
+    document.addEventListener("keydown", onLangGateKeydown);
+
+    window.setTimeout(function () {
+      var first = grid.querySelector(".lang-gate-btn");
+      if (first) first.focus();
+    }, 50);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
+    // Dil özelliği yalnızca menü sayfalarında (menu.html + menu-<slug>.html) etkin
+    if (!document.body.classList.contains("menu-page")) return;
     mountSwitchers();
     applyLang(getLang());
+    if (!hasSavedLang()) showLangGate();
   });
 })();
