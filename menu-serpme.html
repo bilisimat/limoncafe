@@ -14,7 +14,7 @@
   <link rel="icon" type="image/webp" href="logo.webp" />
   <link rel="stylesheet" href="css/styles.css?v=40" />
 </head>
-<body class="menu-page cat-page">
+<body class="menu-page cat-page" data-category="serpme">
 
   <a class="skip-link" href="#cat-baslik">İçeriğe geç</a>
 
@@ -48,9 +48,9 @@
     <section class="menu-hero cat-hero">
       <div class="container">
         <a class="cat-back" href="menu.html">← Tüm menü</a>
-        <p class="sec-index sec-index--light">Menü · 01 / 10</p>
-        <h1 class="display display--light" id="cat-baslik">Serpme &amp; Tabaklar</h1>
-        <p class="sec-sub sec-sub--light cat-blurb">Sofranın tamamı: serpme kahvaltılar ve tek kişilik tabaklar. İlk çay ikramımızdır.</p>
+        <p class="sec-index sec-index--light" id="cat-breadcrumb"></p>
+        <h1 class="display display--light" id="cat-baslik"></h1>
+        <p class="sec-sub sec-sub--light cat-blurb" id="cat-blurb"></p>
       </div>
     </section>
 
@@ -59,46 +59,13 @@
         <div class="cat-layout">
           <aside class="cat-side" aria-label="Kategoriler">
             <p class="cat-side-label">Kategoriler</p>
-            <a href="menu-serpme.html" aria-current="page" class="is-current">Serpme &amp; Tabaklar</a>
-            <a href="menu-menemenler.html">Menemenler</a>
-            <a href="menu-yumurta.html">Sahanda Yumurtalar</a>
-            <a href="menu-omletler.html">Omletler</a>
-            <a href="menu-tavalar.html">Tavalar</a>
-            <a href="menu-pisiler.html">Pişiler</a>
-            <a href="menu-gozlemeler.html">Gözlemeler</a>
-            <a href="menu-krep.html">Krep &amp; Pankek Çeşitleri</a>
-            <a href="menu-ekstralar.html">Ekstralar</a>
-            <a href="menu-icecekler.html">İçecekler</a>
+            <div id="cat-side-links"></div>
           </aside>
 
           <div class="cat-main">
-              <ul class="menu-list mi-list">
-                <li><button class="mi" type="button" data-name="Limos Serpme Kahvaltı" data-price="1150₺" data-cat="Serpme &amp; Tabaklar" data-img="images/menu/serpme/limos-serpme-kahvalti-b.webp" data-desc="Peynir çeşitleri, bal, kaymak, ev reçelleri, zeytin ve kahvaltılık meze seçkisi; yanında sıcak tabak. Sınırsız çay ikram edilir.">
-                  <img class="mi-thumb" src="images/menu/serpme/limos-serpme-kahvalti-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Limos Serpme Kahvaltı</span><span class="p">1150₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Full Serpme Kahvaltı" data-price="1590₺" data-cat="Serpme &amp; Tabaklar" data-img="images/menu/serpme/full-serpme-kahvalti-b.webp" data-desc="Limos Serpme içeriğine ek olarak tereyağlı köy menemen, mıhlama, sucuk tava ve pişi. Sınırsız çay ikram edilir.">
-                  <img class="mi-thumb" src="images/menu/serpme/full-serpme-kahvalti-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Full Serpme Kahvaltı</span><span class="p">1590₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Special Serpme Kahvaltı" data-price="1390₺" data-cat="Serpme &amp; Tabaklar" data-img="images/menu/serpme/special-serpme-kahvalti-b.webp" data-desc="Geniş peynir ve meze seçkisi, mevsim ürünleri ve zenginleştirilmiş sıcak tabak. Sınırsız çay ikram edilir.">
-                  <img class="mi-thumb" src="images/menu/serpme/special-serpme-kahvalti-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Special Serpme Kahvaltı</span><span class="p">1390₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Kahvaltı Tabağı" data-price="450₺" data-cat="Serpme &amp; Tabaklar" data-img="images/menu/serpme/kahvalti-tabagi-b.webp" data-desc="Tek kişilik. Ezine beyaz peynir, taze kaşar, domates, salatalık, Erzincan balı, manda kaymağı, ev reçeli, siyah ve yeşil zeytin, omlet ve bir adet sigara böreği. İlk çay ikramımızdır.">
-                  <img class="mi-thumb" src="images/menu/serpme/kahvalti-tabagi-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Kahvaltı Tabağı</span><span class="p">450₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Pişi Tabağı" data-price="350₺" data-cat="Serpme &amp; Tabaklar" data-img="images/menu/serpme/pisi-tabagi-b.webp" data-desc="Tek kişilik. Üç adet sade pişi, domates, salatalık, Ezine beyaz peynir, ev reçeli, siyah ve yeşil zeytin. İlk çay ikramımızdır.">
-                  <img class="mi-thumb" src="images/menu/serpme/pisi-tabagi-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Pişi Tabağı</span><span class="p">350₺</span>
-                </button></li>
-              </ul>
+              <ul class="menu-list mi-list" id="mi-list"></ul>
 
-            <nav class="cat-prevnext" aria-label="Kategoriler arası gezinme">
-              <a href="menu-icecekler.html"><span>← Önceki</span><b>İçecekler</b></a>
-              <a href="menu-menemenler.html" class="cat-next"><span>Sonraki →</span><b>Menemenler</b></a>
-            </nav>
+            <nav class="cat-prevnext" id="cat-prevnext" aria-label="Kategoriler arası gezinme"></nav>
           </div>
         </div>
       </div>
@@ -173,6 +140,8 @@
   </div>
 
   <script src="js/i18n.js?v=1" defer></script>
+
+  <script src="js/menu-render.js?v=1" defer></script>
   <script src="js/script.js?v=11" defer></script>
 </body>
 </html>

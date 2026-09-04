@@ -14,7 +14,7 @@
   <link rel="icon" type="image/webp" href="logo.webp" />
   <link rel="stylesheet" href="css/styles.css?v=40" />
 </head>
-<body class="menu-page cat-page">
+<body class="menu-page cat-page" data-category="krep">
 
   <a class="skip-link" href="#cat-baslik">İçeriğe geç</a>
 
@@ -48,9 +48,9 @@
     <section class="menu-hero cat-hero">
       <div class="container">
         <a class="cat-back" href="menu.html">← Tüm menü</a>
-        <p class="sec-index sec-index--light">Menü · 08 / 10</p>
-        <h1 class="display display--light" id="cat-baslik">Krep &amp; Pankek Çeşitleri</h1>
-        <p class="sec-sub sec-sub--light cat-blurb">Nutellalı krep ve tereyağlı pankek çeşitleri.</p>
+        <p class="sec-index sec-index--light" id="cat-breadcrumb"></p>
+        <h1 class="display display--light" id="cat-baslik"></h1>
+        <p class="sec-sub sec-sub--light cat-blurb" id="cat-blurb"></p>
       </div>
     </section>
 
@@ -59,39 +59,14 @@
         <div class="cat-layout">
           <aside class="cat-side" aria-label="Kategoriler">
             <p class="cat-side-label">Kategoriler</p>
-            <a href="menu-serpme.html">Serpme &amp; Tabaklar</a>
-            <a href="menu-menemenler.html">Menemenler</a>
-            <a href="menu-yumurta.html">Sahanda Yumurtalar</a>
-            <a href="menu-omletler.html">Omletler</a>
-            <a href="menu-tavalar.html">Tavalar</a>
-            <a href="menu-pisiler.html">Pişiler</a>
-            <a href="menu-gozlemeler.html">Gözlemeler</a>
-            <a href="menu-krep.html" aria-current="page" class="is-current">Krep &amp; Pankek Çeşitleri</a>
-            <a href="menu-ekstralar.html">Ekstralar</a>
-            <a href="menu-icecekler.html">İçecekler</a>
+            <div id="cat-side-links"></div>
           </aside>
 
           <div class="cat-main">
-              <ul class="menu-list mi-list">
-                <li><button class="mi" type="button" data-name="Sade Krep" data-price="150₺" data-cat="Krep &amp; Pankek Çeşitleri" data-img="images/menu/krep/sade-krep-b.webp" data-desc="İnce krep, pudra şekeriyle servis edilir.">
-                  <img class="mi-thumb" src="images/menu/krep/sade-krep-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Sade Krep</span><span class="p">150₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Nutella'lı Krep" data-price="275₺" data-cat="Krep &amp; Pankek Çeşitleri" data-img="images/menu/krep/nutella-li-krep-b.webp" data-desc="Nutella ve mevsim meyveleriyle servis edilen krep.">
-                  <img class="mi-thumb" src="images/menu/krep/nutella-li-krep-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Nutella'lı Krep</span><span class="p">275₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Pankek" data-price="400₺" data-cat="Krep &amp; Pankek Çeşitleri" data-img="images/menu/krep/pankek-b.webp" data-desc="Dört adet pankek; tereyağı, Nutella ve mevsim meyveleriyle servis edilir.">
-                  <img class="mi-thumb" src="images/menu/krep/pankek-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Pankek</span><span class="p">400₺</span>
-                </button></li>
-              </ul>
+              <ul class="menu-list mi-list" id="mi-list"></ul>
             <p class="menu-cat-note">Nutella ve meyve ile servis edilir.</p>
 
-            <nav class="cat-prevnext" aria-label="Kategoriler arası gezinme">
-              <a href="menu-gozlemeler.html"><span>← Önceki</span><b>Gözlemeler</b></a>
-              <a href="menu-ekstralar.html" class="cat-next"><span>Sonraki →</span><b>Ekstralar</b></a>
-            </nav>
+            <nav class="cat-prevnext" id="cat-prevnext" aria-label="Kategoriler arası gezinme"></nav>
           </div>
         </div>
       </div>
@@ -166,6 +141,8 @@
   </div>
 
   <script src="js/i18n.js?v=1" defer></script>
+
+  <script src="js/menu-render.js?v=1" defer></script>
   <script src="js/script.js?v=11" defer></script>
 </body>
 </html>

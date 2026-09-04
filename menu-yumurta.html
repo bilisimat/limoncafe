@@ -14,7 +14,7 @@
   <link rel="icon" type="image/webp" href="logo.webp" />
   <link rel="stylesheet" href="css/styles.css?v=40" />
 </head>
-<body class="menu-page cat-page">
+<body class="menu-page cat-page" data-category="yumurta">
 
   <a class="skip-link" href="#cat-baslik">İçeriğe geç</a>
 
@@ -48,9 +48,9 @@
     <section class="menu-hero cat-hero">
       <div class="container">
         <a class="cat-back" href="menu.html">← Tüm menü</a>
-        <p class="sec-index sec-index--light">Menü · 03 / 10</p>
-        <h1 class="display display--light" id="cat-baslik">Sahanda Yumurtalar</h1>
-        <p class="sec-sub sec-sub--light cat-blurb">Bakır sahanda pişen yumurta; sadeden sucuklu, sosisli, kavurmalıya.</p>
+        <p class="sec-index sec-index--light" id="cat-breadcrumb"></p>
+        <h1 class="display display--light" id="cat-baslik"></h1>
+        <p class="sec-sub sec-sub--light cat-blurb" id="cat-blurb"></p>
       </div>
     </section>
 
@@ -59,54 +59,13 @@
         <div class="cat-layout">
           <aside class="cat-side" aria-label="Kategoriler">
             <p class="cat-side-label">Kategoriler</p>
-            <a href="menu-serpme.html">Serpme &amp; Tabaklar</a>
-            <a href="menu-menemenler.html">Menemenler</a>
-            <a href="menu-yumurta.html" aria-current="page" class="is-current">Sahanda Yumurtalar</a>
-            <a href="menu-omletler.html">Omletler</a>
-            <a href="menu-tavalar.html">Tavalar</a>
-            <a href="menu-pisiler.html">Pişiler</a>
-            <a href="menu-gozlemeler.html">Gözlemeler</a>
-            <a href="menu-krep.html">Krep &amp; Pankek Çeşitleri</a>
-            <a href="menu-ekstralar.html">Ekstralar</a>
-            <a href="menu-icecekler.html">İçecekler</a>
+            <div id="cat-side-links"></div>
           </aside>
 
           <div class="cat-main">
-              <ul class="menu-list mi-list">
-                <li><button class="mi" type="button" data-name="Sade Yumurta" data-price="150₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/sade-yumurta-b.webp" data-desc="İki yumurta, bakır sahanda tereyağında pişirilir.">
-                  <img class="mi-thumb" src="images/menu/yumurta/sade-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Sade Yumurta</span><span class="p">150₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Kaşarlı Yumurta" data-price="200₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/kasarli-yumurta-b.webp" data-desc="Sahanda yumurtanın üzerine taze kaşar eklenir.">
-                  <img class="mi-thumb" src="images/menu/yumurta/kasarli-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Kaşarlı Yumurta</span><span class="p">200₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Beyaz Peynirli Yumurta" data-price="200₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/beyaz-peynirli-yumurta-b.webp" data-desc="Sahanda yumurta, Ezine beyaz peynir parçalarıyla hazırlanır.">
-                  <img class="mi-thumb" src="images/menu/yumurta/beyaz-peynirli-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Beyaz Peynirli Yumurta</span><span class="p">200₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Sucuklu Yumurta" data-price="270₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/sucuklu-yumurta-b.webp" data-desc="Bakır sahanda kızartılan sucuk dilimlerinin üzerine yumurta kırılır.">
-                  <img class="mi-thumb" src="images/menu/yumurta/sucuklu-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Sucuklu Yumurta</span><span class="p">270₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Sosisli Yumurta" data-price="250₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/sosisli-yumurta-b.webp" data-desc="Dana sosis dilimleri sahanda kızartılır, üzerine yumurta kırılır.">
-                  <img class="mi-thumb" src="images/menu/yumurta/sosisli-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Sosisli Yumurta</span><span class="p">250₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Patatesli Yumurta" data-price="200₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/patatesli-yumurta-b.webp" data-desc="Küp patates kızartılır, yumurtayla birlikte pişirilir.">
-                  <img class="mi-thumb" src="images/menu/yumurta/patatesli-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Patatesli Yumurta</span><span class="p">200₺</span>
-                </button></li>
-                <li><button class="mi" type="button" data-name="Kavurmalı Yumurta" data-price="350₺" data-cat="Sahanda Yumurtalar" data-img="images/menu/yumurta/kavurmali-yumurta-b.webp" data-desc="Kendi yağında çevrilen kavurmanın üzerine yumurta kırılır.">
-                  <img class="mi-thumb" src="images/menu/yumurta/kavurmali-yumurta-t.webp" width="80" height="80" loading="lazy" decoding="async" alt="" />
-                  <span class="mi-name">Kavurmalı Yumurta</span><span class="p">350₺</span>
-                </button></li>
-              </ul>
+              <ul class="menu-list mi-list" id="mi-list"></ul>
 
-            <nav class="cat-prevnext" aria-label="Kategoriler arası gezinme">
-              <a href="menu-menemenler.html"><span>← Önceki</span><b>Menemenler</b></a>
-              <a href="menu-omletler.html" class="cat-next"><span>Sonraki →</span><b>Omletler</b></a>
-            </nav>
+            <nav class="cat-prevnext" id="cat-prevnext" aria-label="Kategoriler arası gezinme"></nav>
           </div>
         </div>
       </div>
@@ -181,6 +140,8 @@
   </div>
 
   <script src="js/i18n.js?v=1" defer></script>
+
+  <script src="js/menu-render.js?v=1" defer></script>
   <script src="js/script.js?v=11" defer></script>
 </body>
 </html>

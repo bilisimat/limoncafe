@@ -233,6 +233,9 @@
     });
 
     /* ---------- 12. Menü: ürün pop-up ---------- */
+    /* .mi butonları artık menu-render.js tarafından DB'den dinamik oluşturuluyor;
+       bu yüzden dialog kurulumu (statik elemanlar) bir kez yapılır, buton
+       dinleyicileri ise her render sonrası wireMenuItems() ile yeniden bağlanır. */
     var miDlg = document.getElementById("mi-dlg");
     if (miDlg) {
       var miImg = document.getElementById("mi-dlg-img");
@@ -263,9 +266,13 @@
         if (x && x.focus) x.focus();
       };
 
-      document.querySelectorAll(".mi").forEach(function (btn) {
-        btn.addEventListener("click", function () { miOpen(btn); });
-      });
+      window.LimosWireMenuItems = function () {
+        document.querySelectorAll(".mi").forEach(function (btn) {
+          btn.addEventListener("click", function () { miOpen(btn); });
+        });
+      };
+      window.LimosWireMenuItems();
+
       Array.prototype.forEach.call(miDlg.querySelectorAll("[data-close]"), function (el) {
         el.addEventListener("click", miClose);
       });
