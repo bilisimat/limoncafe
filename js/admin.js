@@ -25,6 +25,7 @@
     panel.hidden = false;
     document.getElementById("panel-username").textContent = username || "";
     loadUsers();
+    loadMenu();
   }
 
   function showLogin() {
@@ -195,6 +196,257 @@
     } catch (err) {
       window.alert(err.message || "Silinemedi.");
     }
+  }
+
+  /* ---------- Menü: kategoriler + ürünler ---------- */
+  var CATS = [];
+  var editingCatId = null;
+  var editingItemId = null;
+
+  var catTbody = document.getElementById("cat-tbody");
+  var addCatForm = document.getElementById("add-cat-form");
+  var catFormError = document.getElementById("cat-form-error");
+
+  var itemTbody = document.getElementById("item-tbody");
+  var addItemForm = document.getElementById("add-item-form");
+  var itemFormError = document.getElementById("item-form-error");
+  var itemCatFilter = document.getElementById("item-cat-filter");
+  var itemCatSelect = document.getElementById("item-cat");
+
+  function fillCatSelects() {
+    [itemCatFilter, itemCatSelect].forEach(function (sel) {
+      if (!sel) return;
+      var current = sel.value;
+      sel.innerHTML = "";
+      if (sel === itemCatFilter) {
+        var allOpt = document.createElement("option");
+        allOpt.value = "";
+        allOpt.textContent = "Tümü";
+        sel.appendChild(allOpt);
+      }
+      CATS.forEach(function (c) {
+        var opt = document.createElement("option");
+        opt.value = c.slug;
+        opt.textContent = c.name.tr;
+        sel.appendChild(opt);
+      });
+      if (current) sel.value = current;
+    });
+  }
+
+  function resetCatForm() {
+    editingCatId = null;
+    addCatForm.reset();
+    addCatForm.querySelector("button[type=submit]").textContent = "Ekle ve çevir";
+    catFormError.hidden = true;
+  }
+  function resetItemForm() {
+    editingItemId = null;
+    var keepCat = itemCatSelect.value;
+    addItemForm.reset();
+    itemCatSelect.value = keepCat;
+    addItemForm.querySelector("button[type=submit]").textContent = "Ekle ve çevir";
+    itemFormError.hidden = true;
+  }
+
+  async function loadMenu() {
+    try {
+      var data = await api("/api/admin/menu/categories");
+      CATS = (data.categories || []).sort(function (a, b) { return a.order - b.order; });
+      fillCatSelects();
+      renderCatTable();
+      loadItems();
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  function renderCatTable() {
+    catTbody.innerHTML = "";
+    CATS.forEach(function (c) {
+      var tr = document.createElement("tr");
+
+      var tdName = document.createElement("td");
+      tdName.innerHTML = escapeHtml(c.name.tr) + '<br><span class="cell-sub">' + escapeHtml(c.name.en) + "</span>";
+      tr.appendChild(tdName);
+
+      var tdSlug = document.createElement("td");
+      tdSlug.textContent = c.slug;
+      tr.appendChild(tdSlug);
+
+      var tdActions = document.createElement("td");
+      tdActions.className = "actions";
+
+      var editBtn = document.createElement("button");
+      editBtn.type = "button";
+      editBtn.className = "btn-line";
+      editBtn.textContent = "Düzenle";
+      editBtn.addEventListener("click", function () { startEditCat(c); });
+      tdActions.appendChild(editBtn);
+
+      var delBtn = document.createElement("button");
+      delBtn.type = "button";
+      delBtn.className = "btn-danger";
+      delBtn.textContent = "Sil";
+      delBtn.addEventListener("click", function () { deleteCat(c); });
+      tdActions.appendChild(delBtn);
+
+      tr.appendChild(tdActions);
+      catTbody.appendChild(tr);
+    });
+  }
+
+  function startEditCat(c) {
+    editingCatId = c._id;
+    document.getElementById("cat-name").value = c.name.tr;
+    document.getElementById("cat-listdesc").value = c.listDesc.tr;
+    document.getElementById("cat-blurb").value = c.blurb.tr;
+    document.getElementById("cat-image").value = c.image || "";
+    addCatForm.querySelector("button[type=submit]").textContent = "Güncelle ve yeniden çevir";
+    addCatForm.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  async function deleteCat(c) {
+    if (!window.confirm('"' + c.name.tr + '" kategorisini ve içindeki tüm ürünleri silmek istediğine emin misin?')) return;
+    try {
+      await api("/api/admin/menu/categories/" + c._id, { method: "DELETE" });
+      if (editingCatId === c._id) resetCatForm();
+      loadMenu();
+    } catch (err) {
+      window.alert(err.message || "Silinemedi.");
+    }
+  }
+
+  addCatForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    catFormError.hidden = true;
+    var submitBtn = addCatForm.querySelector("button[type=submit]");
+    submitBtn.disabled = true;
+    var body = {
+      name: document.getElementById("cat-name").value.trim(),
+      listDesc: document.getElementById("cat-listdesc").value.trim(),
+      blurb: document.getElementById("cat-blurb").value.trim(),
+      image: document.getElementById("cat-image").value.trim(),
+    };
+    try {
+      if (editingCatId) {
+        await api("/api/admin/menu/categories/" + editingCatId, { method: "PUT", body: JSON.stringify(body) });
+      } else {
+        await api("/api/admin/menu/categories", { method: "POST", body: JSON.stringify(body) });
+      }
+      resetCatForm();
+      loadMenu();
+    } catch (err) {
+      catFormError.textContent = err.message || "Kaydedilemedi.";
+      catFormError.hidden = false;
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+
+  async function loadItems() {
+    try {
+      var filter = itemCatFilter.value ? "?category=" + encodeURIComponent(itemCatFilter.value) : "";
+      var data = await api("/api/admin/menu/items" + filter);
+      renderItemTable(data.items || []);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+  itemCatFilter.addEventListener("change", loadItems);
+
+  function renderItemTable(items) {
+    items.sort(function (a, b) { return a.order - b.order; });
+    itemTbody.innerHTML = "";
+    items.forEach(function (it) {
+      var tr = document.createElement("tr");
+
+      var tdName = document.createElement("td");
+      tdName.innerHTML = escapeHtml(it.name.tr) + '<br><span class="cell-sub">' + escapeHtml(it.name.en) + "</span>";
+      tr.appendChild(tdName);
+
+      var tdPrice = document.createElement("td");
+      tdPrice.textContent = it.price || "—";
+      tr.appendChild(tdPrice);
+
+      var tdActions = document.createElement("td");
+      tdActions.className = "actions";
+
+      var editBtn = document.createElement("button");
+      editBtn.type = "button";
+      editBtn.className = "btn-line";
+      editBtn.textContent = "Düzenle";
+      editBtn.addEventListener("click", function () { startEditItem(it); });
+      tdActions.appendChild(editBtn);
+
+      var delBtn = document.createElement("button");
+      delBtn.type = "button";
+      delBtn.className = "btn-danger";
+      delBtn.textContent = "Sil";
+      delBtn.addEventListener("click", function () { deleteItem(it); });
+      tdActions.appendChild(delBtn);
+
+      tr.appendChild(tdActions);
+      itemTbody.appendChild(tr);
+    });
+  }
+
+  function startEditItem(it) {
+    editingItemId = it._id;
+    itemCatSelect.value = it.categorySlug;
+    document.getElementById("item-name").value = it.name.tr;
+    document.getElementById("item-desc").value = it.desc.tr;
+    document.getElementById("item-price").value = it.price || "";
+    document.getElementById("item-img").value = it.img || "";
+    document.getElementById("item-img-thumb").value = it.imgThumb || "";
+    addItemForm.querySelector("button[type=submit]").textContent = "Güncelle ve yeniden çevir";
+    addItemForm.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  async function deleteItem(it) {
+    if (!window.confirm('"' + it.name.tr + '" ürününü silmek istediğine emin misin?')) return;
+    try {
+      await api("/api/admin/menu/items/" + it._id, { method: "DELETE" });
+      if (editingItemId === it._id) resetItemForm();
+      loadItems();
+    } catch (err) {
+      window.alert(err.message || "Silinemedi.");
+    }
+  }
+
+  addItemForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    itemFormError.hidden = true;
+    var submitBtn = addItemForm.querySelector("button[type=submit]");
+    submitBtn.disabled = true;
+    var body = {
+      categorySlug: itemCatSelect.value,
+      name: document.getElementById("item-name").value.trim(),
+      desc: document.getElementById("item-desc").value.trim(),
+      price: document.getElementById("item-price").value.trim(),
+      img: document.getElementById("item-img").value.trim(),
+      imgThumb: document.getElementById("item-img-thumb").value.trim(),
+    };
+    try {
+      if (editingItemId) {
+        await api("/api/admin/menu/items/" + editingItemId, { method: "PUT", body: JSON.stringify(body) });
+      } else {
+        await api("/api/admin/menu/items", { method: "POST", body: JSON.stringify(body) });
+      }
+      resetItemForm();
+      loadItems();
+    } catch (err) {
+      itemFormError.textContent = err.message || "Kaydedilemedi.";
+      itemFormError.hidden = false;
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+
+  function escapeHtml(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
   }
 
   checkSession();

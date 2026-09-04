@@ -62,7 +62,45 @@
       <!-- ---------- MENÜ ---------- -->
       <section class="panel-section" id="section-menu">
         <h1>Menü</h1>
-        <p class="panel-sub">Yakında burada kategori ve ürünleri ekleyip düzenleyebileceksin.</p>
+        <p class="panel-sub">Sadece Türkçe gir — İngilizce, Almanca, Arapça otomatik oluşturulur.</p>
+
+        <h2 class="panel-h2">Kategoriler</h2>
+        <table class="data-table" id="cat-table">
+          <thead><tr><th>Ad</th><th>Slug</th><th></th></tr></thead>
+          <tbody id="cat-tbody"></tbody>
+        </table>
+
+        <form class="menu-form" id="add-cat-form">
+          <h3>Yeni kategori</h3>
+          <label class="field"><span>Ad (Türkçe)</span><input type="text" id="cat-name" required /></label>
+          <label class="field"><span>Liste açıklaması (Türkçe, kısa)</span><input type="text" id="cat-listdesc" /></label>
+          <label class="field"><span>Sayfa üstü açıklama (Türkçe, boşsa liste açıklaması kullanılır)</span><input type="text" id="cat-blurb" /></label>
+          <label class="field"><span>Görsel yolu</span><input type="text" id="cat-image" placeholder="images/cat/ornek.webp" /></label>
+          <p class="form-error" id="cat-form-error" hidden></p>
+          <button type="submit" class="btn-primary">Ekle ve çevir</button>
+        </form>
+
+        <h2 class="panel-h2">Ürünler</h2>
+        <label class="field" style="max-width:320px">
+          <span>Kategori filtrele</span>
+          <select id="item-cat-filter"></select>
+        </label>
+        <table class="data-table" id="item-table">
+          <thead><tr><th>Ad</th><th>Fiyat</th><th></th></tr></thead>
+          <tbody id="item-tbody"></tbody>
+        </table>
+
+        <form class="menu-form" id="add-item-form">
+          <h3>Yeni ürün</h3>
+          <label class="field"><span>Kategori</span><select id="item-cat" required></select></label>
+          <label class="field"><span>Ad (Türkçe)</span><input type="text" id="item-name" required /></label>
+          <label class="field"><span>Açıklama (Türkçe)</span><input type="text" id="item-desc" /></label>
+          <label class="field"><span>Fiyat (örn. 220₺, boş bırakılabilir)</span><input type="text" id="item-price" /></label>
+          <label class="field"><span>Büyük görsel yolu</span><input type="text" id="item-img" placeholder="images/menu/kategori/urun-b.webp" /></label>
+          <label class="field"><span>Küçük görsel yolu (boşsa büyük görsel kullanılır)</span><input type="text" id="item-img-thumb" placeholder="images/menu/kategori/urun-t.webp" /></label>
+          <p class="form-error" id="item-form-error" hidden></p>
+          <button type="submit" class="btn-primary">Ekle ve çevir</button>
+        </form>
       </section>
 
       <!-- ---------- KULLANICILAR ---------- -->

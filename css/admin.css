@@ -112,17 +112,25 @@ body {
 .qr-card img { width: 260px; height: 260px; border-radius: 6px; }
 .qr-caption { font-family: var(--sans); font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--danger); margin: 0; }
 
-/* ---------- Users table ---------- */
-.users-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; }
-.users-table th {
+/* ---------- Tablolar (kullanıcılar + menü) ---------- */
+.users-table, .data-table { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+.users-table th, .data-table th {
   text-align: left; font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
   color: var(--stone); padding: 8px 10px; border-bottom: 1px solid var(--stone-line-dk);
 }
-.users-table td { padding: 11px 10px; border-bottom: 1px solid var(--stone-line); font-size: .88rem; }
-.users-table td.actions { display: flex; gap: 8px; justify-content: flex-end; }
+.users-table td, .data-table td { padding: 11px 10px; border-bottom: 1px solid var(--stone-line); font-size: .88rem; vertical-align: middle; }
+.users-table td.actions, .data-table td.actions { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
+.data-table .cell-sub { color: var(--stone); font-size: .78rem; }
 
-.add-user-form { max-width: 360px; background: #fff; border: 1px solid var(--stone-line); border-radius: 10px; padding: 22px; }
-.add-user-form h3 { margin: 0 0 16px; font-family: var(--serif); font-size: 1.2rem; }
+.add-user-form, .menu-form { max-width: 420px; background: #fff; border: 1px solid var(--stone-line); border-radius: 10px; padding: 22px; margin-bottom: 40px; }
+.add-user-form h3, .menu-form h3 { margin: 0 0 16px; font-family: var(--serif); font-size: 1.2rem; }
+.panel-h2 { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--espresso); margin: 30px 0 14px; }
+.panel-h2:first-of-type { margin-top: 0; }
+.field select {
+  font-family: var(--sans); font-size: .95rem;
+  padding: 11px 13px; border-radius: 6px;
+  border: 1px solid var(--stone-line-dk); background: #fff; color: var(--ink);
+}
 
 /* ---------- Modal ---------- */
 .modal { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: 20px; }
