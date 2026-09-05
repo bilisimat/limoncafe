@@ -24,6 +24,10 @@
     loginScreen.hidden = true;
     panel.hidden = false;
     document.getElementById("panel-username").textContent = username || "";
+    // QR görseli oturum açılmadan İSTENMEZ — sayfa yüklenir yüklenmez
+    // src atanırsa giriş öncesi 401 döner ve görsel kalıcı olarak kırık kalır.
+    var qrImg = document.getElementById("qr-img");
+    if (qrImg && !qrImg.src) qrImg.src = "/api/admin/qr";
     loadUsers();
     loadMenu();
   }
