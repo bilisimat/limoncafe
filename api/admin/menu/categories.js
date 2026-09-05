@@ -37,7 +37,8 @@ module.exports = async (req, res) => {
       try {
         translated = await translateCategory({ name, listDesc: listDesc || "", blurb: blurb || listDesc || "" });
       } catch (e) {
-        res.status(502).json({ error: "Çeviri servisine ulaşılamadı, tekrar deneyin.", detail: String(e.message || e) });
+        console.error("çeviri hatası:", e);
+        res.status(502).json({ error: "Çeviri servisine ulaşılamadı, tekrar deneyin." });
         return;
       }
 
@@ -77,6 +78,7 @@ module.exports = async (req, res) => {
 
     res.status(405).json({ error: "Desteklenmeyen metod." });
   } catch (err) {
-    res.status(500).json({ error: "Sunucu hatası", detail: String(err.message || err) });
+    console.error("menu/categories hatası:", err);
+    res.status(500).json({ error: "Sunucu hatası" });
   }
 };

@@ -19,6 +19,7 @@ module.exports = async (req, res) => {
       items: items.map(mapId),
     });
   } catch (err) {
-    res.status(500).json({ error: "Sunucu hatası", detail: String(err.message || err) });
+    console.error("menu hatası:", err);
+    res.status(500).json({ error: "Sunucu hatası" });
   }
 };

@@ -38,6 +38,7 @@ module.exports = async (req, res) => {
 
     res.status(200).json({ ok: true });
   } catch (err) {
-    res.status(500).json({ error: "Sunucu hatası", detail: String(err.message || err) });
+    console.error("setup hatası:", err);
+    res.status(500).json({ error: "Sunucu hatası" });
   }
 };

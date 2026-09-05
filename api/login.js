@@ -3,6 +3,7 @@ const { verifyPassword, setSessionCookie } = require("../lib/auth");
 
 const WINDOW_SECONDS = 15 * 60;
 const MAX_ATTEMPTS = 8;
+const MAX_ATTEMPTS_PER_IP = 20; // farklı kullanıcı adlarıyla deneyerek hesap-bazlı sınırı aşmayı önler
 
 function clientIp(req) {
   const fwd = req.headers["x-forwarded-for"];
@@ -27,9 +28,14 @@ module.exports = async (req, res) => {
     const attempts = db.collection("login_attempts");
     await attempts.createIndex({ firstAttempt: 1 }, { expireAfterSeconds: WINDOW_SECONDS });
 
-    const rateKey = `${clientIp(req)}:${String(username).toLowerCase()}`;
-    const rec = await attempts.findOne({ key: rateKey });
-    if (rec && rec.count >= MAX_ATTEMPTS) {
+    const ip = clientIp(req);
+    const rateKey = `${ip}:${String(username).toLowerCase()}`;
+    const ipKey = `ip:${ip}`;
+    const [rec, ipRec] = await Promise.all([
+      attempts.findOne({ key: rateKey }),
+      attempts.findOne({ key: ipKey }),
+    ]);
+    if ((rec && rec.count >= MAX_ATTEMPTS) || (ipRec && ipRec.count >= MAX_ATTEMPTS_PER_IP)) {
       res.status(429).json({ error: "Çok fazla deneme. Birkaç dakika sonra tekrar deneyin." });
       return;
     }
@@ -39,11 +45,18 @@ module.exports = async (req, res) => {
     const ok = admin ? await verifyPassword(String(password), admin.passwordHash) : false;
 
     if (!ok) {
-      await attempts.updateOne(
-        { key: rateKey },
-        { $inc: { count: 1 }, $setOnInsert: { firstAttempt: new Date() } },
-        { upsert: true }
-      );
+      await Promise.all([
+        attempts.updateOne(
+          { key: rateKey },
+          { $inc: { count: 1 }, $setOnInsert: { firstAttempt: new Date() } },
+          { upsert: true }
+        ),
+        attempts.updateOne(
+          { key: ipKey },
+          { $inc: { count: 1 }, $setOnInsert: { firstAttempt: new Date() } },
+          { upsert: true }
+        ),
+      ]);
       res.status(401).json({ error: "Kullanıcı adı veya şifre hatalı." });
       return;
     }
@@ -52,6 +65,7 @@ module.exports = async (req, res) => {
     setSessionCookie(res, admin.username);
     res.status(200).json({ ok: true, username: admin.username });
   } catch (err) {
-    res.status(500).json({ error: "Sunucu hatası", detail: String(err.message || err) });
+    console.error("login hatası:", err);
+    res.status(500).json({ error: "Sunucu hatası" });
   }
 };

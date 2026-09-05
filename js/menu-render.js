@@ -34,7 +34,7 @@
     DATA.categories.forEach(function (c) {
       html +=
         '<a class="cat-card" href="menu-' + c.slug + '.html">' +
-          '<span class="cat-thumb"><img src="' + c.image + '" width="800" height="800" loading="lazy" decoding="async" alt="" /></span>' +
+          '<span class="cat-thumb"><img src="' + escapeHtml(c.image) + '" width="800" height="800" loading="lazy" decoding="async" alt="" /></span>' +
           '<span class="cat-name">' + escapeHtml(c.name[l]) + '<span class="cat-desc">' + escapeHtml(c.listDesc[l]) + '</span></span>' +
           '<svg class="cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' +
         '</a>';

@@ -37,6 +37,7 @@ module.exports = async (req, res) => {
 
     res.status(200).json({ ok: true, categories: catsWithMeta.length, items: itemsWithMeta.length });
   } catch (err) {
-    res.status(500).json({ error: "Sunucu hatası", detail: String(err.message || err) });
+    console.error("menu import hatası:", err);
+    res.status(500).json({ error: "Sunucu hatası" });
   }
 };

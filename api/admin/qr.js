@@ -19,6 +19,7 @@ module.exports = async (req, res) => {
     res.setHeader("Cache-Control", "no-store");
     res.status(200).send(buf);
   } catch (err) {
-    res.status(500).json({ error: "QR üretilemedi", detail: String(err.message || err) });
+    console.error("qr hatası:", err);
+    res.status(500).json({ error: "QR üretilemedi" });
   }
 };
