@@ -146,6 +146,10 @@
       };
       window.addEventListener("scroll", onScroll, { passive: true });
       onScroll();
+      toTop.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
     }
 
     /* ---------- 7. Footer yıl ---------- */
