@@ -90,16 +90,15 @@
           <tbody id="item-tbody"></tbody>
         </table>
 
-        <form class="menu-form" id="add-item-form">
-          <h3>Yeni ürün</h3>
-          <label class="field"><span>Kategori</span><select id="item-cat" required></select></label>
-          <label class="field"><span>Ad (Türkçe)</span><input type="text" id="item-name" required /></label>
-          <label class="field"><span>Açıklama (Türkçe)</span><input type="text" id="item-desc" /></label>
+        <form class="menu-form" id="add-item-form" hidden>
+          <h3>Fiyat güncelle</h3>
+          <p class="panel-sub" id="item-edit-name"></p>
           <label class="field"><span>Fiyat (örn. 220₺, boş bırakılabilir)</span><input type="text" id="item-price" /></label>
-          <label class="field"><span>Büyük görsel yolu</span><input type="text" id="item-img" placeholder="images/menu/kategori/urun-b.webp" /></label>
-          <label class="field"><span>Küçük görsel yolu (boşsa büyük görsel kullanılır)</span><input type="text" id="item-img-thumb" placeholder="images/menu/kategori/urun-t.webp" /></label>
           <p class="form-error" id="item-form-error" hidden></p>
-          <button type="submit" class="btn-primary">Ekle ve çevir</button>
+          <div class="modal-actions">
+            <button type="button" class="btn-line" id="item-edit-cancel">Vazgeç</button>
+            <button type="submit" class="btn-primary">Kaydet</button>
+          </div>
         </form>
       </section>
 
@@ -151,6 +150,6 @@
     </form>
   </div>
 
-  <script src="../js/admin.js?v=1" defer></script>
+  <script src="../js/admin.js?v=2" defer></script>
 </body>
 </html>

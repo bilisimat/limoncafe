@@ -1,6 +1,5 @@
 const { getDb } = require("../../../lib/db");
 const { requireAuth } = require("../../../lib/auth");
-const { translateItem } = require("../../../lib/translate");
 
 module.exports = async (req, res) => {
   const session = requireAuth(req, res);
@@ -19,42 +18,10 @@ module.exports = async (req, res) => {
     }
 
     if (req.method === "POST") {
-      const { categorySlug, name, desc, price, img, imgThumb } = req.body || {};
-      if (!categorySlug || !name) {
-        res.status(400).json({ error: "categorySlug ve name (Türkçe) gerekli." });
-        return;
-      }
-      const catExists = await db.collection("categories").findOne({ slug: categorySlug });
-      if (!catExists) {
-        res.status(400).json({ error: "Geçersiz categorySlug." });
-        return;
-      }
-
-      let translated;
-      try {
-        translated = await translateItem({ name, desc: desc || "" });
-      } catch (e) {
-        console.error("çeviri hatası:", e);
-        res.status(502).json({ error: "Çeviri servisine ulaşılamadı, tekrar deneyin." });
-        return;
-      }
-
-      const maxOrderDoc = await col.find({ categorySlug }).sort({ order: -1 }).limit(1).toArray();
-      const order = maxOrderDoc.length ? maxOrderDoc[0].order + 1 : 0;
-
-      const doc = {
-        categorySlug,
-        order,
-        price: price || "",
-        img: img || "",
-        imgThumb: imgThumb || img || "",
-        name: { tr: name, en: translated.en.name, de: translated.de.name, ar: translated.ar.name },
-        desc: { tr: desc || "", en: translated.en.desc, de: translated.de.desc, ar: translated.ar.desc },
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      };
-      const result = await col.insertOne(doc);
-      res.status(201).json({ ok: true, id: String(result.insertedId) });
+      // Ürün ekleme panelden kaldırıldı — menü yapısı (ürün adı/açıklama/görsel)
+      // sadece doğrudan veritabanı üzerinden değiştirilebilir. Panelde yalnızca
+      // mevcut ürünlerin fiyatı düzenlenebilir.
+      res.status(403).json({ error: "Ürün ekleme devre dışı. Panelden yalnızca fiyat güncellenebilir." });
       return;
     }
 

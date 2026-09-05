@@ -1,7 +1,6 @@
 const { ObjectId } = require("mongodb");
 const { getDb } = require("../../../../lib/db");
 const { requireAuth } = require("../../../../lib/auth");
-const { translateItem } = require("../../../../lib/translate");
 
 module.exports = async (req, res) => {
   const session = requireAuth(req, res);
@@ -19,53 +18,28 @@ module.exports = async (req, res) => {
     const _id = new ObjectId(String(id));
 
     if (req.method === "PUT") {
-      const { name, desc, price, img, imgThumb, categorySlug, order } = req.body || {};
+      // Panelden yalnızca fiyat güncellenebilir — ürün adı/açıklama/görsel/
+      // kategori artık bu uçtan değiştirilemez (yanlışlıkla yeniden çeviri
+      // tetiklenip mevcut çevirilerin bozulmasını önlemek için).
+      const { price } = req.body || {};
+      if (typeof price !== "string") {
+        res.status(400).json({ error: "price (metin) gerekli." });
+        return;
+      }
       const current = await col.findOne({ _id });
       if (!current) {
         res.status(404).json({ error: "Ürün bulunamadı." });
         return;
       }
 
-      const update = { updatedAt: new Date() };
-      if (typeof price === "string") update.price = price;
-      if (typeof img === "string") update.img = img;
-      if (typeof imgThumb === "string") update.imgThumb = imgThumb;
-      if (typeof categorySlug === "string") update.categorySlug = categorySlug;
-      if (typeof order === "number") update.order = order;
-
-      if (name || desc != null) {
-        let translated;
-        try {
-          translated = await translateItem({
-            name: name || current.name.tr,
-            desc: desc != null ? desc : current.desc.tr,
-          });
-        } catch (e) {
-          console.error("çeviri hatası:", e);
-          res.status(502).json({ error: "Çeviri servisine ulaşılamadı, tekrar deneyin." });
-          return;
-        }
-        update.name = { tr: name || current.name.tr, en: translated.en.name, de: translated.de.name, ar: translated.ar.name };
-        update.desc = {
-          tr: desc != null ? desc : current.desc.tr,
-          en: translated.en.desc,
-          de: translated.de.desc,
-          ar: translated.ar.desc,
-        };
-      }
-
-      await col.updateOne({ _id }, { $set: update });
+      await col.updateOne({ _id }, { $set: { price, updatedAt: new Date() } });
       res.status(200).json({ ok: true });
       return;
     }
 
     if (req.method === "DELETE") {
-      const result = await col.deleteOne({ _id });
-      if (result.deletedCount === 0) {
-        res.status(404).json({ error: "Ürün bulunamadı." });
-        return;
-      }
-      res.status(200).json({ ok: true });
+      // Ürün silme panelden kaldırıldı.
+      res.status(403).json({ error: "Ürün silme devre dışı." });
       return;
     }
 

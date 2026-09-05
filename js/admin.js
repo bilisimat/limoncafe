@@ -215,19 +215,18 @@
   var addItemForm = document.getElementById("add-item-form");
   var itemFormError = document.getElementById("item-form-error");
   var itemCatFilter = document.getElementById("item-cat-filter");
-  var itemCatSelect = document.getElementById("item-cat");
+  var itemEditName = document.getElementById("item-edit-name");
+  var itemEditCancel = document.getElementById("item-edit-cancel");
 
   function fillCatSelects() {
-    [itemCatFilter, itemCatSelect].forEach(function (sel) {
+    [itemCatFilter].forEach(function (sel) {
       if (!sel) return;
       var current = sel.value;
       sel.innerHTML = "";
-      if (sel === itemCatFilter) {
-        var allOpt = document.createElement("option");
-        allOpt.value = "";
-        allOpt.textContent = "Tümü";
-        sel.appendChild(allOpt);
-      }
+      var allOpt = document.createElement("option");
+      allOpt.value = "";
+      allOpt.textContent = "Tümü";
+      sel.appendChild(allOpt);
       CATS.forEach(function (c) {
         var opt = document.createElement("option");
         opt.value = c.slug;
@@ -246,12 +245,11 @@
   }
   function resetItemForm() {
     editingItemId = null;
-    var keepCat = itemCatSelect.value;
     addItemForm.reset();
-    itemCatSelect.value = keepCat;
-    addItemForm.querySelector("button[type=submit]").textContent = "Ekle ve çevir";
+    addItemForm.hidden = true;
     itemFormError.hidden = true;
   }
+  if (itemEditCancel) itemEditCancel.addEventListener("click", resetItemForm);
 
   async function loadMenu() {
     try {
@@ -379,16 +377,9 @@
       var editBtn = document.createElement("button");
       editBtn.type = "button";
       editBtn.className = "btn-line";
-      editBtn.textContent = "Düzenle";
+      editBtn.textContent = "Fiyat Düzenle";
       editBtn.addEventListener("click", function () { startEditItem(it); });
       tdActions.appendChild(editBtn);
-
-      var delBtn = document.createElement("button");
-      delBtn.type = "button";
-      delBtn.className = "btn-danger";
-      delBtn.textContent = "Sil";
-      delBtn.addEventListener("click", function () { deleteItem(it); });
-      tdActions.appendChild(delBtn);
 
       tr.appendChild(tdActions);
       itemTbody.appendChild(tr);
@@ -397,46 +388,21 @@
 
   function startEditItem(it) {
     editingItemId = it._id;
-    itemCatSelect.value = it.categorySlug;
-    document.getElementById("item-name").value = it.name.tr;
-    document.getElementById("item-desc").value = it.desc.tr;
+    itemEditName.textContent = it.name.tr;
     document.getElementById("item-price").value = it.price || "";
-    document.getElementById("item-img").value = it.img || "";
-    document.getElementById("item-img-thumb").value = it.imgThumb || "";
-    addItemForm.querySelector("button[type=submit]").textContent = "Güncelle ve yeniden çevir";
+    addItemForm.hidden = false;
     addItemForm.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
-
-  async function deleteItem(it) {
-    if (!window.confirm('"' + it.name.tr + '" ürününü silmek istediğine emin misin?')) return;
-    try {
-      await api("/api/admin/menu/items/" + it._id, { method: "DELETE" });
-      if (editingItemId === it._id) resetItemForm();
-      loadItems();
-    } catch (err) {
-      window.alert(err.message || "Silinemedi.");
-    }
   }
 
   addItemForm.addEventListener("submit", async function (e) {
     e.preventDefault();
+    if (!editingItemId) return;
     itemFormError.hidden = true;
     var submitBtn = addItemForm.querySelector("button[type=submit]");
     submitBtn.disabled = true;
-    var body = {
-      categorySlug: itemCatSelect.value,
-      name: document.getElementById("item-name").value.trim(),
-      desc: document.getElementById("item-desc").value.trim(),
-      price: document.getElementById("item-price").value.trim(),
-      img: document.getElementById("item-img").value.trim(),
-      imgThumb: document.getElementById("item-img-thumb").value.trim(),
-    };
+    var body = { price: document.getElementById("item-price").value.trim() };
     try {
-      if (editingItemId) {
-        await api("/api/admin/menu/items/" + editingItemId, { method: "PUT", body: JSON.stringify(body) });
-      } else {
-        await api("/api/admin/menu/items", { method: "POST", body: JSON.stringify(body) });
-      }
+      await api("/api/admin/menu/items/" + editingItemId, { method: "PUT", body: JSON.stringify(body) });
       resetItemForm();
       loadItems();
     } catch (err) {
