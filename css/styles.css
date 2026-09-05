@@ -551,6 +551,11 @@ body:not(.menu-page) .site-header.is-scrolled .header-phone:hover { color: #000;
   .cook-spin { transition: none; }
 }
 
+@media (max-width: 899px) {
+  .intro-cook { order: 1; }
+  .intro-body { order: 2; }
+}
+
 @media (min-width: 900px) {
   .intro-grid { grid-template-columns: 200px 1fr; gap: 0; }
   .intro-body { grid-column: 1 / -1; margin-top: clamp(16px, 3vw, 32px); }
@@ -784,9 +789,9 @@ body:not(.menu-page) .site-header.is-scrolled .header-phone:hover { color: #000;
   gap: 16px;
 }
 .g-item { overflow: hidden; background: var(--paper-2); }
-.g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ease); }
-@media (hover: hover) { .g-item:hover img { transform: scale(1.04); } }
-.g-item img { aspect-ratio: 1/1; }
+.g-item img, .g-item video { width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ease); }
+@media (hover: hover) { .g-item:hover img, .g-item:hover video { transform: scale(1.04); } }
+.g-item img, .g-item video { aspect-ratio: 1/1; }
 
 @media (min-width: 720px) {
   .gallery {
@@ -797,7 +802,7 @@ body:not(.menu-page) .site-header.is-scrolled .header-phone:hover { color: #000;
       "meze  suc   brk"
       "meze  yum   men";
   }
-  .g-item img { aspect-ratio: auto; height: 100%; }
+  .g-item img, .g-item video { aspect-ratio: auto; height: 100%; }
   .gallery .g-item:nth-child(1) { grid-area: brk; }
   .gallery .g-item:nth-child(2) { grid-area: hero; }
   .gallery .g-item:nth-child(3) { grid-area: suc; }
@@ -1362,56 +1367,6 @@ body:not(.menu-page) .site-header.is-scrolled .header-phone:hover { color: #000;
   .mi-dlg-backdrop, .mi-dlg-box { animation: none; }
 }
 
-/* --- Dil seçim ekranı (ilk ziyaret) --- */
-.lang-gate {
-  position: fixed; inset: 0; z-index: 300;
-  display: grid; place-items: center;
-  padding: clamp(16px, 4vw, 40px);
-}
-.lang-gate-backdrop {
-  position: absolute; inset: 0;
-  background: rgba(20, 14, 10, .78);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  animation: mi-fade .25s var(--ease);
-}
-.lang-gate-box {
-  position: relative; z-index: 1;
-  width: min(420px, 100%);
-  background: var(--paper);
-  border-radius: 8px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, .45);
-  padding: clamp(28px, 5vw, 40px) clamp(24px, 5vw, 34px);
-  text-align: center;
-  animation: mi-rise .3s var(--ease);
-}
-.lang-gate-title {
-  font-family: var(--sans); font-size: .82rem; line-height: 1.9;
-  color: var(--stone); margin-bottom: 22px;
-}
-.lang-gate-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-}
-.lang-gate-btn {
-  appearance: none; cursor: pointer;
-  font-family: var(--serif); font-size: 1.15rem; font-weight: 500;
-  padding: 16px 10px; border-radius: 6px;
-  border: 1px solid var(--stone-line-dk);
-  background: var(--paper-2); color: var(--espresso);
-  transition: background .25s var(--ease), border-color .25s var(--ease), transform .2s var(--ease);
-}
-.lang-gate-btn:hover, .lang-gate-btn:focus-visible { background: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
-.lang-gate-skip {
-  display: inline-block; margin-top: 20px;
-  font-family: var(--sans); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--stone); cursor: pointer; border: 0; background: transparent;
-}
-.lang-gate-skip:hover { color: var(--ink); }
-html.lang-gate-open { overflow: hidden; }
-@media (prefers-reduced-motion: reduce) {
-  .lang-gate-backdrop, .lang-gate-box { animation: none; }
-}
-
 /* =========================================================
    Giriş animasyonu — dönen limon
    ========================================================= */
@@ -1426,6 +1381,10 @@ html.lang-gate-open { overflow: hidden; }
   gap: clamp(18px, 3vw, 30px);
   background: var(--espresso);
   transition: opacity .7s var(--ease), visibility .7s var(--ease);
+  /* Saf marka animasyonu — altındaki header/nav'a giden ilk tıklamaları
+     yutmasın diye baştan itibaren tıklama geçirgen (bkz. "Menü'ye ilk
+     tıklamada sayfa açılmıyor" hatası). */
+  pointer-events: none;
 }
 .intro-splash.is-hiding {
   opacity: 0;

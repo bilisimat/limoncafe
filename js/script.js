@@ -17,9 +17,18 @@
       return;
     }
     document.documentElement.classList.add("intro-lock");
+
+    var word = document.getElementById("intro-splash-word");
+    var dotCount = 1;
+    var dotsTimer = word ? window.setInterval(function () {
+      dotCount = (dotCount % 3) + 1;
+      word.textContent = "Yükleniyor" + ".".repeat(dotCount);
+    }, 500) : null;
+
     window.setTimeout(function () {
       s.classList.add("is-hiding");
       document.documentElement.classList.remove("intro-lock");
+      if (dotsTimer) window.clearInterval(dotsTimer);
       try { sessionStorage.setItem("limosIntro", "1"); } catch (e) {}
       window.setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 850);
     }, 4000);

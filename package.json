@@ -4,6 +4,9 @@
   "private": true,
   "description": "Limos Kahvaltı — statik site + admin paneli (Vercel serverless).",
   "engines": { "node": ">=20" },
+  "scripts": {
+    "backup": "node scripts/backup-menu-db.js"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "mongodb": "^6.10.0",

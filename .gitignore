@@ -9,6 +9,7 @@ sifre.txt
 credentials*
 *.pem
 *.key
+backups/
 
 # ---- Kaynak/çalışma dosyaları (yayınlanan siteye dahil değil) ----
 işletme-bilgileri.md
