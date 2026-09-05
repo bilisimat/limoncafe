@@ -148,9 +148,8 @@
       onScroll();
       toTop.addEventListener("click", function (e) {
         e.preventDefault();
-        // Not: html { scroll-behavior: smooth } zaten tanımlı; scrollTo'ya
-        // ayrıca { behavior: "smooth" } vermek Chrome'da bazen scroll'u
-        // iptal ediyor. Düz (x, y) formu CSS'in smooth davranışını kullanır.
+        // html { scroll-behavior: smooth } zaten tanımlı, bu yüzden düz
+        // scrollTo(0, 0) yeterli — ayrıca behavior seçeneği vermeye gerek yok.
         window.scrollTo(0, 0);
       });
     }
