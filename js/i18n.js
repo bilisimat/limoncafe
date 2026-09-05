@@ -208,6 +208,82 @@
     }
   }
 
+  /* ---------- İlk ziyaret dil seçim penceresi ----------
+     Tam ekranı kaplamaz (arkada menü hâlâ görünür durur, sadece hafif
+     karartma + blur), tek tıkla kapanır, tercih localStorage'a yazılır ve
+     bir daha çıkmaz. Önceki tam ekran/engelleyici sürüm "menü gelmiyor"
+     izlenimi verdiği için kaldırılmıştı — bu sürüm onun yerine geçer. */
+  function shouldShowPrompt() {
+    try { return !localStorage.getItem(STORAGE_KEY); } catch (e) { return false; }
+  }
+
+  function showLangPrompt() {
+    var overlay = document.createElement("div");
+    overlay.className = "lang-modal-overlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-label", "Dil seçimi / Language");
+
+    var card = document.createElement("div");
+    card.className = "lang-modal-card";
+
+    var title = document.createElement("p");
+    title.className = "lang-modal-title";
+    title.textContent = "Dilinizi seçin / Choose your language";
+    card.appendChild(title);
+
+    var grid = document.createElement("div");
+    grid.className = "lang-modal-grid";
+    LANGS.forEach(function (code) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "lang-modal-btn";
+      b.textContent = LANG_NAME[code];
+      b.addEventListener("click", function () {
+        setLang(code);
+        applyLang(code);
+        close();
+      });
+      grid.appendChild(b);
+    });
+    card.appendChild(grid);
+
+    var skip = document.createElement("button");
+    skip.type = "button";
+    skip.className = "lang-modal-skip";
+    skip.textContent = "Türkçe devam et";
+    skip.addEventListener("click", function () {
+      setLang("tr");
+      close();
+    });
+    card.appendChild(skip);
+
+    overlay.appendChild(card);
+    document.body.appendChild(overlay);
+
+    function onKey(e) {
+      if (e.key === "Escape") { setLang("tr"); close(); }
+    }
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) { setLang("tr"); close(); }
+    });
+    document.addEventListener("keydown", onKey);
+
+    function close() {
+      overlay.classList.remove("is-open");
+      document.removeEventListener("keydown", onKey);
+      setTimeout(function () { overlay.remove(); }, 350);
+    }
+
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        overlay.classList.add("is-open");
+        var firstBtn = grid.querySelector(".lang-modal-btn");
+        if (firstBtn) firstBtn.focus();
+      });
+    });
+  }
+
   window.LimosI18n = { getLang: getLang, applyLang: applyLang };
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -215,8 +291,6 @@
     if (!document.body.classList.contains("menu-page")) return;
     mountSwitchers();
     applyLang(getLang());
-    // Not: ilk ziyarette tam ekran dil seçim penceresi ARTIK gösterilmiyor —
-    // menüyü kaplayıp "menü gelmiyor" izlenimi veriyordu. Varsayılan dil
-    // Türkçe; ziyaretçi başlıktaki TR/EN/AR/DE düğmeleriyle istediği an değiştirebilir.
+    if (shouldShowPrompt()) showLangPrompt();
   });
 })();

@@ -288,6 +288,77 @@ ul { list-style: none; }
 .site-header.is-scrolled .lang-btn.is-active { background: var(--accent); color: var(--espresso); }
 .lang-switch--topbar { display: none; }
 
+/* İlk ziyaret dil seçim penceresi — menüyü kaplamaz, hızlıca kapanır */
+.lang-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(33, 28, 24, .6);
+  backdrop-filter: blur(6px) saturate(140%);
+  -webkit-backdrop-filter: blur(6px) saturate(140%);
+  opacity: 0;
+  transition: opacity .35s var(--ease);
+}
+.lang-modal-overlay.is-open { opacity: 1; }
+.lang-modal-card {
+  width: 100%;
+  max-width: 340px;
+  background: var(--paper);
+  border-radius: 14px;
+  padding: 1.9rem 1.6rem;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .4);
+  transform: translateY(14px) scale(.97);
+  transition: transform .35s var(--ease);
+}
+.lang-modal-overlay.is-open .lang-modal-card { transform: translateY(0) scale(1); }
+.lang-modal-title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--espresso);
+  margin: 0 0 1.2rem;
+}
+.lang-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .6rem;
+  margin-bottom: 1rem;
+}
+.lang-modal-btn {
+  appearance: none;
+  cursor: pointer;
+  padding: .7rem .5rem;
+  border: 1px solid var(--stone-line);
+  border-radius: 8px;
+  background: transparent;
+  font-family: inherit;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--espresso);
+  transition: background .18s var(--ease), border-color .18s var(--ease);
+}
+.lang-modal-btn:hover, .lang-modal-btn:focus-visible { background: var(--accent); border-color: var(--accent); }
+.lang-modal-skip {
+  appearance: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: .8rem;
+  color: var(--stone);
+  text-decoration: underline;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lang-modal-overlay, .lang-modal-card { transition: none; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .lang-modal-overlay { background: rgba(33, 28, 24, .92); backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+
 /* Scrolled state → ivory */
 .site-header.is-scrolled {
   background: rgba(243, 239, 230, .92);
