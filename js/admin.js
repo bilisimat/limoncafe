@@ -176,7 +176,10 @@
   function closePwModal() { pwModal.hidden = true; pwEditingId = null; }
 
   document.querySelectorAll("[data-modal-close]").forEach(function (el) {
-    el.addEventListener("click", closePwModal);
+    el.addEventListener("click", function () {
+      var m = el.closest(".modal");
+      if (m) m.hidden = true;
+    });
   });
 
   pwForm.addEventListener("submit", async function (e) {
@@ -212,11 +215,11 @@
   var catFormError = document.getElementById("cat-form-error");
 
   var itemTbody = document.getElementById("item-tbody");
-  var addItemForm = document.getElementById("add-item-form");
-  var itemFormError = document.getElementById("item-form-error");
   var itemCatFilter = document.getElementById("item-cat-filter");
-  var itemEditName = document.getElementById("item-edit-name");
-  var itemEditCancel = document.getElementById("item-edit-cancel");
+  var priceModal = document.getElementById("price-modal");
+  var priceForm = document.getElementById("price-form");
+  var priceModalName = document.getElementById("price-modal-name");
+  var priceError = document.getElementById("price-error");
 
   function fillCatSelects() {
     [itemCatFilter].forEach(function (sel) {
@@ -243,13 +246,10 @@
     addCatForm.querySelector("button[type=submit]").textContent = "Ekle ve çevir";
     catFormError.hidden = true;
   }
-  function resetItemForm() {
+  function closePriceModal() {
+    priceModal.hidden = true;
     editingItemId = null;
-    addItemForm.reset();
-    addItemForm.hidden = true;
-    itemFormError.hidden = true;
   }
-  if (itemEditCancel) itemEditCancel.addEventListener("click", resetItemForm);
 
   async function loadMenu() {
     try {
@@ -362,6 +362,8 @@
     itemTbody.innerHTML = "";
     items.forEach(function (it) {
       var tr = document.createElement("tr");
+      tr.className = "row-clickable";
+      tr.addEventListener("click", function () { openPriceModal(it); });
 
       var tdName = document.createElement("td");
       tdName.innerHTML = escapeHtml(it.name.tr) + '<br><span class="cell-sub">' + escapeHtml(it.name.en) + "</span>";
@@ -371,43 +373,32 @@
       tdPrice.textContent = it.price || "—";
       tr.appendChild(tdPrice);
 
-      var tdActions = document.createElement("td");
-      tdActions.className = "actions";
-
-      var editBtn = document.createElement("button");
-      editBtn.type = "button";
-      editBtn.className = "btn-line";
-      editBtn.textContent = "Fiyat Düzenle";
-      editBtn.addEventListener("click", function () { startEditItem(it); });
-      tdActions.appendChild(editBtn);
-
-      tr.appendChild(tdActions);
       itemTbody.appendChild(tr);
     });
   }
 
-  function startEditItem(it) {
+  function openPriceModal(it) {
     editingItemId = it._id;
-    itemEditName.textContent = it.name.tr;
-    document.getElementById("item-price").value = it.price || "";
-    addItemForm.hidden = false;
-    addItemForm.scrollIntoView({ behavior: "smooth", block: "center" });
+    priceModalName.textContent = it.name.tr;
+    priceError.hidden = true;
+    document.getElementById("price-input").value = it.price || "";
+    priceModal.hidden = false;
   }
 
-  addItemForm.addEventListener("submit", async function (e) {
+  priceForm.addEventListener("submit", async function (e) {
     e.preventDefault();
     if (!editingItemId) return;
-    itemFormError.hidden = true;
-    var submitBtn = addItemForm.querySelector("button[type=submit]");
+    priceError.hidden = true;
+    var submitBtn = priceForm.querySelector("button[type=submit]");
     submitBtn.disabled = true;
-    var body = { price: document.getElementById("item-price").value.trim() };
+    var body = { price: document.getElementById("price-input").value.trim() };
     try {
       await api("/api/admin/menu/items/" + editingItemId, { method: "PUT", body: JSON.stringify(body) });
-      resetItemForm();
+      closePriceModal();
       loadItems();
     } catch (err) {
-      itemFormError.textContent = err.message || "Kaydedilemedi.";
-      itemFormError.hidden = false;
+      priceError.textContent = err.message || "Kaydedilemedi.";
+      priceError.hidden = false;
     } finally {
       submitBtn.disabled = false;
     }

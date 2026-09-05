@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/webp" href="../logo.webp" />
-  <link rel="stylesheet" href="../css/admin.css?v=1" />
+  <link rel="stylesheet" href="../css/admin.css?v=2" />
 </head>
 <body>
 
@@ -86,20 +86,9 @@
           <select id="item-cat-filter"></select>
         </label>
         <table class="data-table" id="item-table">
-          <thead><tr><th>Ad</th><th>Fiyat</th><th></th></tr></thead>
+          <thead><tr><th>Ad</th><th>Fiyat</th></tr></thead>
           <tbody id="item-tbody"></tbody>
         </table>
-
-        <form class="menu-form" id="add-item-form" hidden>
-          <h3>Fiyat güncelle</h3>
-          <p class="panel-sub" id="item-edit-name"></p>
-          <label class="field"><span>Fiyat (örn. 220₺, boş bırakılabilir)</span><input type="text" id="item-price" /></label>
-          <p class="form-error" id="item-form-error" hidden></p>
-          <div class="modal-actions">
-            <button type="button" class="btn-line" id="item-edit-cancel">Vazgeç</button>
-            <button type="submit" class="btn-primary">Kaydet</button>
-          </div>
-        </form>
       </section>
 
       <!-- ---------- KULLANICILAR ---------- -->
@@ -132,6 +121,24 @@
     </main>
   </div>
 
+  <!-- ---------- Fiyat değişimi dialog ---------- -->
+  <div class="modal" id="price-modal" hidden>
+    <div class="modal-backdrop" data-modal-close></div>
+    <form class="modal-box" id="price-form">
+      <h3>Fiyat Değişimi</h3>
+      <p class="modal-user" id="price-modal-name"></p>
+      <label class="field">
+        <span>Fiyat (örn. 220₺, boş bırakılabilir)</span>
+        <input type="text" id="price-input" />
+      </label>
+      <p class="form-error" id="price-error" hidden></p>
+      <div class="modal-actions">
+        <button type="button" class="btn-line" data-modal-close>Vazgeç</button>
+        <button type="submit" class="btn-primary">Kaydet</button>
+      </div>
+    </form>
+  </div>
+
   <!-- ---------- Şifre değiştir dialog ---------- -->
   <div class="modal" id="pw-modal" hidden>
     <div class="modal-backdrop" data-modal-close></div>
@@ -150,6 +157,6 @@
     </form>
   </div>
 
-  <script src="../js/admin.js?v=2" defer></script>
+  <script src="../js/admin.js?v=3" defer></script>
 </body>
 </html>
