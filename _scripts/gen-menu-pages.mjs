@@ -7,8 +7,8 @@ import fs from "fs";
 import path from "path";
 
 const ROOT = path.resolve(".");
-const CSS_V = "v=41";
-const JS_V = "v=13";
+const CSS_V = "v=42";
+const JS_V = "v=14";
 
 const IMG = JSON.parse(fs.readFileSync(path.resolve("_scripts/menu-images.json"), "utf8"));
 const ITEMS = JSON.parse(fs.readFileSync(path.resolve("_scripts/menu-items.json"), "utf8"));
@@ -260,7 +260,7 @@ function head(title, desc) {
   <header class="site-header" id="top" data-header>
     <div class="container header-inner">
       <a href="index.html" class="header-logo" aria-label="Limos Kahvaltı — ana sayfa">
-        <img src="images/logo-mark.jpg" width="150" height="150" alt="Limos Kahvaltı" />
+        <img src="images/logo-mark.webp" width="150" height="150" alt="Limos Kahvaltı" />
       </a>
       <nav class="main-nav" id="main-nav" aria-label="Ana menü">
         <a href="index.html#kahvalti" class="nav-link">Kahvaltı</a>
@@ -274,7 +274,7 @@ function head(title, desc) {
         <span class="brand-sub">kahvaltı — beşiktaş</span>
       </a>
       <div class="header-actions">
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="header-phone">Yol Tarifi</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A9-11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="header-phone">Yol Tarifi</a>
         <a href="tel:+902122369236" class="btn btn-line header-cta">Bizi Arayın</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü aç / kapat" aria-expanded="false" aria-controls="main-nav">
@@ -289,7 +289,7 @@ const FOOT = `  <footer class="site-footer">
       <p class="footer-cta">Masada görüşürüz.</p>
       <div class="footer-inner">
         <div class="footer-brand">
-          <img class="footer-logo" src="images/logo-mark.jpg" width="150" height="150" alt="Limos Kahvaltı" />
+          <img class="footer-logo" src="images/logo-mark.webp" width="150" height="150" alt="Limos Kahvaltı" />
           <p>Beşiktaş Sinanpaşa'da, kahvaltı sokağında. Serpme ve à la carte kahvaltı, taze pişiler ve demli çay.</p>
         </div>
         <nav class="footer-col" aria-label="Alt menü">
@@ -302,7 +302,7 @@ const FOOT = `  <footer class="site-footer">
         </nav>
         <div class="footer-col">
           <h4>İletişim</h4>
-          <p>Sinanpaşa, Çelebi Oğlu Sk. No:11<br />34353 Beşiktaş / İstanbul</p>
+          <p>Sinanpaşa, Çelebi Oğlu Sk. No:9-11<br />34353 Beşiktaş / İstanbul</p>
           <p><a href="tel:+905494980021">0 (549) 498 00 21</a></p>
           <p><a href="https://instagram.com/limoskahvalti" target="_blank" rel="noopener noreferrer">Instagram — @limoskahvalti</a></p>
           <p>Her gün · 07:00 – 18:00</p>
@@ -324,7 +324,7 @@ const FOOT = `  <footer class="site-footer">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       <span>Ara</span>
     </a>
-    <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A9-11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
       <span>Konum</span>
     </a>

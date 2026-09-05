@@ -261,10 +261,10 @@ ul { list-style: none; }
   font-weight: 500;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: rgba(243, 239, 230, .82);
   transition: color .3s var(--ease);
 }
-.header-phone:hover { color: var(--accent); }
+.header-phone:hover { color: var(--paper); }
 .header-cta {
   padding: 12px 20px;
   color: var(--paper);
@@ -369,18 +369,12 @@ ul { list-style: none; }
 .site-header.is-scrolled .brand-word { color: var(--espresso); }
 .site-header.is-scrolled .brand-sub { color: var(--stone); }
 .site-header.is-scrolled .nav-link { color: var(--ink); }
-.site-header.is-scrolled .header-phone { color: var(--accent); }
+.site-header.is-scrolled .header-phone { color: var(--ink); }
 .site-header.is-scrolled .nav-link:hover,
 .site-header.is-scrolled .nav-link.is-current { color: var(--espresso); }
-.site-header.is-scrolled .header-phone:hover { color: var(--accent); }
+.site-header.is-scrolled .header-phone:hover { color: var(--espresso); }
 .site-header.is-scrolled .header-cta { color: var(--espresso); border-color: var(--stone-line-dk); }
 .site-header.is-scrolled .header-cta:hover { background: var(--accent); color: var(--espresso); border-color: var(--accent); }
-
-/* Ana sayfa: "Yol Tarifi" simsiyah (menü sayfalarında sarı kalır) */
-body:not(.menu-page) .header-phone,
-body:not(.menu-page) .header-phone:hover,
-body:not(.menu-page) .site-header.is-scrolled .header-phone,
-body:not(.menu-page) .site-header.is-scrolled .header-phone:hover { color: #000; }
 .site-header.is-scrolled .nav-toggle span { background: var(--espresso); }
 
 /* Hamburger */
@@ -1346,8 +1340,36 @@ body:not(.menu-page) .site-header.is-scrolled .header-phone:hover { color: #000;
   max-width: 30ch;
 }
 
+/* --- menü verisi API'den gelene kadar gösterilen yükleme/hata durumu --- */
+.menu-loading,
+.menu-error {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  padding: 2.75rem 0;
+  color: var(--stone);
+  font-size: .95rem;
+  list-style: none;
+  grid-column: 1 / -1;
+}
+.menu-error { color: var(--espresso); }
+.menu-loading__spinner {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--stone-line);
+  border-top-color: var(--espresso);
+  border-radius: 50%;
+  animation: menu-spin .7s linear infinite;
+}
+@keyframes menu-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .menu-loading__spinner { animation: none; }
+}
+
 /* --- alt sayfa: fotoğraflı, tıklanır ürün satırı --- */
 .mi-list li { padding: 0; }
+.mi-list li.menu-loading, .mi-list li.menu-error { padding: 2.75rem 4px; }
 .mi {
   display: flex;
   align-items: center;

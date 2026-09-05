@@ -6,7 +6,13 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- 0. Giriş animasyonu (dönen limon, ~4 sn) ---------- */
+  /* ---------- 0. Giriş animasyonu (dönen limon) ----------
+     Sabit bir süre beklemek yerine sayfanın gerçekten yüklenmesini
+     (window "load" — görseller dahil) bekler; böylece ana içerik hazır
+     olmadan splash ekranı geçip boş/yarım bir sayfa göstermez. Yine de
+     çok hızlı bağlantılarda animasyonun görülebilmesi için asgari bir
+     süre, çok yavaş bağlantılarda da sonsuza kadar takılı kalmaması için
+     bir üst sınır uygulanır. */
   (function introSplash() {
     var s = document.getElementById("intro-splash");
     if (!s) return;
@@ -25,13 +31,33 @@
       word.textContent = "Yükleniyor" + ".".repeat(dotCount);
     }, 500) : null;
 
-    window.setTimeout(function () {
+    var MIN_MS = 1200;
+    var MAX_MS = 6000;
+    var start = Date.now();
+    var hidden = false;
+
+    function hide() {
+      if (hidden) return;
+      hidden = true;
       s.classList.add("is-hiding");
       document.documentElement.classList.remove("intro-lock");
       if (dotsTimer) window.clearInterval(dotsTimer);
       try { sessionStorage.setItem("limosIntro", "1"); } catch (e) {}
       window.setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 850);
-    }, 4000);
+    }
+
+    function readyToHide() {
+      var elapsed = Date.now() - start;
+      if (elapsed >= MIN_MS) hide();
+      else window.setTimeout(hide, MIN_MS - elapsed);
+    }
+
+    if (document.readyState === "complete") {
+      readyToHide();
+    } else {
+      window.addEventListener("load", readyToHide, { once: true });
+    }
+    window.setTimeout(hide, MAX_MS);
   })();
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -192,7 +218,7 @@
         "telephone": "+902122369236",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Sinanpaşa, Çelebi Oğlu Sk. No:11",
+          "streetAddress": "Sinanpaşa, Çelebi Oğlu Sk. No:9-11",
           "addressLocality": "Beşiktaş",
           "addressRegion": "İstanbul",
           "postalCode": "34353",

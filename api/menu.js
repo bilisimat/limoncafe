@@ -13,7 +13,10 @@ module.exports = async (req, res) => {
 
     const mapId = (doc) => Object.assign({}, doc, { _id: String(doc._id) });
 
-    res.setHeader("Cache-Control", "public, max-age=30, stale-while-revalidate=120");
+    // s-maxage olmadan Vercel'in edge/CDN katmanı bu yanıtı önbelleklemiyordu;
+    // bu da her ziyaretçide (her kategori sayfasında) doğrudan veritabanına
+    // gidip menü sayfalarının yavaş açılmasına yol açıyordu.
+    res.setHeader("Cache-Control", "public, max-age=30, s-maxage=60, stale-while-revalidate=600");
     res.status(200).json({
       categories: categories.map(mapId),
       items: items.map(mapId),

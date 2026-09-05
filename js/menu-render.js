@@ -114,16 +114,33 @@
     if (window.LimosWireMenuItems) window.LimosWireMenuItems();
   }
 
+  // Fetch başarısız olursa "Menü yükleniyor…" ekranda sonsuza kadar takılı
+  // kalmasın diye yerine geçen hata mesajı.
+  function showError() {
+    var msg = '<p class="menu-error">Menü şu anda yüklenemedi. Lütfen sayfayı yenileyin.</p>';
+    var catList = document.getElementById("cat-list");
+    if (catList) catList.innerHTML = msg;
+    var miList = document.getElementById("mi-list");
+    if (miList) miList.innerHTML = '<li class="menu-error">Menü şu anda yüklenemedi. Lütfen sayfayı yenileyin.</li>';
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     if (!document.body.classList.contains("menu-page")) return;
 
     fetch("/api/menu")
-      .then(function (r) { return r.json(); })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
       .then(function (data) {
+        if (!data || !Array.isArray(data.categories)) throw new Error("Geçersiz veri");
         DATA = data;
         renderAll();
       })
-      .catch(function (err) { console.error("Menü yüklenemedi:", err); });
+      .catch(function (err) {
+        console.error("Menü yüklenemedi:", err);
+        showError();
+      });
 
     document.addEventListener("limos:langchange", function () {
       if (DATA) renderAll();
