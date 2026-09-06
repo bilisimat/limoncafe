@@ -3,4 +3,4 @@ Disallow: /admin
 Disallow: /api
 Allow: /
 
-Sitemap: https://www.limoskahvalti.com/sitemap.xml
+Sitemap: https://limoskahvalti.com/sitemap.xml
