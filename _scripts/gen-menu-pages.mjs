@@ -236,7 +236,7 @@ function itemLi(slug, catName, name) {
 const itemList = (slug, catName, names) =>
   `              <ul class="menu-list mi-list">\n${names.map((n) => itemLi(slug, catName, n)).join("\n")}\n              </ul>`;
 
-function head(title, desc) {
+function head(title, desc, slug) {
   return `<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -247,6 +247,7 @@ function head(title, desc) {
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>${title} — Limos Kahvaltı Menüsü</title>
   <meta name="description" content="${desc}" />
+  <link rel="canonical" href="https://www.limoskahvalti.com/menu-${slug}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -378,7 +379,7 @@ CATS.forEach((cat, i) => {
     if (cat.note) mainInner += `\n            <p class="menu-cat-note">${esc(cat.note)}</p>`;
   }
 
-  const html = `${head(cat.name, `Limos Kahvaltı ${cat.name} kategorisi, fiyatları ve içerikleri.`)}
+  const html = `${head(cat.name, `Limos Kahvaltı ${cat.name} kategorisi, fiyatları ve içerikleri.`, cat.slug)}
 
   <main>
     <section class="menu-hero cat-hero">
