@@ -1156,6 +1156,11 @@ ul { list-style: none; }
     border-bottom: 1px solid var(--stone-line);
     font-size: .82rem;
   }
+  /* Masaüstü kuralı (.nav-link.is-current, saydam koyu hero için açık
+     renk) burada da geçerli kalıp geçerli sayfanın linkini (örn. "Menü")
+     açık zemin üstünde görünmez bırakıyordu — mobilde ezip düzeltiyoruz. */
+  .nav-link:hover,
+  .nav-link.is-current { color: var(--ink); }
   .nav-link::after { display: none; }
   .nav-link--cta { display: block; color: var(--espresso); }
 
