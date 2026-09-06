@@ -173,11 +173,7 @@
   }
 
   /* ---------- Dil değiştirici arayüzü ---------- */
-  function buildSwitcher(extraClass) {
-    var wrap = document.createElement("div");
-    wrap.className = "lang-switch" + (extraClass ? " " + extraClass : "");
-    wrap.setAttribute("role", "group");
-    wrap.setAttribute("aria-label", "Dil seçimi / Language");
+  function fillSwitcherButtons(wrap) {
     LANGS.forEach(function (code) {
       var b = document.createElement("button");
       b.type = "button";
@@ -192,6 +188,14 @@
       });
       wrap.appendChild(b);
     });
+  }
+
+  function buildSwitcher(extraClass) {
+    var wrap = document.createElement("div");
+    wrap.className = "lang-switch" + (extraClass ? " " + extraClass : "");
+    wrap.setAttribute("role", "group");
+    wrap.setAttribute("aria-label", "Dil seçimi / Language");
+    fillSwitcherButtons(wrap);
     return wrap;
   }
 
@@ -200,11 +204,14 @@
     if (actions && !actions.querySelector(".lang-switch")) {
       actions.insertBefore(buildSwitcher(), actions.firstChild);
     }
-    // Mobilde: dil seçici hamburger menüsünün içinde değil, üst bar'da (nav-toggle'ın yanında)
-    var headerInner = document.querySelector(".header-inner");
-    var toggle = document.getElementById("nav-toggle");
-    if (headerInner && toggle && !headerInner.querySelector(".lang-switch--topbar")) {
-      headerInner.insertBefore(buildSwitcher("lang-switch--topbar"), toggle);
+    // Mobilde: dil seçici hamburger menüsünün içinde değil, üst bar'da
+    // (nav-toggle'ın yanında). HTML'de zaten aynı boyutta boş bir yer
+    // tutucu (#lang-switch-topbar) var — JS onu SONRADAN eklemek yerine
+    // sadece içini dolduruyor. Böylece sayfa açılırken hamburger butonu
+    // dil düğmeleri eklenince sağa doğru kaymıyor.
+    var topbar = document.getElementById("lang-switch-topbar");
+    if (topbar && !topbar.querySelector(".lang-btn")) {
+      fillSwitcherButtons(topbar);
     }
   }
 

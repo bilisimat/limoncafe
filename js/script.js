@@ -67,24 +67,61 @@
     var nav = document.getElementById("main-nav");
 
     if (toggle && nav) {
-      var closeNav = function () {
+      var closeNav = function (returnFocus) {
         nav.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
         document.documentElement.classList.remove("nav-open");
+        if (returnFocus) toggle.focus();
+      };
+
+      var openNav = function () {
+        nav.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+        document.documentElement.classList.add("nav-open");
+        // Odağı çekmecenin içine taşı — klavye/ekran okuyucu kullanıcıları
+        // arkadaki gizli sayfa içeriğinde kalmasın.
+        var firstLink = nav.querySelector("a");
+        if (firstLink) firstLink.focus();
       };
 
       toggle.addEventListener("click", function () {
-        var open = nav.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", open ? "true" : "false");
-        document.documentElement.classList.toggle("nav-open", open);
+        if (nav.classList.contains("is-open")) closeNav(); else openNav();
       });
 
       nav.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", closeNav);
+        link.addEventListener("click", function () { closeNav(); });
+      });
+
+      // Dışarı (karartılmış alana) tıklayınca da kapansın.
+      document.addEventListener("click", function (e) {
+        if (!nav.classList.contains("is-open")) return;
+        if (nav.contains(e.target) || toggle.contains(e.target)) return;
+        closeNav();
       });
 
       document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") closeNav();
+        if (!nav.classList.contains("is-open")) return;
+        if (e.key === "Escape") {
+          closeNav(true);
+          return;
+        }
+        // Basit odak tuzağı: çekmece açıkken Tab, içindeki son/ilk
+        // odaklanabilir öğede arkadaki sayfaya kaçmasın, çekmecede döngü yapsın.
+        if (e.key === "Tab") {
+          var focusables = Array.prototype.slice.call(
+            nav.querySelectorAll("a[href], button:not([disabled])")
+          );
+          if (!focusables.length) return;
+          var first = focusables[0];
+          var last = focusables[focusables.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
       });
 
       window.addEventListener("resize", function () {
