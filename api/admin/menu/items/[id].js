@@ -18,12 +18,23 @@ module.exports = async (req, res) => {
     const _id = new ObjectId(String(id));
 
     if (req.method === "PUT") {
-      // Panelden yalnızca fiyat güncellenebilir — ürün adı/açıklama/görsel/
-      // kategori artık bu uçtan değiştirilemez (yanlışlıkla yeniden çeviri
-      // tetiklenip mevcut çevirilerin bozulmasını önlemek için).
-      const { price } = req.body || {};
+      // Panelden fiyat her zaman güncellenebilir. name/desc yalnızca zaten
+      // hazır (tr/en/de/ar) obje olarak gönderildiğinde kabul edilir — yeni
+      // çeviri tetiklemez, verilen değerleri olduğu gibi yazar. Çeviri
+      // denetiminde tespit edilen hataları düzeltmek için geçici olarak
+      // açıldı; kullanım sonrası kaldırılacak.
+      const { price, name, desc } = req.body || {};
       if (typeof price !== "string") {
         res.status(400).json({ error: "price (metin) gerekli." });
+        return;
+      }
+      const isLangObj = (v) => v !== undefined && typeof v === "object" && v !== null && !Array.isArray(v);
+      if (name !== undefined && !isLangObj(name)) {
+        res.status(400).json({ error: "name obje olmalı." });
+        return;
+      }
+      if (desc !== undefined && !isLangObj(desc)) {
+        res.status(400).json({ error: "desc obje olmalı." });
         return;
       }
       const current = await col.findOne({ _id });
@@ -32,7 +43,10 @@ module.exports = async (req, res) => {
         return;
       }
 
-      await col.updateOne({ _id }, { $set: { price, updatedAt: new Date() } });
+      const set = { price, updatedAt: new Date() };
+      if (name !== undefined) set.name = name;
+      if (desc !== undefined) set.desc = desc;
+      await col.updateOne({ _id }, { $set: set });
       res.status(200).json({ ok: true });
       return;
     }
