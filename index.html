@@ -6,19 +6,27 @@
   <meta name="theme-color" content="#F3EFE6" />
 
   <!-- Güvenlik: içerik güvenlik politikası (yalnızca sitenin gerçekten kullandığı kaynaklar) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-TgsYg7cLh3TjR1se8PgBiwucVoG/dOcJ8XKNoun/WaQ='; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <title>Limos Kahvaltı — Beşiktaş'ta Serpme Kahvaltı ve Taze Kahve</title>
-  <meta name="description" content="Sinanpaşa, Beşiktaş'ta serpme ve à la carte kahvaltı: menemenler, sıcak pişiler, gözlemeler, mıhlama ve taze kahve. Google'da 4,6 / 5 — 2.418+ değerlendirme. Çelebi Oğlu Sk. No:9-11, Beşiktaş / İstanbul." />
+  <title>Limos Kahvaltı | Beşiktaş Kahvaltıcılar Sokağı</title>
+  <meta name="description" content="Limos Kahvaltı, Beşiktaş Kahvaltıcılar Sokağı'nda zengin kahvaltı seçenekleri, pişi, menemen, omlet ve daha fazlasıyla keyifli bir kahvaltı deneyimi sunar." />
   <link rel="canonical" href="https://limoskahvalti.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Limos Kahvaltı — Beşiktaş" />
-  <meta property="og:description" content="Serpme ve à la carte kahvaltı, sıcacık pişiler, menemenler ve taze kahve. Beşiktaş / İstanbul." />
-  <meta property="og:type" content="restaurant" />
+  <meta property="og:title" content="Limos Kahvaltı | Beşiktaş Kahvaltıcılar Sokağı" />
+  <meta property="og:description" content="Limos Kahvaltı, Beşiktaş Kahvaltıcılar Sokağı'nda zengin kahvaltı seçenekleri, pişi, menemen, omlet ve daha fazlasıyla keyifli bir kahvaltı deneyimi sunar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://limoskahvalti.com/" />
+  <meta property="og:site_name" content="Limos Kahvaltı" />
   <meta property="og:locale" content="tr_TR" />
-  <meta property="og:image" content="images/hero.webp" />
+  <meta property="og:image" content="https://limoskahvalti.com/images/hero.webp" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Limos Kahvaltı | Beşiktaş Kahvaltıcılar Sokağı" />
+  <meta name="twitter:description" content="Limos Kahvaltı, Beşiktaş Kahvaltıcılar Sokağı'nda zengin kahvaltı seçenekleri, pişi, menemen, omlet ve daha fazlasıyla keyifli bir kahvaltı deneyimi sunar." />
+  <meta name="twitter:image" content="https://limoskahvalti.com/images/hero.webp" />
 
   <!-- Tipografi: Cormorant Garamond (editorial başlıklar) + Inter (gövde / arayüz) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,6 +36,35 @@
   <link rel="icon" type="image/webp" href="logo.webp" />
   <link rel="preload" as="image" href="images/hero.webp" fetchpriority="high" />
   <link rel="stylesheet" href="css/styles.css?v=46" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Limos Kahvaltı",
+    "url": "https://limoskahvalti.com/",
+    "logo": "https://limoskahvalti.com/images/logo-mark.webp",
+    "image": "https://limoskahvalti.com/images/hero.webp",
+    "telephone": "+905494980021",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sinanpaşa, Çelebi Oğlu Sk. No:9-11",
+      "addressLocality": "Beşiktaş",
+      "addressRegion": "İstanbul",
+      "postalCode": "34353",
+      "addressCountry": "TR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    "servesCuisine": "Turkish Breakfast",
+    "menu": "https://limoskahvalti.com/menu",
+    "sameAs": ["https://instagram.com/limoskahvalti"]
+  }
+  </script>
 </head>
 <body>
 
@@ -59,7 +96,7 @@
 
       <div class="header-actions">
         <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A9-11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="header-phone">Yol Tarifi</a>
-        <a href="tel:+902122369236" class="btn btn-line header-cta">Bizi Arayın</a>
+        <a href="tel:+905494980021" class="btn btn-line header-cta">Bizi Arayın</a>
       </div>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü aç / kapat" aria-expanded="false" aria-controls="main-nav">
@@ -73,13 +110,14 @@
     <div class="hero-media" aria-hidden="true"></div>
     <div class="hero-scrim" aria-hidden="true"></div>
     <div class="container hero-inner">
-      <p class="hero-eyebrow">Beşiktaş Kahvaltıcılar Sokağı</p>
+      <p class="hero-eyebrow">Limos Kahvaltı – Beşiktaş Kahvaltıcılar Sokağı</p>
       <h1 class="hero-title">
         Sabahın<br /><em>en güzel</em> hali.
       </h1>
       <p class="hero-lead">
         Serpme ve à la carte kahvaltı, tavadan yeni inmiş menemenler, sıcacık pişiler
-        ve demi gelmiş çay. Limos'ta sofra acele etmeden kurulur.
+        ve demi gelmiş çay. Limos'ta sofra acele etmeden kurulur; Beşiktaş'ta kahvaltı,
+        burada zamana yayılır.
       </p>
       <div class="hero-actions">
         <a href="menu.html" class="btn btn-solid">Menüyü Keşfet <span class="arw" aria-hidden="true">→</span></a>
@@ -400,7 +438,7 @@
     </a>
   </nav>
 
-  <script src="js/script.js?v=15" defer></script>
+  <script src="js/script.js?v=16" defer></script>
   <script src="js/menemen.js?v=6" defer></script>
 </body>
 </html>

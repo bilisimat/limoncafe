@@ -242,39 +242,6 @@
       if (img.complete && img.naturalWidth === 0) swap();
     });
 
-    /* ---------- 10. LocalBusiness / Restaurant yapılandırılmış veri ---------- */
-    try {
-      var schema = {
-        "@context": "https://schema.org",
-        "@type": "Restaurant",
-        "name": "Limos Kahvaltı",
-        "description": "Beşiktaş Sinanpaşa'da serpme ve à la carte kahvaltı: menemenler, sıcak pişiler, gözlemeler, mıhlama ve taze kahve.",
-        "servesCuisine": "Turkish breakfast",
-        "priceRange": "₺₺₺",
-        "image": ["images/hero.webp", "logo.webp"],
-        "telephone": "+902122369236",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Sinanpaşa, Çelebi Oğlu Sk. No:9-11",
-          "addressLocality": "Beşiktaş",
-          "addressRegion": "İstanbul",
-          "postalCode": "34353",
-          "addressCountry": "TR"
-        },
-        "hasMap": "https://www.google.com/maps/search/?api=1&query=Limos+Kahvalt%C4%B1+Be%C5%9Fikta%C5%9F",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.6",
-          "reviewCount": "2418"
-        },
-        "sameAs": ["https://instagram.com/limoskahvalti"]
-      };
-      var s = document.createElement("script");
-      s.type = "application/ld+json";
-      s.textContent = JSON.stringify(schema);
-      document.head.appendChild(s);
-    } catch (e) { /* yok say */ }
-
     /* ---------- 11. Loop video: bazı tarayıcılar loop/autoplay'i takmıyor ---------- */
     document.querySelectorAll("video[loop], video[autoplay]").forEach(function (v) {
       v.muted = true;               // autoplay politikası için şart

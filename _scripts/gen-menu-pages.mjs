@@ -8,7 +8,7 @@ import path from "path";
 
 const ROOT = path.resolve(".");
 const CSS_V = "v=46";
-const JS_V = "v=15";
+const JS_V = "v=16";
 
 const IMG = JSON.parse(fs.readFileSync(path.resolve("_scripts/menu-images.json"), "utf8"));
 const ITEMS = JSON.parse(fs.readFileSync(path.resolve("_scripts/menu-items.json"), "utf8"));
@@ -276,7 +276,7 @@ function head(title, desc, slug) {
       </a>
       <div class="header-actions">
         <a href="https://www.google.com/maps/search/?api=1&amp;query=Limos+Kahvalt%C4%B1+%C3%87elebi+O%C4%9Flu+Sk.+No%3A9-11+Be%C5%9Fikta%C5%9F" target="_blank" rel="noopener noreferrer" class="header-phone">Yol Tarifi</a>
-        <a href="tel:+902122369236" class="btn btn-line header-cta">Bizi Arayın</a>
+        <a href="tel:+905494980021" class="btn btn-line header-cta">Bizi Arayın</a>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü aç / kapat" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span>
