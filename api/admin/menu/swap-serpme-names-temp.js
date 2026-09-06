@@ -34,3 +34,4 @@ module.exports = async (req, res) => {
     res.status(500).json({ error: "Sunucu hatası" });
   }
 };
+// touch 1788723270
