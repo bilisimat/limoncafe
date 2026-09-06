@@ -1079,12 +1079,23 @@ ul { list-style: none; }
   .lang-switch--topbar .lang-btn:hover { color: var(--ink); }
   .lang-switch--topbar .lang-btn.is-active { background: var(--accent); color: var(--espresso); }
 
-  .header-inner { grid-template-columns: auto 1fr auto; }
+  .header-inner { grid-template-columns: auto 1fr auto; gap: 10px; }
   .header-actions { display: none; }
-  .nav-toggle { display: flex; justify-self: end; }
+  .nav-toggle { display: flex; justify-self: end; flex-shrink: 0; }
   /* min-width/height: JS içeriği doldurmadan önce de aynı alanı ayırır,
-     böylece hamburger butonu sayfa yüklenirken sağa doğru kaymaz. */
-  .lang-switch--topbar { display: flex; justify-self: end; min-width: 150px; min-height: 32px; }
+     böylece hamburger butonu sayfa yüklenirken sağa doğru kaymaz.
+     Değer, dar telefonlarda (320-360px) logo + hamburger ile birlikte
+     taşma/çakışma yaratmayacak şekilde küçük tutuldu. */
+  .lang-switch--topbar {
+    display: flex;
+    justify-self: end;
+    flex-shrink: 0;
+    min-width: 108px;
+    min-height: 28px;
+    gap: 0;
+    padding: 2px;
+  }
+  .lang-switch--topbar .lang-btn { padding: 4px 6px; font-size: .62rem; }
 
   .main-nav {
     position: fixed;
