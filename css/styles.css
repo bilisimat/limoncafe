@@ -1570,26 +1570,14 @@ ul { list-style: none; }
   visibility: hidden;
   pointer-events: none;
 }
-.intro-splash__lemon {
-  width: clamp(200px, 48vw, 340px);
+.intro-splash__video {
+  width: clamp(220px, 52vw, 380px);
   aspect-ratio: 1;
-  filter: drop-shadow(0 24px 60px rgba(0, 0, 0, .45));
-}
-.intro-splash__lemon img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  transform: scale(1.12);
-  -webkit-mask: radial-gradient(circle 40% at 50% 50%, #000 91%, transparent 100%);
-          mask: radial-gradient(circle 40% at 50% 50%, #000 91%, transparent 100%);
-}
-.intro-splash__word {
-  font-family: var(--serif);
-  font-size: clamp(1.3rem, 3.4vw, 1.7rem);
-  font-weight: 600;
-  letter-spacing: .05em;
-  color: var(--paper);
-  opacity: .88;
+  object-fit: contain;
+  /* Videonun arka planı düz siyah; "screen" karışımı siyahı tamamen
+     görünmez kılıp yalnızca logo animasyonunu splash'ın koyu (--espresso)
+     zemininin üstünde bırakır — ayrı bir kutu/kare hissi vermeden kaynaşır. */
+  mix-blend-mode: screen;
 }
 @media (prefers-reduced-motion: reduce) {
   .intro-splash { display: none; }

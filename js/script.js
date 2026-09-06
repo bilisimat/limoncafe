@@ -24,15 +24,11 @@
     }
     document.documentElement.classList.add("intro-lock");
 
-    var word = document.getElementById("intro-splash-word");
-    var dotCount = 1;
-    var dotsTimer = word ? window.setInterval(function () {
-      dotCount = (dotCount % 3) + 1;
-      word.textContent = "Yükleniyor" + ".".repeat(dotCount);
-    }, 500) : null;
-
-    var MIN_MS = 1200;
-    var MAX_MS = 6000;
+    // Logo videosunun (~4.25sn) kesilmeden oynaması için asgari süre onun
+    // uzunluğuna göre ayarlanır; MAX_MS yalnızca çok yavaş bağlantılar için
+    // üst sınır güvencesidir.
+    var MIN_MS = 4300;
+    var MAX_MS = 6500;
     var start = Date.now();
     var hidden = false;
 
@@ -41,7 +37,6 @@
       hidden = true;
       s.classList.add("is-hiding");
       document.documentElement.classList.remove("intro-lock");
-      if (dotsTimer) window.clearInterval(dotsTimer);
       try { sessionStorage.setItem("limosIntro", "1"); } catch (e) {}
       window.setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 850);
     }

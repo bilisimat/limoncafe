@@ -7,8 +7,8 @@ import fs from "fs";
 import path from "path";
 
 const ROOT = path.resolve(".");
-const CSS_V = "v=51";
-const JS_V = "v=16";
+const CSS_V = "v=52";
+const JS_V = "v=17";
 
 const IMG = JSON.parse(fs.readFileSync(path.resolve("_scripts/menu-images.json"), "utf8"));
 const ITEMS = JSON.parse(fs.readFileSync(path.resolve("_scripts/menu-items.json"), "utf8"));
