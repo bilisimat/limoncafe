@@ -114,6 +114,15 @@
     if (window.LimosWireMenuItems) window.LimosWireMenuItems();
   }
 
+  // Ana içerik (kategori/ürün listesi) hazır olana kadar tam ekran yükleme
+  // ekranını üstte tutar; hazır olur olmaz (başarılı ya da hatalı) kaldırır.
+  function hideSplash() {
+    var splash = document.getElementById("menu-splash");
+    if (!splash) return;
+    splash.classList.add("is-hidden");
+    window.setTimeout(function () { if (splash.parentNode) splash.parentNode.removeChild(splash); }, 450);
+  }
+
   // Fetch başarısız olursa "Menü yükleniyor…" ekranda sonsuza kadar takılı
   // kalmasın diye yerine geçen hata mesajı.
   function showError() {
@@ -126,6 +135,10 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     if (!document.body.classList.contains("menu-page")) return;
+
+    // Güvenlik: ağ isteği anormal derecede uzarsa yükleme ekranı sonsuza
+    // kadar takılı kalmasın.
+    window.setTimeout(hideSplash, 8000);
 
     fetch("/api/menu")
       .then(function (r) {
@@ -140,6 +153,9 @@
       .catch(function (err) {
         console.error("Menü yüklenemedi:", err);
         showError();
+      })
+      .finally(function () {
+        hideSplash();
       });
 
     document.addEventListener("limos:langchange", function () {
