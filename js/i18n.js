@@ -30,8 +30,8 @@
     "Hızlı erişim": { en: "Quick access", de: "Schnellzugriff", ar: "الوصول السريع" },
     "Ana menü": { en: "Main menu", de: "Hauptmenü", ar: "القائمة الرئيسية" },
     "Kategoriler arası gezinme": { en: "Navigate between categories", de: "Zwischen Kategorien wechseln", ar: "التنقل بين الفئات" },
-    "Ara": { en: "Call", de: "Anrufen", ar: "اتصال" },
     "Konum": { en: "Location", de: "Standort", ar: "الموقع" },
+    "Instagram": { en: "Instagram", de: "Instagram", ar: "إنستغرام" },
     "Masada görüşürüz.": { en: "See you at the table.", de: "Wir sehen uns am Tisch.", ar: "نراكم على المائدة." },
     "Beşiktaş Sinanpaşa'da, kahvaltı sokağında. Serpme ve à la carte kahvaltı, taze pişiler ve demli çay.": {
       en: "In Beşiktaş Sinanpaşa, on breakfast street. Sharing and à la carte breakfast, fresh pişi and brewed tea.",
@@ -144,7 +144,7 @@
     var commonSel = [
       "#main-nav a", ".header-phone", ".header-cta", ".skip-link",
       ".footer-cta", ".footer-brand p", ".footer-col nav a", ".footer-col h4",
-      ".footer-col p:not(.footer-addr)", ".footer-bottom a",
+      ".footer-col p:not(.footer-addr)", ".footer-col p a", ".footer-bottom a",
       ".mobile-bar span", ".cat-side-label", ".cat-back",
       ".cat-prevnext a > span",
       ".menu-hero:not(.cat-hero) .sec-index", ".menu-hero:not(.cat-hero) h1", ".menu-hero:not(.cat-hero) .sec-sub"
