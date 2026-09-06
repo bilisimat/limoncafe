@@ -5,6 +5,11 @@
    ========================================================= */
 
 :root {
+  /* Site yalnızca açık (light) tema için tasarlandı — Android/Chrome'un
+     otomatik koyu tema (auto-dark) sezgisi bazı elemanları yanlış tersine
+     çevirip (örn. mobil menüde metni arka planla aynı renge getirip)
+     içerikleri okunmaz hale getirebiliyor; bunu devre dışı bırakır. */
+  color-scheme: light;
   /* Palet */
   --paper:      #F3EFE6;   /* ana açık zemin */
   --paper-2:    #ECE6D8;   /* hafif kontrast zemin */

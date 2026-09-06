@@ -7,7 +7,7 @@ import fs from "fs";
 import path from "path";
 
 const ROOT = path.resolve(".");
-const CSS_V = "v=47";
+const CSS_V = "v=48";
 const JS_V = "v=16";
 
 const IMG = JSON.parse(fs.readFileSync(path.resolve("_scripts/menu-images.json"), "utf8"));
@@ -243,6 +243,7 @@ function head(title, desc, slug) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#211C18" />
+  <meta name="color-scheme" content="light" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>${title} — Limos Kahvaltı Menüsü</title>
