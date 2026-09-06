@@ -218,8 +218,6 @@ ul { list-style: none; }
   border-radius: 4px;
   display: block;
 }
-/* Mobilde kare işaret yerine yatay "Limos kahvaltı" logotipi gösterilir. */
-.header-logo-img--mobile { display: none; }
 
 .brand { display: none; }
 .brand-word {
@@ -1094,13 +1092,6 @@ ul { list-style: none; }
 
   .header-inner { grid-template-columns: auto 1fr auto; gap: 10px; }
   .header-actions { display: none; }
-  .header-logo-img--desktop { display: none; }
-  .header-logo-img--mobile {
-    display: block;
-    width: auto;
-    height: 54px;
-    border-radius: 0;
-  }
   .nav-toggle { display: flex; justify-self: end; flex-shrink: 0; }
   /* min-width/height: JS içeriği doldurmadan önce de aynı alanı ayırır,
      böylece hamburger butonu sayfa yüklenirken sağa doğru kaymaz.

@@ -7,7 +7,7 @@ import fs from "fs";
 import path from "path";
 
 const ROOT = path.resolve(".");
-const CSS_V = "v=50";
+const CSS_V = "v=51";
 const JS_V = "v=16";
 
 const IMG = JSON.parse(fs.readFileSync(path.resolve("_scripts/menu-images.json"), "utf8"));
@@ -262,8 +262,7 @@ function head(title, desc, slug) {
   <header class="site-header" id="top" data-header>
     <div class="container header-inner">
       <a href="index.html" class="header-logo" aria-label="Limos Kahvaltı — ana sayfa">
-        <img class="header-logo-img header-logo-img--desktop" src="images/logo-mark.webp" width="150" height="150" alt="Limos Kahvaltı" />
-        <img class="header-logo-img header-logo-img--mobile" src="images/logo-mobile.webp" width="842" height="511" alt="Limos Kahvaltı" />
+        <img src="images/logo-mark.webp" width="150" height="150" alt="Limos Kahvaltı" />
       </a>
       <nav class="main-nav" id="main-nav" aria-label="Ana menü">
         <a href="index.html#kahvalti" class="nav-link">Kahvaltı</a>
