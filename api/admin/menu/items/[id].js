@@ -18,17 +18,12 @@ module.exports = async (req, res) => {
     const _id = new ObjectId(String(id));
 
     if (req.method === "PUT") {
-      // Panelden fiyat her zaman güncellenebilir. İsim güncellemesi yalnızca
-      // zaten var olan bir "name" objesi (tr/en/de/ar) gönderildiğinde kabul
-      // edilir — yeni çeviri tetiklemez, sadece verilen değerleri olduğu gibi
-      // yazar (yanlışlıkla yeniden çeviri/çeviri bozulması riskini önler).
-      const { price, name } = req.body || {};
+      // Panelden yalnızca fiyat güncellenebilir — ürün adı/açıklama/görsel/
+      // kategori artık bu uçtan değiştirilemez (yanlışlıkla yeniden çeviri
+      // tetiklenip mevcut çevirilerin bozulmasını önlemek için).
+      const { price } = req.body || {};
       if (typeof price !== "string") {
         res.status(400).json({ error: "price (metin) gerekli." });
-        return;
-      }
-      if (name !== undefined && (typeof name !== "object" || name === null || Array.isArray(name))) {
-        res.status(400).json({ error: "name obje olmalı." });
         return;
       }
       const current = await col.findOne({ _id });
@@ -37,9 +32,7 @@ module.exports = async (req, res) => {
         return;
       }
 
-      const set = { price, updatedAt: new Date() };
-      if (name !== undefined) set.name = name;
-      await col.updateOne({ _id }, { $set: set });
+      await col.updateOne({ _id }, { $set: { price, updatedAt: new Date() } });
       res.status(200).json({ ok: true });
       return;
     }
