@@ -40,7 +40,7 @@
     },
     "Keşfet": { en: "Explore", de: "Entdecken", ar: "استكشف" },
     "Alt menü": { en: "Footer menu", de: "Fußzeilenmenü", ar: "قائمة إضافية" },
-    "Her gün · 07:00 – 18:00": { en: "Open daily · 07:00 – 18:00", de: "Täglich geöffnet · 07:00 – 18:00 Uhr", ar: "يومياً · ٠٧:٠٠ – ١٨:٠٠" },
+    "Her gün · 07:30 – 18:00": { en: "Open daily · 07:30 – 18:00", de: "Täglich geöffnet · 07:30 – 18:00 Uhr", ar: "يومياً · ٠٧:٣٠ – ١٨:٠٠" },
     "Tüm hakları saklıdır.": { en: "All rights reserved.", de: "Alle Rechte vorbehalten.", ar: "جميع الحقوق محفوظة." },
     "Google Haritalar'da aç": { en: "Open in Google Maps", de: "In Google Maps öffnen", ar: "افتح في خرائط جوجل" },
     "Instagram — @limoskahvalti": { en: "Instagram — @limoskahvalti", de: "Instagram — @limoskahvalti", ar: "إنستغرام — @limoskahvalti" },

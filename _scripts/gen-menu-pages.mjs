@@ -307,7 +307,7 @@ const FOOT = `  <footer class="site-footer">
           <p>Sinanpaşa, Çelebi Oğlu Sk. No:11<br />34353 Beşiktaş / İstanbul</p>
           <p><a href="tel:+905494980021">0 (549) 498 00 21</a></p>
           <p><a href="https://instagram.com/limoskahvalti" target="_blank" rel="noopener noreferrer">Instagram — @limoskahvalti</a></p>
-          <p>Her gün · 07:00 – 18:00</p>
+          <p>Her gün · 07:30 – 18:00</p>
         </div>
       </div>
       <div class="footer-bottom">
