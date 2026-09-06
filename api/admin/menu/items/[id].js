@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
       // Panelden yalnızca fiyat güncellenebilir — ürün adı/açıklama/görsel/
       // kategori artık bu uçtan değiştirilemez (yanlışlıkla yeniden çeviri
       // tetiklenip mevcut çevirilerin bozulmasını önlemek için).
-      const { price } = req.body || {};
+      const { price, name } = req.body || {};
       if (typeof price !== "string") {
         res.status(400).json({ error: "price (metin) gerekli." });
         return;
@@ -32,7 +32,9 @@ module.exports = async (req, res) => {
         return;
       }
 
-      await col.updateOne({ _id }, { $set: { price, updatedAt: new Date() } });
+      const set = { price, updatedAt: new Date() };
+      if (name !== undefined && typeof name === "object" && name !== null) set.name = name;
+      await col.updateOne({ _id }, { $set: set });
       res.status(200).json({ ok: true });
       return;
     }
