@@ -1065,6 +1065,20 @@ ul { list-style: none; }
    Mobile navigation + bottom bar
    ========================================================= */
 @media (max-width: 900px) {
+  /* Mobilde header en tepede de "scroll edilmiş" görünümünde (dolu/opak) —
+     saydam/şeffaf hali sadece masaüstünde geçerli. */
+  .site-header {
+    background: rgba(243, 239, 230, .92);
+    backdrop-filter: saturate(150%) blur(10px);
+    -webkit-backdrop-filter: saturate(150%) blur(10px);
+    border-bottom-color: var(--stone-line);
+  }
+  .nav-toggle span { background: var(--espresso); }
+  .lang-switch--topbar { border-color: var(--stone-line-dk); }
+  .lang-switch--topbar .lang-btn { color: var(--stone); }
+  .lang-switch--topbar .lang-btn:hover { color: var(--ink); }
+  .lang-switch--topbar .lang-btn.is-active { background: var(--accent); color: var(--espresso); }
+
   .header-inner { grid-template-columns: auto 1fr auto; }
   .header-actions { display: none; }
   .nav-toggle { display: flex; justify-self: end; }
