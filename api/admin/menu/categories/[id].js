@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
     const _id = new ObjectId(String(id));
 
     if (req.method === "PUT") {
-      const { name, listDesc, blurb, image, order } = req.body || {};
+      const { name, listDesc, blurb, image, order, listDescRaw, blurbRaw } = req.body || {};
       const current = await col.findOne({ _id });
       if (!current) {
         res.status(404).json({ error: "Kategori bulunamadı." });
@@ -29,6 +29,8 @@ module.exports = async (req, res) => {
       const update = { updatedAt: new Date() };
       if (typeof image === "string") update.image = image;
       if (typeof order === "number") update.order = order;
+      if (listDescRaw && typeof listDescRaw === "object") update.listDesc = listDescRaw;
+      if (blurbRaw && typeof blurbRaw === "object") update.blurb = blurbRaw;
 
       if (name || listDesc || blurb) {
         let translated;
