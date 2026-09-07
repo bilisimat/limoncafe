@@ -161,9 +161,10 @@ ul { list-style: none; }
   padding: 16px 26px;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: background-color .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease);
+  transition: background-color .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease), transform .16s ease-out;
   white-space: nowrap;
 }
+.btn:active { transform: scale(0.97); }
 .btn .arw { transition: transform .4s var(--ease); }
 .btn:hover .arw { transform: translateX(5px); }
 
@@ -1187,10 +1188,11 @@ ul { list-style: none; }
     letter-spacing: .14em;
     text-transform: uppercase;
     color: rgba(243, 239, 230, .82);
+    transition: background-color .18s var(--ease), transform .16s ease-out;
   }
   .mobile-bar-btn + .mobile-bar-btn { border-left: 1px solid rgba(243, 239, 230, .14); }
   .mobile-bar-btn svg { width: 19px; height: 19px; }
-  .mobile-bar-btn:active { background: rgba(243, 239, 230, .06); }
+  .mobile-bar-btn:active { background: rgba(243, 239, 230, .06); transform: scale(0.97); }
 
   body { padding-bottom: calc(58px + env(safe-area-inset-bottom)); }
   .back-to-top { bottom: calc(72px + env(safe-area-inset-bottom)); }
