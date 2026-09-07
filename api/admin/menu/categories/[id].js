@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
     const _id = new ObjectId(String(id));
 
     if (req.method === "PUT") {
-      const { name, listDesc, blurb, image, order, nameRaw } = req.body || {};
+      const { name, listDesc, blurb, image, order } = req.body || {};
       const current = await col.findOne({ _id });
       if (!current) {
         res.status(404).json({ error: "Kategori bulunamadı." });
@@ -29,13 +29,6 @@ module.exports = async (req, res) => {
       const update = { updatedAt: new Date() };
       if (typeof image === "string") update.image = image;
       if (typeof order === "number") update.order = order;
-
-      // Çeviri denetiminde tespit edilen bir yazım hatasını (örn. otomatik
-      // çeviride kalan gereksiz noktalama) yeniden çeviri tetiklemeden
-      // düzeltmek için: hazır (tr/en/de/ar) obje doğrudan kabul edilir.
-      if (nameRaw && typeof nameRaw === "object" && !Array.isArray(nameRaw)) {
-        update.name = nameRaw;
-      }
 
       if (name || listDesc || blurb) {
         let translated;
