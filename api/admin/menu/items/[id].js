@@ -18,12 +18,20 @@ module.exports = async (req, res) => {
     const _id = new ObjectId(String(id));
 
     if (req.method === "PUT") {
-      // Panelden yalnızca fiyat güncellenebilir — ürün adı/açıklama/görsel/
-      // kategori artık bu uçtan değiştirilemez (yanlışlıkla yeniden çeviri
-      // tetiklenip mevcut çevirilerin bozulmasını önlemek için).
-      const { price } = req.body || {};
+      // Panelden fiyat her zaman güncellenebilir. name (hazır tr/en/de/ar
+      // objesi, çeviri tetiklemez), img ve imgThumb geçici olarak açıldı —
+      // Special/Limos serpme ad+görsel takası için; kullanım sonrası kaldırılacak.
+      const { price, name, img, imgThumb } = req.body || {};
       if (typeof price !== "string") {
         res.status(400).json({ error: "price (metin) gerekli." });
+        return;
+      }
+      if (name !== undefined && (typeof name !== "object" || name === null || Array.isArray(name))) {
+        res.status(400).json({ error: "name obje olmalı." });
+        return;
+      }
+      if ((img !== undefined && typeof img !== "string") || (imgThumb !== undefined && typeof imgThumb !== "string")) {
+        res.status(400).json({ error: "img/imgThumb metin olmalı." });
         return;
       }
       const current = await col.findOne({ _id });
@@ -32,7 +40,11 @@ module.exports = async (req, res) => {
         return;
       }
 
-      await col.updateOne({ _id }, { $set: { price, updatedAt: new Date() } });
+      const set = { price, updatedAt: new Date() };
+      if (name !== undefined) set.name = name;
+      if (img !== undefined) set.img = img;
+      if (imgThumb !== undefined) set.imgThumb = imgThumb;
+      await col.updateOne({ _id }, { $set: set });
       res.status(200).json({ ok: true });
       return;
     }
