@@ -33,7 +33,7 @@
     "Konum": { en: "Location", de: "Standort", ar: "الموقع" },
     "Instagram": { en: "Instagram", de: "Instagram", ar: "إنستغرام" },
     "Masada görüşürüz.": { en: "See you at the table.", de: "Wir sehen uns am Tisch.", ar: "نراكم على المائدة." },
-    "Beşiktaş Sinanpaşa'da, kahvaltı sokağında. Serpme ve à la carte kahvaltı, taze pişiler ve demli çay.": {
+    "Beşiktaş Sinanpaşa'da, kahvaltılar sokağında. Serpme ve à la carte kahvaltı, taze pişiler ve demli çay.": {
       en: "In Beşiktaş Sinanpaşa, on breakfast street. Sharing and à la carte breakfast, fresh pişi and brewed tea.",
       de: "In Beşiktaş Sinanpaşa, in der Frühstücksstraße. Serpme- und à-la-carte-Frühstück, frisches Pişi und aufgebrühter Tee.",
       ar: "في سينان باشا ببشيكطاش، في شارع الفطور. فطور سربمة وأطباق فردية، بيشي طازج وشاي مغلي."

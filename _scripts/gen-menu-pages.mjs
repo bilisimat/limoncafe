@@ -292,7 +292,7 @@ const FOOT = `  <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-brand">
           <img class="footer-logo" src="images/logo-mark.webp" width="150" height="150" alt="Limos Kahvaltı" />
-          <p>Beşiktaş Sinanpaşa'da, kahvaltı sokağında. Serpme ve à la carte kahvaltı, taze pişiler ve demli çay.</p>
+          <p>Beşiktaş Sinanpaşa'da, kahvaltılar sokağında. Serpme ve à la carte kahvaltı, taze pişiler ve demli çay.</p>
         </div>
         <nav class="footer-col" aria-label="Alt menü">
           <h4>Keşfet</h4>
