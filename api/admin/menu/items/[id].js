@@ -21,9 +21,13 @@ module.exports = async (req, res) => {
       // Panelden yalnızca fiyat güncellenebilir — ürün adı/açıklama/görsel/
       // kategori artık bu uçtan değiştirilemez (yanlışlıkla yeniden çeviri
       // tetiklenip mevcut çevirilerin bozulmasını önlemek için).
-      const { price } = req.body || {};
-      if (typeof price !== "string") {
-        res.status(400).json({ error: "price (metin) gerekli." });
+      // GEÇİCİ: sıra (order) değişikliği için 'order' alanı da kabul ediliyor.
+      const { price, order } = req.body || {};
+      const set = { updatedAt: new Date() };
+      if (typeof price === "string") set.price = price;
+      if (typeof order === "number" && Number.isFinite(order)) set.order = order;
+      if (set.price === undefined && set.order === undefined) {
+        res.status(400).json({ error: "price (metin) veya order (sayı) gerekli." });
         return;
       }
       const current = await col.findOne({ _id });
@@ -32,7 +36,7 @@ module.exports = async (req, res) => {
         return;
       }
 
-      await col.updateOne({ _id }, { $set: { price, updatedAt: new Date() } });
+      await col.updateOne({ _id }, { $set: set });
       res.status(200).json({ ok: true });
       return;
     }
