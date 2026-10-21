@@ -8,8 +8,11 @@
   var LABELS = {
     menuWord: { tr: "Menü", en: "Menu", de: "Speisekarte", ar: "القائمة" },
     prev: { tr: "← Önceki", en: "← Previous", de: "← Zurück", ar: "→ السابق" },
-    next: { tr: "Sonraki →", en: "Next →", de: "Weiter →", ar: "التالي ←" }
+    next: { tr: "Sonraki →", en: "Next →", de: "Weiter →", ar: "التالي ←" },
+    forTwo: { tr: "İki kişilik", en: "For two", de: "Für zwei Personen", ar: "لشخصين" }
   };
+  // Bu kategorilerdeki her ürünün yanında "İki kişilik" rozeti gösterilir.
+  var FOR_TWO_CATS = { serpme: true };
   var ARABIC_DIGITS = { "0": "٠", "1": "١", "2": "٢", "3": "٣", "4": "٤", "5": "٥", "6": "٦", "7": "٧", "8": "٨", "9": "٩" };
 
   function toDigits(str, lang) {
@@ -78,16 +81,20 @@
         .filter(function (it) { return it.categorySlug === slug; })
         .sort(function (a, b) { return a.order - b.order; });
       var itemsHtml = "";
+      var forTwo = FOR_TWO_CATS[slug] ? LABELS.forTwo[l] : "";
       items.forEach(function (it) {
         itemsHtml +=
           '<li><button class="mi" type="button" ' +
+            (forTwo ? 'data-tag="' + escapeHtml(forTwo) + '" ' : "") +
             'data-name="' + escapeHtml(it.name[l]) + '" ' +
             'data-price="' + escapeHtml(it.price || "") + '" ' +
             'data-cat="' + escapeHtml(cat.name[l]) + '" ' +
             'data-img="' + escapeHtml(it.img || "") + '" ' +
             'data-desc="' + escapeHtml(it.desc[l] || "") + '">' +
             '<img class="mi-thumb" src="' + escapeHtml(it.imgThumb || it.img || "") + '" width="80" height="80" loading="lazy" decoding="async" alt="" />' +
-            '<span class="mi-name">' + escapeHtml(it.name[l]) + '</span><span class="p">' + escapeHtml(it.price || "") + '</span>' +
+            '<span class="mi-name">' + escapeHtml(it.name[l]) +
+              (forTwo ? ' <span class="mi-tag">' + escapeHtml(forTwo) + '</span>' : "") +
+            '</span><span class="p">' + escapeHtml(it.price || "") + '</span>' +
           '</button></li>';
       });
       list.innerHTML = itemsHtml;

@@ -296,7 +296,8 @@
         var name = btn.getAttribute("data-name") || "";
         miImg.src = img;
         miImg.alt = name;
-        miCat.textContent = btn.getAttribute("data-cat") || "";
+        var tag = btn.getAttribute("data-tag") || "";
+        miCat.textContent = (btn.getAttribute("data-cat") || "") + (tag ? " · " + tag : "");
         miTitle.textContent = name;
         miPrice.textContent = btn.getAttribute("data-price") || "";
         miDesc.textContent = btn.getAttribute("data-desc") || "";
